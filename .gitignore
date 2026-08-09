@@ -1,0 +1,28 @@
+# Entornos virtuales
+.venv/
+venv/
+env/
+.env
+
+# Datos pesados (se conserva la estructura de carpetas via .gitkeep)
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+outputs/checkpoints/*
+!outputs/checkpoints/.gitkeep
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+
+# Editores
+.vscode/
+.idea/
+.DS_Store
+
+# Experiment tracking
+mlruns/
+wandb/
