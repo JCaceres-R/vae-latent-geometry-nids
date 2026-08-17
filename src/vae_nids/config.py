@@ -6,8 +6,12 @@ Ajusta DATA_DIR a donde tengas los 5 CSV (Monday...Friday-WorkingHours.csv) en t
 from pathlib import Path
 
 # --- Rutas ---
-DATA_DIR = Path("./data/raw")            # carpeta con los 5 CSV originales
-OUTPUT_DIR = Path("./data/processed")    # aquí se guardan los .parquet + scaler
+# Ancladas a la raíz del proyecto (no al cwd del proceso que importa este módulo),
+# para que funcionen igual desde `python -m vae_nids.data.pipeline` (cwd = raíz)
+# como desde un notebook en notebooks/ (cwd = notebooks/).
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+DATA_DIR = PROJECT_ROOT / "data" / "raw"            # carpeta con los 5 CSV originales
+OUTPUT_DIR = PROJECT_ROOT / "data" / "processed"    # aquí se guardan los .parquet + scaler
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 CSV_FILES = [
