@@ -41,6 +41,17 @@ IDENTIFIER_COLS = ["Flow ID", "Src IP", "Dst IP", "Timestamp"]
 # arquitectura los necesita.
 PORT_COLS = ["Src Port", "Dst Port"]
 
+# Duplicados exactos (r = 1.0), identificados en el EDA (notebooks/eda_cicids2017.ipynb,
+# Sección 7.3; ver data/processed/eda_exclusion_log.json -> dropped.exact_duplicates).
+# Cada columna listada aquí reproduce, valor por valor, una estadística que ya está
+# presente con el nombre estándar de CICFlowMeter -- se conserva ese nombre y se
+# descarta el alias.
+DUPLICATE_COLS = [
+    "Bwd Segment Size Avg",  # == Bwd Packet Length Mean
+    "Average Packet Size",   # == Packet Length Mean
+    "Fwd Segment Size Avg",  # == Fwd Packet Length Mean
+]
+
 LABEL_COL = "Label"
 
 # --- Split (sobre el subconjunto BENIGN únicamente) ---

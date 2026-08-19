@@ -66,7 +66,11 @@ Decisiones de preprocesamiento ya tomadas (ver `src/vae_nids/data/pipeline.py`):
 - **Fuga de datos**: se excluyen `Flow ID`, `Src IP`, `Dst IP`, `Timestamp`, `Src Port`,
   `Dst Port` como features (las IPs de atacante/víctima son fijas durante toda la
   simulación en CICIDS2017 — dejarlas permitiría al modelo memorizar direcciones en vez
-  de aprender patrones de tráfico). Quedan **77 features** numéricas.
+  de aprender patrones de tráfico).
+- **Duplicados exactos**: el EDA (`notebooks/eda_cicids2017.ipynb`, Sección 7.3)
+  identificó 3 columnas con correlación r = 1.0 frente a otra ya presente
+  (`Bwd Segment Size Avg`, `Average Packet Size`, `Fwd Segment Size Avg`); se excluyen
+  también como features. Quedan **74 features** numéricas.
 - **Etiquetas `X - Attempted`** (flujos capturados durante la ventana de un ataque pero
   sin payload malicioso real): se mantienen como clases propias, no se fusionan con
   BENIGN ni con el ataque completo, para no distorsionar la evaluación aislada por

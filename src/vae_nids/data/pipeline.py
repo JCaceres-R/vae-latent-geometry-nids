@@ -106,13 +106,14 @@ def get_feature_columns(df: pd.DataFrame) -> list[str]:
     drop_cols = set(
         cfg.IDENTIFIER_COLS
         + cfg.PORT_COLS
+        + cfg.DUPLICATE_COLS
         + [cfg.LABEL_COL, "Day", "is_benign", "is_attempted", "attack_family"]
     )
     feature_cols = [c for c in df.columns if c not in drop_cols]
     # Solo columnas numéricas entran al modelo
     feature_cols = [c for c in feature_cols if pd.api.types.is_numeric_dtype(df[c])]
     print(f"[features] {len(feature_cols)} columnas seleccionadas como features "
-          f"(verifica que coincida con tu arquitectura, ej. x ∈ R^78)")
+          f"(verifica que coincida con tu arquitectura, ej. x ∈ R^74)")
     return feature_cols
 
 
