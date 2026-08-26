@@ -52,6 +52,36 @@ DUPLICATE_COLS = [
     "Fwd Segment Size Avg",  # == Fwd Packet Length Mean
 ]
 
+# Features colapsadas por correlación alta (|r| >= 0.95, verificado por
+# clique real, no single-linkage) dentro de los 13 clusters candidatos
+# del EDA (Sección 7.4). Ver notebooks/cluster_review_oe1.md para las
+# matrices de correlación par-a-par completas y la razón de cada
+# representante elegido.
+CORRELATED_CLUSTER_DROP_COLS = [
+    # Cluster 0
+    "Bwd Packet Length Max", "Bwd Packet Length Std", "Packet Length Max",
+    "Bwd Packet Length Mean", "Subflow Bwd Bytes", "Packet Length Variance",
+    # Cluster 1
+    "ACK Flag Count", "Bwd Header Length", "Fwd Header Length",
+    "Total Bwd packets", "Total Length of Bwd Packet",
+    # Cluster 2
+    "Fwd IAT Max", "Idle Max", "Idle Mean",
+    # Cluster 3
+    "Bwd IAT Min", "Fwd IAT Min",
+    # Cluster 4
+    "Subflow Fwd Bytes",
+    # Cluster 5
+    "Bwd IAT Total", "Fwd IAT Total",
+    # Cluster 6
+    "Fwd URG Flags",
+    # Cluster 7
+    "Bwd Packet/Bulk Avg",
+    # Cluster 8
+    "Fwd Packets/s",
+    # Cluster 9
+    "Bwd PSH Flags",
+]  # 23 columnas -- 74 -> 51
+
 LABEL_COL = "Label"
 
 # --- Split (sobre el subconjunto BENIGN únicamente) ---
