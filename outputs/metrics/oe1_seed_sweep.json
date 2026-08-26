@@ -1,0 +1,114 @@
+[
+  {
+    "seed": 43,
+    "run_name": "vae_k8_beta1_input51_seed43",
+    "checkpoint_epoch": 86,
+    "val_loss": -190.04938807688535,
+    "n_active": 5,
+    "n_total": 8,
+    "active_per_dim": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      false,
+      false,
+      false
+    ],
+    "variance_per_dim": [
+      0.7361026406288147,
+      0.2438819855451584,
+      0.4356704652309418,
+      0.814364492893219,
+      1.0116702318191528,
+      1.013723431242397e-05,
+      6.46737453280366e-06,
+      6.948088412173092e-06
+    ]
+  },
+  {
+    "seed": 44,
+    "run_name": "vae_k8_beta1_input51_seed44",
+    "checkpoint_epoch": 80,
+    "val_loss": -186.07888367661795,
+    "n_active": 6,
+    "n_total": 8,
+    "active_per_dim": [
+      false,
+      true,
+      true,
+      true,
+      false,
+      true,
+      true,
+      true
+    ],
+    "variance_per_dim": [
+      4.625686051440425e-05,
+      0.2531600892543793,
+      0.9491361379623413,
+      0.7460175156593323,
+      5.5078676268749405e-06,
+      0.7241818308830261,
+      1.0529978275299072,
+      0.22810618579387665
+    ]
+  },
+  {
+    "seed": 45,
+    "run_name": "vae_k8_beta1_input51_seed45",
+    "checkpoint_epoch": 84,
+    "val_loss": -187.89100682234357,
+    "n_active": 5,
+    "n_total": 8,
+    "active_per_dim": [
+      true,
+      true,
+      false,
+      true,
+      true,
+      true,
+      false,
+      false
+    ],
+    "variance_per_dim": [
+      0.7460758090019226,
+      0.6893349289894104,
+      1.646643431740813e-05,
+      0.9910550713539124,
+      0.34167298674583435,
+      0.5343227982521057,
+      1.1095419722551014e-05,
+      1.289938882109709e-05
+    ]
+  },
+  {
+    "seed": 46,
+    "run_name": "vae_k8_beta1_input51_seed46",
+    "checkpoint_epoch": 82,
+    "val_loss": -186.39777765338505,
+    "n_active": 5,
+    "n_total": 8,
+    "active_per_dim": [
+      false,
+      true,
+      true,
+      true,
+      false,
+      false,
+      true,
+      true
+    ],
+    "variance_per_dim": [
+      9.098959708353505e-06,
+      0.4108278155326843,
+      0.9576807618141174,
+      0.8739233016967773,
+      5.1714846449613106e-06,
+      1.0998920515703503e-05,
+      0.9923837780952454,
+      0.2858903110027313
+    ]
+  }
+]
