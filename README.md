@@ -30,17 +30,14 @@ benigno.
 La métrica de éxito no es AUC/F1 global, sino evidencia geométrica cuantitativa y
 verificable.
 
-## Objetivos específicos
+## Objetivos Específicos
 
-| # | Objetivo | Evidencia esperada |
-|---|----------|---------------------|
-| **OE1** | Establecer una línea base geométricamente estable del espacio latente (ELBO converge sin colapso del posterior) | Curvas de ELBO, histograma de σ² por dimensión latente, checkpoints reproducibles |
-| **OE2** | Cuantificar posición y dispersión de cada familia de ataque en el espacio latente | Distancia de Mahalanobis al centroide benigno, silhouette score, proyecciones t-SNE/UMAP anotadas |
-| **OE3** | Correlacionar la geometría latente con la detectabilidad observada (AUC-ROC, TPR/FPR) | Matriz de correlación Pearson/Spearman geometría-vs-detección |
-| **OE4** | Validar que la geometría corresponde a un modelo genuinamente generativo | Muestreo z ~ N(0,I), test Kolmogorov-Smirnov entre tráfico sintético y benigno real |
-| **OE5** | Evaluar robustez de los hallazgos frente a β y la dimensión latente k | Comparación de resultados (Mahalanobis, AUC) en ≥2-3 configuraciones distintas |
+- **OE1** — Estabilidad del espacio latente (semanas 1-2)
+- **OE2** — Geometría comparativa y correlación con detectabilidad (semanas 3-6)
+- **OE3** — Capacidad generativa (semanas 7-9)
+- **OE4** — Reproducibilidad frente a β, k (semanas 10-11)
 
-OE1 valida que el fenómeno se puede medir; OE2 es el hallazgo central; OE3, OE4 y OE5
+OE1 valida que el fenómeno se puede medir; OE2 es el hallazgo central; OE3 y OE4
 validan que ese hallazgo es legítimo y robusto.
 
 ## Cronograma (13 semanas)
@@ -48,9 +45,9 @@ validan que ese hallazgo es legítimo y robusto.
 | Fase | Semanas |
 |------|---------|
 | OE1 — Estabilidad del espacio latente | 1–2 |
-| OE2 — Geometría comparativa y correlación | 3–6 |
+| OE2 — Geometría comparativa y correlación con detectabilidad | 3–6 |
 | OE3 — Capacidad generativa | 7–9 |
-| OE4/OE5 — Reproducibilidad frente a β, k | 10–11 |
+| OE4 — Reproducibilidad frente a β, k | 10–11 |
 | Cierre — Consolidación y sustentación | 12–13 |
 
 ## Dataset
@@ -70,11 +67,18 @@ Decisiones de preprocesamiento ya tomadas (ver `src/vae_nids/data/pipeline.py`):
 - **Duplicados exactos**: el EDA (`notebooks/eda_cicids2017.ipynb`, Sección 7.3)
   identificó 3 columnas con correlación r = 1.0 frente a otra ya presente
   (`Bwd Segment Size Avg`, `Average Packet Size`, `Fwd Segment Size Avg`); se excluyen
-  también como features. Quedan **74 features** numéricas.
+  también como features.
+- **Features redundantes por correlación**: revisión adicional de 13 clusters con
+  `|r| ≥ 0.95` (verificado por clique real, no single-linkage — ver
+  `notebooks/cluster_review_oe1.md` y `data/processed/eda_exclusion_log.json`) excluyó
+  23 features más, manteniendo un representante por grupo. Preserva asimetrías
+  forward/backward donde la evidencia empírica las sostiene (tamaño de payload,
+  temporización IAT); las colapsa donde no (conteos de paquetes/flags, simétricos
+  entre fwd/bwd en este dataset). Quedan **51 features** numéricas.
 - **Etiquetas `X - Attempted`** (flujos capturados durante la ventana de un ataque pero
   sin payload malicioso real): se mantienen como clases propias, no se fusionan con
   BENIGN ni con el ataque completo, para no distorsionar la evaluación aislada por
-  familia (OE2/OE3).
+  familia (OE2).
 - **Sanitización**: se eliminan filas con nulos/infinitos (~0.04% del total, división
   por cero en `Flow Bytes/s`, `Flow Packets/s`, `Flow IAT *`).
 - **Split 70/15/15**, estratificado por día, aplicado únicamente sobre tráfico BENIGN.
@@ -99,7 +103,7 @@ vae-latent-geometry-nids/
 │   │   └── pipeline.py           # carga → sanitización → taxonomía de labels → split → escalado
 │   ├── models/                 # arquitectura del VAE (encoder/decoder probabilístico)
 │   ├── training/                # loop de entrenamiento, calibración de β, early stopping (OE1)
-│   ├── evaluation/              # umbral τ, ROC/AUC por familia, métricas geométricas (OE2/OE3/OE5)
+│   ├── evaluation/              # umbral τ, ROC/AUC por familia, métricas geométricas (OE2/OE4)
 │   └── viz/                     # visualizaciones del espacio latente (t-SNE/UMAP, proyecciones)
 └── tests/
 ```
@@ -125,13 +129,15 @@ Esto genera en `data/processed/`: `train_benign.parquet`, `val_benign.parquet`,
 
 ## Estado actual
 
-- [x] Pipeline de datos (carga, sanitización, taxonomía de labels, split, escalado)
-- [ ] Arquitectura VAE (encoder/decoder, reparametrización, ELBO) — OE1
-- [ ] Calibración de β y verificación de no colapso del posterior — OE1
-- [ ] Métricas geométricas por familia (Mahalanobis, silhouette, t-SNE/UMAP) — OE2
-- [ ] Correlación geometría–detectabilidad — OE3
-- [ ] Validación generativa (muestreo + test KS) — OE4
-- [ ] Análisis de robustez frente a β/k — OE5
+- [x] Pipeline de datos (74 → 51 features tras EDA y revisión de
+      clusters correlacionados, ver `data/processed/eda_exclusion_log.json`)
+- [x] Arquitectura VAE de producción (`src/vae_nids/models/vae.py`)
+- [x] OE1 — Estabilidad del espacio latente: entrenamiento convergente,
+      unidades activas 5-6/8 (barrido de 5 semillas), documentado en
+      `notebooks/oe1_report.md`
+- [ ] OE2 — Geometría comparativa y correlación con detectabilidad
+- [ ] OE3 — Capacidad generativa
+- [ ] OE4 — Reproducibilidad frente a β, k
 
 ## Referencias clave
 
