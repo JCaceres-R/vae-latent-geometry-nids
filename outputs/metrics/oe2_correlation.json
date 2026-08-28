@@ -1,0 +1,83 @@
+{
+  "n_main_families": 11,
+  "correlations": {
+    "mahalanobis_median_vs_auc_roc": {
+      "rho": 0.38181818181818183,
+      "p_value": 0.2465595757789701,
+      "n": 11
+    },
+    "mahalanobis_median_vs_tpr_at_tau": {
+      "rho": 0.33636363636363636,
+      "p_value": 0.31182431390038634,
+      "n": 11
+    },
+    "silhouette_score_vs_auc_roc": {
+      "rho": 0.17272727272727276,
+      "p_value": 0.6115423848512369,
+      "n": 11
+    },
+    "silhouette_score_vs_tpr_at_tau": {
+      "rho": -0.045454545454545456,
+      "p_value": 0.8944269969053026,
+      "n": 11
+    },
+    "mahalanobis_mean_vs_auc_roc": {
+      "rho": 0.5,
+      "p_value": 0.11730680301423817,
+      "n": 11
+    },
+    "mahalanobis_mean_vs_tpr_at_tau": {
+      "rho": 0.4727272727272727,
+      "p_value": 0.1419985202063199,
+      "n": 11
+    }
+  },
+  "attempted_pairs": {
+    "n_same_sign": 3,
+    "n_consistent_with_hypothesis": 2,
+    "deltas": [
+      {
+        "pair": "DoS_Hulk vs DoS_Hulk_attempted",
+        "delta_mahalanobis_median": -2.5082433647139886,
+        "delta_auc_roc": -0.018198488927365197,
+        "same_sign": true,
+        "consistent_with_hypothesis": false
+      },
+      {
+        "pair": "DoS_GoldenEye vs DoS_GoldenEye_attempted",
+        "delta_mahalanobis_median": 1.2001463475647562,
+        "delta_auc_roc": 0.15668771906159906,
+        "same_sign": true,
+        "consistent_with_hypothesis": true
+      },
+      {
+        "pair": "DoS_slowloris vs DoS_slowloris_attempted",
+        "delta_mahalanobis_median": 2.5598955706938153,
+        "delta_auc_roc": -0.031741565609453626,
+        "same_sign": false,
+        "consistent_with_hypothesis": false
+      },
+      {
+        "pair": "DoS_Slowhttptest vs DoS_Slowhttptest_attempted",
+        "delta_mahalanobis_median": -1.7907066571415253,
+        "delta_auc_roc": 0.005010165701717972,
+        "same_sign": false,
+        "consistent_with_hypothesis": false
+      },
+      {
+        "pair": "Bot vs Bot_attempted",
+        "delta_mahalanobis_median": -1.069439507279219,
+        "delta_auc_roc": 0.03198596693053568,
+        "same_sign": false,
+        "consistent_with_hypothesis": false
+      },
+      {
+        "pair": "WebAttack_BruteForce vs WebAttack_BruteForce_attempted",
+        "delta_mahalanobis_median": 1.4206664411283634,
+        "delta_auc_roc": 0.21516703138673,
+        "same_sign": true,
+        "consistent_with_hypothesis": true
+      }
+    ]
+  }
+}
