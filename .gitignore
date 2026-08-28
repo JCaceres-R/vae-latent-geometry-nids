@@ -9,8 +9,6 @@ data/raw/*
 !data/raw/.gitkeep
 data/processed/*
 !data/processed/.gitkeep
-outputs/checkpoints/*
-!outputs/checkpoints/.gitkeep
 
 # Python
 __pycache__/
