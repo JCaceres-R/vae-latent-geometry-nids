@@ -1,0 +1,194 @@
+{
+  "latent_benign_test.npy": {
+    "n": 248561,
+    "shape": [
+      248561,
+      8
+    ],
+    "labels": [
+      "BENIGN"
+    ]
+  },
+  "latent_attack_PortScan.npy": {
+    "n": 159023,
+    "shape": [
+      159023,
+      8
+    ],
+    "labels": [
+      "PortScan"
+    ]
+  },
+  "latent_attack_DoS_Hulk.npy": {
+    "n": 158469,
+    "shape": [
+      158469,
+      8
+    ],
+    "labels": [
+      "DoS Hulk"
+    ]
+  },
+  "latent_attack_DDoS.npy": {
+    "n": 95123,
+    "shape": [
+      95123,
+      8
+    ],
+    "labels": [
+      "DDoS"
+    ]
+  },
+  "latent_attack_DoS_GoldenEye.npy": {
+    "n": 7567,
+    "shape": [
+      7567,
+      8
+    ],
+    "labels": [
+      "DoS GoldenEye"
+    ]
+  },
+  "latent_attack_DoS_slowloris.npy": {
+    "n": 4001,
+    "shape": [
+      4001,
+      8
+    ],
+    "labels": [
+      "DoS slowloris"
+    ]
+  },
+  "latent_attack_FTP_Patator.npy": {
+    "n": 3973,
+    "shape": [
+      3973,
+      8
+    ],
+    "labels": [
+      "FTP-Patator"
+    ]
+  },
+  "latent_attack_SSH_Patator.npy": {
+    "n": 2980,
+    "shape": [
+      2980,
+      8
+    ],
+    "labels": [
+      "SSH-Patator"
+    ]
+  },
+  "latent_attack_DoS_Slowhttptest.npy": {
+    "n": 1742,
+    "shape": [
+      1742,
+      8
+    ],
+    "labels": [
+      "DoS Slowhttptest"
+    ]
+  },
+  "latent_attack_Bot.npy": {
+    "n": 738,
+    "shape": [
+      738,
+      8
+    ],
+    "labels": [
+      "Bot"
+    ]
+  },
+  "latent_attack_Web_Attack.npy": {
+    "n": 190,
+    "shape": [
+      190,
+      8
+    ],
+    "labels": [
+      "Web Attack - Brute Force",
+      "Web Attack - XSS",
+      "Web Attack - Sql Injection"
+    ]
+  },
+  "latent_attack_Infiltration.npy": {
+    "n": 32,
+    "shape": [
+      32,
+      8
+    ],
+    "labels": [
+      "Infiltration"
+    ]
+  },
+  "latent_attack_DoS_Hulk_attempted.npy": {
+    "n": 579,
+    "shape": [
+      579,
+      8
+    ],
+    "labels": [
+      "DoS Hulk - Attempted"
+    ]
+  },
+  "latent_attack_DoS_GoldenEye_attempted.npy": {
+    "n": 80,
+    "shape": [
+      80,
+      8
+    ],
+    "labels": [
+      "DoS GoldenEye - Attempted"
+    ]
+  },
+  "latent_attack_DoS_slowloris_attempted.npy": {
+    "n": 1706,
+    "shape": [
+      1706,
+      8
+    ],
+    "labels": [
+      "DoS slowloris - Attempted"
+    ]
+  },
+  "latent_attack_DoS_Slowhttptest_attempted.npy": {
+    "n": 3367,
+    "shape": [
+      3367,
+      8
+    ],
+    "labels": [
+      "DoS Slowhttptest - Attempted"
+    ]
+  },
+  "latent_attack_Bot_attempted.npy": {
+    "n": 1470,
+    "shape": [
+      1470,
+      8
+    ],
+    "labels": [
+      "Bot - Attempted"
+    ]
+  },
+  "latent_attack_WebAttack_BruteForce.npy": {
+    "n": 151,
+    "shape": [
+      151,
+      8
+    ],
+    "labels": [
+      "Web Attack - Brute Force"
+    ]
+  },
+  "latent_attack_WebAttack_BruteForce_attempted.npy": {
+    "n": 1214,
+    "shape": [
+      1214,
+      8
+    ],
+    "labels": [
+      "Web Attack - Brute Force - Attempted"
+    ]
+  }
+}
