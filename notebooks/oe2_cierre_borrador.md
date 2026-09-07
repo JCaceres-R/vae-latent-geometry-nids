@@ -173,8 +173,10 @@ produce el encoder).
 **τ = -156.9726** (percentil 95 de los scores de reconstrucción sobre
 `val_benign.parquet` completo, n=248,560 — split fresco, nunca tocado
 antes de esta fase, para no contaminar el umbral con datos de
-evaluación). **[PENDIENTE DE DECISIÓN — ver Sección 9.1]**: la versión
-vigente de la monografía especifica percentil 99, no 95.
+evaluación). **[PENDIENTE DE DECISIÓN — BLOQUEADO, ver Sección 9.1]**:
+la versión vigente de la monografía especifica percentil 99, no 95; se
+intentó resolver este punto y quedó bloqueado por cambios dramáticos de
+TPR entre ambos percentiles — no se sobrescribió nada de esta fase.
 
 AUC-ROC con IC 95% por bootstrap **estratificado** (positivos y
 negativos remuestreados por separado con tamaño fijo, 1000 iteraciones,
@@ -316,48 +318,85 @@ Dos análisis realizados después de cerrar y commitear las Fases 1-6,
 para informar decisiones pendientes sobre la Fase 4. Ninguno modifica los
 resultados ya reportados en las secciones anteriores.
 
-### 9.1. Impacto del percentil de τ (95 vs. 99)
+### 9.1. Impacto del percentil de τ (95 vs. 99) — BLOQUEADO, pendiente de confirmación
 
 Detalle: `oe2_tarea1_tau_comparison.md`, tabla en
 `outputs/metrics/oe2_tau_comparison.csv`.
 
-τ con percentil 99 (especificado en la versión vigente de la monografía)
-= -132.5056, frente a τ=-156.9726 con percentil 95 (el que usa
-actualmente `detectability_oe2.py`). El cambio de percentil **no afecta
-AUC-ROC** (no depende de τ), solo TPR@τ.
+τ con percentil 99 (especificado en la versión vigente de la monografía,
+`monografia_v8.pdf`, ecuación 6) = -132.5056, frente a τ=-156.9726 con
+percentil 95 (el que usa actualmente `detectability_oe2.py`). El cambio
+de percentil **no afecta AUC-ROC** (no depende de τ), solo TPR@τ.
 
-Cambios más dramáticos en TPR@τ al pasar de percentil 95 a 99:
+Se estableció como regla de decisión: si ningún grupo cambia de forma
+dramática entre ambos percentiles (ej. TPR de ~0 a alto o viceversa), se
+adopta 99 directamente; si sí lo hay, se reporta y se espera confirmación
+antes de tocar la Fase 4/5. **Sí hubo cambios dramáticos — este punto
+quedó bloqueado, sin recalcular ni sobrescribir nada de la Fase 4/5**:
 
-| group | TPR@τ95 | TPR@τ99 | Δ |
-|---|---:|---:|---:|
-| DoS_slowloris_attempted | 0.9578 | 0.0023 | **-0.9555** |
-| SSH_Patator | 0.9842 | 0.2369 | -0.7473 |
-| DDoS | 0.7937 | 0.1446 | -0.6491 |
+| group | TPR@τ95 | TPR@τ99 | Δ | Patrón |
+|---|---:|---:|---:|---|
+| **DoS_slowloris_attempted** | 0.9578 | **0.0023** | -0.9555 | **De casi total a ~0 — cumple el criterio literal** |
+| SSH_Patator | 0.9842 | 0.2369 | -0.7473 | Caída fuerte (no llega a ~0) |
+| DDoS | 0.7937 | 0.1446 | -0.6491 | Caída fuerte, volumen alto (n=95,123) |
 
 `DoS_slowloris_attempted` colapsa de detección casi total a
-prácticamente nula. `SSH_Patator` y `DDoS` (esta última con volumen
-considerable, n=95,123) también caen con fuerza. **[PENDIENTE DE
-DECISIÓN]**: qué percentil usar como τ oficial de la monografía — 95
-(código actual) o 99 (spec vigente) — sopesando este costo en TPR contra
-la reducción de falsos positivos esperada de un umbral más conservador
-(no cuantificada en este análisis, que solo midió TPR).
+prácticamente nula — el ejemplo textual del criterio de bloqueo.
+`SSH_Patator` y `DDoS` también caen con fuerza, aunque no lleguen a cero.
+**[PENDIENTE DE DECISIÓN — requiere confirmación explícita del autor
+antes de proceder]**: qué percentil usar como τ oficial — 95 (código
+actual) o 99 (spec vigente) — sopesando este costo en TPR contra la
+reducción de falsos positivos esperada de un umbral más conservador (no
+cuantificada aquí, que solo midió TPR). Hasta que se confirme, la Fase 4
+y la Fase 5 de este documento siguen reportando los resultados
+originales con τ=percentil 95.
 
-### 9.2. Factibilidad de usar z muestreado en vez de mu (Fase 4)
+### 9.2. Mu vs. z muestreado — IMPLEMENTADO como variante paralela
 
-Detalle: `oe2_tarea2_mu_vs_z_factibilidad.md`.
+Detalle de factibilidad: `oe2_tarea2_mu_vs_z_factibilidad.md`. Script:
+`src/vae_nids/evaluation/detectability_z_sampled_oe2.py`. Resultado:
+`outputs/metrics/oe2_detectability_z_sampled.csv` (en paralelo a
+`oe2_detectability.csv`, que sigue con mu sin modificar).
 
-El reparameterization trick ya existe (`VAE.reparameterize`,
-`vae.py:89-94`) y ya está encadenado en `VAE.forward`. Cambiar
-`detectability_oe2.py` para usar z en vez de mu es un cambio de código
-pequeño, pero no cosmético: introduce no-determinismo (requiere fijar
-semilla de torch explícitamente) y una decisión de diseño real —¿una
-sola muestra de z por fila, o promedio sobre K muestras para un
-estimado Monte Carlo más estable?— que cambia qué significa el score
-resultante. No requiere tocar la Fase 2 (el encoder puede correrse fresco
-sobre la x ya recargada en `detectability_oe2.py`, sin depender de los
-`.npy` de mu guardados, que deliberadamente no incluyen `logvar`).
-**[PENDIENTE DE DECISIÓN]**: si vale la pena rehacer la Fase 4 con z en
-vez de mu, y en tal caso, con qué K.
+Al ser un cambio de código simple y sin complicaciones estructurales
+(confirmado en la factibilidad: el reparameterization trick ya existe,
+`vae.py:89-94`, ya encadenado en `forward()`), se implementó como
+variante: mismo pipeline de la Fase 4 (mismo checkpoint, mismo τ =
+percentil 95 sin resolver aún — ver 9.1, mismo bootstrap estratificado),
+pero con z ~ q_φ(z|x) muestreado (`torch.manual_seed(42)` fijada una
+sola vez al inicio, para reproducibilidad de una sola muestra por fila,
+no un promedio sobre K).
+
+**Resultado: AUC-ROC prácticamente no cambia entre mu y z.**
+
+| group | AUC (mu) | AUC (z) | Δ |
+|---|---:|---:|---:|
+| SSH_Patator | 0.9824 | 0.9700 | -0.0124 (mayor diferencia de las 18) |
+| DoS_Hulk | 0.9176 | 0.9109 | -0.0067 |
+| FTP_Patator | 0.9327 | 0.9270 | -0.0057 |
+| DoS_GoldenEye_attempted | 0.7945 | 0.7998 | +0.0053 |
+| DoS_slowloris_attempted | 0.9728 | 0.9675 | -0.0053 |
+| *(resto de las 18)* | — | — | \|Δ\| ≤ 0.004 |
+
+Diferencia absoluta media sobre las 18: ≈0.003. **Esto confirma que la
+elección mu vs. z no es responsable del resultado no significativo de la
+Fase 5** — si se recalculara la correlación de Spearman con las AUC de
+la variante z en vez de mu, el cambio en rho sería marginal (las AUC que
+alimentan esa correlación casi no se mueven).
+
+TPR@τ sí cambia de forma más notoria en casos puntuales — el más
+grande es **`SSH_Patator`: 0.9842 (mu) → 0.7923 (z)**, una caída de 19
+puntos porcentuales causada por el ruido de una sola muestra de z
+empujando algunos puntajes por debajo del umbral fijo. Esto es
+justamente el costo de varianza que se anticipó en la factibilidad
+(Sección 9.2 original): con z de una sola muestra, TPR en un punto de
+corte fijo es más sensible al ruido de muestreo que AUC-ROC (que agrega
+sobre todos los umbrales).
+
+**No se reemplazó `oe2_detectability.csv` ni se recalculó la Fase 5** —
+ambas variantes (mu y z) quedan disponibles para comparar; decidir cuál
+usar como oficial sigue siendo una decisión del autor, aunque con este
+resultado el impacto esperado en la conclusión central de OE2 es bajo.
 
 ## 10. Conclusión de OE2
 
@@ -374,21 +413,91 @@ hipótesis de forma sistemática (2/6 pares). El caso de `Infiltration`
 ejemplo más claro de esta desconexión. Este resultado queda documentado
 tal cual, sin suavizarlo: la evidencia no respalda que la geometría del
 espacio latente por sí sola sea un predictor de detectabilidad en este
-VAE y este dataset.
+VAE y este dataset. El análisis adicional de la Sección 9.2 (mu vs. z)
+descarta que esto sea un artefacto de usar mu en vez del z muestreado
+que especifica la ecuación 5 de la monografía: las AUC-ROC con ambas
+variantes son casi idénticas (diferencia media ≈0.003).
+
+### 10.1. Reconciliación con la hipótesis de la Sección 4
+
+La hipótesis de la monografía (Sección 4, `monografia_v8.pdf`) predice,
+de forma específica y verificable, que los ataques volumétricos (DDoS,
+DoS Hulk) mostrarán distancias de Mahalanobis altas junto con una
+correlación **fuerte** entre esa distancia y el AUC-ROC, y que los
+ataques sigilosos (Infiltración, Botnets en fase C&C) se ubicarán cerca
+del núcleo benigno y por ello serán menos detectables "como función
+directa de su cercanía geométrica". **Esta hipótesis, tal como está
+formulada, no se sostiene con los datos de OE2.** La correlación de
+Spearman entre Mahalanobis (mediana) y AUC-ROC es rho=0.3818 (p=0.2466,
+n=11) — no significativa a ningún nivel convencional. El caso más
+directo de contradicción es `Infiltration`: la propia hipótesis la nombra
+como ejemplo esperado de baja detectabilidad por cercanía geométrica, y
+en los hechos es la familia **más detectable de las 18** evaluadas
+(AUC-ROC=0.9928), sin ser la geométricamente más cercana (su mediana de
+Mahalanobis, 4.351, la ubica en la mitad inferior de las 11 familias por
+distancia — no en el extremo cercano, que ocupan `SSH_Patator` y `Bot`).
+`SSH_Patator`, la familia geométricamente **más cercana** de todas
+(mediana=1.375), es la tercera más detectable (AUC-ROC=0.9824) — el
+patrón exactamente opuesto al que predice la hipótesis para una familia
+cercana al benigno.
+
+Este resultado no se reinterpreta como una confirmación parcial ni se
+suaviza: la hipótesis mecanicista específica de la Sección 4 no se
+sostiene con estos datos. Sigue siendo, no obstante, un resultado válido
+y útil para la monografía, por dos razones. Primera, la ausencia de una
+correlación fuerte es en sí misma información: indica que la distancia
+geométrica puntual (Mahalanobis a un centroide global, silhouette score)
+no captura, por sí sola, los factores que determinan la detectabilidad
+de una familia de ataque en este espacio latente — un hallazgo negativo
+obtenido con una metodología verificada de forma independiente
+(dimensiones activas recalculadas, no asumidas; score de anomalía
+consistente con la ecuación 5; splits sin fuga de datos; bootstrap
+estratificado para no sesgar grupos chicos), no un resultado nulo por
+error de implementación. Segunda, delimita con precisión hasta dónde
+llega una explicación geométrica simple y abre la pregunta de qué la
+explicaría en su lugar — si no es la distancia puntual al centroide
+benigno, podría ser la forma u orientación de la covarianza por familia,
+la densidad local (no solo la distancia), u otro factor no capturado por
+estas dos métricas — pregunta que queda fuera del alcance verificado en
+este documento.
 
 ## 11. Pendientes de decisión y alcance
 
-- **[PENDIENTE DE DECISIÓN]** Percentil de τ para la Fase 4 oficial: 95
-  (código actual, ya reportado en la Sección 6) vs. 99 (spec vigente de
-  la monografía) — ver Sección 9.1 para el costo cuantificado en TPR.
-- **[PENDIENTE DE DECISIÓN]** Uso de mu (determinístico, actual) vs. z
-  muestreado (estocástico, requiere fijar semilla y decidir K) como
-  entrada al decoder para el score de anomalía de la Fase 4 — ver
-  Sección 9.2.
-- **[PENDIENTE DE DECISIÓN]** Si el Experimento 4 (resistencia a la
-  evasión) entra en el alcance de esta monografía o queda fuera — no
-  se abordó en ninguna fase de OE2 hasta ahora y no hay trabajo
-  preliminar al respecto en este repo.
+- **[PENDIENTE DE DECISIÓN — BLOQUEADO]** Percentil de τ para la Fase 4
+  oficial: 95 (código actual, ya reportado en la Sección 6) vs. 99 (spec
+  vigente de la monografía). Hay cambios dramáticos de TPR entre ambos
+  (`DoS_slowloris_attempted`: 0.96→0.002; `SSH_Patator`: 0.98→0.24;
+  `DDoS`: 0.79→0.14) — ver Sección 9.1 para la tabla completa. Requiere
+  confirmación explícita antes de tocar la Fase 4/5.
+- **Uso de mu vs. z muestreado — resuelto operativamente, decisión de
+  cuál usar sigue abierta.** Se implementó la variante con z (Sección
+  9.2): AUC-ROC casi no cambia (diferencia media ≈0.003, máxima 0.0124
+  en `SSH_Patator`), TPR@τ sí cambia de forma notoria en casos puntuales
+  (`SSH_Patator`: -19 puntos porcentuales). Ambas variantes están
+  disponibles (`oe2_detectability.csv` con mu,
+  `oe2_detectability_z_sampled.csv` con z); cuál declarar oficial sigue
+  siendo decisión del autor, con el antecedente de que el impacto en la
+  conclusión central de OE2 (Sección 7) es bajo.
+- **Experimento 4 (resistencia a la evasión) — propuesta de exclusión,
+  pendiente de aprobación.** `monografia_v8.pdf` (Sección 7) lo lista
+  explícitamente como soporte de OE2, pero se propone excluirlo del
+  alcance de esta monografía por restricción de tiempo/alcance: los
+  Experimentos 2 y 3, ya consolidados en las Fases 1-6, cubren el núcleo
+  verificable de OE2 (detectabilidad por familia y su relación con la
+  geometría latente). El Experimento 4 introduce una pregunta distinta y
+  no trivial —caracterizar los límites operacionales de τ frente a
+  tráfico benigno complejo que se solapa con ataques sigilosos—, que
+  requeriría identificar o construir tráfico benigno de alto
+  volumen/ráfaga dentro de CICIDS2017, definir de forma cuantificable
+  qué cuenta como "solapamiento", y probablemente esperar a que se
+  resuelva primero la calibración de τ (Sección 9.1, todavía bloqueada).
+  Dado el cronograma de 13 semanas y que OE3/OE4 siguen pendientes,
+  absorber esa carga adicional dentro de OE2 arriesga el cierre del
+  resto de objetivos. **Si se aprueba esta exclusión, debe quedar
+  documentada explícitamente como una limitación de alcance del
+  capítulo, no como un vacío no reconocido** — por ejemplo, en una
+  sección de "Limitaciones y trabajo futuro" citando esta misma
+  propuesta.
 
 ## 12. Referencias
 
