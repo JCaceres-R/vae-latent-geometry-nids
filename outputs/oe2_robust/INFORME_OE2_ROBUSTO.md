@@ -166,6 +166,17 @@ también aquí, igual que en la monografía v9).]
   fases (todas más baratas computacionalmente). No afecta ningún resultado
   cuantitativo -- es apoyo visual, explícitamente no-evidencia según el
   propio prompt (Sección 8).
+- **Cómputo movido de la máquina local a una VM Linux, por decisión del
+  autor** (no del agente): las Fases 0-2 (diagnóstico, entrenamiento de las
+  10 semillas, codificación) y una validación completa de las Fases 3-5
+  sobre seed=42 (confirmando que reproducen los números del OE2 original:
+  mediana de Mahalanobis exacta, rho de Spearman exacto = 0.3818) se
+  corrieron localmente en Windows/CPU. El resto (Fases 3-5 sobre las 9
+  semillas nuevas, Fase 6 completa con UMAP) se corre en una VM Linux vía
+  `scripts/run_oe2_robust_vm.sh`, que reutiliza los checkpoints ya
+  entrenados (versionados en git, así que la VM no reentrena) y es
+  resumible por semilla si la VM se interrumpe. Log de esa corrida en
+  `outputs/oe2_robust/VM_RUN_LOG.md`.
 - Reducción de `SILHOUETTE_MAX_N`/`DIVERGENCE_MAX_N` de 5000 a 1500 por
   lado (ver `config.py`), y de la estrategia de IC de AUC-ROC/AUC-PR (de
   bootstrap ingenuo de 1000 remuestras sobre grupos de hasta ~400k filas a
