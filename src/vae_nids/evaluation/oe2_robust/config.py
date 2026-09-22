@@ -53,9 +53,18 @@ MC_SEED_BASE = 1000  # semilla de muestreo MC = MC_SEED_BASE + seed_modelo, docu
 
 # --- Fase 3: geometría distribucional ---
 ACTIVE_THRESHOLD = 0.01
-SILHOUETTE_MAX_N = 5000
+# Tamaños de submuestra por lado para las métricas O(n^2) de esta fase
+# (kernel RBF, matrices de distancia par-a-par, silhouette). Reducidos de
+# 5000 a 1500 tras medir timing real: a n=5000, MMD+SW+energy+silhouette
+# tomaban ~11s por repetición; a n=1500, ~1.3s -- con 18 familias x 20
+# repeticiones x 10 semillas (3600 llamadas), 5000 hacía el pipeline
+# inviable (>6h solo en estas dos subfases) mientras que 1500 lo deja en
+# ~75-90 min. Decisión tomada en la Fase 0/inicio de la Fase 3, ANTES de
+# ver ningún resultado de geometría o detectabilidad -- documentada en el
+# informe, Sección 10.
+SILHOUETTE_MAX_N = 1500
 N_SILHOUETTE_REPEATS = 20
-DIVERGENCE_MAX_N = 5000
+DIVERGENCE_MAX_N = 1500
 N_DIVERGENCE_REPEATS = 20
 N_BOOTSTRAP_GEOMETRY = 500
 KNN_K = 10

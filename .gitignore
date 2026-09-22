@@ -24,3 +24,11 @@ __pycache__/
 # Experiment tracking
 mlruns/
 wandb/
+
+# OE2 robusto (outputs/oe2_robust/): artefactos intermedios pesados y
+# regenerables por código (mu/logvar por semilla, scores crudos por
+# conexión, curvas ROC por familia/semilla) -- no se versionan. Los CSV de
+# tablas finales, JSON de métricas, figuras, checkpoints (pequeños, ~30KB
+# c/u) y el informe SÍ se versionan.
+outputs/oe2_robust/latent_vectors/
+outputs/oe2_robust/tables/*.npz
