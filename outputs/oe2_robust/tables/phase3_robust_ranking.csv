@@ -1,0 +1,2 @@
+mcd_n_used,metric,p_value,seed,value
+20000,spearman_rho_standard_vs_robust_mcd,0.13343383825682875,42,0.48181818181818187

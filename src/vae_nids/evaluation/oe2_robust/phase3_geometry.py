@@ -380,19 +380,43 @@ def write_csv(rows: list[dict], path):
     print(f"[fase3] {path} ({len(rows)} filas)")
 
 
+CACHE_DIR = rcfg.TABLES_DIR / "_cache"
+
+
 def main(seeds: list[int] | None = None):
+    """Cachea el resultado de cada semilla en outputs/oe2_robust/tables/_cache/
+    apenas termina de calcularse (no solo al final) -- una corrida de horas
+    en una VM sin supervisión puede interrumpirse; al relanzar `main()` con
+    la misma lista de semillas, las que ya tengan caché se saltan (se
+    cargan del disco) en vez de recomputarse. Los CSV finales combinados
+    solo se reescriben al final, a partir de todos los cachés disponibles."""
     seeds = seeds if seeds is not None else rcfg.ALL_SEEDS
+    CACHE_DIR.mkdir(parents=True, exist_ok=True)
     with open(rcfg.METRICS_DIR / "phase2_active_dims_per_seed.json", encoding="utf-8") as f:
         active_dims_map = json.load(f)
 
-    all_results = {k: [] for k in [
+    keys = [
         "mahalanobis_summary", "mahalanobis_tests", "cliffs_delta", "robust_ranking",
         "divergences", "bhattacharyya", "posterior_mahalanobis", "posterior_uncertainty",
         "neighborhood", "dispersion",
-    ]}
+    ]
+
     for seed in seeds:
+        cache_path = CACHE_DIR / f"phase3_seed{seed}.json"
+        if cache_path.exists():
+            print(f"[fase3 seed={seed}] ya cacheado en {cache_path.name}, se salta el cómputo")
+            continue
         result = run_seed(seed, active_dims_map)
-        for k in all_results:
+        with open(cache_path, "w", encoding="utf-8") as f:
+            json.dump(result, f)
+        print(f"[fase3 seed={seed}] cacheado en {cache_path.name}")
+
+    all_results = {k: [] for k in keys}
+    for seed in seeds:
+        cache_path = CACHE_DIR / f"phase3_seed{seed}.json"
+        with open(cache_path, encoding="utf-8") as f:
+            result = json.load(f)
+        for k in keys:
             all_results[k].extend(result[k])
 
     for key, rows in all_results.items():

@@ -1,0 +1,18 @@
+             Mixed Linear Model Regression Results
+===============================================================
+Model:              MixedLM   Dependent Variable:   score_std  
+No. Observations:   38656     Method:               REML       
+No. Groups:         12        Scale:                0.2455     
+Min. group size:    32        Log-Likelihood:       -27789.3234
+Max. group size:    5000      Converged:            Yes        
+Mean group size:    3221.3                                     
+---------------------------------------------------------------
+                     Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+---------------------------------------------------------------
+Intercept            -0.229    0.245 -0.934 0.350 -0.709  0.251
+maha_std              0.107    0.164  0.654 0.513 -0.214  0.428
+Group Var             0.528                                    
+Group x maha_std Cov -0.382                                    
+maha_std Var          0.313                                    
+seed Var              0.189                                    
+===============================================================

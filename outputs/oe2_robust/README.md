@@ -16,7 +16,42 @@ python -m pip install statsmodels psutil
 
 `umap-learn` ya es dependencia del proyecto (Fase 6).
 
-## Orden de ejecución
+## Correr todo en una VM Linux (recomendado -- así se corrió esta corrida)
+
+`scripts/run_oe2_robust_vm.sh` hace todo: crea un venv Linux propio
+(`.venv-linux/`, no toca `.venv`), instala dependencias, corre los tests, y
+ejecuta las Fases 0-6 (más la proyección UMAP al final) una por una, sin
+supervisión. Cada fase pesada (entrenamiento, geometría, detectabilidad)
+cachea su trabajo por semilla, así que si la VM se cae o el script se
+interrumpe, **volver a correrlo tal cual retoma donde iba** en vez de
+recalcular todo desde cero.
+
+Pasos:
+
+1. Clonar el repo en la VM, rama `oe2-robust`.
+2. Copiar a mano la carpeta `data/processed/` (parquets + `scaler.joblib` +
+   `feature_columns.json`) desde la máquina donde se generó -- está
+   excluida de git por `.gitignore` por su tamaño. El checkpoint oficial
+   (`outputs/checkpoints/vae_k8_beta1_input51_best.pt`) sí viaja con el
+   clone (está trackeado). Sin `data/processed/`, el script se detiene de
+   entrada con instrucciones claras.
+3. Correr dentro de `tmux`/`screen` (recomendado, dado que puede tardar
+   varias horas) o con `nohup`:
+   ```
+   tmux new -s oe2robust
+   bash scripts/run_oe2_robust_vm.sh
+   # Ctrl+B D para salir sin matar el proceso; tmux attach -t oe2robust para volver
+   ```
+4. Ver progreso en vivo (o después, para revisar qué pasó):
+   ```
+   tail -f outputs/oe2_robust/VM_RUN_LOG.md
+   ```
+   Este archivo es el log en Markdown con una sección por fase (inicio,
+   fin, duración, estado OK/FALLÓ, y las últimas líneas del log crudo de
+   esa fase). El log completo de cada fase queda además en
+   `outputs/oe2_robust/logs/vm_<fase>.log`.
+
+## Orden de ejecución manual (alternativa, sin el script de VM)
 
 Todo de una vez (Fases 0-6, ~1-2 horas en CPU, ver Fase 0 del informe para
 el presupuesto observado):

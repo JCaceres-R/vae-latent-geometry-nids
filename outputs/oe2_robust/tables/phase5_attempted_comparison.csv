@@ -1,0 +1,7 @@
+confirms_hypothesis,delta_auc_roc,delta_mahalanobis_median,delta_mmd2,pair,seed
+False,-0.02503005248013357,-2.508243364895287,0.08522695541783454,DoS_Hulk vs DoS_Hulk_attempted,42
+True,0.13885914697803514,1.2001463474551288,-0.10136804784048298,DoS_GoldenEye vs DoS_GoldenEye_attempted,42
+False,-0.031607592229045856,2.559895570608701,-0.24780400052837886,DoS_slowloris vs DoS_slowloris_attempted,42
+False,0.005952934222186346,-1.7907066572608121,-0.22180611502527958,DoS_Slowhttptest vs DoS_Slowhttptest_attempted,42
+False,0.02626503324308882,-1.0694395073373735,-0.2516903761419293,Bot vs Bot_attempted,42
+True,0.2105096849419611,1.4206664411705083,-0.049817545546794795,WebAttack_BruteForce vs WebAttack_BruteForce_attempted,42

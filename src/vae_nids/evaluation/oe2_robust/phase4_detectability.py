@@ -332,8 +332,17 @@ def write_csv(rows: list[dict], path):
     print(f"[fase4] {path} ({len(rows)} filas)")
 
 
+CACHE_DIR = rcfg.TABLES_DIR / "_cache"
+
+
 def main(seeds: list[int] | None = None):
+    """Igual estrategia de checkpointing por semilla que `phase3_geometry.main`
+    (ver su docstring): cada semilla se cachea apenas termina, para poder
+    relanzar tras una interrupción sin recomputar semillas ya hechas. Los
+    scores crudos (.npz) y curvas ROC ya se guardaban por semilla desde
+    antes; lo nuevo es cachear también las filas de métricas agregadas."""
     seeds = seeds if seeds is not None else rcfg.ALL_SEEDS
+    CACHE_DIR.mkdir(parents=True, exist_ok=True)
     ckpt = torch.load(rcfg.OFFICIAL_CHECKPOINT_PATH, map_location="cpu", weights_only=False)
     feature_cols = ckpt["feature_columns"]
     x_cache = XCache(feature_cols)
@@ -341,23 +350,23 @@ def main(seeds: list[int] | None = None):
     with open(rcfg.METRICS_DIR / "phase2_active_dims_per_seed.json", encoding="utf-8") as f:
         active_dims_map = json.load(f)
 
-    all_metric_rows, all_family_delong, all_score_delong, all_sample_control = [], [], [], []
-    tau_rows = []
-
     for seed in seeds:
+        cache_path = CACHE_DIR / f"phase4_seed{seed}.json"
+        if cache_path.exists():
+            print(f"[fase4 seed={seed}] ya cacheado en {cache_path.name}, se salta el cómputo")
+            continue
+
         manifest_path = rcfg.LATENT_DIR / f"seed{seed}" / "manifest.json"
         with open(manifest_path, encoding="utf-8") as f:
             manifest = json.load(f)
         active_dims = active_dims_map[str(seed)]
 
         result = detectability_for_seed(seed, active_dims, manifest, x_cache)
-        all_metric_rows.extend(result["metric_rows"])
-        tau_rows.append({"seed": seed, "tau_p95": result["tau_p95"],
-                          "fpr_test_benign_at_tau_p95": result["fpr_test_benign_at_tau_p95"]})
-
-        all_family_delong.extend(delong_between_families(result["raw_scores"], result["scores_test_benign"], seed))
-        all_score_delong.extend(delong_between_scores(result["raw_scores"], result["scores_test_benign"], seed))
-        all_sample_control.extend(sample_size_control(result["raw_scores"], result["scores_test_benign"], seed))
+        tau_row = {"seed": seed, "tau_p95": result["tau_p95"],
+                   "fpr_test_benign_at_tau_p95": result["fpr_test_benign_at_tau_p95"]}
+        family_delong = delong_between_families(result["raw_scores"], result["scores_test_benign"], seed)
+        score_delong = delong_between_scores(result["raw_scores"], result["scores_test_benign"], seed)
+        sample_control = sample_size_control(result["raw_scores"], result["scores_test_benign"], seed)
 
         for name, curves in result["roc_curves"].items():
             np.savez(rcfg.TABLES_DIR / f"phase4_roc_seed{seed}_{name}.npz", **curves)
@@ -371,11 +380,29 @@ def main(seeds: list[int] | None = None):
             np.savez(raw_dir / f"{name}.npz", **scores)
         np.savez(raw_dir / "BENIGN.npz", **result["scores_test_benign"])
 
+        with open(cache_path, "w", encoding="utf-8") as f:
+            json.dump({
+                "metric_rows": result["metric_rows"], "tau_row": tau_row,
+                "family_delong": family_delong, "score_delong": score_delong,
+                "sample_control": sample_control,
+            }, f)
+
         auc_main = {r["group"]: r["auc_roc"] for r in result["metric_rows"]
                     if r["score"] == PRINCIPAL_SCORE and r["group"] in rcfg.MAIN_FAMILIES}
         print(f"[fase4 seed={seed}] tau_p95={result['tau_p95']:.4f} "
               f"fpr_test_benign={result['fpr_test_benign_at_tau_p95']:.4f} "
               f"AUC({PRINCIPAL_SCORE}) principales: {auc_main}")
+
+    all_metric_rows, all_family_delong, all_score_delong, all_sample_control, tau_rows = [], [], [], [], []
+    for seed in seeds:
+        cache_path = CACHE_DIR / f"phase4_seed{seed}.json"
+        with open(cache_path, encoding="utf-8") as f:
+            cached = json.load(f)
+        all_metric_rows.extend(cached["metric_rows"])
+        tau_rows.append(cached["tau_row"])
+        all_family_delong.extend(cached["family_delong"])
+        all_score_delong.extend(cached["score_delong"])
+        all_sample_control.extend(cached["sample_control"])
 
     write_csv(all_metric_rows, rcfg.TABLES_DIR / "phase4_detectability_metrics.csv")
     write_csv(all_family_delong, rcfg.TABLES_DIR / "phase4_delong_between_families.csv")

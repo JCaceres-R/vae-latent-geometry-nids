@@ -32,3 +32,8 @@ wandb/
 # c/u) y el informe SÍ se versionan.
 outputs/oe2_robust/latent_vectors/
 outputs/oe2_robust/tables/*.npz
+outputs/oe2_robust/tables/_cache/
+
+# VM Linux dedicada para OE2 robusto (scripts/run_oe2_robust_vm.sh) -- no
+# se versiona, es local a cada máquina donde se corre el pipeline.
+.venv-linux/

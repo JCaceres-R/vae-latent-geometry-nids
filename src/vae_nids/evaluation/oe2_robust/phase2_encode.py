@@ -61,6 +61,19 @@ def encode_mu_logvar(model: VAE, df: pd.DataFrame, feature_cols: list[str],
 def encode_seed(seed: int) -> dict:
     out_dir = rcfg.LATENT_DIR / f"seed{seed}"
     out_dir.mkdir(parents=True, exist_ok=True)
+    manifest_path = out_dir / "manifest.json"
+
+    # Resumible: si esta semilla ya se codificó en una corrida anterior
+    # (interrumpida o no), se reutiliza en vez de recalcular -- barato en
+    # general, pero relevante si la VM se corta a mitad de esta fase.
+    if manifest_path.exists():
+        with open(manifest_path, encoding="utf-8") as f:
+            manifest = json.load(f)
+        mu_b = np.load(out_dir / "latent_benign_test_mu.npy")
+        au = active_units(torch.from_numpy(mu_b), threshold=ACTIVE_THRESHOLD)
+        active_dims = [i for i, a in enumerate(au["active_per_dim"]) if a]
+        print(f"[fase2 seed={seed}] ya codificado ({manifest_path}), se reutiliza")
+        return {"seed": seed, "n_groups": len(manifest), "active_units": au, "active_dims": active_dims}
 
     model, feature_cols = load_model(seed)
     manifest = {}

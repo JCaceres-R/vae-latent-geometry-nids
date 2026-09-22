@@ -1,0 +1,27 @@
+{
+  "run_name": "vae_k8_beta1_input51_seed2",
+  "seed": 2,
+  "checkpoint_epoch": 100,
+  "val_loss": -187.362897323741,
+  "val_recon": -193.85812566515943,
+  "val_kl": 6.495228192796268,
+  "total_train_seconds": 931.5186085000023,
+  "device": "cpu",
+  "git_commit": "d8ca5e0fd1a9f2a04b8a1b6483c2ec5823cc8c43",
+  "library_versions": {
+    "python": "3.14.7",
+    "torch": "2.13.0+cpu",
+    "numpy": "2.5.1",
+    "pandas": "3.0.5",
+    "sklearn": "1.9.0",
+    "scipy": "1.18.0"
+  },
+  "config": {
+    "input_dim": 51,
+    "latent_dim": 8,
+    "beta": 1.0,
+    "hidden_dim": 32,
+    "logvar_min": -10.0,
+    "logvar_max": 10.0
+  }
+}

@@ -48,7 +48,16 @@ def main() -> list[dict]:
 
     for seed in rcfg.NEW_SEEDS:
         run_name = run_name_for(seed)
-        meta = train_one_seed(seed=seed, run_name=run_name)
+        checkpoint_path = rcfg.CHECKPOINTS_DIR / f"{run_name}_best.pt"
+        meta_path = rcfg.CHECKPOINTS_DIR / f"{run_name}_metadata.json"
+        if checkpoint_path.exists() and meta_path.exists():
+            with open(meta_path, encoding="utf-8") as f:
+                meta = json.load(f)
+            print(f"[fase1] seed={seed}: checkpoint ya existe ({checkpoint_path.name}), "
+                  f"se salta el entrenamiento (epoch={meta['checkpoint_epoch']}, "
+                  f"val_loss={meta['val_loss']:.4f})")
+        else:
+            meta = train_one_seed(seed=seed, run_name=run_name)
         results.append({
             "seed": seed,
             "run_name": run_name,

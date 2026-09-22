@@ -1,0 +1,47 @@
+{
+  "hardware": {
+    "platform": "Windows-10-10.0.19045-SP0",
+    "processor": "Intel64 Family 6 Model 60 Stepping 3, GenuineIntel",
+    "cpu_count_logical": 8,
+    "cpu_count_physical": 4,
+    "ram_total_gb": 17.12,
+    "cuda_available": false,
+    "cuda_device_name": null
+  },
+  "splits": {
+    "train_benign": [
+      1159948,
+      82
+    ],
+    "val_benign": [
+      248560,
+      82
+    ],
+    "test_benign": [
+      248561,
+      82
+    ],
+    "test_attacks": [
+      442952,
+      82
+    ]
+  },
+  "reproducibility": {
+    "official_epoch": 52,
+    "official_val_loss": -185.27911716408389,
+    "repro_epoch": 53,
+    "repro_val_loss": -185.29933694250758,
+    "epoch_matches": false,
+    "val_loss_abs_diff": 0.02021977842369438,
+    "tolerance_used": 1.0,
+    "verdict": "aproximada",
+    "seconds_for_this_run": 536.9454139000009,
+    "note": "PyTorch en CPU no garantiza determinismo bit-exacto entre corridas incluso con la misma semilla (orden de reducci\u00f3n en operaciones paralelizadas, threads de BLAS); se eval\u00faa aproximaci\u00f3n, no igualdad exacta."
+  },
+  "budget": {
+    "seconds_per_seed_observed": 536.9454139000009,
+    "n_new_seeds_to_train": 9,
+    "estimated_total_training_minutes": 80.54181208500013,
+    "decision": "Entrenar las 10 semillas completas ([42, 0, 1, 2, 3, 4, 5, 6, 7, 8]); presupuesto estimado de ~81 min en CPU para las 9 nuevas (42 reutiliza el checkpoint oficial)."
+  }
+}

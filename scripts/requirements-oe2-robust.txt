@@ -1,0 +1,6 @@
+# Dependencias adicionales de OE2 robusto, no cubiertas por el
+# requirements.txt del proyecto base. Se instalan encima de ese archivo
+# (nunca se toca requirements.txt).
+statsmodels>=0.14
+psutil>=5.9
+pytest>=8.0

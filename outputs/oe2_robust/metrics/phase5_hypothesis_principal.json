@@ -1,0 +1,32 @@
+{
+  "pair": "mahalanobis_median vs. auc_roc(nll_mc)",
+  "per_seed": [
+    {
+      "seed": 42,
+      "rho": 0.38181818181818183,
+      "p_asymptotic": 0.2465595757789701,
+      "p_permutation": 0.25207479252074794,
+      "n_families": 11
+    }
+  ],
+  "combined": {
+    "rho_combined": 0.38181818181818183,
+    "ci_low": NaN,
+    "ci_high": NaN,
+    "n_seeds": 1,
+    "rho_per_seed_mean": 0.38181818181818183,
+    "rho_per_seed_sd": NaN
+  },
+  "power": {
+    "n_families": 11,
+    "min_detectable_rho_alpha05": 0.5998750135915839,
+    "power_rho_0.3": 0.14135758313271743,
+    "power_rho_0.5": 0.34248519214434864,
+    "power_rho_0.7": 0.6890455600193522
+  },
+  "previous_oe2_single_seed": {
+    "rho": 0.3818,
+    "p_value": 0.2466,
+    "n": 11
+  }
+}
