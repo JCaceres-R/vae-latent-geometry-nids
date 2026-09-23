@@ -1,10 +1,10 @@
 {
   "hardware": {
-    "platform": "Windows-10-10.0.19045-SP0",
-    "processor": "Intel64 Family 6 Model 60 Stepping 3, GenuineIntel",
+    "platform": "Linux-5.15.0-191-generic-x86_64-with-glibc2.35",
+    "processor": "x86_64",
     "cpu_count_logical": 8,
-    "cpu_count_physical": 4,
-    "ram_total_gb": 17.12,
+    "cpu_count_physical": 8,
+    "ram_total_gb": 25.2,
     "cuda_available": false,
     "cuda_device_name": null
   },
@@ -29,19 +29,19 @@
   "reproducibility": {
     "official_epoch": 52,
     "official_val_loss": -185.27911716408389,
-    "repro_epoch": 53,
-    "repro_val_loss": -185.29933694250758,
+    "repro_epoch": 97,
+    "repro_val_loss": -186.8288606740057,
     "epoch_matches": false,
-    "val_loss_abs_diff": 0.02021977842369438,
+    "val_loss_abs_diff": 1.549743509921825,
     "tolerance_used": 1.0,
-    "verdict": "aproximada",
-    "seconds_for_this_run": 536.9454139000009,
+    "verdict": "no reproduce",
+    "seconds_for_this_run": 836.7635232839966,
     "note": "PyTorch en CPU no garantiza determinismo bit-exacto entre corridas incluso con la misma semilla (orden de reducci\u00f3n en operaciones paralelizadas, threads de BLAS); se eval\u00faa aproximaci\u00f3n, no igualdad exacta."
   },
   "budget": {
-    "seconds_per_seed_observed": 536.9454139000009,
+    "seconds_per_seed_observed": 836.7635232839966,
     "n_new_seeds_to_train": 9,
-    "estimated_total_training_minutes": 80.54181208500013,
-    "decision": "Entrenar las 10 semillas completas ([42, 0, 1, 2, 3, 4, 5, 6, 7, 8]); presupuesto estimado de ~81 min en CPU para las 9 nuevas (42 reutiliza el checkpoint oficial)."
+    "estimated_total_training_minutes": 125.5145284925995,
+    "decision": "Entrenar las 10 semillas completas ([42, 0, 1, 2, 3, 4, 5, 6, 7, 8]); presupuesto estimado de ~126 min en CPU para las 9 nuevas (42 reutiliza el checkpoint oficial)."
   }
 }

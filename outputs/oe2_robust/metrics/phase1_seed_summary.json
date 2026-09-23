@@ -8,7 +8,7 @@
     "val_kl": 8.180642477906629,
     "total_train_seconds": null,
     "reused_official": true,
-    "val_loss_zscore": 1.1818423135465637,
+    "val_loss_zscore": 1.1818423135465792,
     "flagged_anomalous": false
   },
   {
@@ -20,7 +20,7 @@
     "val_kl": 8.084385288018753,
     "total_train_seconds": 906.5654581999988,
     "reused_official": false,
-    "val_loss_zscore": 1.0628921565526417,
+    "val_loss_zscore": 1.0628921565526572,
     "flagged_anomalous": false
   },
   {
@@ -32,7 +32,7 @@
     "val_kl": 5.964108666001619,
     "total_train_seconds": 1059.5592403000046,
     "reused_official": false,
-    "val_loss_zscore": -1.4153503922497566,
+    "val_loss_zscore": -1.4153503922497408,
     "flagged_anomalous": false
   },
   {
@@ -44,7 +44,7 @@
     "val_kl": 6.495228192796268,
     "total_train_seconds": 931.5186085000023,
     "reused_official": false,
-    "val_loss_zscore": 0.035777623184035344,
+    "val_loss_zscore": 0.03577762318405097,
     "flagged_anomalous": false
   },
   {
@@ -56,7 +56,7 @@
     "val_kl": 7.643758030048244,
     "total_train_seconds": 881.4022856999945,
     "reused_official": false,
-    "val_loss_zscore": 0.6257961971265732,
+    "val_loss_zscore": 0.6257961971265887,
     "flagged_anomalous": false
   },
   {
@@ -68,7 +68,7 @@
     "val_kl": 6.385213822216553,
     "total_train_seconds": 803.9249799999961,
     "reused_official": false,
-    "val_loss_zscore": -0.32196624009835173,
+    "val_loss_zscore": -0.3219662400983361,
     "flagged_anomalous": false
   },
   {
@@ -80,7 +80,7 @@
     "val_kl": 6.037283562524241,
     "total_train_seconds": 767.9095260000031,
     "reused_official": false,
-    "val_loss_zscore": -0.6212492974183094,
+    "val_loss_zscore": -0.6212492974182937,
     "flagged_anomalous": false
   },
   {
@@ -92,7 +92,7 @@
     "val_kl": 6.056721562605638,
     "total_train_seconds": 792.2215721999964,
     "reused_official": false,
-    "val_loss_zscore": -1.1554428501931893,
+    "val_loss_zscore": -1.1554428501931735,
     "flagged_anomalous": false
   },
   {
@@ -104,7 +104,7 @@
     "val_kl": 5.923480925484796,
     "total_train_seconds": 772.5750926999899,
     "reused_official": false,
-    "val_loss_zscore": -0.7130273993106367,
+    "val_loss_zscore": -0.713027399310621,
     "flagged_anomalous": false
   },
   {
@@ -116,7 +116,7 @@
     "val_kl": 8.053001700132116,
     "total_train_seconds": 806.6496987999999,
     "reused_official": false,
-    "val_loss_zscore": 1.3207278888603047,
+    "val_loss_zscore": 1.3207278888603202,
     "flagged_anomalous": false
   }
 ]
