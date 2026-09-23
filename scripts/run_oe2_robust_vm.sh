@@ -39,6 +39,19 @@ PYTHON_BIN="$VENV_DIR/bin/python"
 
 mkdir -p "$LOG_DIR"
 
+# El wheel de pip de PyTorch trae Intel MKL/oneDNN, cuyo dispatcher interno
+# de instrucciones SIMD es menos cuidadoso detectando el CPU real que
+# OpenBLAS (el backend de numpy) -- en VMs con CPU sin AVX/AVX2/AVX512
+# (frecuente en VMs académicas virtualizadas con exposición conservadora
+# de CPU flags al hipervisor), MKL puede intentar ejecutar una instrucción
+# AVX2 inexistente y el proceso muere con SIGILL (exit code 132), sin
+# traceback de Python. Forzar techo de instrucciones a SSE4.2 evita esto;
+# no cambia el resultado numérico, solo el código máquina usado. No hace
+# nada si el CPU sí soporta AVX2 -- inofensivo dejarlo siempre activo.
+export MKL_ENABLE_INSTRUCTIONS=SSE4_2
+export DNNL_MAX_CPU_ISA=SSE41
+export MKL_DEBUG_CPU_TYPE=5
+
 timestamp() { date -u +"%Y-%m-%dT%H:%M:%SZ"; }
 
 md_init() {
@@ -120,7 +133,6 @@ for f in \
   "data/processed/val_benign.parquet" \
   "data/processed/test_benign.parquet" \
   "data/processed/test_attacks.parquet" \
-  "data/processed/scaler.joblib" \
   "data/processed/feature_columns.json" \
   "outputs/checkpoints/vae_k8_beta1_input51_best.pt" \
 ; do
