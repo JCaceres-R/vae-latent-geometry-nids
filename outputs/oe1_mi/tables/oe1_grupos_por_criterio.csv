@@ -1,0 +1,507 @@
+criterion,variant,dataset,grupo,representante,n,miembros,descartadas
+P,B20,EDA,0,Total Fwd Packet,6,ACK Flag Count; Bwd Header Length; Fwd Header Length; Total Bwd packets; Total Fwd Packet; Total Length of Bwd Packet,ACK Flag Count; Bwd Header Length; Fwd Header Length; Total Bwd packets; Total Length of Bwd Packet
+P,B20,EDA,1,Packet Length Std,4,Bwd Packet Length Max; Bwd Packet Length Std; Packet Length Max; Packet Length Std,Bwd Packet Length Max; Bwd Packet Length Std; Packet Length Max
+P,B20,EDA,2,Flow IAT Max,4,Flow IAT Max; Fwd IAT Max; Idle Max; Idle Mean,Fwd IAT Max; Idle Max; Idle Mean
+P,B20,EDA,3,Flow Duration,3,Bwd IAT Total; Flow Duration; Fwd IAT Total,Bwd IAT Total; Fwd IAT Total
+P,B20,EDA,4,Packet Length Mean,3,Bwd Packet Length Mean; Packet Length Mean; Subflow Bwd Bytes,Bwd Packet Length Mean; Subflow Bwd Bytes
+P,B20,EDA,5,Bwd Bytes/Bulk Avg,2,Bwd Bytes/Bulk Avg; Bwd Packet/Bulk Avg,Bwd Packet/Bulk Avg
+P,B20,EDA,6,Bwd IAT Mean,2,Bwd IAT Mean; Bwd IAT Min,Bwd IAT Min
+P,B20,EDA,7,PSH Flag Count,2,Bwd PSH Flags; PSH Flag Count,Bwd PSH Flags
+P,B20,EDA,8,Flow Packets/s,2,Flow Packets/s; Fwd Packets/s,Fwd Packets/s
+P,B20,EDA,9,Fwd IAT Mean,2,Fwd IAT Mean; Fwd IAT Min,Fwd IAT Min
+P,B20,EDA,10,Fwd Packet Length Mean,2,Fwd Packet Length Mean; Subflow Fwd Bytes,Subflow Fwd Bytes
+P,B20,EDA,11,URG Flag Count,2,Fwd URG Flags; URG Flag Count,Fwd URG Flags
+P_sin_apriori,B20,EDA,0,Total Fwd Packet,6,ACK Flag Count; Bwd Header Length; Fwd Header Length; Total Bwd packets; Total Fwd Packet; Total Length of Bwd Packet,ACK Flag Count; Bwd Header Length; Fwd Header Length; Total Bwd packets; Total Length of Bwd Packet
+P_sin_apriori,B20,EDA,1,Packet Length Std,4,Bwd Packet Length Max; Bwd Packet Length Std; Packet Length Max; Packet Length Std,Bwd Packet Length Max; Bwd Packet Length Std; Packet Length Max
+P_sin_apriori,B20,EDA,2,Flow IAT Max,4,Flow IAT Max; Fwd IAT Max; Idle Max; Idle Mean,Fwd IAT Max; Idle Max; Idle Mean
+P_sin_apriori,B20,EDA,3,Flow Duration,3,Bwd IAT Total; Flow Duration; Fwd IAT Total,Bwd IAT Total; Fwd IAT Total
+P_sin_apriori,B20,EDA,4,Packet Length Mean,3,Bwd Packet Length Mean; Packet Length Mean; Subflow Bwd Bytes,Bwd Packet Length Mean; Subflow Bwd Bytes
+P_sin_apriori,B20,EDA,5,Bwd Bytes/Bulk Avg,2,Bwd Bytes/Bulk Avg; Bwd Packet/Bulk Avg,Bwd Packet/Bulk Avg
+P_sin_apriori,B20,EDA,6,Bwd IAT Mean,2,Bwd IAT Mean; Bwd IAT Min,Bwd IAT Min
+P_sin_apriori,B20,EDA,7,PSH Flag Count,2,Bwd PSH Flags; PSH Flag Count,Bwd PSH Flags
+P_sin_apriori,B20,EDA,8,Flow Packets/s,2,Flow Packets/s; Fwd Packets/s,Fwd Packets/s
+P_sin_apriori,B20,EDA,9,Fwd IAT Mean,2,Fwd IAT Mean; Fwd IAT Min,Fwd IAT Min
+P_sin_apriori,B20,EDA,10,Fwd Packet Length Mean,2,Fwd Packet Length Mean; Subflow Fwd Bytes,Subflow Fwd Bytes
+P_sin_apriori,B20,EDA,11,URG Flag Count,2,Fwd URG Flags; URG Flag Count,Fwd URG Flags
+L,B20,EDA,0,Packet Length Std,8,Bwd Packet Length Max; Bwd Packet Length Mean; Packet Length Max; Packet Length Mean; Packet Length Std; Packet Length Variance; Subflow Bwd Bytes; Total Length of Bwd Packet,Bwd Packet Length Max; Bwd Packet Length Mean; Packet Length Max; Packet Length Mean; Packet Length Variance; Subflow Bwd Bytes; Total Length of Bwd Packet
+L,B20,EDA,1,Bwd IAT Max,7,Bwd IAT Max; Bwd IAT Mean; Bwd IAT Total; Flow IAT Std; Fwd IAT Max; Fwd IAT Mean; Fwd IAT Total,Bwd IAT Mean; Bwd IAT Total; Flow IAT Std; Fwd IAT Max; Fwd IAT Mean; Fwd IAT Total
+L,B20,EDA,2,Flow Packets/s,7,Bwd Packets/s; Flow Bytes/s; Flow Duration; Flow IAT Max; Flow IAT Mean; Flow Packets/s; Fwd Packets/s,Bwd Packets/s; Flow Bytes/s; Flow Duration; Flow IAT Max; Flow IAT Mean; Fwd Packets/s
+L,B20,EDA,3,Fwd Packet Length Max,5,Fwd Packet Length Max; Fwd Packet Length Mean; Fwd Packet Length Min; Packet Length Min; Total Length of Fwd Packet,Fwd Packet Length Mean; Fwd Packet Length Min; Packet Length Min; Total Length of Fwd Packet
+L,B20,EDA,4,Total Fwd Packet,4,Bwd Header Length; Fwd Header Length; Total Bwd packets; Total Fwd Packet,Bwd Header Length; Fwd Header Length; Total Bwd packets
+L_cal,B20,EDA,0,Packet Length Std,8,Bwd Packet Length Max; Bwd Packet Length Mean; Packet Length Max; Packet Length Mean; Packet Length Std; Packet Length Variance; Subflow Bwd Bytes; Total Length of Bwd Packet,Bwd Packet Length Max; Bwd Packet Length Mean; Packet Length Max; Packet Length Mean; Packet Length Variance; Subflow Bwd Bytes; Total Length of Bwd Packet
+L_cal,B20,EDA,1,Flow Packets/s,8,Bwd Packets/s; Flow Bytes/s; Flow Duration; Flow IAT Max; Flow IAT Mean; Flow IAT Std; Flow Packets/s; Fwd Packets/s,Bwd Packets/s; Flow Bytes/s; Flow Duration; Flow IAT Max; Flow IAT Mean; Flow IAT Std; Fwd Packets/s
+L_cal,B20,EDA,2,Bwd IAT Max,6,Bwd IAT Max; Bwd IAT Mean; Bwd IAT Total; Fwd IAT Max; Fwd IAT Mean; Fwd IAT Total,Bwd IAT Mean; Bwd IAT Total; Fwd IAT Max; Fwd IAT Mean; Fwd IAT Total
+L_cal,B20,EDA,3,Total Fwd Packet,5,ACK Flag Count; Bwd Header Length; Fwd Header Length; Total Bwd packets; Total Fwd Packet,ACK Flag Count; Bwd Header Length; Fwd Header Length; Total Bwd packets
+L_cal,B20,EDA,4,Fwd Packet Length Max,5,Fwd Packet Length Max; Fwd Packet Length Mean; Fwd Packet Length Min; Packet Length Min; Total Length of Fwd Packet,Fwd Packet Length Mean; Fwd Packet Length Min; Packet Length Min; Total Length of Fwd Packet
+S,B20,EDA,0,Bwd IAT Max,9,Bwd Header Length; Bwd IAT Max; Bwd IAT Mean; Bwd IAT Total; Fwd Header Length; Fwd IAT Max; Fwd IAT Mean; Fwd IAT Total; Total Fwd Packet,Bwd Header Length; Bwd IAT Mean; Bwd IAT Total; Fwd Header Length; Fwd IAT Max; Fwd IAT Mean; Fwd IAT Total; Total Fwd Packet
+S,B20,EDA,1,PSH Flag Count,8,ACK Flag Count; Bwd IAT Std; Bwd Init Win Bytes; Bwd PSH Flags; Bwd Packet Length Std; Fwd PSH Flags; Fwd Packet Length Std; PSH Flag Count,ACK Flag Count; Bwd IAT Std; Bwd Init Win Bytes; Bwd PSH Flags; Bwd Packet Length Std; Fwd PSH Flags; Fwd Packet Length Std
+S,B20,EDA,2,Flow Packets/s,8,Bwd Packets/s; Flow Bytes/s; Flow Duration; Flow IAT Max; Flow IAT Mean; Flow IAT Std; Flow Packets/s; Fwd Packets/s,Bwd Packets/s; Flow Bytes/s; Flow Duration; Flow IAT Max; Flow IAT Mean; Flow IAT Std; Fwd Packets/s
+S,B20,EDA,3,Packet Length Std,7,Bwd Packet Length Max; Bwd Packet Length Mean; Packet Length Max; Packet Length Std; Packet Length Variance; Subflow Bwd Bytes; Total Length of Bwd Packet,Bwd Packet Length Max; Bwd Packet Length Mean; Packet Length Max; Packet Length Variance; Subflow Bwd Bytes; Total Length of Bwd Packet
+S,B20,EDA,4,Idle Min,6,Active Max; Active Mean; Active Min; Idle Max; Idle Mean; Idle Min,Active Max; Active Mean; Active Min; Idle Max; Idle Mean
+S,B20,EDA,5,Packet Length Min,6,Bwd Packet Length Min; FWD Init Win Bytes; Fwd Packet Length Min; Fwd Seg Size Min; Packet Length Min; Protocol,Bwd Packet Length Min; FWD Init Win Bytes; Fwd Packet Length Min; Fwd Seg Size Min; Protocol
+S,B20,EDA,6,Fwd Packet Length Max,4,Fwd Packet Length Max; Fwd Packet Length Mean; Subflow Fwd Bytes; Total Length of Fwd Packet,Fwd Packet Length Mean; Subflow Fwd Bytes; Total Length of Fwd Packet
+S,B20,EDA,7,Bwd Bytes/Bulk Avg,3,Bwd Bulk Rate Avg; Bwd Bytes/Bulk Avg; Bwd Packet/Bulk Avg,Bwd Bulk Rate Avg; Bwd Packet/Bulk Avg
+S,B20,EDA,8,Fwd Packet/Bulk Avg,3,Fwd Bulk Rate Avg; Fwd Bytes/Bulk Avg; Fwd Packet/Bulk Avg,Fwd Bulk Rate Avg; Fwd Bytes/Bulk Avg
+S,B20,EDA,9,Idle Std,2,Active Std; Idle Std,Active Std
+S,B20,EDA,10,CWR Flag Count,2,CWR Flag Count; ECE Flag Count,ECE Flag Count
+S,B20,EDA,11,SYN Flag Count,2,FIN Flag Count; SYN Flag Count,FIN Flag Count
+S,B20,EDA,12,Flow IAT Min,2,Flow IAT Min; Fwd IAT Min,Fwd IAT Min
+S,B20,EDA,13,Fwd Act Data Pkts,2,Fwd Act Data Pkts; Total Bwd packets,Total Bwd packets
+S,B20,EDA,14,URG Flag Count,2,Fwd URG Flags; URG Flag Count,Fwd URG Flags
+G,B20,EDA,0,Flow IAT Max,11,Active Mean; Active Min; Flow Duration; Flow IAT Max; Flow IAT Std; Fwd IAT Max; Fwd IAT Total; Fwd Packets/s; Idle Max; Idle Mean; Idle Min,Active Mean; Active Min; Flow Duration; Flow IAT Std; Fwd IAT Max; Fwd IAT Total; Fwd Packets/s; Idle Max; Idle Mean; Idle Min
+G,B20,EDA,1,PSH Flag Count,9,ACK Flag Count; Bwd Header Length; Bwd IAT Std; Bwd PSH Flags; Bwd Packet Length Std; Down/Up Ratio; Fwd PSH Flags; PSH Flag Count; Total Bwd packets,ACK Flag Count; Bwd Header Length; Bwd IAT Std; Bwd PSH Flags; Bwd Packet Length Std; Down/Up Ratio; Fwd PSH Flags; Total Bwd packets
+G,B20,EDA,2,Packet Length Std,9,Bwd Packet Length Max; Bwd Packet Length Mean; Bwd Packet Length Min; Packet Length Max; Packet Length Mean; Packet Length Std; Packet Length Variance; Subflow Bwd Bytes; Total Length of Bwd Packet,Bwd Packet Length Max; Bwd Packet Length Mean; Bwd Packet Length Min; Packet Length Max; Packet Length Mean; Packet Length Variance; Subflow Bwd Bytes; Total Length of Bwd Packet
+G,B20,EDA,3,Bwd IAT Max,6,Bwd IAT Max; Bwd IAT Mean; Bwd IAT Total; Fwd IAT Mean; Fwd IAT Std; Total Fwd Packet,Bwd IAT Mean; Bwd IAT Total; Fwd IAT Mean; Fwd IAT Std; Total Fwd Packet
+G,B20,EDA,4,Fwd Packet Length Max,5,Fwd Packet Length Max; Fwd Seg Size Min; Protocol; SYN Flag Count; Total Length of Fwd Packet,Fwd Seg Size Min; Protocol; SYN Flag Count; Total Length of Fwd Packet
+G,B20,EDA,5,Flow Packets/s,4,Bwd Packets/s; Flow Bytes/s; Flow IAT Mean; Flow Packets/s,Bwd Packets/s; Flow Bytes/s; Flow IAT Mean
+G,B20,EDA,6,URG Flag Count,4,FWD Init Win Bytes; Fwd Header Length; Fwd URG Flags; URG Flag Count,FWD Init Win Bytes; Fwd Header Length; Fwd URG Flags
+G,B20,EDA,7,Fwd Packet Length Mean,4,Fwd Packet Length Mean; Fwd Packet Length Min; Packet Length Min; Subflow Fwd Bytes,Fwd Packet Length Min; Packet Length Min; Subflow Fwd Bytes
+G,B20,EDA,8,Bwd Bytes/Bulk Avg,3,Bwd Bulk Rate Avg; Bwd Bytes/Bulk Avg; Bwd Packet/Bulk Avg,Bwd Bulk Rate Avg; Bwd Packet/Bulk Avg
+G,B20,EDA,9,Fwd Packet/Bulk Avg,3,Fwd Bulk Rate Avg; Fwd Bytes/Bulk Avg; Fwd Packet/Bulk Avg,Fwd Bulk Rate Avg; Fwd Bytes/Bulk Avg
+G,B20,EDA,10,Idle Std,2,Active Std; Idle Std,Active Std
+G,B20,EDA,11,CWR Flag Count,2,CWR Flag Count; ECE Flag Count,ECE Flag Count
+A_0.5,B20,EDA,0,Packet Length Std,20,ACK Flag Count; Bwd Header Length; Bwd Init Win Bytes; Bwd PSH Flags; Bwd Packet Length Std; FWD Init Win Bytes; Fwd Header Length; Fwd PSH Flags; Fwd Packet Length Max; Fwd Packet Length Std; Fwd Seg Size Min; PSH Flag Count; Packet Length Max; Packet Length Std; Packet Length Variance; Protocol; SYN Flag Count; Total Bwd packets; Total Length of Bwd Packet; Total Length of Fwd Packet,ACK Flag Count; Bwd Header Length; Bwd Init Win Bytes; Bwd PSH Flags; Bwd Packet Length Std; FWD Init Win Bytes; Fwd Header Length; Fwd PSH Flags; Fwd Packet Length Max; Fwd Packet Length Std; Fwd Seg Size Min; PSH Flag Count; Packet Length Max; Packet Length Variance; Protocol; SYN Flag Count; Total Bwd packets; Total Length of Bwd Packet; Total Length of Fwd Packet
+A_0.5,B20,EDA,1,Flow IAT Max,16,Bwd IAT Max; Bwd IAT Std; Bwd IAT Total; Bwd Packets/s; Flow Duration; Flow IAT Max; Flow IAT Mean; Flow IAT Std; Flow Packets/s; Fwd IAT Max; Fwd IAT Mean; Fwd IAT Std; Fwd IAT Total; Fwd Packets/s; Idle Max; Idle Mean,Bwd IAT Max; Bwd IAT Std; Bwd IAT Total; Bwd Packets/s; Flow Duration; Flow IAT Mean; Flow IAT Std; Flow Packets/s; Fwd IAT Max; Fwd IAT Mean; Fwd IAT Std; Fwd IAT Total; Fwd Packets/s; Idle Max; Idle Mean
+A_0.5,B20,EDA,2,Active Max,6,Active Max; Active Mean; Active Min; Active Std; Idle Min; Idle Std,Active Mean; Active Min; Active Std; Idle Min; Idle Std
+A_0.5,B20,EDA,3,Packet Length Mean,5,Bwd Packet Length Max; Bwd Packet Length Mean; Bwd Packet Length Min; Packet Length Mean; Subflow Bwd Bytes,Bwd Packet Length Max; Bwd Packet Length Mean; Bwd Packet Length Min; Subflow Bwd Bytes
+A_0.5,B20,EDA,4,Fwd Packet Length Mean,4,Fwd Packet Length Mean; Fwd Packet Length Min; Packet Length Min; Subflow Fwd Bytes,Fwd Packet Length Min; Packet Length Min; Subflow Fwd Bytes
+A_0.5,B20,EDA,5,Bwd Bytes/Bulk Avg,3,Bwd Bulk Rate Avg; Bwd Bytes/Bulk Avg; Bwd Packet/Bulk Avg,Bwd Bulk Rate Avg; Bwd Packet/Bulk Avg
+A_0.5,B20,EDA,6,Fwd Packet/Bulk Avg,3,Fwd Bulk Rate Avg; Fwd Bytes/Bulk Avg; Fwd Packet/Bulk Avg,Fwd Bulk Rate Avg; Fwd Bytes/Bulk Avg
+A_0.5,B20,EDA,7,Bwd IAT Mean,2,Bwd IAT Mean; Total Fwd Packet,Total Fwd Packet
+A_0.5,B20,EDA,8,CWR Flag Count,2,CWR Flag Count; ECE Flag Count,ECE Flag Count
+A_0.5,B20,EDA,9,URG Flag Count,2,Fwd URG Flags; URG Flag Count,Fwd URG Flags
+A_1,B20,EDA,0,Bwd IAT Max,9,Bwd Header Length; Bwd IAT Max; Bwd IAT Mean; Bwd IAT Total; Fwd IAT Max; Fwd IAT Mean; Fwd IAT Total; Total Bwd packets; Total Fwd Packet,Bwd Header Length; Bwd IAT Mean; Bwd IAT Total; Fwd IAT Max; Fwd IAT Mean; Fwd IAT Total; Total Bwd packets; Total Fwd Packet
+A_1,B20,EDA,1,Packet Length Std,9,Bwd Packet Length Max; Bwd Packet Length Mean; Bwd Packet Length Min; Packet Length Max; Packet Length Mean; Packet Length Std; Packet Length Variance; Subflow Bwd Bytes; Total Length of Bwd Packet,Bwd Packet Length Max; Bwd Packet Length Mean; Bwd Packet Length Min; Packet Length Max; Packet Length Mean; Packet Length Variance; Subflow Bwd Bytes; Total Length of Bwd Packet
+A_1,B20,EDA,2,Flow Packets/s,8,Bwd Packets/s; Flow Bytes/s; Flow Duration; Flow IAT Max; Flow IAT Mean; Flow IAT Std; Flow Packets/s; Fwd Packets/s,Bwd Packets/s; Flow Bytes/s; Flow Duration; Flow IAT Max; Flow IAT Mean; Flow IAT Std; Fwd Packets/s
+A_1,B20,EDA,3,Idle Min,6,Active Max; Active Mean; Active Min; Idle Max; Idle Mean; Idle Min,Active Max; Active Mean; Active Min; Idle Max; Idle Mean
+A_1,B20,EDA,4,Fwd PSH Flags,3,ACK Flag Count; Bwd PSH Flags; Fwd PSH Flags,ACK Flag Count; Bwd PSH Flags
+A_1,B20,EDA,5,Bwd Bytes/Bulk Avg,3,Bwd Bulk Rate Avg; Bwd Bytes/Bulk Avg; Bwd Packet/Bulk Avg,Bwd Bulk Rate Avg; Bwd Packet/Bulk Avg
+A_1,B20,EDA,6,Total Length of Fwd Packet,3,FWD Init Win Bytes; Fwd Packet Length Max; Total Length of Fwd Packet,FWD Init Win Bytes; Fwd Packet Length Max
+A_1,B20,EDA,7,Fwd Packet/Bulk Avg,3,Fwd Bulk Rate Avg; Fwd Bytes/Bulk Avg; Fwd Packet/Bulk Avg,Fwd Bulk Rate Avg; Fwd Bytes/Bulk Avg
+A_1,B20,EDA,8,Idle Std,2,Active Std; Idle Std,Active Std
+A_1,B20,EDA,9,Bwd Init Win Bytes,2,Bwd Init Win Bytes; PSH Flag Count,PSH Flag Count
+A_1,B20,EDA,10,CWR Flag Count,2,CWR Flag Count; ECE Flag Count,ECE Flag Count
+A_1,B20,EDA,11,Flow IAT Min,2,Flow IAT Min; Fwd IAT Min,Fwd IAT Min
+A_1,B20,EDA,12,Fwd Seg Size Min,2,Fwd Header Length; Fwd Seg Size Min,Fwd Header Length
+A_1,B20,EDA,13,Fwd Packet Length Mean,2,Fwd Packet Length Mean; Subflow Fwd Bytes,Subflow Fwd Bytes
+A_1,B20,EDA,14,Fwd Packet Length Min,2,Fwd Packet Length Min; Packet Length Min,Packet Length Min
+A_1,B20,EDA,15,URG Flag Count,2,Fwd URG Flags; URG Flag Count,Fwd URG Flags
+A_1,B20,EDA,16,SYN Flag Count,2,Protocol; SYN Flag Count,Protocol
+A_1.5,B20,EDA,0,Fwd Seg Size Min,7,ACK Flag Count; Bwd Header Length; FWD Init Win Bytes; Fwd Header Length; Fwd Seg Size Min; Protocol; SYN Flag Count,ACK Flag Count; Bwd Header Length; FWD Init Win Bytes; Fwd Header Length; Protocol; SYN Flag Count
+A_1.5,B20,EDA,1,Packet Length Std,7,Bwd Packet Length Max; Bwd Packet Length Mean; Packet Length Max; Packet Length Std; Packet Length Variance; Subflow Bwd Bytes; Total Length of Bwd Packet,Bwd Packet Length Max; Bwd Packet Length Mean; Packet Length Max; Packet Length Variance; Subflow Bwd Bytes; Total Length of Bwd Packet
+A_1.5,B20,EDA,2,Idle Min,6,Active Max; Active Mean; Active Min; Idle Max; Idle Mean; Idle Min,Active Max; Active Mean; Active Min; Idle Max; Idle Mean
+A_1.5,B20,EDA,3,Bwd IAT Max,6,Bwd IAT Max; Bwd IAT Mean; Bwd IAT Total; Fwd IAT Max; Fwd IAT Mean; Fwd IAT Total,Bwd IAT Mean; Bwd IAT Total; Fwd IAT Max; Fwd IAT Mean; Fwd IAT Total
+A_1.5,B20,EDA,4,Flow Packets/s,6,Bwd Packets/s; Flow Duration; Flow IAT Max; Flow IAT Mean; Flow Packets/s; Fwd Packets/s,Bwd Packets/s; Flow Duration; Flow IAT Max; Flow IAT Mean; Fwd Packets/s
+A_1.5,B20,EDA,5,PSH Flag Count,5,Bwd PSH Flags; Bwd Packet Length Std; Fwd PSH Flags; Fwd Packet Length Std; PSH Flag Count,Bwd PSH Flags; Bwd Packet Length Std; Fwd PSH Flags; Fwd Packet Length Std
+A_1.5,B20,EDA,6,Fwd Packet Length Max,5,Fwd Packet Length Max; Fwd Packet Length Mean; Fwd Packet Length Min; Packet Length Min; Total Length of Fwd Packet,Fwd Packet Length Mean; Fwd Packet Length Min; Packet Length Min; Total Length of Fwd Packet
+A_1.5,B20,EDA,7,Bwd Bytes/Bulk Avg,3,Bwd Bulk Rate Avg; Bwd Bytes/Bulk Avg; Bwd Packet/Bulk Avg,Bwd Bulk Rate Avg; Bwd Packet/Bulk Avg
+A_1.5,B20,EDA,8,Fwd Packet/Bulk Avg,3,Fwd Bulk Rate Avg; Fwd Bytes/Bulk Avg; Fwd Packet/Bulk Avg,Fwd Bulk Rate Avg; Fwd Bytes/Bulk Avg
+A_1.5,B20,EDA,9,Idle Std,2,Active Std; Idle Std,Active Std
+A_1.5,B20,EDA,10,Bwd Init Win Bytes,2,Bwd Init Win Bytes; FIN Flag Count,FIN Flag Count
+A_1.5,B20,EDA,11,CWR Flag Count,2,CWR Flag Count; ECE Flag Count,ECE Flag Count
+A_1.5,B20,EDA,12,URG Flag Count,2,Fwd URG Flags; URG Flag Count,Fwd URG Flags
+A_2,B20,EDA,0,Packet Length Std,7,Bwd Packet Length Max; Bwd Packet Length Mean; Packet Length Max; Packet Length Std; Packet Length Variance; Subflow Bwd Bytes; Total Length of Bwd Packet,Bwd Packet Length Max; Bwd Packet Length Mean; Packet Length Max; Packet Length Variance; Subflow Bwd Bytes; Total Length of Bwd Packet
+A_2,B20,EDA,1,Idle Min,6,Active Max; Active Mean; Active Min; Idle Max; Idle Mean; Idle Min,Active Max; Active Mean; Active Min; Idle Max; Idle Mean
+A_2,B20,EDA,2,Total Fwd Packet,5,ACK Flag Count; Bwd Header Length; Fwd Header Length; Total Bwd packets; Total Fwd Packet,ACK Flag Count; Bwd Header Length; Fwd Header Length; Total Bwd packets
+A_2,B20,EDA,3,Fwd Seg Size Min,4,FWD Init Win Bytes; Fwd Seg Size Min; Protocol; SYN Flag Count,FWD Init Win Bytes; Protocol; SYN Flag Count
+A_2,B20,EDA,4,Bwd Bytes/Bulk Avg,3,Bwd Bulk Rate Avg; Bwd Bytes/Bulk Avg; Bwd Packet/Bulk Avg,Bwd Bulk Rate Avg; Bwd Packet/Bulk Avg
+A_2,B20,EDA,5,Bwd IAT Max,3,Bwd IAT Max; Bwd IAT Mean; Bwd IAT Total,Bwd IAT Mean; Bwd IAT Total
+A_2,B20,EDA,6,PSH Flag Count,3,Bwd PSH Flags; Fwd PSH Flags; PSH Flag Count,Bwd PSH Flags; Fwd PSH Flags
+A_2,B20,EDA,7,Fwd Packet/Bulk Avg,3,Fwd Bulk Rate Avg; Fwd Bytes/Bulk Avg; Fwd Packet/Bulk Avg,Fwd Bulk Rate Avg; Fwd Bytes/Bulk Avg
+A_2,B20,EDA,8,Idle Std,2,Active Std; Idle Std,Active Std
+A_2,B20,EDA,9,Fwd IAT Std,2,Bwd IAT Std; Fwd IAT Std,Bwd IAT Std
+A_2,B20,EDA,10,CWR Flag Count,2,CWR Flag Count; ECE Flag Count,ECE Flag Count
+A_2,B20,EDA,11,Flow Packets/s,2,Flow Packets/s; Fwd Packets/s,Fwd Packets/s
+A_2,B20,EDA,12,Fwd IAT Mean,2,Fwd IAT Max; Fwd IAT Mean,Fwd IAT Max
+A_2,B20,EDA,13,Total Length of Fwd Packet,2,Fwd Packet Length Max; Total Length of Fwd Packet,Fwd Packet Length Max
+A_2,B20,EDA,14,Fwd Packet Length Mean,2,Fwd Packet Length Mean; Subflow Fwd Bytes,Subflow Fwd Bytes
+A_2,B20,EDA,15,Fwd Packet Length Min,2,Fwd Packet Length Min; Packet Length Min,Packet Length Min
+A_2,B20,EDA,16,URG Flag Count,2,Fwd URG Flags; URG Flag Count,Fwd URG Flags
+L,B10,EDA,0,Flow Packets/s,7,Bwd Packets/s; Flow Duration; Flow IAT Max; Flow IAT Mean; Flow IAT Std; Flow Packets/s; Fwd Packets/s,Bwd Packets/s; Flow Duration; Flow IAT Max; Flow IAT Mean; Flow IAT Std; Fwd Packets/s
+L,B10,EDA,1,Packet Length Std,6,Bwd Packet Length Max; Bwd Packet Length Mean; Packet Length Max; Packet Length Std; Packet Length Variance; Subflow Bwd Bytes,Bwd Packet Length Max; Bwd Packet Length Mean; Packet Length Max; Packet Length Variance; Subflow Bwd Bytes
+L,B10,EDA,2,Bwd IAT Max,3,Bwd IAT Max; Bwd IAT Mean; Bwd IAT Total,Bwd IAT Mean; Bwd IAT Total
+L,B10,EDA,3,Fwd IAT Mean,3,Fwd IAT Max; Fwd IAT Mean; Fwd IAT Total,Fwd IAT Max; Fwd IAT Total
+L,B10,EDA,4,Bwd Header Length,2,Bwd Header Length; Total Bwd packets,Total Bwd packets
+L,B10,EDA,5,Total Fwd Packet,2,Fwd Header Length; Total Fwd Packet,Fwd Header Length
+L,B10,EDA,6,Total Length of Fwd Packet,2,Fwd Packet Length Max; Total Length of Fwd Packet,Fwd Packet Length Max
+L,B10,EDA,7,Fwd Packet Length Mean,2,Fwd Packet Length Mean; Subflow Fwd Bytes,Subflow Fwd Bytes
+L,B10,EDA,8,Fwd Packet Length Min,2,Fwd Packet Length Min; Packet Length Min,Packet Length Min
+L_cal,B10,EDA,0,Packet Length Std,8,Bwd Packet Length Max; Bwd Packet Length Mean; Packet Length Max; Packet Length Mean; Packet Length Std; Packet Length Variance; Subflow Bwd Bytes; Total Length of Bwd Packet,Bwd Packet Length Max; Bwd Packet Length Mean; Packet Length Max; Packet Length Mean; Packet Length Variance; Subflow Bwd Bytes; Total Length of Bwd Packet
+L_cal,B10,EDA,1,Bwd IAT Max,6,Bwd IAT Max; Bwd IAT Mean; Bwd IAT Total; Fwd IAT Max; Fwd IAT Mean; Fwd IAT Total,Bwd IAT Mean; Bwd IAT Total; Fwd IAT Max; Fwd IAT Mean; Fwd IAT Total
+L_cal,B10,EDA,2,Flow Packets/s,6,Bwd Packets/s; Flow Duration; Flow IAT Max; Flow IAT Mean; Flow Packets/s; Fwd Packets/s,Bwd Packets/s; Flow Duration; Flow IAT Max; Flow IAT Mean; Fwd Packets/s
+L_cal,B10,EDA,3,Total Fwd Packet,4,Bwd Header Length; Fwd Header Length; Total Bwd packets; Total Fwd Packet,Bwd Header Length; Fwd Header Length; Total Bwd packets
+L_cal,B10,EDA,4,Fwd Packet Length Max,4,Fwd Packet Length Max; Fwd Packet Length Mean; Subflow Fwd Bytes; Total Length of Fwd Packet,Fwd Packet Length Mean; Subflow Fwd Bytes; Total Length of Fwd Packet
+L_cal,B10,EDA,5,Fwd Packet Length Min,2,Fwd Packet Length Min; Packet Length Min,Packet Length Min
+S,B10,EDA,0,Packet Length Std,8,Bwd Packet Length Max; Bwd Packet Length Mean; Packet Length Max; Packet Length Mean; Packet Length Std; Packet Length Variance; Subflow Bwd Bytes; Total Length of Bwd Packet,Bwd Packet Length Max; Bwd Packet Length Mean; Packet Length Max; Packet Length Mean; Packet Length Variance; Subflow Bwd Bytes; Total Length of Bwd Packet
+S,B10,EDA,1,Fwd IAT Mean,7,Bwd IAT Max; Bwd IAT Total; Fwd Header Length; Fwd IAT Max; Fwd IAT Mean; Fwd IAT Total; Total Fwd Packet,Bwd IAT Max; Bwd IAT Total; Fwd Header Length; Fwd IAT Max; Fwd IAT Total; Total Fwd Packet
+S,B10,EDA,2,Flow Packets/s,7,Bwd Packets/s; Flow Duration; Flow IAT Max; Flow IAT Mean; Flow IAT Std; Flow Packets/s; Fwd Packets/s,Bwd Packets/s; Flow Duration; Flow IAT Max; Flow IAT Mean; Flow IAT Std; Fwd Packets/s
+S,B10,EDA,3,Idle Min,6,Active Max; Active Mean; Active Min; Idle Max; Idle Mean; Idle Min,Active Max; Active Mean; Active Min; Idle Max; Idle Mean
+S,B10,EDA,4,Packet Length Min,6,Bwd Packet Length Min; FWD Init Win Bytes; Fwd Packet Length Min; Fwd Seg Size Min; Packet Length Min; Protocol,Bwd Packet Length Min; FWD Init Win Bytes; Fwd Packet Length Min; Fwd Seg Size Min; Protocol
+S,B10,EDA,5,PSH Flag Count,5,Bwd IAT Std; Bwd PSH Flags; Bwd Packet Length Std; Fwd PSH Flags; PSH Flag Count,Bwd IAT Std; Bwd PSH Flags; Bwd Packet Length Std; Fwd PSH Flags
+S,B10,EDA,6,Fwd Packet Length Max,4,Fwd Packet Length Max; Fwd Packet Length Mean; Subflow Fwd Bytes; Total Length of Fwd Packet,Fwd Packet Length Mean; Subflow Fwd Bytes; Total Length of Fwd Packet
+S,B10,EDA,7,Bwd Bytes/Bulk Avg,3,Bwd Bulk Rate Avg; Bwd Bytes/Bulk Avg; Bwd Packet/Bulk Avg,Bwd Bulk Rate Avg; Bwd Packet/Bulk Avg
+S,B10,EDA,8,Fwd Packet/Bulk Avg,3,Fwd Bulk Rate Avg; Fwd Bytes/Bulk Avg; Fwd Packet/Bulk Avg,Fwd Bulk Rate Avg; Fwd Bytes/Bulk Avg
+S,B10,EDA,9,Idle Std,2,Active Std; Idle Std,Active Std
+S,B10,EDA,10,Bwd Header Length,2,Bwd Header Length; Total Bwd packets,Total Bwd packets
+S,B10,EDA,11,Bwd IAT Mean,2,Bwd IAT Mean; Bwd IAT Min,Bwd IAT Min
+S,B10,EDA,12,CWR Flag Count,2,CWR Flag Count; ECE Flag Count,ECE Flag Count
+S,B10,EDA,13,URG Flag Count,2,Fwd URG Flags; URG Flag Count,Fwd URG Flags
+G,B10,EDA,0,Flow IAT Max,12,Active Max; Active Mean; Active Min; Flow Duration; Flow IAT Max; Flow IAT Mean; Flow IAT Std; Flow Packets/s; Fwd Packets/s; Idle Max; Idle Mean; Idle Min,Active Max; Active Mean; Active Min; Flow Duration; Flow IAT Mean; Flow IAT Std; Flow Packets/s; Fwd Packets/s; Idle Max; Idle Mean; Idle Min
+G,B10,EDA,1,Bwd IAT Max,7,Bwd IAT Max; Bwd IAT Mean; Bwd IAT Std; Bwd IAT Total; Fwd IAT Max; Fwd IAT Total; Total Fwd Packet,Bwd IAT Mean; Bwd IAT Std; Bwd IAT Total; Fwd IAT Max; Fwd IAT Total; Total Fwd Packet
+G,B10,EDA,2,FWD Init Win Bytes,5,Bwd Header Length; FWD Init Win Bytes; Fwd Header Length; Fwd URG Flags; URG Flag Count,Bwd Header Length; Fwd Header Length; Fwd URG Flags; URG Flag Count
+G,B10,EDA,3,Packet Length Min,5,Fwd Packet Length Min; Fwd Seg Size Min; Packet Length Min; Protocol; SYN Flag Count,Fwd Packet Length Min; Fwd Seg Size Min; Protocol; SYN Flag Count
+G,B10,EDA,4,PSH Flag Count,4,ACK Flag Count; Bwd PSH Flags; Fwd PSH Flags; PSH Flag Count,ACK Flag Count; Bwd PSH Flags; Fwd PSH Flags
+G,B10,EDA,5,Packet Length Mean,4,Bwd Packet Length Max; Bwd Packet Length Mean; Packet Length Mean; Subflow Bwd Bytes,Bwd Packet Length Max; Bwd Packet Length Mean; Subflow Bwd Bytes
+G,B10,EDA,6,Fwd Packet Length Max,4,Fwd Packet Length Max; Fwd Packet Length Mean; Subflow Fwd Bytes; Total Length of Fwd Packet,Fwd Packet Length Mean; Subflow Fwd Bytes; Total Length of Fwd Packet
+G,B10,EDA,7,Packet Length Std,4,Packet Length Max; Packet Length Std; Packet Length Variance; Total Length of Bwd Packet,Packet Length Max; Packet Length Variance; Total Length of Bwd Packet
+G,B10,EDA,8,Fwd IAT Std,3,Active Std; Fwd IAT Std; Idle Std,Active Std; Idle Std
+G,B10,EDA,9,Bwd Bytes/Bulk Avg,3,Bwd Bulk Rate Avg; Bwd Bytes/Bulk Avg; Bwd Packet/Bulk Avg,Bwd Bulk Rate Avg; Bwd Packet/Bulk Avg
+G,B10,EDA,10,Bwd Init Win Bytes,3,Bwd Init Win Bytes; Bwd URG Flags; FIN Flag Count,Bwd URG Flags; FIN Flag Count
+G,B10,EDA,11,Fwd Packet Length Std,3,Bwd Packet Length Std; Down/Up Ratio; Fwd Packet Length Std,Bwd Packet Length Std; Down/Up Ratio
+G,B10,EDA,12,Fwd Packet/Bulk Avg,3,Fwd Bulk Rate Avg; Fwd Bytes/Bulk Avg; Fwd Packet/Bulk Avg,Fwd Bulk Rate Avg; Fwd Bytes/Bulk Avg
+G,B10,EDA,13,CWR Flag Count,2,CWR Flag Count; ECE Flag Count,ECE Flag Count
+G,B10,EDA,14,Fwd Act Data Pkts,2,Fwd Act Data Pkts; Total Bwd packets,Total Bwd packets
+G,B10,EDA,15,Fwd IAT Mean,2,Fwd IAT Mean; Fwd IAT Min,Fwd IAT Min
+A_0.5,B10,EDA,0,Bwd IAT Max,21,ACK Flag Count; Bwd Header Length; Bwd IAT Max; Bwd IAT Mean; Bwd IAT Std; Bwd IAT Total; Bwd Init Win Bytes; Bwd PSH Flags; Bwd Packet Length Std; FIN Flag Count; Fwd Header Length; Fwd IAT Max; Fwd IAT Mean; Fwd IAT Std; Fwd IAT Total; Fwd PSH Flags; Fwd Packet Length Std; Fwd Seg Size Min; PSH Flag Count; Total Bwd packets; Total Fwd Packet,ACK Flag Count; Bwd Header Length; Bwd IAT Mean; Bwd IAT Std; Bwd IAT Total; Bwd Init Win Bytes; Bwd PSH Flags; Bwd Packet Length Std; FIN Flag Count; Fwd Header Length; Fwd IAT Max; Fwd IAT Mean; Fwd IAT Std; Fwd IAT Total; Fwd PSH Flags; Fwd Packet Length Std; Fwd Seg Size Min; PSH Flag Count; Total Bwd packets; Total Fwd Packet
+A_0.5,B10,EDA,1,Flow IAT Max,12,Active Max; Active Mean; Active Min; Flow Duration; Flow IAT Max; Flow IAT Mean; Flow IAT Std; Flow Packets/s; Fwd Packets/s; Idle Max; Idle Mean; Idle Min,Active Max; Active Mean; Active Min; Flow Duration; Flow IAT Mean; Flow IAT Std; Flow Packets/s; Fwd Packets/s; Idle Max; Idle Mean; Idle Min
+A_0.5,B10,EDA,2,Packet Length Std,11,Bwd Packet Length Max; Bwd Packet Length Mean; Bwd Packet Length Min; Packet Length Max; Packet Length Mean; Packet Length Std; Packet Length Variance; Protocol; SYN Flag Count; Subflow Bwd Bytes; Total Length of Bwd Packet,Bwd Packet Length Max; Bwd Packet Length Mean; Bwd Packet Length Min; Packet Length Max; Packet Length Mean; Packet Length Variance; Protocol; SYN Flag Count; Subflow Bwd Bytes; Total Length of Bwd Packet
+A_0.5,B10,EDA,3,Fwd Packet Length Max,6,Fwd Packet Length Max; Fwd Packet Length Mean; Fwd Packet Length Min; Packet Length Min; Subflow Fwd Bytes; Total Length of Fwd Packet,Fwd Packet Length Mean; Fwd Packet Length Min; Packet Length Min; Subflow Fwd Bytes; Total Length of Fwd Packet
+A_0.5,B10,EDA,4,Bwd Bytes/Bulk Avg,3,Bwd Bulk Rate Avg; Bwd Bytes/Bulk Avg; Bwd Packet/Bulk Avg,Bwd Bulk Rate Avg; Bwd Packet/Bulk Avg
+A_0.5,B10,EDA,5,Fwd Packet/Bulk Avg,3,Fwd Bulk Rate Avg; Fwd Bytes/Bulk Avg; Fwd Packet/Bulk Avg,Fwd Bulk Rate Avg; Fwd Bytes/Bulk Avg
+A_0.5,B10,EDA,6,Idle Std,2,Active Std; Idle Std,Active Std
+A_0.5,B10,EDA,7,Bwd Packets/s,2,Bwd Packets/s; Flow Bytes/s,Flow Bytes/s
+A_0.5,B10,EDA,8,CWR Flag Count,2,CWR Flag Count; ECE Flag Count,ECE Flag Count
+A_0.5,B10,EDA,9,URG Flag Count,2,Fwd URG Flags; URG Flag Count,Fwd URG Flags
+A_1,B10,EDA,0,Bwd IAT Max,11,Bwd Header Length; Bwd IAT Max; Bwd IAT Mean; Bwd IAT Std; Bwd IAT Total; Flow IAT Std; Fwd IAT Max; Fwd IAT Mean; Fwd IAT Std; Fwd IAT Total; Total Fwd Packet,Bwd Header Length; Bwd IAT Mean; Bwd IAT Std; Bwd IAT Total; Flow IAT Std; Fwd IAT Max; Fwd IAT Mean; Fwd IAT Std; Fwd IAT Total; Total Fwd Packet
+A_1,B10,EDA,1,Fwd Packet Length Max,9,ACK Flag Count; Fwd Header Length; Fwd Packet Length Max; Fwd Packet Length Min; Fwd Seg Size Min; Packet Length Min; Protocol; SYN Flag Count; Total Length of Fwd Packet,ACK Flag Count; Fwd Header Length; Fwd Packet Length Min; Fwd Seg Size Min; Packet Length Min; Protocol; SYN Flag Count; Total Length of Fwd Packet
+A_1,B10,EDA,2,Packet Length Std,9,Bwd Packet Length Max; Bwd Packet Length Mean; Bwd Packet Length Min; Packet Length Max; Packet Length Mean; Packet Length Std; Packet Length Variance; Subflow Bwd Bytes; Total Length of Bwd Packet,Bwd Packet Length Max; Bwd Packet Length Mean; Bwd Packet Length Min; Packet Length Max; Packet Length Mean; Packet Length Variance; Subflow Bwd Bytes; Total Length of Bwd Packet
+A_1,B10,EDA,3,PSH Flag Count,7,Bwd Init Win Bytes; Bwd PSH Flags; Bwd Packet Length Std; FIN Flag Count; Fwd PSH Flags; Fwd Packet Length Std; PSH Flag Count,Bwd Init Win Bytes; Bwd PSH Flags; Bwd Packet Length Std; FIN Flag Count; Fwd PSH Flags; Fwd Packet Length Std
+A_1,B10,EDA,4,Flow Packets/s,7,Bwd Packets/s; Flow Bytes/s; Flow Duration; Flow IAT Max; Flow IAT Mean; Flow Packets/s; Fwd Packets/s,Bwd Packets/s; Flow Bytes/s; Flow Duration; Flow IAT Max; Flow IAT Mean; Fwd Packets/s
+A_1,B10,EDA,5,Idle Min,6,Active Max; Active Mean; Active Min; Idle Max; Idle Mean; Idle Min,Active Max; Active Mean; Active Min; Idle Max; Idle Mean
+A_1,B10,EDA,6,Bwd Bytes/Bulk Avg,3,Bwd Bulk Rate Avg; Bwd Bytes/Bulk Avg; Bwd Packet/Bulk Avg,Bwd Bulk Rate Avg; Bwd Packet/Bulk Avg
+A_1,B10,EDA,7,Fwd Packet/Bulk Avg,3,Fwd Bulk Rate Avg; Fwd Bytes/Bulk Avg; Fwd Packet/Bulk Avg,Fwd Bulk Rate Avg; Fwd Bytes/Bulk Avg
+A_1,B10,EDA,8,Idle Std,2,Active Std; Idle Std,Active Std
+A_1,B10,EDA,9,CWR Flag Count,2,CWR Flag Count; ECE Flag Count,ECE Flag Count
+A_1,B10,EDA,10,Flow IAT Min,2,Flow IAT Min; Fwd IAT Min,Fwd IAT Min
+A_1,B10,EDA,11,Fwd Packet Length Mean,2,Fwd Packet Length Mean; Subflow Fwd Bytes,Subflow Fwd Bytes
+A_1,B10,EDA,12,URG Flag Count,2,Fwd URG Flags; URG Flag Count,Fwd URG Flags
+A_1.5,B10,EDA,0,Packet Length Std,8,Bwd Packet Length Max; Bwd Packet Length Mean; Packet Length Max; Packet Length Mean; Packet Length Std; Packet Length Variance; Subflow Bwd Bytes; Total Length of Bwd Packet,Bwd Packet Length Max; Bwd Packet Length Mean; Packet Length Max; Packet Length Mean; Packet Length Variance; Subflow Bwd Bytes; Total Length of Bwd Packet
+A_1.5,B10,EDA,1,Idle Min,6,Active Max; Active Mean; Active Min; Idle Max; Idle Mean; Idle Min,Active Max; Active Mean; Active Min; Idle Max; Idle Mean
+A_1.5,B10,EDA,2,Bwd IAT Max,6,Bwd IAT Max; Bwd IAT Mean; Bwd IAT Total; Fwd IAT Max; Fwd IAT Mean; Fwd IAT Total,Bwd IAT Mean; Bwd IAT Total; Fwd IAT Max; Fwd IAT Mean; Fwd IAT Total
+A_1.5,B10,EDA,3,Flow Packets/s,6,Bwd Packets/s; Flow Duration; Flow IAT Max; Flow IAT Mean; Flow Packets/s; Fwd Packets/s,Bwd Packets/s; Flow Duration; Flow IAT Max; Flow IAT Mean; Fwd Packets/s
+A_1.5,B10,EDA,4,Fwd Seg Size Min,5,Bwd Header Length; Fwd Header Length; Fwd Seg Size Min; Protocol; SYN Flag Count,Bwd Header Length; Fwd Header Length; Protocol; SYN Flag Count
+A_1.5,B10,EDA,5,PSH Flag Count,5,Bwd Init Win Bytes; Bwd PSH Flags; FIN Flag Count; Fwd PSH Flags; PSH Flag Count,Bwd Init Win Bytes; Bwd PSH Flags; FIN Flag Count; Fwd PSH Flags
+A_1.5,B10,EDA,6,Total Fwd Packet,3,ACK Flag Count; Total Bwd packets; Total Fwd Packet,ACK Flag Count; Total Bwd packets
+A_1.5,B10,EDA,7,Bwd Bytes/Bulk Avg,3,Bwd Bulk Rate Avg; Bwd Bytes/Bulk Avg; Bwd Packet/Bulk Avg,Bwd Bulk Rate Avg; Bwd Packet/Bulk Avg
+A_1.5,B10,EDA,8,Fwd Packet/Bulk Avg,3,Fwd Bulk Rate Avg; Fwd Bytes/Bulk Avg; Fwd Packet/Bulk Avg,Fwd Bulk Rate Avg; Fwd Bytes/Bulk Avg
+A_1.5,B10,EDA,9,Idle Std,2,Active Std; Idle Std,Active Std
+A_1.5,B10,EDA,10,CWR Flag Count,2,CWR Flag Count; ECE Flag Count,ECE Flag Count
+A_1.5,B10,EDA,11,Total Length of Fwd Packet,2,Fwd Packet Length Max; Total Length of Fwd Packet,Fwd Packet Length Max
+A_1.5,B10,EDA,12,Fwd Packet Length Mean,2,Fwd Packet Length Mean; Subflow Fwd Bytes,Subflow Fwd Bytes
+A_1.5,B10,EDA,13,Fwd Packet Length Min,2,Fwd Packet Length Min; Packet Length Min,Packet Length Min
+A_1.5,B10,EDA,14,URG Flag Count,2,Fwd URG Flags; URG Flag Count,Fwd URG Flags
+A_2,B10,EDA,0,Idle Min,6,Active Max; Active Mean; Active Min; Idle Max; Idle Mean; Idle Min,Active Max; Active Mean; Active Min; Idle Max; Idle Mean
+A_2,B10,EDA,1,Total Fwd Packet,5,ACK Flag Count; Bwd Header Length; Fwd Header Length; Total Bwd packets; Total Fwd Packet,ACK Flag Count; Bwd Header Length; Fwd Header Length; Total Bwd packets
+A_2,B10,EDA,2,Fwd Seg Size Min,4,FWD Init Win Bytes; Fwd Seg Size Min; Protocol; SYN Flag Count,FWD Init Win Bytes; Protocol; SYN Flag Count
+A_2,B10,EDA,3,Bwd Bytes/Bulk Avg,3,Bwd Bulk Rate Avg; Bwd Bytes/Bulk Avg; Bwd Packet/Bulk Avg,Bwd Bulk Rate Avg; Bwd Packet/Bulk Avg
+A_2,B10,EDA,4,Bwd IAT Max,3,Bwd IAT Max; Bwd IAT Mean; Bwd IAT Total,Bwd IAT Mean; Bwd IAT Total
+A_2,B10,EDA,5,PSH Flag Count,3,Bwd PSH Flags; Fwd PSH Flags; PSH Flag Count,Bwd PSH Flags; Fwd PSH Flags
+A_2,B10,EDA,6,Bwd Packet Length Max,3,Bwd Packet Length Max; Bwd Packet Length Mean; Packet Length Max,Bwd Packet Length Mean; Packet Length Max
+A_2,B10,EDA,7,Fwd Packet/Bulk Avg,3,Fwd Bulk Rate Avg; Fwd Bytes/Bulk Avg; Fwd Packet/Bulk Avg,Fwd Bulk Rate Avg; Fwd Bytes/Bulk Avg
+A_2,B10,EDA,8,Idle Std,2,Active Std; Idle Std,Active Std
+A_2,B10,EDA,9,Fwd IAT Std,2,Bwd IAT Std; Fwd IAT Std,Bwd IAT Std
+A_2,B10,EDA,10,CWR Flag Count,2,CWR Flag Count; ECE Flag Count,ECE Flag Count
+A_2,B10,EDA,11,Flow Packets/s,2,Flow Packets/s; Fwd Packets/s,Fwd Packets/s
+A_2,B10,EDA,12,Fwd IAT Mean,2,Fwd IAT Max; Fwd IAT Mean,Fwd IAT Max
+A_2,B10,EDA,13,Total Length of Fwd Packet,2,Fwd Packet Length Max; Total Length of Fwd Packet,Fwd Packet Length Max
+A_2,B10,EDA,14,Fwd Packet Length Mean,2,Fwd Packet Length Mean; Subflow Fwd Bytes,Subflow Fwd Bytes
+A_2,B10,EDA,15,Fwd Packet Length Min,2,Fwd Packet Length Min; Packet Length Min,Packet Length Min
+A_2,B10,EDA,16,URG Flag Count,2,Fwd URG Flags; URG Flag Count,Fwd URG Flags
+A_2,B10,EDA,17,Packet Length Mean,2,Packet Length Mean; Subflow Bwd Bytes,Subflow Bwd Bytes
+A_2,B10,EDA,18,Packet Length Std,2,Packet Length Std; Packet Length Variance,Packet Length Variance
+L,B50,EDA,0,Fwd Packet Length Max,6,Fwd Packet Length Max; Fwd Packet Length Mean; Fwd Packet Length Min; Packet Length Min; Subflow Fwd Bytes; Total Length of Fwd Packet,Fwd Packet Length Mean; Fwd Packet Length Min; Packet Length Min; Subflow Fwd Bytes; Total Length of Fwd Packet
+L,B50,EDA,1,Total Fwd Packet,5,ACK Flag Count; Bwd Header Length; Fwd Header Length; Total Bwd packets; Total Fwd Packet,ACK Flag Count; Bwd Header Length; Fwd Header Length; Total Bwd packets
+L,B50,EDA,2,Packet Length Std,5,Bwd Packet Length Max; Packet Length Max; Packet Length Std; Packet Length Variance; Total Length of Bwd Packet,Bwd Packet Length Max; Packet Length Max; Packet Length Variance; Total Length of Bwd Packet
+L,B50,EDA,3,Flow Packets/s,4,Bwd IAT Mean; Flow Packets/s; Fwd IAT Mean; Fwd Packets/s,Bwd IAT Mean; Fwd IAT Mean; Fwd Packets/s
+L,B50,EDA,4,Flow IAT Mean,3,Bwd Packets/s; Flow Bytes/s; Flow IAT Mean,Bwd Packets/s; Flow Bytes/s
+L,B50,EDA,5,Flow IAT Max,3,Flow Duration; Flow IAT Max; Flow IAT Std,Flow Duration; Flow IAT Std
+L,B50,EDA,6,Bwd IAT Max,2,Bwd IAT Max; Bwd IAT Total,Bwd IAT Total
+L,B50,EDA,7,Bwd Packet Length Mean,2,Bwd Packet Length Mean; Subflow Bwd Bytes,Subflow Bwd Bytes
+L,B50,EDA,8,Fwd IAT Total,2,Fwd IAT Max; Fwd IAT Total,Fwd IAT Max
+L_cal,B50,EDA,0,Flow Packets/s,10,Bwd Packets/s; Flow Duration; Flow IAT Max; Flow IAT Mean; Flow IAT Std; Flow Packets/s; Fwd IAT Max; Fwd IAT Mean; Fwd IAT Total; Fwd Packets/s,Bwd Packets/s; Flow Duration; Flow IAT Max; Flow IAT Mean; Flow IAT Std; Fwd IAT Max; Fwd IAT Mean; Fwd IAT Total; Fwd Packets/s
+L_cal,B50,EDA,1,Packet Length Std,8,Bwd Packet Length Max; Bwd Packet Length Mean; Packet Length Max; Packet Length Mean; Packet Length Std; Packet Length Variance; Subflow Bwd Bytes; Total Length of Bwd Packet,Bwd Packet Length Max; Bwd Packet Length Mean; Packet Length Max; Packet Length Mean; Packet Length Variance; Subflow Bwd Bytes; Total Length of Bwd Packet
+L_cal,B50,EDA,2,Fwd Packet Length Max,6,Fwd Packet Length Max; Fwd Packet Length Mean; Fwd Packet Length Min; Packet Length Min; Subflow Fwd Bytes; Total Length of Fwd Packet,Fwd Packet Length Mean; Fwd Packet Length Min; Packet Length Min; Subflow Fwd Bytes; Total Length of Fwd Packet
+L_cal,B50,EDA,3,Total Fwd Packet,5,ACK Flag Count; Bwd Header Length; Fwd Header Length; Total Bwd packets; Total Fwd Packet,ACK Flag Count; Bwd Header Length; Fwd Header Length; Total Bwd packets
+L_cal,B50,EDA,4,Bwd IAT Max,4,Bwd IAT Max; Bwd IAT Mean; Bwd IAT Min; Bwd IAT Total,Bwd IAT Mean; Bwd IAT Min; Bwd IAT Total
+L_cal,B50,EDA,5,Fwd IAT Std,2,Bwd IAT Std; Fwd IAT Std,Bwd IAT Std
+S,B50,EDA,0,Packet Length Std,10,Bwd Packet Length Max; Bwd Packet Length Mean; Fwd Packet Length Max; Packet Length Max; Packet Length Mean; Packet Length Std; Packet Length Variance; Subflow Bwd Bytes; Total Length of Bwd Packet; Total Length of Fwd Packet,Bwd Packet Length Max; Bwd Packet Length Mean; Fwd Packet Length Max; Packet Length Max; Packet Length Mean; Packet Length Variance; Subflow Bwd Bytes; Total Length of Bwd Packet; Total Length of Fwd Packet
+S,B50,EDA,1,Flow Packets/s,10,Bwd Packets/s; Flow Duration; Flow IAT Max; Flow IAT Mean; Flow IAT Std; Flow Packets/s; Fwd IAT Max; Fwd IAT Mean; Fwd IAT Total; Fwd Packets/s,Bwd Packets/s; Flow Duration; Flow IAT Max; Flow IAT Mean; Flow IAT Std; Fwd IAT Max; Fwd IAT Mean; Fwd IAT Total; Fwd Packets/s
+S,B50,EDA,2,PSH Flag Count,7,ACK Flag Count; Bwd Init Win Bytes; Bwd PSH Flags; Bwd Packet Length Std; Fwd PSH Flags; Fwd Packet Length Std; PSH Flag Count,ACK Flag Count; Bwd Init Win Bytes; Bwd PSH Flags; Bwd Packet Length Std; Fwd PSH Flags; Fwd Packet Length Std
+S,B50,EDA,3,Idle Min,6,Active Max; Active Mean; Active Min; Idle Max; Idle Mean; Idle Min,Active Max; Active Mean; Active Min; Idle Max; Idle Mean
+S,B50,EDA,4,Packet Length Min,6,Bwd Packet Length Min; FWD Init Win Bytes; Fwd Packet Length Min; Fwd Seg Size Min; Packet Length Min; Protocol,Bwd Packet Length Min; FWD Init Win Bytes; Fwd Packet Length Min; Fwd Seg Size Min; Protocol
+S,B50,EDA,5,Bwd IAT Max,4,Bwd IAT Max; Bwd IAT Mean; Bwd IAT Total; Fwd IAT Std,Bwd IAT Mean; Bwd IAT Total; Fwd IAT Std
+S,B50,EDA,6,Bwd Bytes/Bulk Avg,3,Bwd Bulk Rate Avg; Bwd Bytes/Bulk Avg; Bwd Packet/Bulk Avg,Bwd Bulk Rate Avg; Bwd Packet/Bulk Avg
+S,B50,EDA,7,Total Fwd Packet,3,Bwd Header Length; Total Bwd packets; Total Fwd Packet,Bwd Header Length; Total Bwd packets
+S,B50,EDA,8,Fwd Packet/Bulk Avg,3,Fwd Bulk Rate Avg; Fwd Bytes/Bulk Avg; Fwd Packet/Bulk Avg,Fwd Bulk Rate Avg; Fwd Bytes/Bulk Avg
+S,B50,EDA,9,Idle Std,2,Active Std; Idle Std,Active Std
+S,B50,EDA,10,CWR Flag Count,2,CWR Flag Count; ECE Flag Count,ECE Flag Count
+S,B50,EDA,11,Fwd Packet Length Mean,2,Fwd Packet Length Mean; Subflow Fwd Bytes,Subflow Fwd Bytes
+S,B50,EDA,12,URG Flag Count,2,Fwd URG Flags; URG Flag Count,Fwd URG Flags
+G,B50,EDA,0,Packet Length Std,16,ACK Flag Count; Bwd Header Length; Bwd Init Win Bytes; Bwd PSH Flags; Bwd Packet Length Max; Bwd Packet Length Std; Fwd Header Length; Fwd PSH Flags; Fwd Packet Length Max; Fwd Packet Length Std; PSH Flag Count; Packet Length Max; Packet Length Std; Packet Length Variance; Total Length of Bwd Packet; Total Length of Fwd Packet,ACK Flag Count; Bwd Header Length; Bwd Init Win Bytes; Bwd PSH Flags; Bwd Packet Length Max; Bwd Packet Length Std; Fwd Header Length; Fwd PSH Flags; Fwd Packet Length Max; Fwd Packet Length Std; PSH Flag Count; Packet Length Max; Packet Length Variance; Total Length of Bwd Packet; Total Length of Fwd Packet
+G,B50,EDA,1,Flow IAT Max,11,Bwd IAT Max; Flow Duration; Flow IAT Max; Flow IAT Std; Fwd IAT Max; Fwd IAT Mean; Fwd IAT Total; Fwd Packets/s; Idle Max; Idle Mean; Idle Min,Bwd IAT Max; Flow Duration; Flow IAT Std; Fwd IAT Max; Fwd IAT Mean; Fwd IAT Total; Fwd Packets/s; Idle Max; Idle Mean; Idle Min
+G,B50,EDA,2,Packet Length Mean,4,Bwd Packet Length Mean; Bwd Packet Length Min; Packet Length Mean; Subflow Bwd Bytes,Bwd Packet Length Mean; Bwd Packet Length Min; Subflow Bwd Bytes
+G,B50,EDA,3,Idle Std,3,Active Std; Bwd IAT Total; Idle Std,Active Std; Bwd IAT Total
+G,B50,EDA,4,Bwd Bytes/Bulk Avg,3,Bwd Bulk Rate Avg; Bwd Bytes/Bulk Avg; Bwd Packet/Bulk Avg,Bwd Bulk Rate Avg; Bwd Packet/Bulk Avg
+G,B50,EDA,5,Bwd IAT Mean,3,Bwd IAT Mean; Bwd IAT Std; Fwd IAT Std,Bwd IAT Std; Fwd IAT Std
+G,B50,EDA,6,Fwd Seg Size Min,3,Down/Up Ratio; FIN Flag Count; Fwd Seg Size Min,Down/Up Ratio; FIN Flag Count
+G,B50,EDA,7,Fwd Packet/Bulk Avg,3,Fwd Bulk Rate Avg; Fwd Bytes/Bulk Avg; Fwd Packet/Bulk Avg,Fwd Bulk Rate Avg; Fwd Bytes/Bulk Avg
+G,B50,EDA,8,Fwd Packet Length Mean,3,Fwd Packet Length Mean; Fwd Packet Length Min; Subflow Fwd Bytes,Fwd Packet Length Min; Subflow Fwd Bytes
+G,B50,EDA,9,Packet Length Min,3,Packet Length Min; Protocol; SYN Flag Count,Protocol; SYN Flag Count
+G,B50,EDA,10,Active Mean,2,Active Max; Active Mean,Active Max
+G,B50,EDA,11,Bwd Packets/s,2,Bwd Packets/s; Flow Packets/s,Flow Packets/s
+G,B50,EDA,12,CWR Flag Count,2,CWR Flag Count; ECE Flag Count,ECE Flag Count
+G,B50,EDA,13,Flow IAT Min,2,Flow IAT Min; Fwd IAT Min,Fwd IAT Min
+G,B50,EDA,14,Total Fwd Packet,2,Total Bwd packets; Total Fwd Packet,Total Bwd packets
+A_0.5,B50,EDA,0,Bwd IAT Max,16,ACK Flag Count; Bwd Header Length; Bwd IAT Max; Bwd IAT Mean; Bwd IAT Std; Bwd IAT Total; Bwd Init Win Bytes; Fwd Header Length; Fwd IAT Std; Fwd PSH Flags; Fwd Packet Length Std; Fwd Seg Size Min; PSH Flag Count; SYN Flag Count; Total Bwd packets; Total Fwd Packet,ACK Flag Count; Bwd Header Length; Bwd IAT Mean; Bwd IAT Std; Bwd IAT Total; Bwd Init Win Bytes; Fwd Header Length; Fwd IAT Std; Fwd PSH Flags; Fwd Packet Length Std; Fwd Seg Size Min; PSH Flag Count; SYN Flag Count; Total Bwd packets; Total Fwd Packet
+A_0.5,B50,EDA,1,Flow Packets/s,10,Bwd Packets/s; Flow Duration; Flow IAT Max; Flow IAT Mean; Flow IAT Std; Flow Packets/s; Fwd IAT Max; Fwd IAT Mean; Fwd IAT Total; Fwd Packets/s,Bwd Packets/s; Flow Duration; Flow IAT Max; Flow IAT Mean; Flow IAT Std; Fwd IAT Max; Fwd IAT Mean; Fwd IAT Total; Fwd Packets/s
+A_0.5,B50,EDA,2,Packet Length Std,8,Bwd Packet Length Max; Fwd Packet Length Max; Packet Length Max; Packet Length Mean; Packet Length Std; Packet Length Variance; Total Length of Bwd Packet; Total Length of Fwd Packet,Bwd Packet Length Max; Fwd Packet Length Max; Packet Length Max; Packet Length Mean; Packet Length Variance; Total Length of Bwd Packet; Total Length of Fwd Packet
+A_0.5,B50,EDA,3,Idle Min,6,Active Max; Active Min; Active Std; Idle Max; Idle Mean; Idle Min,Active Max; Active Min; Active Std; Idle Max; Idle Mean
+A_0.5,B50,EDA,4,Down/Up Ratio,4,Bwd PSH Flags; Bwd Packet Length Std; Down/Up Ratio; FIN Flag Count,Bwd PSH Flags; Bwd Packet Length Std; FIN Flag Count
+A_0.5,B50,EDA,5,Fwd Packet Length Mean,4,Fwd Packet Length Mean; Fwd Packet Length Min; Packet Length Min; Subflow Fwd Bytes,Fwd Packet Length Min; Packet Length Min; Subflow Fwd Bytes
+A_0.5,B50,EDA,6,Bwd Bytes/Bulk Avg,3,Bwd Bulk Rate Avg; Bwd Bytes/Bulk Avg; Bwd Packet/Bulk Avg,Bwd Bulk Rate Avg; Bwd Packet/Bulk Avg
+A_0.5,B50,EDA,7,Bwd Packet Length Min,3,Bwd Packet Length Mean; Bwd Packet Length Min; Subflow Bwd Bytes,Bwd Packet Length Mean; Subflow Bwd Bytes
+A_0.5,B50,EDA,8,Fwd Packet/Bulk Avg,3,Fwd Bulk Rate Avg; Fwd Bytes/Bulk Avg; Fwd Packet/Bulk Avg,Fwd Bulk Rate Avg; Fwd Bytes/Bulk Avg
+A_0.5,B50,EDA,9,CWR Flag Count,2,CWR Flag Count; ECE Flag Count,ECE Flag Count
+A_0.5,B50,EDA,10,FWD Init Win Bytes,2,FWD Init Win Bytes; Protocol,Protocol
+A_0.5,B50,EDA,11,URG Flag Count,2,Fwd URG Flags; URG Flag Count,Fwd URG Flags
+A_1,B50,EDA,0,Bwd IAT Max,10,Bwd Header Length; Bwd IAT Max; Bwd IAT Mean; Bwd IAT Total; Fwd Header Length; Fwd IAT Max; Fwd IAT Mean; Fwd IAT Total; Total Bwd packets; Total Fwd Packet,Bwd Header Length; Bwd IAT Mean; Bwd IAT Total; Fwd Header Length; Fwd IAT Max; Fwd IAT Mean; Fwd IAT Total; Total Bwd packets; Total Fwd Packet
+A_1,B50,EDA,1,Packet Length Std,9,Bwd Packet Length Max; Bwd Packet Length Mean; Bwd Packet Length Min; Packet Length Max; Packet Length Mean; Packet Length Std; Packet Length Variance; Subflow Bwd Bytes; Total Length of Bwd Packet,Bwd Packet Length Max; Bwd Packet Length Mean; Bwd Packet Length Min; Packet Length Max; Packet Length Mean; Packet Length Variance; Subflow Bwd Bytes; Total Length of Bwd Packet
+A_1,B50,EDA,2,Flow Packets/s,8,Bwd Packets/s; Flow Bytes/s; Flow Duration; Flow IAT Max; Flow IAT Mean; Flow IAT Std; Flow Packets/s; Fwd Packets/s,Bwd Packets/s; Flow Bytes/s; Flow Duration; Flow IAT Max; Flow IAT Mean; Flow IAT Std; Fwd Packets/s
+A_1,B50,EDA,3,Fwd Packet Length Max,8,FWD Init Win Bytes; Fwd Packet Length Max; Fwd Packet Length Min; Fwd Seg Size Min; Packet Length Min; Protocol; SYN Flag Count; Total Length of Fwd Packet,FWD Init Win Bytes; Fwd Packet Length Min; Fwd Seg Size Min; Packet Length Min; Protocol; SYN Flag Count; Total Length of Fwd Packet
+A_1,B50,EDA,4,PSH Flag Count,7,ACK Flag Count; Bwd IAT Std; Bwd Init Win Bytes; Bwd PSH Flags; Bwd Packet Length Std; Fwd PSH Flags; PSH Flag Count,ACK Flag Count; Bwd IAT Std; Bwd Init Win Bytes; Bwd PSH Flags; Bwd Packet Length Std; Fwd PSH Flags
+A_1,B50,EDA,5,Idle Min,6,Active Max; Active Mean; Active Min; Idle Max; Idle Mean; Idle Min,Active Max; Active Mean; Active Min; Idle Max; Idle Mean
+A_1,B50,EDA,6,Bwd Bytes/Bulk Avg,3,Bwd Bulk Rate Avg; Bwd Bytes/Bulk Avg; Bwd Packet/Bulk Avg,Bwd Bulk Rate Avg; Bwd Packet/Bulk Avg
+A_1,B50,EDA,7,Fwd Packet/Bulk Avg,3,Fwd Bulk Rate Avg; Fwd Bytes/Bulk Avg; Fwd Packet/Bulk Avg,Fwd Bulk Rate Avg; Fwd Bytes/Bulk Avg
+A_1,B50,EDA,8,Idle Std,2,Active Std; Idle Std,Active Std
+A_1,B50,EDA,9,CWR Flag Count,2,CWR Flag Count; ECE Flag Count,ECE Flag Count
+A_1,B50,EDA,10,Flow IAT Min,2,Flow IAT Min; Fwd IAT Min,Fwd IAT Min
+A_1,B50,EDA,11,Fwd Packet Length Mean,2,Fwd Packet Length Mean; Subflow Fwd Bytes,Subflow Fwd Bytes
+A_1,B50,EDA,12,URG Flag Count,2,Fwd URG Flags; URG Flag Count,Fwd URG Flags
+A_1.5,B50,EDA,0,Packet Length Std,8,Bwd Packet Length Max; Bwd Packet Length Mean; Packet Length Max; Packet Length Mean; Packet Length Std; Packet Length Variance; Subflow Bwd Bytes; Total Length of Bwd Packet,Bwd Packet Length Max; Bwd Packet Length Mean; Packet Length Max; Packet Length Mean; Packet Length Variance; Subflow Bwd Bytes; Total Length of Bwd Packet
+A_1.5,B50,EDA,1,Fwd Seg Size Min,7,ACK Flag Count; Bwd Header Length; FWD Init Win Bytes; Fwd Header Length; Fwd Seg Size Min; Protocol; SYN Flag Count,ACK Flag Count; Bwd Header Length; FWD Init Win Bytes; Fwd Header Length; Protocol; SYN Flag Count
+A_1.5,B50,EDA,2,Flow Packets/s,7,Bwd Packets/s; Flow Duration; Flow IAT Max; Flow IAT Mean; Flow IAT Std; Flow Packets/s; Fwd Packets/s,Bwd Packets/s; Flow Duration; Flow IAT Max; Flow IAT Mean; Flow IAT Std; Fwd Packets/s
+A_1.5,B50,EDA,3,Idle Min,6,Active Max; Active Mean; Active Min; Idle Max; Idle Mean; Idle Min,Active Max; Active Mean; Active Min; Idle Max; Idle Mean
+A_1.5,B50,EDA,4,Fwd Packet Length Max,6,Fwd Packet Length Max; Fwd Packet Length Mean; Fwd Packet Length Min; Packet Length Min; Subflow Fwd Bytes; Total Length of Fwd Packet,Fwd Packet Length Mean; Fwd Packet Length Min; Packet Length Min; Subflow Fwd Bytes; Total Length of Fwd Packet
+A_1.5,B50,EDA,5,Total Fwd Packet,5,Bwd PSH Flags; Fwd PSH Flags; PSH Flag Count; Total Bwd packets; Total Fwd Packet,Bwd PSH Flags; Fwd PSH Flags; PSH Flag Count; Total Bwd packets
+A_1.5,B50,EDA,6,Bwd IAT Max,4,Bwd IAT Max; Bwd IAT Mean; Fwd IAT Max; Fwd IAT Total,Bwd IAT Mean; Fwd IAT Max; Fwd IAT Total
+A_1.5,B50,EDA,7,Bwd Bytes/Bulk Avg,3,Bwd Bulk Rate Avg; Bwd Bytes/Bulk Avg; Bwd Packet/Bulk Avg,Bwd Bulk Rate Avg; Bwd Packet/Bulk Avg
+A_1.5,B50,EDA,8,Fwd Packet/Bulk Avg,3,Fwd Bulk Rate Avg; Fwd Bytes/Bulk Avg; Fwd Packet/Bulk Avg,Fwd Bulk Rate Avg; Fwd Bytes/Bulk Avg
+A_1.5,B50,EDA,9,Idle Std,2,Active Std; Idle Std,Active Std
+A_1.5,B50,EDA,10,Bwd IAT Total,2,Bwd IAT Min; Bwd IAT Total,Bwd IAT Min
+A_1.5,B50,EDA,11,Fwd IAT Std,2,Bwd IAT Std; Fwd IAT Std,Bwd IAT Std
+A_1.5,B50,EDA,12,Bwd Init Win Bytes,2,Bwd Init Win Bytes; FIN Flag Count,FIN Flag Count
+A_1.5,B50,EDA,13,Fwd Packet Length Std,2,Bwd Packet Length Std; Fwd Packet Length Std,Bwd Packet Length Std
+A_1.5,B50,EDA,14,CWR Flag Count,2,CWR Flag Count; ECE Flag Count,ECE Flag Count
+A_1.5,B50,EDA,15,Fwd IAT Mean,2,Fwd IAT Mean; Fwd IAT Min,Fwd IAT Min
+A_1.5,B50,EDA,16,URG Flag Count,2,Fwd URG Flags; URG Flag Count,Fwd URG Flags
+A_2,B50,EDA,0,Bwd Packet Length Min,6,Bwd Packet Length Max; Bwd Packet Length Mean; Bwd Packet Length Min; Packet Length Max; Subflow Bwd Bytes; Total Length of Bwd Packet,Bwd Packet Length Max; Bwd Packet Length Mean; Packet Length Max; Subflow Bwd Bytes; Total Length of Bwd Packet
+A_2,B50,EDA,1,Fwd Packet Length Max,6,Fwd Packet Length Max; Fwd Packet Length Mean; Fwd Packet Length Min; Packet Length Min; Subflow Fwd Bytes; Total Length of Fwd Packet,Fwd Packet Length Mean; Fwd Packet Length Min; Packet Length Min; Subflow Fwd Bytes; Total Length of Fwd Packet
+A_2,B50,EDA,2,Total Fwd Packet,5,ACK Flag Count; Bwd Header Length; Fwd Header Length; Total Bwd packets; Total Fwd Packet,ACK Flag Count; Bwd Header Length; Fwd Header Length; Total Bwd packets
+A_2,B50,EDA,3,Flow Packets/s,5,Bwd Packets/s; Flow IAT Max; Flow IAT Mean; Flow Packets/s; Fwd Packets/s,Bwd Packets/s; Flow IAT Max; Flow IAT Mean; Fwd Packets/s
+A_2,B50,EDA,4,Fwd Seg Size Min,4,FWD Init Win Bytes; Fwd Seg Size Min; Protocol; SYN Flag Count,FWD Init Win Bytes; Protocol; SYN Flag Count
+A_2,B50,EDA,5,Active Mean,3,Active Max; Active Mean; Active Min,Active Max; Active Min
+A_2,B50,EDA,6,Bwd Bytes/Bulk Avg,3,Bwd Bulk Rate Avg; Bwd Bytes/Bulk Avg; Bwd Packet/Bulk Avg,Bwd Bulk Rate Avg; Bwd Packet/Bulk Avg
+A_2,B50,EDA,7,PSH Flag Count,3,Bwd PSH Flags; Fwd PSH Flags; PSH Flag Count,Bwd PSH Flags; Fwd PSH Flags
+A_2,B50,EDA,8,Fwd Packet/Bulk Avg,3,Fwd Bulk Rate Avg; Fwd Bytes/Bulk Avg; Fwd Packet/Bulk Avg,Fwd Bulk Rate Avg; Fwd Bytes/Bulk Avg
+A_2,B50,EDA,9,Idle Min,3,Idle Max; Idle Mean; Idle Min,Idle Max; Idle Mean
+A_2,B50,EDA,10,Idle Std,2,Active Std; Idle Std,Active Std
+A_2,B50,EDA,11,Bwd IAT Max,2,Bwd IAT Max; Bwd IAT Mean,Bwd IAT Mean
+A_2,B50,EDA,12,CWR Flag Count,2,CWR Flag Count; ECE Flag Count,ECE Flag Count
+A_2,B50,EDA,13,Fwd IAT Mean,2,Fwd IAT Max; Fwd IAT Mean,Fwd IAT Max
+A_2,B50,EDA,14,URG Flag Count,2,Fwd URG Flags; URG Flag Count,Fwd URG Flags
+A_2,B50,EDA,15,Packet Length Std,2,Packet Length Std; Packet Length Variance,Packet Length Variance
+L,qcut20,EDA,0,Packet Length Std,8,Bwd Packet Length Max; Bwd Packet Length Mean; Packet Length Max; Packet Length Mean; Packet Length Std; Packet Length Variance; Subflow Bwd Bytes; Total Length of Bwd Packet,Bwd Packet Length Max; Bwd Packet Length Mean; Packet Length Max; Packet Length Mean; Packet Length Variance; Subflow Bwd Bytes; Total Length of Bwd Packet
+L,qcut20,EDA,1,Flow Packets/s,7,Bwd Packets/s; Flow Duration; Flow IAT Max; Flow IAT Mean; Flow IAT Std; Flow Packets/s; Fwd Packets/s,Bwd Packets/s; Flow Duration; Flow IAT Max; Flow IAT Mean; Flow IAT Std; Fwd Packets/s
+L,qcut20,EDA,2,Total Fwd Packet,4,Bwd Header Length; Fwd Header Length; Total Bwd packets; Total Fwd Packet,Bwd Header Length; Fwd Header Length; Total Bwd packets
+L,qcut20,EDA,3,Fwd Packet Length Max,4,Fwd Packet Length Max; Fwd Packet Length Mean; Subflow Fwd Bytes; Total Length of Fwd Packet,Fwd Packet Length Mean; Subflow Fwd Bytes; Total Length of Fwd Packet
+L,qcut20,EDA,4,Bwd IAT Max,3,Bwd IAT Max; Bwd IAT Mean; Bwd IAT Total,Bwd IAT Mean; Bwd IAT Total
+L,qcut20,EDA,5,Fwd IAT Mean,3,Fwd IAT Max; Fwd IAT Mean; Fwd IAT Total,Fwd IAT Max; Fwd IAT Total
+L,qcut20,EDA,6,Fwd Packet Length Min,2,Fwd Packet Length Min; Packet Length Min,Packet Length Min
+L_cal,qcut20,EDA,0,Packet Length Std,8,Bwd Packet Length Max; Bwd Packet Length Mean; Packet Length Max; Packet Length Mean; Packet Length Std; Packet Length Variance; Subflow Bwd Bytes; Total Length of Bwd Packet,Bwd Packet Length Max; Bwd Packet Length Mean; Packet Length Max; Packet Length Mean; Packet Length Variance; Subflow Bwd Bytes; Total Length of Bwd Packet
+L_cal,qcut20,EDA,1,Flow Packets/s,6,Bwd Packets/s; Flow Duration; Flow IAT Max; Flow IAT Mean; Flow Packets/s; Fwd Packets/s,Bwd Packets/s; Flow Duration; Flow IAT Max; Flow IAT Mean; Fwd Packets/s
+L_cal,qcut20,EDA,2,Total Fwd Packet,4,Bwd Header Length; Fwd Header Length; Total Bwd packets; Total Fwd Packet,Bwd Header Length; Fwd Header Length; Total Bwd packets
+L_cal,qcut20,EDA,3,Fwd Packet Length Max,4,Fwd Packet Length Max; Fwd Packet Length Mean; Subflow Fwd Bytes; Total Length of Fwd Packet,Fwd Packet Length Mean; Subflow Fwd Bytes; Total Length of Fwd Packet
+L_cal,qcut20,EDA,4,Flow IAT Std,3,Bwd IAT Max; Flow IAT Std; Fwd IAT Total,Bwd IAT Max; Fwd IAT Total
+L_cal,qcut20,EDA,5,Fwd Packet Length Min,2,Fwd Packet Length Min; Packet Length Min,Packet Length Min
+S,qcut20,EDA,0,Bwd IAT Max,8,Bwd IAT Max; Bwd IAT Mean; Bwd IAT Total; Fwd Header Length; Fwd IAT Max; Fwd IAT Mean; Fwd IAT Total; Total Fwd Packet,Bwd IAT Mean; Bwd IAT Total; Fwd Header Length; Fwd IAT Max; Fwd IAT Mean; Fwd IAT Total; Total Fwd Packet
+S,qcut20,EDA,1,Packet Length Std,8,Bwd Packet Length Max; Bwd Packet Length Mean; Packet Length Max; Packet Length Mean; Packet Length Std; Packet Length Variance; Subflow Bwd Bytes; Total Length of Bwd Packet,Bwd Packet Length Max; Bwd Packet Length Mean; Packet Length Max; Packet Length Mean; Packet Length Variance; Subflow Bwd Bytes; Total Length of Bwd Packet
+S,qcut20,EDA,2,Flow Packets/s,8,Bwd Packets/s; Flow Bytes/s; Flow Duration; Flow IAT Max; Flow IAT Mean; Flow IAT Std; Flow Packets/s; Fwd Packets/s,Bwd Packets/s; Flow Bytes/s; Flow Duration; Flow IAT Max; Flow IAT Mean; Flow IAT Std; Fwd Packets/s
+S,qcut20,EDA,3,Idle Min,6,Active Max; Active Mean; Active Min; Idle Max; Idle Mean; Idle Min,Active Max; Active Mean; Active Min; Idle Max; Idle Mean
+S,qcut20,EDA,4,Fwd Packet Length Max,5,Fwd Packet Length Max; Fwd Packet Length Mean; Fwd Packet Length Min; Packet Length Min; Total Length of Fwd Packet,Fwd Packet Length Mean; Fwd Packet Length Min; Packet Length Min; Total Length of Fwd Packet
+S,qcut20,EDA,5,PSH Flag Count,4,Bwd PSH Flags; Fwd Act Data Pkts; Fwd PSH Flags; PSH Flag Count,Bwd PSH Flags; Fwd Act Data Pkts; Fwd PSH Flags
+S,qcut20,EDA,6,Fwd Seg Size Min,4,FWD Init Win Bytes; Fwd Seg Size Min; Protocol; SYN Flag Count,FWD Init Win Bytes; Protocol; SYN Flag Count
+S,qcut20,EDA,7,Idle Std,2,Active Std; Idle Std,Active Std
+S,qcut20,EDA,8,Fwd IAT Std,2,Bwd IAT Std; Fwd IAT Std,Bwd IAT Std
+S,qcut20,EDA,9,CWR Flag Count,2,CWR Flag Count; ECE Flag Count,ECE Flag Count
+S,qcut20,EDA,10,URG Flag Count,2,Fwd URG Flags; URG Flag Count,Fwd URG Flags
+G,qcut20,EDA,0,Packet Length Std,8,Bwd Packet Length Max; Bwd Packet Length Mean; Packet Length Max; Packet Length Mean; Packet Length Std; Packet Length Variance; Subflow Bwd Bytes; Total Length of Bwd Packet,Bwd Packet Length Max; Bwd Packet Length Mean; Packet Length Max; Packet Length Mean; Packet Length Variance; Subflow Bwd Bytes; Total Length of Bwd Packet
+G,qcut20,EDA,1,Total Fwd Packet,7,ACK Flag Count; Bwd Header Length; Bwd IAT Max; Bwd IAT Total; Fwd Header Length; Total Bwd packets; Total Fwd Packet,ACK Flag Count; Bwd Header Length; Bwd IAT Max; Bwd IAT Total; Fwd Header Length; Total Bwd packets
+G,qcut20,EDA,2,Flow IAT Max,6,Flow Duration; Flow IAT Max; Flow IAT Std; Fwd IAT Mean; Fwd IAT Std; Idle Max,Flow Duration; Flow IAT Std; Fwd IAT Mean; Fwd IAT Std; Idle Max
+G,qcut20,EDA,3,Fwd Packet Length Max,6,Fwd Packet Length Max; Fwd Packet Length Mean; Fwd Packet Length Min; Packet Length Min; Subflow Fwd Bytes; Total Length of Fwd Packet,Fwd Packet Length Mean; Fwd Packet Length Min; Packet Length Min; Subflow Fwd Bytes; Total Length of Fwd Packet
+G,qcut20,EDA,4,Flow Packets/s,4,Bwd Packets/s; Flow IAT Mean; Flow Packets/s; Fwd Packets/s,Bwd Packets/s; Flow IAT Mean; Fwd Packets/s
+G,qcut20,EDA,5,Fwd Seg Size Min,4,FWD Init Win Bytes; Fwd Seg Size Min; Protocol; SYN Flag Count,FWD Init Win Bytes; Protocol; SYN Flag Count
+G,qcut20,EDA,6,Idle Min,4,Fwd IAT Max; Fwd IAT Total; Idle Mean; Idle Min,Fwd IAT Max; Fwd IAT Total; Idle Mean
+G,qcut20,EDA,7,Active Mean,3,Active Max; Active Mean; Active Min,Active Max; Active Min
+G,qcut20,EDA,8,Idle Std,2,Active Std; Idle Std,Active Std
+G,qcut20,EDA,9,Bwd Bulk Rate Avg,2,Bwd Bulk Rate Avg; Bwd Bytes/Bulk Avg,Bwd Bytes/Bulk Avg
+G,qcut20,EDA,10,Down/Up Ratio,2,Bwd Packet Length Std; Down/Up Ratio,Bwd Packet Length Std
+G,qcut20,EDA,11,CWR Flag Count,2,CWR Flag Count; ECE Flag Count,ECE Flag Count
+G,qcut20,EDA,12,PSH Flag Count,2,Fwd PSH Flags; PSH Flag Count,Fwd PSH Flags
+G,qcut20,EDA,13,URG Flag Count,2,Fwd URG Flags; URG Flag Count,Fwd URG Flags
+A_0.5,qcut20,EDA,0,Packet Length Std,15,ACK Flag Count; Bwd Packet Length Max; Bwd Packet Length Std; FWD Init Win Bytes; Fwd Packet Length Max; Fwd Seg Size Min; Packet Length Max; Packet Length Std; Packet Length Variance; Protocol; SYN Flag Count; Total Bwd packets; Total Fwd Packet; Total Length of Bwd Packet; Total Length of Fwd Packet,ACK Flag Count; Bwd Packet Length Max; Bwd Packet Length Std; FWD Init Win Bytes; Fwd Packet Length Max; Fwd Seg Size Min; Packet Length Max; Packet Length Variance; Protocol; SYN Flag Count; Total Bwd packets; Total Fwd Packet; Total Length of Bwd Packet; Total Length of Fwd Packet
+A_0.5,qcut20,EDA,1,Flow Packets/s,15,Bwd IAT Max; Bwd IAT Mean; Bwd IAT Std; Bwd IAT Total; Bwd Packets/s; Flow Duration; Flow IAT Max; Flow IAT Mean; Flow IAT Std; Flow Packets/s; Fwd IAT Max; Fwd IAT Mean; Fwd IAT Std; Fwd IAT Total; Fwd Packets/s,Bwd IAT Max; Bwd IAT Mean; Bwd IAT Std; Bwd IAT Total; Bwd Packets/s; Flow Duration; Flow IAT Max; Flow IAT Mean; Flow IAT Std; Fwd IAT Max; Fwd IAT Mean; Fwd IAT Std; Fwd IAT Total; Fwd Packets/s
+A_0.5,qcut20,EDA,2,Active Mean,6,Active Max; Active Mean; Active Min; Idle Max; Idle Mean; Idle Std,Active Max; Active Min; Idle Max; Idle Mean; Idle Std
+A_0.5,qcut20,EDA,3,Packet Length Mean,4,Bwd Packet Length Mean; Bwd Packet Length Min; Packet Length Mean; Subflow Bwd Bytes,Bwd Packet Length Mean; Bwd Packet Length Min; Subflow Bwd Bytes
+A_0.5,qcut20,EDA,4,Fwd Packet Length Mean,4,Fwd Packet Length Mean; Fwd Packet Length Min; Packet Length Min; Subflow Fwd Bytes,Fwd Packet Length Min; Packet Length Min; Subflow Fwd Bytes
+A_0.5,qcut20,EDA,5,PSH Flag Count,3,Bwd PSH Flags; Fwd PSH Flags; PSH Flag Count,Bwd PSH Flags; Fwd PSH Flags
+A_0.5,qcut20,EDA,6,Fwd Header Length,2,Bwd Header Length; Fwd Header Length,Bwd Header Length
+A_0.5,qcut20,EDA,7,Fwd Packet Length Std,2,Bwd Init Win Bytes; Fwd Packet Length Std,Bwd Init Win Bytes
+A_0.5,qcut20,EDA,8,CWR Flag Count,2,CWR Flag Count; ECE Flag Count,ECE Flag Count
+A_0.5,qcut20,EDA,9,URG Flag Count,2,Fwd URG Flags; URG Flag Count,Fwd URG Flags
+A_1,qcut20,EDA,0,Bwd IAT Max,9,Bwd Header Length; Bwd IAT Max; Bwd IAT Mean; Bwd IAT Total; Fwd IAT Max; Fwd IAT Mean; Fwd IAT Total; Total Bwd packets; Total Fwd Packet,Bwd Header Length; Bwd IAT Mean; Bwd IAT Total; Fwd IAT Max; Fwd IAT Mean; Fwd IAT Total; Total Bwd packets; Total Fwd Packet
+A_1,qcut20,EDA,1,Packet Length Std,8,Bwd Packet Length Max; Bwd Packet Length Mean; Packet Length Max; Packet Length Mean; Packet Length Std; Packet Length Variance; Subflow Bwd Bytes; Total Length of Bwd Packet,Bwd Packet Length Max; Bwd Packet Length Mean; Packet Length Max; Packet Length Mean; Packet Length Variance; Subflow Bwd Bytes; Total Length of Bwd Packet
+A_1,qcut20,EDA,2,Flow Packets/s,7,Bwd Packets/s; Flow Duration; Flow IAT Max; Flow IAT Mean; Flow IAT Std; Flow Packets/s; Fwd Packets/s,Bwd Packets/s; Flow Duration; Flow IAT Max; Flow IAT Mean; Flow IAT Std; Fwd Packets/s
+A_1,qcut20,EDA,3,Idle Min,6,Active Max; Active Mean; Active Min; Idle Max; Idle Mean; Idle Min,Active Max; Active Mean; Active Min; Idle Max; Idle Mean
+A_1,qcut20,EDA,4,Fwd Packet Length Max,5,Fwd Packet Length Max; Fwd Seg Size Min; Protocol; SYN Flag Count; Total Length of Fwd Packet,Fwd Seg Size Min; Protocol; SYN Flag Count; Total Length of Fwd Packet
+A_1,qcut20,EDA,5,PSH Flag Count,3,Bwd PSH Flags; Fwd PSH Flags; PSH Flag Count,Bwd PSH Flags; Fwd PSH Flags
+A_1,qcut20,EDA,6,ACK Flag Count,2,ACK Flag Count; Bwd Packet Length Std,Bwd Packet Length Std
+A_1,qcut20,EDA,7,Idle Std,2,Active Std; Idle Std,Active Std
+A_1,qcut20,EDA,8,Fwd IAT Std,2,Bwd IAT Std; Fwd IAT Std,Bwd IAT Std
+A_1,qcut20,EDA,9,CWR Flag Count,2,CWR Flag Count; ECE Flag Count,ECE Flag Count
+A_1,qcut20,EDA,10,FWD Init Win Bytes,2,FWD Init Win Bytes; Fwd Header Length,Fwd Header Length
+A_1,qcut20,EDA,11,Flow IAT Min,2,Flow IAT Min; Fwd IAT Min,Fwd IAT Min
+A_1,qcut20,EDA,12,Fwd Packet Length Mean,2,Fwd Packet Length Mean; Subflow Fwd Bytes,Subflow Fwd Bytes
+A_1,qcut20,EDA,13,Fwd Packet Length Min,2,Fwd Packet Length Min; Packet Length Min,Packet Length Min
+A_1,qcut20,EDA,14,URG Flag Count,2,Fwd URG Flags; URG Flag Count,Fwd URG Flags
+A_1.5,qcut20,EDA,0,Packet Length Std,7,Bwd Packet Length Max; Bwd Packet Length Mean; Packet Length Max; Packet Length Std; Packet Length Variance; Subflow Bwd Bytes; Total Length of Bwd Packet,Bwd Packet Length Max; Bwd Packet Length Mean; Packet Length Max; Packet Length Variance; Subflow Bwd Bytes; Total Length of Bwd Packet
+A_1.5,qcut20,EDA,1,Idle Min,6,Active Max; Active Mean; Active Min; Idle Max; Idle Mean; Idle Min,Active Max; Active Mean; Active Min; Idle Max; Idle Mean
+A_1.5,qcut20,EDA,2,Fwd Seg Size Min,6,Bwd Header Length; FWD Init Win Bytes; Fwd Header Length; Fwd Seg Size Min; Protocol; SYN Flag Count,Bwd Header Length; FWD Init Win Bytes; Fwd Header Length; Protocol; SYN Flag Count
+A_1.5,qcut20,EDA,3,Bwd IAT Max,6,Bwd IAT Max; Bwd IAT Mean; Bwd IAT Total; Fwd IAT Max; Fwd IAT Mean; Fwd IAT Total,Bwd IAT Mean; Bwd IAT Total; Fwd IAT Max; Fwd IAT Mean; Fwd IAT Total
+A_1.5,qcut20,EDA,4,Flow Packets/s,6,Bwd Packets/s; Flow Duration; Flow IAT Max; Flow IAT Mean; Flow Packets/s; Fwd Packets/s,Bwd Packets/s; Flow Duration; Flow IAT Max; Flow IAT Mean; Fwd Packets/s
+A_1.5,qcut20,EDA,5,Fwd Packet Length Max,6,Fwd Packet Length Max; Fwd Packet Length Mean; Fwd Packet Length Min; Packet Length Min; Subflow Fwd Bytes; Total Length of Fwd Packet,Fwd Packet Length Mean; Fwd Packet Length Min; Packet Length Min; Subflow Fwd Bytes; Total Length of Fwd Packet
+A_1.5,qcut20,EDA,6,Total Bwd packets,2,ACK Flag Count; Total Bwd packets,ACK Flag Count
+A_1.5,qcut20,EDA,7,Idle Std,2,Active Std; Idle Std,Active Std
+A_1.5,qcut20,EDA,8,CWR Flag Count,2,CWR Flag Count; ECE Flag Count,ECE Flag Count
+A_1.5,qcut20,EDA,9,PSH Flag Count,2,Fwd PSH Flags; PSH Flag Count,Fwd PSH Flags
+A_1.5,qcut20,EDA,10,URG Flag Count,2,Fwd URG Flags; URG Flag Count,Fwd URG Flags
+A_2,qcut20,EDA,0,Packet Length Std,7,Bwd Packet Length Max; Bwd Packet Length Mean; Packet Length Max; Packet Length Mean; Packet Length Std; Packet Length Variance; Subflow Bwd Bytes,Bwd Packet Length Max; Bwd Packet Length Mean; Packet Length Max; Packet Length Mean; Packet Length Variance; Subflow Bwd Bytes
+A_2,qcut20,EDA,1,Total Fwd Packet,5,ACK Flag Count; Bwd Header Length; Fwd Header Length; Total Bwd packets; Total Fwd Packet,ACK Flag Count; Bwd Header Length; Fwd Header Length; Total Bwd packets
+A_2,qcut20,EDA,2,Flow Packets/s,5,Bwd Packets/s; Flow IAT Max; Flow IAT Mean; Flow Packets/s; Fwd Packets/s,Bwd Packets/s; Flow IAT Max; Flow IAT Mean; Fwd Packets/s
+A_2,qcut20,EDA,3,Fwd Seg Size Min,4,FWD Init Win Bytes; Fwd Seg Size Min; Protocol; SYN Flag Count,FWD Init Win Bytes; Protocol; SYN Flag Count
+A_2,qcut20,EDA,4,Active Mean,3,Active Max; Active Mean; Active Min,Active Max; Active Min
+A_2,qcut20,EDA,5,Fwd IAT Mean,3,Fwd IAT Max; Fwd IAT Mean; Fwd IAT Std,Fwd IAT Max; Fwd IAT Std
+A_2,qcut20,EDA,6,Idle Min,3,Idle Max; Idle Mean; Idle Min,Idle Max; Idle Mean
+A_2,qcut20,EDA,7,Idle Std,2,Active Std; Idle Std,Active Std
+A_2,qcut20,EDA,8,Bwd Bulk Rate Avg,2,Bwd Bulk Rate Avg; Bwd Bytes/Bulk Avg,Bwd Bytes/Bulk Avg
+A_2,qcut20,EDA,9,CWR Flag Count,2,CWR Flag Count; ECE Flag Count,ECE Flag Count
+A_2,qcut20,EDA,10,PSH Flag Count,2,Fwd PSH Flags; PSH Flag Count,Fwd PSH Flags
+A_2,qcut20,EDA,11,Fwd Packet Length Mean,2,Fwd Packet Length Max; Fwd Packet Length Mean,Fwd Packet Length Max
+A_2,qcut20,EDA,12,Fwd Packet Length Min,2,Fwd Packet Length Min; Packet Length Min,Packet Length Min
+A_2,qcut20,EDA,13,URG Flag Count,2,Fwd URG Flags; URG Flag Count,Fwd URG Flags
+G_consenso,B10&B20&B50,EDA,0,Bwd IAT Max,7,Bwd IAT Max; Bwd IAT Mean; Bwd IAT Std; Bwd IAT Total; Fwd IAT Max; Fwd IAT Total; Total Fwd Packet,Bwd IAT Mean; Bwd IAT Std; Bwd IAT Total; Fwd IAT Max; Fwd IAT Total; Total Fwd Packet
+G_consenso,B10&B20&B50,EDA,1,Flow Packets/s,6,Bwd Packets/s; Flow Bytes/s; Flow IAT Max; Flow IAT Mean; Flow Packets/s; Fwd Packets/s,Bwd Packets/s; Flow Bytes/s; Flow IAT Max; Flow IAT Mean; Fwd Packets/s
+G_consenso,B10&B20&B50,EDA,2,Packet Length Min,6,Fwd Packet Length Min; Fwd Seg Size Min; Packet Length Min; Protocol; SYN Flag Count; Total Length of Fwd Packet,Fwd Packet Length Min; Fwd Seg Size Min; Protocol; SYN Flag Count; Total Length of Fwd Packet
+G_consenso,B10&B20&B50,EDA,3,Flow IAT Std,5,Flow Duration; Flow IAT Std; Idle Max; Idle Mean; Idle Min,Flow Duration; Idle Max; Idle Mean; Idle Min
+G_consenso,B10&B20&B50,EDA,4,PSH Flag Count,4,ACK Flag Count; Bwd PSH Flags; Fwd PSH Flags; PSH Flag Count,ACK Flag Count; Bwd PSH Flags; Fwd PSH Flags
+G_consenso,B10&B20&B50,EDA,5,Fwd Act Data Pkts,4,Bwd Header Length; Fwd Act Data Pkts; Fwd Header Length; Total Bwd packets,Bwd Header Length; Fwd Header Length; Total Bwd packets
+G_consenso,B10&B20&B50,EDA,6,Packet Length Mean,4,Bwd Packet Length Max; Bwd Packet Length Mean; Packet Length Mean; Subflow Bwd Bytes,Bwd Packet Length Max; Bwd Packet Length Mean; Subflow Bwd Bytes
+G_consenso,B10&B20&B50,EDA,7,Packet Length Std,4,Packet Length Max; Packet Length Std; Packet Length Variance; Total Length of Bwd Packet,Packet Length Max; Packet Length Variance; Total Length of Bwd Packet
+G_consenso,B10&B20&B50,EDA,8,Bwd Bytes/Bulk Avg,3,Bwd Bulk Rate Avg; Bwd Bytes/Bulk Avg; Bwd Packet/Bulk Avg,Bwd Bulk Rate Avg; Bwd Packet/Bulk Avg
+G_consenso,B10&B20&B50,EDA,9,Fwd Packet/Bulk Avg,3,Fwd Bulk Rate Avg; Fwd Bytes/Bulk Avg; Fwd Packet/Bulk Avg,Fwd Bulk Rate Avg; Fwd Bytes/Bulk Avg
+G_consenso,B10&B20&B50,EDA,10,Fwd Packet Length Mean,3,Fwd Packet Length Max; Fwd Packet Length Mean; Subflow Fwd Bytes,Fwd Packet Length Max; Subflow Fwd Bytes
+G_consenso,B10&B20&B50,EDA,11,Active Mean,2,Active Mean; Active Min,Active Min
+G_consenso,B10&B20&B50,EDA,12,Idle Std,2,Active Std; Idle Std,Active Std
+G_consenso,B10&B20&B50,EDA,13,CWR Flag Count,2,CWR Flag Count; ECE Flag Count,ECE Flag Count
+R,B20,EDA,0,Idle Min,6,Active Max; Active Mean; Active Min; Idle Max; Idle Mean; Idle Min,Active Max; Active Mean; Active Min; Idle Max; Idle Mean
+R,B20,EDA,1,Packet Length Std,5,Bwd Packet Length Max; Packet Length Max; Packet Length Mean; Packet Length Std; Packet Length Variance,Bwd Packet Length Max; Packet Length Max; Packet Length Mean; Packet Length Variance
+R,B20,EDA,2,Bwd Bytes/Bulk Avg,3,Bwd Bulk Rate Avg; Bwd Bytes/Bulk Avg; Bwd Packet/Bulk Avg,Bwd Bulk Rate Avg; Bwd Packet/Bulk Avg
+R,B20,EDA,3,Bwd IAT Max,3,Bwd IAT Max; Bwd IAT Mean; Bwd IAT Total,Bwd IAT Mean; Bwd IAT Total
+R,B20,EDA,4,PSH Flag Count,3,Bwd PSH Flags; Fwd PSH Flags; PSH Flag Count,Bwd PSH Flags; Fwd PSH Flags
+R,B20,EDA,5,Flow Packets/s,3,Flow IAT Max; Flow Packets/s; Fwd Packets/s,Flow IAT Max; Fwd Packets/s
+R,B20,EDA,6,Fwd Packet/Bulk Avg,3,Fwd Bulk Rate Avg; Fwd Bytes/Bulk Avg; Fwd Packet/Bulk Avg,Fwd Bulk Rate Avg; Fwd Bytes/Bulk Avg
+R,B20,EDA,7,Fwd IAT Mean,3,Fwd IAT Max; Fwd IAT Mean; Fwd IAT Total,Fwd IAT Max; Fwd IAT Total
+R,B20,EDA,8,Idle Std,2,Active Std; Idle Std,Active Std
+R,B20,EDA,9,Bwd Packet Length Mean,2,Bwd Packet Length Mean; Subflow Bwd Bytes,Subflow Bwd Bytes
+R,B20,EDA,10,Fwd Packet Length Mean,2,Fwd Packet Length Mean; Subflow Fwd Bytes,Subflow Fwd Bytes
+R,B20,EDA,11,Fwd Packet Length Min,2,Fwd Packet Length Min; Packet Length Min,Packet Length Min
+R,B20,EDA,12,URG Flag Count,2,Fwd URG Flags; URG Flag Count,Fwd URG Flags
+Robusto,7 medidas IM,EDA,0,Flow Packets/s,7,Bwd Packets/s; Flow Duration; Flow IAT Max; Flow IAT Mean; Flow IAT Std; Flow Packets/s; Fwd Packets/s,Bwd Packets/s; Flow Duration; Flow IAT Max; Flow IAT Mean; Flow IAT Std; Fwd Packets/s
+Robusto,7 medidas IM,EDA,1,Packet Length Std,6,Bwd Packet Length Max; Bwd Packet Length Mean; Packet Length Max; Packet Length Std; Packet Length Variance; Subflow Bwd Bytes,Bwd Packet Length Max; Bwd Packet Length Mean; Packet Length Max; Packet Length Variance; Subflow Bwd Bytes
+Robusto,7 medidas IM,EDA,2,Bwd IAT Max,3,Bwd IAT Max; Bwd IAT Mean; Bwd IAT Total,Bwd IAT Mean; Bwd IAT Total
+Robusto,7 medidas IM,EDA,3,Fwd IAT Mean,3,Fwd IAT Max; Fwd IAT Mean; Fwd IAT Total,Fwd IAT Max; Fwd IAT Total
+Robusto,7 medidas IM,EDA,4,Bwd Header Length,2,Bwd Header Length; Total Bwd packets,Total Bwd packets
+Robusto,7 medidas IM,EDA,5,Total Fwd Packet,2,Fwd Header Length; Total Fwd Packet,Fwd Header Length
+Robusto,7 medidas IM,EDA,6,Total Length of Fwd Packet,2,Fwd Packet Length Max; Total Length of Fwd Packet,Fwd Packet Length Max
+Robusto,7 medidas IM,EDA,7,Fwd Packet Length Mean,2,Fwd Packet Length Mean; Subflow Fwd Bytes,Subflow Fwd Bytes
+Robusto,7 medidas IM,EDA,8,Fwd Packet Length Min,2,Fwd Packet Length Min; Packet Length Min,Packet Length Min
+Recomendado,P + restauradas + robustas,EDA,0,Flow Packets/s,6,Bwd Packets/s; Flow Duration; Flow IAT Max; Flow IAT Mean; Flow IAT Std; Flow Packets/s,Bwd Packets/s; Flow Duration; Flow IAT Max; Flow IAT Mean; Flow IAT Std
+Recomendado,P + restauradas + robustas,EDA,1,Fwd Packet Length Min,2,Fwd Packet Length Min; Packet Length Min,Packet Length Min
+L_ksg,KSG50k,EDA,0,Packet Length Std,13,Bwd Header Length; Bwd Packet Length Max; Bwd Packet Length Mean; Fwd Header Length; Fwd Packet Length Max; Fwd Packet Length Mean; Packet Length Max; Packet Length Mean; Packet Length Std; Packet Length Variance; Subflow Bwd Bytes; Total Length of Bwd Packet; Total Length of Fwd Packet,Bwd Header Length; Bwd Packet Length Max; Bwd Packet Length Mean; Fwd Header Length; Fwd Packet Length Max; Fwd Packet Length Mean; Packet Length Max; Packet Length Mean; Packet Length Variance; Subflow Bwd Bytes; Total Length of Bwd Packet; Total Length of Fwd Packet
+L_ksg,KSG50k,EDA,1,Fwd IAT Mean,11,Bwd IAT Max; Bwd IAT Mean; Bwd IAT Total; Flow Duration; Flow IAT Max; Flow IAT Mean; Flow IAT Std; Fwd IAT Max; Fwd IAT Mean; Fwd IAT Std; Fwd IAT Total,Bwd IAT Max; Bwd IAT Mean; Bwd IAT Total; Flow Duration; Flow IAT Max; Flow IAT Mean; Flow IAT Std; Fwd IAT Max; Fwd IAT Std; Fwd IAT Total
+L_ksg,KSG50k,EDA,2,Total Fwd Packet,4,ACK Flag Count; Down/Up Ratio; Total Bwd packets; Total Fwd Packet,ACK Flag Count; Down/Up Ratio; Total Bwd packets
+L_ksg,KSG50k,EDA,3,Active Mean,3,Active Max; Active Mean; Active Min,Active Max; Active Min
+L_ksg,KSG50k,EDA,4,Flow Packets/s,3,Bwd Packets/s; Flow Packets/s; Fwd Packets/s,Bwd Packets/s; Fwd Packets/s
+L_ksg,KSG50k,EDA,5,Idle Min,3,Idle Max; Idle Mean; Idle Min,Idle Max; Idle Mean
+L_ksg,KSG50k,EDA,6,Fwd Packet Length Min,2,Fwd Packet Length Min; Packet Length Min,Packet Length Min
+P,B20,train_benign,0,Total Fwd Packet,6,ACK Flag Count; Bwd Header Length; Fwd Header Length; Total Bwd packets; Total Fwd Packet; Total Length of Bwd Packet,ACK Flag Count; Bwd Header Length; Fwd Header Length; Total Bwd packets; Total Length of Bwd Packet
+P,B20,train_benign,1,Flow IAT Max,4,Flow IAT Max; Fwd IAT Max; Idle Max; Idle Mean,Fwd IAT Max; Idle Max; Idle Mean
+P,B20,train_benign,2,Flow Duration,3,Bwd IAT Total; Flow Duration; Fwd IAT Total,Bwd IAT Total; Fwd IAT Total
+P,B20,train_benign,3,Packet Length Mean,3,Bwd Packet Length Mean; Packet Length Mean; Subflow Bwd Bytes,Bwd Packet Length Mean; Subflow Bwd Bytes
+P,B20,train_benign,4,Bwd Bytes/Bulk Avg,2,Bwd Bytes/Bulk Avg; Bwd Packet/Bulk Avg,Bwd Packet/Bulk Avg
+P,B20,train_benign,5,Fwd IAT Std,2,Bwd IAT Std; Fwd IAT Std,Bwd IAT Std
+P,B20,train_benign,6,PSH Flag Count,2,Bwd PSH Flags; PSH Flag Count,Bwd PSH Flags
+P,B20,train_benign,7,Flow Packets/s,2,Flow Packets/s; Fwd Packets/s,Fwd Packets/s
+P,B20,train_benign,8,Fwd Packet Length Mean,2,Fwd Packet Length Mean; Subflow Fwd Bytes,Subflow Fwd Bytes
+P,B20,train_benign,9,URG Flag Count,2,Fwd URG Flags; URG Flag Count,Fwd URG Flags
+P,B20,train_benign,10,Packet Length Std,2,Packet Length Max; Packet Length Std,Packet Length Max
+L,B20,train_benign,0,Packet Length Std,7,Bwd Packet Length Max; Bwd Packet Length Mean; Packet Length Max; Packet Length Std; Packet Length Variance; Subflow Bwd Bytes; Total Length of Bwd Packet,Bwd Packet Length Max; Bwd Packet Length Mean; Packet Length Max; Packet Length Variance; Subflow Bwd Bytes; Total Length of Bwd Packet
+L,B20,train_benign,1,Flow Packets/s,7,Bwd Packets/s; Flow Duration; Flow IAT Max; Flow IAT Mean; Flow IAT Std; Flow Packets/s; Fwd Packets/s,Bwd Packets/s; Flow Duration; Flow IAT Max; Flow IAT Mean; Flow IAT Std; Fwd Packets/s
+L,B20,train_benign,2,Fwd Packet Length Max,6,Fwd Packet Length Max; Fwd Packet Length Mean; Fwd Packet Length Min; Packet Length Min; Subflow Fwd Bytes; Total Length of Fwd Packet,Fwd Packet Length Mean; Fwd Packet Length Min; Packet Length Min; Subflow Fwd Bytes; Total Length of Fwd Packet
+L,B20,train_benign,3,Bwd IAT Max,4,Bwd IAT Max; Bwd IAT Mean; Bwd IAT Min; Bwd IAT Total,Bwd IAT Mean; Bwd IAT Min; Bwd IAT Total
+L,B20,train_benign,4,Fwd IAT Mean,4,Fwd IAT Max; Fwd IAT Mean; Fwd IAT Min; Fwd IAT Total,Fwd IAT Max; Fwd IAT Min; Fwd IAT Total
+L,B20,train_benign,5,Total Fwd Packet,2,Bwd Header Length; Total Fwd Packet,Bwd Header Length
+L_cal,B20,train_benign,0,Packet Length Std,9,Bwd Packet Length Max; Bwd Packet Length Mean; Bwd Packet Length Min; Packet Length Max; Packet Length Mean; Packet Length Std; Packet Length Variance; Subflow Bwd Bytes; Total Length of Bwd Packet,Bwd Packet Length Max; Bwd Packet Length Mean; Bwd Packet Length Min; Packet Length Max; Packet Length Mean; Packet Length Variance; Subflow Bwd Bytes; Total Length of Bwd Packet
+L_cal,B20,train_benign,1,Flow Packets/s,8,Bwd Packets/s; Flow Bytes/s; Flow Duration; Flow IAT Max; Flow IAT Mean; Flow IAT Std; Flow Packets/s; Fwd Packets/s,Bwd Packets/s; Flow Bytes/s; Flow Duration; Flow IAT Max; Flow IAT Mean; Flow IAT Std; Fwd Packets/s
+L_cal,B20,train_benign,2,Bwd IAT Max,6,Bwd IAT Max; Bwd IAT Mean; Bwd IAT Total; Fwd IAT Max; Fwd IAT Mean; Fwd IAT Total,Bwd IAT Mean; Bwd IAT Total; Fwd IAT Max; Fwd IAT Mean; Fwd IAT Total
+L_cal,B20,train_benign,3,Fwd Packet Length Max,6,Fwd Packet Length Max; Fwd Packet Length Mean; Fwd Packet Length Min; Packet Length Min; Subflow Fwd Bytes; Total Length of Fwd Packet,Fwd Packet Length Mean; Fwd Packet Length Min; Packet Length Min; Subflow Fwd Bytes; Total Length of Fwd Packet
+L_cal,B20,train_benign,4,Total Fwd Packet,4,Bwd Header Length; Fwd Header Length; Total Bwd packets; Total Fwd Packet,Bwd Header Length; Fwd Header Length; Total Bwd packets
+S,B20,train_benign,0,Packet Length Std,9,Bwd Packet Length Max; Bwd Packet Length Mean; Bwd Packet Length Min; Packet Length Max; Packet Length Mean; Packet Length Std; Packet Length Variance; Subflow Bwd Bytes; Total Length of Bwd Packet,Bwd Packet Length Max; Bwd Packet Length Mean; Bwd Packet Length Min; Packet Length Max; Packet Length Mean; Packet Length Variance; Subflow Bwd Bytes; Total Length of Bwd Packet
+S,B20,train_benign,1,Flow Packets/s,8,Bwd Packets/s; Flow Bytes/s; Flow Duration; Flow IAT Max; Flow IAT Mean; Flow IAT Std; Flow Packets/s; Fwd Packets/s,Bwd Packets/s; Flow Bytes/s; Flow Duration; Flow IAT Max; Flow IAT Mean; Flow IAT Std; Fwd Packets/s
+S,B20,train_benign,2,PSH Flag Count,7,ACK Flag Count; Bwd IAT Std; Bwd PSH Flags; Bwd Packet Length Std; Fwd PSH Flags; Fwd Packet Length Std; PSH Flag Count,ACK Flag Count; Bwd IAT Std; Bwd PSH Flags; Bwd Packet Length Std; Fwd PSH Flags; Fwd Packet Length Std
+S,B20,train_benign,3,Idle Min,6,Active Max; Active Mean; Active Min; Idle Max; Idle Mean; Idle Min,Active Max; Active Mean; Active Min; Idle Max; Idle Mean
+S,B20,train_benign,4,Fwd Packet Length Max,6,Fwd Packet Length Max; Fwd Packet Length Mean; Fwd Packet Length Min; Packet Length Min; Subflow Fwd Bytes; Total Length of Fwd Packet,Fwd Packet Length Mean; Fwd Packet Length Min; Packet Length Min; Subflow Fwd Bytes; Total Length of Fwd Packet
+S,B20,train_benign,5,Total Fwd Packet,5,Bwd Header Length; Fwd Act Data Pkts; Fwd Header Length; Total Bwd packets; Total Fwd Packet,Bwd Header Length; Fwd Act Data Pkts; Fwd Header Length; Total Bwd packets
+S,B20,train_benign,6,Fwd IAT Mean,5,Bwd IAT Max; Bwd IAT Total; Fwd IAT Max; Fwd IAT Mean; Fwd IAT Total,Bwd IAT Max; Bwd IAT Total; Fwd IAT Max; Fwd IAT Total
+S,B20,train_benign,7,Fwd Seg Size Min,5,FIN Flag Count; FWD Init Win Bytes; Fwd Seg Size Min; Protocol; SYN Flag Count,FIN Flag Count; FWD Init Win Bytes; Protocol; SYN Flag Count
+S,B20,train_benign,8,Bwd Bytes/Bulk Avg,3,Bwd Bulk Rate Avg; Bwd Bytes/Bulk Avg; Bwd Packet/Bulk Avg,Bwd Bulk Rate Avg; Bwd Packet/Bulk Avg
+S,B20,train_benign,9,Fwd Packet/Bulk Avg,3,Fwd Bulk Rate Avg; Fwd Bytes/Bulk Avg; Fwd Packet/Bulk Avg,Fwd Bulk Rate Avg; Fwd Bytes/Bulk Avg
+S,B20,train_benign,10,Idle Std,2,Active Std; Idle Std,Active Std
+S,B20,train_benign,11,Bwd IAT Mean,2,Bwd IAT Mean; Bwd IAT Min,Bwd IAT Min
+S,B20,train_benign,12,CWR Flag Count,2,CWR Flag Count; ECE Flag Count,ECE Flag Count
+S,B20,train_benign,13,Flow IAT Min,2,Flow IAT Min; Fwd IAT Min,Fwd IAT Min
+S,B20,train_benign,14,URG Flag Count,2,Fwd URG Flags; URG Flag Count,Fwd URG Flags
+G,B20,train_benign,0,Bwd IAT Max,11,Active Max; Active Mean; Active Min; Bwd IAT Max; Bwd IAT Total; Flow IAT Std; Fwd IAT Max; Fwd IAT Total; Idle Max; Idle Mean; Idle Min,Active Max; Active Mean; Active Min; Bwd IAT Total; Flow IAT Std; Fwd IAT Max; Fwd IAT Total; Idle Max; Idle Mean; Idle Min
+G,B20,train_benign,1,Total Length of Fwd Packet,9,ACK Flag Count; Bwd Header Length; Bwd PSH Flags; Fwd PSH Flags; PSH Flag Count; Protocol; Total Bwd packets; Total Fwd Packet; Total Length of Fwd Packet,ACK Flag Count; Bwd Header Length; Bwd PSH Flags; Fwd PSH Flags; PSH Flag Count; Protocol; Total Bwd packets; Total Fwd Packet
+G,B20,train_benign,2,Packet Length Std,9,Bwd Packet Length Max; Bwd Packet Length Mean; Bwd Packet Length Min; Packet Length Max; Packet Length Mean; Packet Length Std; Packet Length Variance; Subflow Bwd Bytes; Total Length of Bwd Packet,Bwd Packet Length Max; Bwd Packet Length Mean; Bwd Packet Length Min; Packet Length Max; Packet Length Mean; Packet Length Variance; Subflow Bwd Bytes; Total Length of Bwd Packet
+G,B20,train_benign,3,Flow Packets/s,6,Bwd IAT Std; Bwd Packets/s; Flow IAT Mean; Flow Packets/s; Fwd IAT Std; Fwd Packets/s,Bwd IAT Std; Bwd Packets/s; Flow IAT Mean; Fwd IAT Std; Fwd Packets/s
+G,B20,train_benign,4,Fwd Packet Length Max,6,FWD Init Win Bytes; Fwd Packet Length Max; Fwd Packet Length Min; Fwd Seg Size Min; Packet Length Min; SYN Flag Count,FWD Init Win Bytes; Fwd Packet Length Min; Fwd Seg Size Min; Packet Length Min; SYN Flag Count
+G,B20,train_benign,5,Bwd Bytes/Bulk Avg,3,Bwd Bulk Rate Avg; Bwd Bytes/Bulk Avg; Bwd Packet/Bulk Avg,Bwd Bulk Rate Avg; Bwd Packet/Bulk Avg
+G,B20,train_benign,6,Fwd Packet/Bulk Avg,3,Fwd Bulk Rate Avg; Fwd Bytes/Bulk Avg; Fwd Packet/Bulk Avg,Fwd Bulk Rate Avg; Fwd Bytes/Bulk Avg
+G,B20,train_benign,7,Idle Std,2,Active Std; Idle Std,Active Std
+G,B20,train_benign,8,Fwd IAT Mean,2,Bwd IAT Mean; Fwd IAT Mean,Bwd IAT Mean
+G,B20,train_benign,9,Fwd Packet Length Std,2,Bwd Packet Length Std; Fwd Packet Length Std,Bwd Packet Length Std
+G,B20,train_benign,10,CWR Flag Count,2,CWR Flag Count; ECE Flag Count,ECE Flag Count
+G,B20,train_benign,11,FIN Flag Count,2,FIN Flag Count; Fwd Header Length,Fwd Header Length
+G,B20,train_benign,12,Flow Duration,2,Flow Duration; Flow IAT Max,Flow IAT Max
+G,B20,train_benign,13,Flow IAT Min,2,Flow IAT Min; Fwd IAT Min,Fwd IAT Min
+G,B20,train_benign,14,Fwd Packet Length Mean,2,Fwd Packet Length Mean; Subflow Fwd Bytes,Subflow Fwd Bytes

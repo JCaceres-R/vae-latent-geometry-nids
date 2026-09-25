@@ -1,0 +1,6 @@
+medida_eje_y,umbral_y,redundancia_confirmada,pearson_sobreestimo,redundancia_no_lineal_no_detectada,independientes_o_debiles
+r_info_hist_B20,0.95,24,28,89,2560
+r_info_hist_B20_Lcal,0.9413966274520271,28,24,100,2549
+r_info_KSG,0.95,46,6,305,2344
+G_B20_gauss_ratio,1.0,49,3,451,2198
+G_consenso,1.0,46,6,362,2287

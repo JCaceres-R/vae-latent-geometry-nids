@@ -1,0 +1,268 @@
+{
+  "cuadrantes": [
+    {
+      "medida_eje_y": "r_info_hist_B20",
+      "umbral_y": 0.95,
+      "redundancia_confirmada": 24,
+      "pearson_sobreestimo": 28,
+      "redundancia_no_lineal_no_detectada": 89,
+      "independientes_o_debiles": 2560
+    },
+    {
+      "medida_eje_y": "r_info_hist_B20_Lcal",
+      "umbral_y": 0.9413966274520271,
+      "redundancia_confirmada": 28,
+      "pearson_sobreestimo": 24,
+      "redundancia_no_lineal_no_detectada": 100,
+      "independientes_o_debiles": 2549
+    },
+    {
+      "medida_eje_y": "r_info_KSG",
+      "umbral_y": 0.95,
+      "redundancia_confirmada": 46,
+      "pearson_sobreestimo": 6,
+      "redundancia_no_lineal_no_detectada": 305,
+      "independientes_o_debiles": 2344
+    },
+    {
+      "medida_eje_y": "G_B20_gauss_ratio",
+      "umbral_y": 1.0,
+      "redundancia_confirmada": 49,
+      "pearson_sobreestimo": 3,
+      "redundancia_no_lineal_no_detectada": 451,
+      "independientes_o_debiles": 2198
+    },
+    {
+      "medida_eje_y": "G_consenso",
+      "umbral_y": 1.0,
+      "redundancia_confirmada": 46,
+      "pearson_sobreestimo": 6,
+      "redundancia_no_lineal_no_detectada": 362,
+      "independientes_o_debiles": 2287
+    }
+  ],
+  "q2_cluster1": {
+    "n_pares": 15,
+    "pearson_min": 0.9938529061687272,
+    "r_info_min": 0.8867065301530652,
+    "r_info_max": 0.9790444451760778,
+    "n_pares_L": 8,
+    "n_pares_G_consenso": 12,
+    "ksg_r_info_min": 0.945756707623916,
+    "u_min": 0.2869822896315816,
+    "u_max": 0.799604860221926,
+    "nmi_max_min": 0.2869822896315816,
+    "nmi_max_max": 0.7019864063794169
+  },
+  "q3": {
+    "n_pares_51": 1275,
+    "n_L_B20": 39,
+    "n_L_todas_B_y_KSG": 22,
+    "n_G_consenso": 155,
+    "n_G_consenso_y_KSG": 63,
+    "n_alguna_medida": 272,
+    "robustos_7_de_7_benign_L_y_G": 22
+  },
+  "q4": {
+    "n_pares": 41,
+    "n_rinfo_menor_095": 19,
+    "n_rinfo_menor_095_linfoot_aplicable": 12,
+    "n_G_consenso": 37,
+    "n_no_G_consenso": 4,
+    "pares_no_G_consenso": [
+      "Total Fwd Packet ~ Total Length of Bwd Packet",
+      "Total Bwd packets ~ Total Length of Bwd Packet",
+      "Total Length of Bwd Packet ~ Fwd Header Length",
+      "Flow Duration ~ Bwd IAT Total"
+    ]
+  },
+  "recomendado": {
+    "final_size": 46,
+    "restored": [
+      "Total Length of Bwd Packet"
+    ],
+    "groups": [
+      {
+        "members": [
+          "Bwd Packets/s",
+          "Flow Duration",
+          "Flow IAT Max",
+          "Flow IAT Mean",
+          "Flow IAT Std",
+          "Flow Packets/s"
+        ],
+        "rep": "Flow Packets/s",
+        "dropped": [
+          "Bwd Packets/s",
+          "Flow Duration",
+          "Flow IAT Max",
+          "Flow IAT Mean",
+          "Flow IAT Std"
+        ]
+      },
+      {
+        "members": [
+          "Fwd Packet Length Min",
+          "Packet Length Min"
+        ],
+        "rep": "Fwd Packet Length Min",
+        "dropped": [
+          "Packet Length Min"
+        ]
+      }
+    ],
+    "ambiguous": [
+      {
+        "size": 2,
+        "cliques": [
+          [
+            "Bwd IAT Max",
+            "Bwd IAT Mean"
+          ],
+          [
+            "Bwd IAT Mean",
+            "Fwd IAT Mean"
+          ]
+        ],
+        "truncated": false
+      },
+      {
+        "size": 2,
+        "cliques": [
+          [
+            "Fwd Packet Length Max",
+            "Fwd Packet Length Mean"
+          ],
+          [
+            "Fwd Packet Length Max",
+            "Total Length of Fwd Packet"
+          ]
+        ],
+        "truncated": false
+      },
+      {
+        "size": 2,
+        "cliques": [
+          [
+            "Packet Length Mean",
+            "Packet Length Std"
+          ],
+          [
+            "Packet Length Std",
+            "Total Length of Bwd Packet"
+          ]
+        ],
+        "truncated": false
+      }
+    ],
+    "u_min_fuera": 0.5384950704230392,
+    "n_fuera": 28
+  },
+  "q5_q3": {
+    "n": 272,
+    "ambos_si": 39,
+    "ambos_no": 162,
+    "solo_hist": 0,
+    "solo_ksg": 71,
+    "corr_spearman_rinfo_hist_vs_ksg": 0.8717168294567879,
+    "discrepancias": [
+      "Fwd IAT Mean ~ Fwd IAT Std (hist 0.9495, ksg 0.9896)",
+      "Flow IAT Std ~ Fwd IAT Std (hist 0.9424, ksg 0.9893)",
+      "Bwd Packet Length Min ~ Packet Length Std (hist 0.9399, ksg 0.9826)",
+      "Total Fwd Packet ~ Fwd IAT Mean (hist 0.9391, ksg 0.9752)",
+      "Bwd IAT Std ~ Bwd IAT Max (hist 0.9379, ksg 0.9847)",
+      "Bwd IAT Mean ~ Bwd IAT Std (hist 0.9358, ksg 0.9851)",
+      "Flow IAT Max ~ Fwd IAT Std (hist 0.9252, ksg 0.9815)",
+      "Fwd IAT Mean ~ Bwd Packets/s (hist 0.9461, ksg 0.9698)",
+      "Flow IAT Max ~ Bwd IAT Max (hist 0.9459, ksg 0.9967)",
+      "Flow Bytes/s ~ Flow IAT Std (hist 0.9418, ksg 0.9512)",
+      "Flow Duration ~ Bwd IAT Max (hist 0.9395, ksg 0.9846)",
+      "Flow Duration ~ Fwd IAT Mean (hist 0.9383, ksg 0.9956)",
+      "Flow IAT Mean ~ Bwd IAT Mean (hist 0.9378, ksg 0.9887)",
+      "Bwd IAT Mean ~ Bwd Packets/s (hist 0.9369, ksg 0.9610)",
+      "Fwd Packet Length Max ~ Packet Length Std (hist 0.9338, ksg 0.9887)",
+      "Flow IAT Max ~ Fwd IAT Mean (hist 0.9333, ksg 0.9842)",
+      "Bwd Packet Length Min ~ Packet Length Mean (hist 0.9266, ksg 0.9884)",
+      "Fwd IAT Std ~ Bwd IAT Std (hist 0.9266, ksg 0.9735)",
+      "Total Fwd Packet ~ Bwd IAT Mean (hist 0.9218, ksg 0.9505)",
+      "Fwd Packet Length Max ~ Fwd Packet Length Std (hist 0.9199, ksg 0.9839)",
+      "Fwd IAT Std ~ Bwd IAT Max (hist 0.9197, ksg 0.9675)",
+      "Flow Duration ~ Fwd IAT Std (hist 0.9111, ksg 0.9702)",
+      "Fwd IAT Std ~ Bwd IAT Mean (hist 0.9099, ksg 0.9631)",
+      "Flow IAT Mean ~ Fwd IAT Std (hist 0.9072, ksg 0.9729)",
+      "Fwd IAT Mean ~ Bwd IAT Std (hist 0.9048, ksg 0.9601)",
+      "Total Length of Fwd Packet ~ Fwd Packet Length Std (hist 0.9028, ksg 0.9830)",
+      "Flow IAT Std ~ Bwd IAT Std (hist 0.8934, ksg 0.9717)",
+      "Bwd Packet Length Min ~ Packet Length Min (hist 0.8762, ksg 0.9696)",
+      "Fwd Packet Length Min ~ Bwd Packet Length Min (hist 0.8745, ksg 0.9699)",
+      "Active Mean ~ Active Max (hist 0.8509, ksg 0.9725)",
+      "Flow IAT Max ~ Idle Min (hist 0.8447, ksg 0.9757)",
+      "Active Mean ~ Active Min (hist 0.8419, ksg 0.9688)",
+      "Active Max ~ Active Min (hist 0.8253, ksg 0.9646)",
+      "Total Length of Fwd Packet ~ Packet Length Std (hist 0.9298, ksg 0.9923)",
+      "Fwd Packet Length Max ~ Packet Length Mean (hist 0.9271, ksg 0.9953)",
+      "Total Fwd Packet ~ Total Length of Fwd Packet (hist 0.9249, ksg 0.9594)",
+      "Total Length of Fwd Packet ~ Packet Length Mean (hist 0.9152, ksg 0.9964)",
+      "Flow IAT Max ~ Bwd IAT Std (hist 0.8767, ksg 0.9570)",
+      "Fwd Packet Length Std ~ Packet Length Std (hist 0.8648, ksg 0.9615)",
+      "Total Fwd Packet ~ Down/Up Ratio (hist 0.8569, ksg 0.9613)",
+      "Flow Duration ~ Bwd IAT Mean (hist 0.9222, ksg 0.9855)",
+      "Flow IAT Max ~ Bwd IAT Mean (hist 0.9149, ksg 0.9740)",
+      "Flow IAT Mean ~ Bwd IAT Max (hist 0.9060, ksg 0.9662)",
+      "Fwd Packet Length Max ~ Bwd Packet Length Min (hist 0.8499, ksg 0.9667)",
+      "Total Length of Fwd Packet ~ Bwd Packet Length Min (hist 0.8447, ksg 0.9654)",
+      "Fwd Packet Length Mean ~ Fwd Packet Length Std (hist 0.8388, ksg 0.9874)",
+      "Total Length of Fwd Packet ~ Bwd IAT Max (hist 0.9063, ksg 0.9547)",
+      "Total Length of Fwd Packet ~ Flow Bytes/s (hist 0.9013, ksg 0.9604)",
+      "Total Length of Fwd Packet ~ Fwd IAT Mean (hist 0.9005, ksg 0.9548)",
+      "Flow Bytes/s ~ Packet Length Mean (hist 0.8933, ksg 0.9684)",
+      "Fwd Packet Length Mean ~ Packet Length Mean (hist 0.8889, ksg 0.9943)",
+      "Flow Duration ~ Total Length of Fwd Packet (hist 0.8838, ksg 0.9516)",
+      "Flow Bytes/s ~ Packet Length Std (hist 0.8823, ksg 0.9556)",
+      "Total Fwd Packet ~ Packet Length Std (hist 0.8678, ksg 0.9684)",
+      "Total Length of Fwd Packet ~ Flow IAT Max (hist 0.8667, ksg 0.9510)",
+      "Bwd IAT Mean ~ Packet Length Std (hist 0.8643, ksg 0.9573)",
+      "Bwd IAT Max ~ Packet Length Std (hist 0.8585, ksg 0.9548)",
+      "Fwd Packet Length Mean ~ Packet Length Std (hist 0.8545, ksg 0.9850)",
+      "Flow Duration ~ Packet Length Std (hist 0.8534, ksg 0.9524)",
+      "Fwd IAT Mean ~ Packet Length Std (hist 0.8270, ksg 0.9570)",
+      "Fwd Packet Length Min ~ Packet Length Mean (hist 0.8205, ksg 0.9646)",
+      "Packet Length Min ~ Packet Length Mean (hist 0.8203, ksg 0.9638)",
+      "Fwd Packet Length Std ~ Packet Length Mean (hist 0.8098, ksg 0.9639)",
+      "Flow IAT Mean ~ Packet Length Std (hist 0.8047, ksg 0.9518)",
+      "Flow IAT Std ~ Packet Length Std (hist 0.8043, ksg 0.9557)",
+      "Flow IAT Mean ~ Flow IAT Min (hist 0.7848, ksg 0.9874)",
+      "Flow Packets/s ~ Flow IAT Min (hist 0.7721, ksg 0.9656)",
+      "Flow IAT Min ~ Bwd Packets/s (hist 0.7709, ksg 0.9683)",
+      "Flow Duration ~ Flow IAT Min (hist 0.7694, ksg 0.9768)",
+      "Flow IAT Max ~ Flow IAT Min (hist 0.7676, ksg 0.9808)",
+      "Fwd Packet Length Mean ~ Bwd Packet Length Min (hist 0.7131, ksg 0.9599)"
+    ]
+  },
+  "q5_q4": {
+    "n": 41,
+    "ambos_si": 22,
+    "ambos_no": 4,
+    "solo_hist": 0,
+    "solo_ksg": 15,
+    "corr_spearman_rinfo_hist_vs_ksg": 0.7766550522648084,
+    "discrepancias": [
+      "Fwd IAT Max ~ Idle Mean (hist 0.8631, ksg 0.9763)",
+      "Flow IAT Max ~ Idle Mean (hist 0.8657, ksg 0.9809)",
+      "Fwd IAT Max ~ Idle Max (hist 0.8665, ksg 0.9858)",
+      "Flow IAT Max ~ Idle Max (hist 0.8756, ksg 0.9954)",
+      "Idle Mean ~ Idle Max (hist 0.8816, ksg 0.9809)",
+      "Total Bwd packets ~ Total Length of Bwd Packet (hist 0.8995, ksg 0.9549)",
+      "Total Length of Bwd Packet ~ ACK Flag Count (hist 0.9212, ksg 0.9570)",
+      "Total Length of Bwd Packet ~ Fwd Header Length (hist 0.9226, ksg 0.9740)",
+      "Bwd Packet Length Std ~ Packet Length Max (hist 0.9296, ksg 0.9777)",
+      "Bwd Packet Length Max ~ Bwd Packet Length Std (hist 0.9336, ksg 0.9812)",
+      "Total Length of Bwd Packet ~ Bwd Header Length (hist 0.9350, ksg 0.9774)",
+      "Bwd Packet Length Std ~ Packet Length Std (hist 0.9353, ksg 0.9870)",
+      "Total Fwd Packet ~ ACK Flag Count (hist 0.9437, ksg 0.9685)",
+      "Total Bwd packets ~ ACK Flag Count (hist 0.9445, ksg 0.9694)",
+      "Fwd IAT Mean ~ Fwd IAT Min (hist 0.9462, ksg 0.9694)"
+    ]
+  },
+  "q5_global_spearman_rinfo_hist_vs_ksg": 0.9724921311155464
+}
