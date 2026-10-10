@@ -328,3 +328,66 @@ log σ² en local). En la VM Linux se puede usar todo.
 | NIDS | Pitsiorlas et al. 2024, arXiv:2409.13774; Nguyen et al. 2019, arXiv:1903.06661; Engelen et al. 2021, DOI 10.1109/SPW53761.2021.00009 |
 
 No se pudo verificar por API la referencia original de Holm (1979); no se cita.
+
+---
+
+## 11. Actualización del 8 de octubre de 2026 (máquina `user`)
+
+Hecho:
+
+- Pendientes 1 a 7 de la sección 7. Implementados en `src/vae_nids/evaluation/oe2_descriptores/`
+  (fases 1 a 6). Resultados en `outputs/oe2_descriptores/tables/` y `figures/`.
+- Valoración de 17 descriptores (23 variantes) más 16 del repo en las 10 semillas: cribado en 11 familias
+  (permutación, Holm/BH, W de Kendall) y validación en los 6 grupos attempted.
+  - Superan Holm: Fisher–Rao al vecino benigno (ρ = 0,72), kNN decodificado (0,69), kNN blanqueado (0,69)
+    y tasa KL (0,68).
+  - Mahalanobis da ρ = 0,60 con 10 semillas (la semilla 42 daba 0,38), pero sin PortScan ni Bot cae a 0,41.
+  - La sonda lineal está saturada (≥ 0,975 en todas las familias).
+  - El silhouette del grupo se asocia en negativo.
+- Búsqueda complementaria: 12 trabajos nuevos verificados (10 descargados de arXiv).
+- Informe LaTeX listo para Prism: `Monografia/02_Objetivos_Especificos/OE2_Geometria_comparativa/informe_geometria_latente.zip`
+  (52 páginas; compila sin errores; cifras generadas desde CSV).
+- Corrección: PortScan tiene 1769 vectores μ distintos en precisión completa. Los 905 de la sección 2.1
+  salían de redondear a 4 decimales.
+
+Recomendación para el OE2:
+
+- Primario: Mahalanobis (mediana).
+- Secundarios (Holm entre 6): 2.4 Fisher–Rao, 6.2 kNN decodificado, 7.1 tasa, 5.1 kNN blanqueado,
+  6.1 log-magnificación y 10.1 silhouette con Fisher–Rao (signo negativo).
+- La prueba confirmatoria debe hacerse en datos no usados para elegir.
+
+Sigue pendiente: el punto 8 (fase 5 del OE2 robusto con estos secundarios), el punto 9 (piso −10) y la
+redacción del OE2 en la monografía.
+
+---
+
+## 12. Actualización del 10 de octubre de 2026 (máquina `user`)
+
+Decisión: **todo el OE2 se recalcula sobre los modelos del OE1 saneado** (66 variables, semillas 42–49).
+Los modelos del OE2 son los del OE1; no se entrena ninguno aparte. Los resultados de 51 variables quedan
+como comparación.
+
+Hecho (falta correrlo en la VM):
+
+- Perfil `saneado` en `oe2_robust/config.py` (variable de entorno `VAE_NIDS_OE2_PERFIL=saneado`): datos de
+  `data/processed/oe1_saneado/*_escalado.parquet`, checkpoints de `outputs/oe1_saneado/checkpoints/`,
+  semillas y arquitectura de `configs/oe1_saneado.yaml`. Resultados en `outputs/oe2_robust_saneado/` y
+  `outputs/oe2_descriptores_saneado/`. Probado con la semilla 42 de Windows: los conteos por grupo son
+  idénticos a los del OE2 original y el escalador del checkpoint coincide con el de los parquets.
+- Punto 8: `oe2_descriptores/fase7_confirmatoria.py`. Hipótesis registradas hoy con signo y ρ de 51
+  variables: el primario más los 6 secundarios con Holm, IC por bootstrap jerárquico (familias y
+  semillas), descomposición a nivel de flujo (total y dentro de cada familia) y comparación 51 frente a 66.
+  Sobre las tablas de 51 variables, con Holm entre 6, se confirmarían 2.4, 6.2, 7.1 y 5.1, pero no 6.1
+  ni 10.1b (p_Holm = 0,053).
+- Script único: `scripts/run_pendientes_vm.sh` (guía en `docs/EJECUTAR_PENDIENTES_EN_VM.md`). Deja la
+  documentación de la corrida en `outputs/vm_pendientes/`.
+
+Hallazgo: en el repo, `outputs/oe2_robust/tables/phase4_detectability_metrics.csv` solo tiene la semilla
+42. La fase 4 del OE2 robusto no terminó las 10 semillas en la corrida anterior de la VM (el commit
+`85057de` dice "Fases 3-6 sobre las 10 semillas"), y `phase5_hypothesis_principal.json` sigue siendo el de
+una sola semilla. Los AUC de 10 semillas de la valoración de descriptores salen de su propia fase 1, no de
+esa tabla. En la corrida nueva, la fase 4 se lanza semilla por semilla.
+
+Sigue pendiente: el punto 9 (piso −10), que es una decisión del autor, y la redacción del OE2 en la
+monografía.

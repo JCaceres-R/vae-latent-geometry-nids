@@ -1,0 +1,80 @@
+{
+  "filas_crudas": 2100814,
+  "eliminadas_inf_nan": 793,
+  "eliminadas_solo_por_desborde_float32": 0,
+  "columnas_con_no_finitos": {
+    "Flow Bytes/s": 793,
+    "Flow Packets/s": 793,
+    "Flow IAT Mean": 252,
+    "Flow IAT Std": 252,
+    "Flow IAT Max": 252,
+    "Flow IAT Min": 252
+  },
+  "verificacion_vs_original": {
+    "train_benign": {
+      "filas_original": 1159948,
+      "filas_nuevas": 1159948,
+      "columnas_comparadas": 26,
+      "identicas": true
+    },
+    "val_benign": {
+      "filas_original": 248560,
+      "filas_nuevas": 248560,
+      "columnas_comparadas": 26,
+      "identicas": true
+    },
+    "test_benign": {
+      "filas_original": 248561,
+      "filas_nuevas": 248561,
+      "columnas_comparadas": 26,
+      "identicas": true
+    },
+    "test_attacks": {
+      "filas_original": 442952,
+      "filas_nuevas": 442952,
+      "columnas_comparadas": 26,
+      "identicas": true
+    }
+  },
+  "filtro_d4": {
+    "train_benign": {
+      "filas_antes": 1159948,
+      "eliminadas": 24,
+      "filas_despues": 1159924,
+      "hash_ids_antes": "3fad4a73b4ed2b6dfc68917ac37a90ce5019fdd2f67513340ca67a56464f990e",
+      "hash_ids_despues": "d1a4253d2f408408e9331e26ddfa81f99f297d6149eee526d5dab5e338919d57",
+      "hash_ids_eliminadas": "d119ece679bc99c9835f0fd9066d82e9ba5013e456bafe1484b00e0f2561cb46"
+    },
+    "val_benign": {
+      "filas_antes": 248560,
+      "eliminadas": 7,
+      "filas_despues": 248553,
+      "hash_ids_antes": "59abb6301eb19ec4a044b02ede30b60d4aa8a3e8c2db43e7c91b198b127f3885",
+      "hash_ids_despues": "9f6fe2a92ac7a91aecfeebba0d38458d10a4554a7b74b4baa2006dd99064619d",
+      "hash_ids_eliminadas": "cdb69ab4267ccc0fa2b4c32c38a53572ff61838f418c750193f78d20163e45b1"
+    },
+    "test_benign": {
+      "filas_antes": 248561,
+      "eliminadas": 0,
+      "filas_despues": 248561,
+      "hash_ids_antes": "4c0915b8d58f617e463d65d39fbec2ae6be189c102275f7ceb3e135b421d9676",
+      "hash_ids_despues": "4c0915b8d58f617e463d65d39fbec2ae6be189c102275f7ceb3e135b421d9676",
+      "hash_ids_eliminadas": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "test_attacks": {
+      "filas_antes": 442952,
+      "eliminadas": 0,
+      "filas_despues": 442952,
+      "hash_ids_antes": "c88e8ccf9a05abf173ce5f653c55e29dd72fbb34fde6b189b784fe5d672a9320",
+      "hash_ids_despues": "c88e8ccf9a05abf173ce5f653c55e29dd72fbb34fde6b189b784fe5d672a9320",
+      "hash_ids_eliminadas": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "por_etiqueta": {}
+    }
+  },
+  "flow_iat_min_negativos": {
+    "train_benign": 1873,
+    "val_benign": 375,
+    "test_benign": 414,
+    "test_attacks": 229
+  }
+}

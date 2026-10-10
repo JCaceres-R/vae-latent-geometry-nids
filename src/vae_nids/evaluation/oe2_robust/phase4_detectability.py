@@ -24,9 +24,10 @@ from sklearn.metrics import average_precision_score, roc_auc_score, roc_curve
 from vae_nids import config as base_cfg
 from vae_nids.evaluation.oe2_robust import config as rcfg
 from vae_nids.evaluation.oe2_robust import stats_utils as su
-from vae_nids.evaluation.oe2_robust.phase2_encode import checkpoint_path_for
+from vae_nids.evaluation.oe2_robust.phase2_encode import feature_columns_for
+from vae_nids.evaluation.oe2_robust.phase2_encode import load_model as _load_model_and_columns
 from vae_nids.evaluation.oe2_robust.phase3_geometry import group_names, load_group_mu_logvar, mahalanobis_batch
-from vae_nids.models.vae import VAE, VAEConfig
+from vae_nids.models.vae import VAE
 
 RNG_SEED = 42
 
@@ -38,9 +39,9 @@ RNG_SEED = 42
 class XCache:
     def __init__(self, feature_cols: list[str]):
         self.feature_cols = feature_cols
-        self._benign_test = pd.read_parquet(base_cfg.OUTPUT_DIR / "test_benign.parquet")
-        self._val_benign = pd.read_parquet(base_cfg.OUTPUT_DIR / "val_benign.parquet")
-        self._attacks = pd.read_parquet(base_cfg.OUTPUT_DIR / "test_attacks.parquet")
+        self._benign_test = pd.read_parquet(rcfg.data_path("test_benign"))
+        self._val_benign = pd.read_parquet(rcfg.data_path("val_benign"))
+        self._attacks = pd.read_parquet(rcfg.data_path("test_attacks"))
 
     def x_tensor(self, df: pd.DataFrame) -> torch.Tensor:
         return torch.from_numpy(df[self.feature_cols].to_numpy(dtype=np.float32, copy=True))
@@ -57,10 +58,7 @@ class XCache:
 
 
 def load_model(seed: int) -> VAE:
-    ckpt = torch.load(checkpoint_path_for(seed), map_location="cpu", weights_only=False)
-    model = VAE(VAEConfig(**ckpt["config"]))
-    model.load_state_dict(ckpt["model_state_dict"])
-    model.eval()
+    model, _cols = _load_model_and_columns(seed)
     return model
 
 
@@ -343,8 +341,7 @@ def main(seeds: list[int] | None = None):
     antes; lo nuevo es cachear también las filas de métricas agregadas."""
     seeds = seeds if seeds is not None else rcfg.ALL_SEEDS
     CACHE_DIR.mkdir(parents=True, exist_ok=True)
-    ckpt = torch.load(rcfg.OFFICIAL_CHECKPOINT_PATH, map_location="cpu", weights_only=False)
-    feature_cols = ckpt["feature_columns"]
+    feature_cols = feature_columns_for(rcfg.OFFICIAL_SEED)
     x_cache = XCache(feature_cols)
 
     with open(rcfg.METRICS_DIR / "phase2_active_dims_per_seed.json", encoding="utf-8") as f:

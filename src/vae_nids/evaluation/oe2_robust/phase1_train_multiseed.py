@@ -29,6 +29,10 @@ def run_name_for(seed: int) -> str:
 
 
 def main() -> list[dict]:
+    if rcfg.PERFIL == "saneado":
+        print("[perfil saneado] no aplica: los modelos son los del OE1 saneado "
+              "(vae_nids.oe1.run), que ya verifica el determinismo y registra cada entrenamiento")
+        return []
     results = []
 
     # Semilla oficial: no se reentrena, se registra tal cual para el resumen.

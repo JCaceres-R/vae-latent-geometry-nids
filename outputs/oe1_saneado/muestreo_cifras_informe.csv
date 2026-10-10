@@ -1,0 +1,20 @@
+cifra,esperado,encontrada_en_pdf
+columnas que quedan,66columnas,True
+hash del conjunto (prefijo),49435ba7a103,True
+filas crudas,2100814,True
+filas eliminadas por inf/NaN,793,True
+train antes del filtro,1159948,True
+train después del filtro,1159924,True
+val después del filtro,248553,True
+ataques,442952,True
+Flow IAT Min < 0 en train,1873,True
+comprobaciones posteriores,10340726,True
+fallos Fwd Packets/s,39167,True
+fallos Bwd Packets/s,41941,True
+fallos Down/Up Ratio,68,True
+u(Protocol|Fwd Seg Size Min),"0,996",True
+distintos crudos Flow Duration,524335,True
+distintos float32 Flow Duration,517280,True
+Flow Packets/s antes (%),"1,7",True
+Flow Packets/s después (%),"99,2",True
+% conservado mínimo (Idle Mean),"90,6",True

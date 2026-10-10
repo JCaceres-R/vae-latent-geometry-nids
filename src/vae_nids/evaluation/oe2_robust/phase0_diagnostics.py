@@ -109,6 +109,10 @@ def reproducibility_check() -> dict:
 
 
 def main() -> dict:
+    if rcfg.PERFIL == "saneado":
+        print("[perfil saneado] no aplica: los modelos son los del OE1 saneado "
+              "(vae_nids.oe1.run), que ya verifica el determinismo y registra cada entrenamiento")
+        return {}
     hw = hardware_report()
     splits = check_splits()
     repro = reproducibility_check()

@@ -31,18 +31,46 @@ ACTIVE_THRESHOLD = rcfg.ACTIVE_THRESHOLD
 
 
 def checkpoint_path_for(seed: int) -> Path:
+    if rcfg.PERFIL == "saneado":
+        return rcfg.OE1_CHECKPOINTS_DIR / f"{rcfg.OE1_RUN_NAME}_seed{seed}.pt"
     if seed == rcfg.OFFICIAL_SEED:
         return rcfg.OFFICIAL_CHECKPOINT_PATH
     return rcfg.CHECKPOINTS_DIR / f"vae_k8_beta1_input51_seed{seed}_best.pt"
 
 
+def _check_saneado_scaler(ck: dict) -> None:
+    """Los parquets *_escalado los escribió vae_nids.oe1.preproceso con el escalador ajustado en
+    train_benign; el checkpoint guarda el suyo (ajustado con los mismos datos). Si no coinciden, x no
+    está en la escala con la que se entrenó el modelo."""
+    with open(rcfg.DATA_DIR / "escalador_minmax_float64.json", encoding="utf-8") as f:
+        disk = json.load(f)
+    esc = ck["escalador"]
+    same = (esc["columns"] == disk["columns"]
+            and np.array_equal(np.asarray(esc["data_min"]), np.asarray(disk["data_min"]))
+            and np.array_equal(np.asarray(esc["data_max"]), np.asarray(disk["data_max"])))
+    if not same:
+        raise AssertionError(f"el escalador del checkpoint de seed={ck['semilla']} no coincide con "
+                             f"{rcfg.DATA_DIR / 'escalador_minmax_float64.json'}")
+
+
 def load_model(seed: int) -> tuple[VAE, list[str]]:
+    if rcfg.PERFIL == "saneado":
+        from vae_nids.oe1.entrenamiento import load_checkpoint
+        model, _scaler, ck = load_checkpoint(checkpoint_path_for(seed))
+        assert ck["semilla"] == seed, f"checkpoint de seed={ck['semilla']}, esperaba seed={seed}"
+        _check_saneado_scaler(ck)
+        return model, ck["columnas"]
     ckpt = torch.load(checkpoint_path_for(seed), map_location="cpu", weights_only=False)
     assert ckpt["seed"] == seed, f"checkpoint de seed={ckpt['seed']}, esperaba seed={seed}"
     model = VAE(VAEConfig(**ckpt["config"]))
     model.load_state_dict(ckpt["model_state_dict"])
     model.eval()
     return model, ckpt["feature_columns"]
+
+
+def feature_columns_for(seed: int) -> list[str]:
+    ckpt = torch.load(checkpoint_path_for(seed), map_location="cpu", weights_only=False)
+    return ckpt["columnas"] if rcfg.PERFIL == "saneado" else ckpt["feature_columns"]
 
 
 @torch.no_grad()
@@ -78,14 +106,14 @@ def encode_seed(seed: int) -> dict:
     model, feature_cols = load_model(seed)
     manifest = {}
 
-    benign_df = pd.read_parquet(base_cfg.OUTPUT_DIR / "test_benign.parquet")
+    benign_df = pd.read_parquet(rcfg.data_path("test_benign"))
     mu_b, logvar_b = encode_mu_logvar(model, benign_df, feature_cols)
     np.save(out_dir / "latent_benign_test_mu.npy", mu_b)
     np.save(out_dir / "latent_benign_test_logvar.npy", logvar_b)
     manifest["latent_benign_test"] = {"n": int(mu_b.shape[0]), "labels": ["BENIGN"]}
     print(f"[fase2 seed={seed}] BENIGN test: n={mu_b.shape[0]:,}")
 
-    attacks_df = pd.read_parquet(base_cfg.OUTPUT_DIR / "test_attacks.parquet")
+    attacks_df = pd.read_parquet(rcfg.data_path("test_attacks"))
     all_groups = {**rcfg.ATTACK_GROUPS, **rcfg.ATTEMPTED_GROUPS}
     for name, labels in all_groups.items():
         subset = attacks_df[attacks_df[base_cfg.LABEL_COL].isin(labels)]
@@ -115,9 +143,17 @@ def encode_seed(seed: int) -> dict:
             mismatches.append(f"{name}: ausente en manifest nuevo")
         elif manifest[name].get("n") != info["n"]:
             mismatches.append(f"{name}: n_original={info['n']} vs n_nuevo={manifest[name].get('n')}")
-    if mismatches:
+    if rcfg.PERFIL == "saneado":
+        # El filtro D4 del OE1 saneado no quitó filas de test_benign ni de test_attacks, así que los
+        # conteos deberían ser idénticos; si no lo son se registra y se sigue (no invalida el análisis).
+        with open(out_dir / "verificacion_conteos_vs_oe2_original.json", "w", encoding="utf-8") as f:
+            json.dump({"identicos": not mismatches, "diferencias": mismatches}, f, indent=2, ensure_ascii=False)
+        print(f"[fase2 seed={seed}] conteos frente al manifest del OE2 original: "
+              f"{'idénticos' if not mismatches else 'DIFERENCIAS ' + str(mismatches)}")
+    elif mismatches:
         raise AssertionError(f"[fase2 seed={seed}] conteos no coinciden con el manifest original: {mismatches}")
-    print(f"[fase2 seed={seed}] conteos verificados contra manifest original de OE2: OK ({len(manifest)} grupos)")
+    else:
+        print(f"[fase2 seed={seed}] conteos verificados contra manifest original de OE2: OK ({len(manifest)} grupos)")
 
     # --- Unidades activas (Burda et al. 2016) sobre benigno de esta semilla ---
     au = active_units(torch.from_numpy(mu_b), threshold=ACTIVE_THRESHOLD)

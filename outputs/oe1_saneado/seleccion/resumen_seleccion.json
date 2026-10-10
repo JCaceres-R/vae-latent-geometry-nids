@@ -1,0 +1,18 @@
+{
+  "n_universo": 77,
+  "n_quedan": 66,
+  "sha256": "49435ba7a10312a12aef49ee6c0f75b7916cf92813ba8cf3cf12291739405d97",
+  "eliminadas_por_regla": {
+    "R2": 8,
+    "R0": 3
+  },
+  "casi_funciones": [
+    "Flow Packets/s",
+    "Fwd Packets/s",
+    "Bwd Packets/s",
+    "Flow Bytes/s",
+    "Packet Length Variance",
+    "Down/Up Ratio"
+  ],
+  "fallos_posteriores": []
+}

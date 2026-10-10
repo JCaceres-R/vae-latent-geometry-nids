@@ -1,0 +1,78 @@
+columna,estado,regla,formula,tramos,eps,frac_verificada,error_abs_max,error_rel_max,entradas,formula_tex,tipo,fuente,filas,fallos,error_rel_max_ulp,error_sobre_eps_max,reconstruccion_frac,casi_funcion,eps_casi,fallos_casi,frac_bit_a_bit,reconstruccion_desde_final,precision_csv_cifras,precision_csv_entera
+Protocol,queda,,,,,,,,,,,,,,,,,,,,,,2,True
+Flow Duration,queda,,,,,,,,,,,,,,,,,,,,,,9,True
+Total Fwd Packet,queda,,,,,,,,,,,,,,,,,,,,,,6,True
+Total Bwd packets,queda,,,,,,,,,,,,,,,,,,,,,,6,True
+Total Length of Fwd Packet,queda,,,,,,,,,,,,,,,,,,,,,,7,True
+Total Length of Bwd Packet,queda,,,,,,,,,,,,,,,,,,,,,,9,True
+Fwd Packet Length Max,queda,,,,,,,,,,,,,,,,,,,,,,6,True
+Fwd Packet Length Min,queda,,,,,,,,,,,,,,,,,,,,,,5,True
+Fwd Packet Length Mean,sale,R2,B_f / n_f si n_f > 0; 0 si no,n_f = 0: 0,(3n_f+4)u,1.0,3.637978807091713e-12,3.1757551330794136e-14,Total Length of Fwd Packet; Total Fwd Packet,B_f / n_f\ \text{si } n_f > 0;\ 0 \text{ si no},continua,BasicFlow.java:1258 (fwdPktStats.getMean),1159924.0,0.0,286.04659267912774,0.2884501632918415,1.0,,,,,,17,False
+Fwd Packet Length Std,queda,,,,,,,,,,,,,,,,,,,,,,17,False
+Bwd Packet Length Max,queda,,,,,,,,,,,,,,,,,,,,,,6,True
+Bwd Packet Length Min,queda,,,,,,,,,,,,,,,,,,,,,,5,True
+Bwd Packet Length Mean,sale,R2,B_b / n_b si n_b > 0; 0 si no,n_b = 0 (flujos sin paquetes de vuelta): 0,(3n_b+4)u,1.0,9.777068044058979e-11,4.413634773740186e-14,Total Length of Bwd Packet; Total Bwd packets,B_b / n_b\ \text{si } n_b > 0;\ 0 \text{ si no},continua,BasicFlow.java:1270 (bwdPktStats.getMean),1159924.0,0.0,397.5448784473153,0.2249251566255851,1.0,,,,,,17,False
+Bwd Packet Length Std,queda,,,,,,,,,,,,,,,,,,,,,,17,False
+Flow Bytes/s,queda,,,,,0.998782678865167,,4.211212246973961e-15,,,,,,,,,,(B_f + B_b) / (D·1e-6),4u,1412.0,,,17,False
+Flow Packets/s,queda,,,,,0.9835066780237326,,3.745462721221892e-15,,,,,,,,,,(n_f + n_b) / (D·1e-6),4u (una conversión y dos divisiones),19131.0,,,17,False
+Flow IAT Mean,sale,R2,D / (n - 1) si n >= 2; 0 si no,n < 2: 0 (convención; con un solo paquete no hay intervalos),(3(n-1)+4)u: media incremental de n-1 IAT,1.0,7.450580596923828e-09,3.6258202559476294e-14,Flow Duration; Total Fwd Packet; Total Bwd packets,D / (n_f + n_b - 1)\ \text{si } n \ge 2;\ 0 \text{ si no},continua,BasicFlow.java:1287 (flowIAT.getMean),1159924.0,0.0,326.5848550719628,0.2961314939772184,1.0,,,,,,17,False
+Flow IAT Std,queda,,,,,,,,,,,,,,,,,,,,,,17,False
+Flow IAT Max,queda,,,,,,,,,,,,,,,,,,,,,,9,True
+Flow IAT Min,queda,,,,,,,,,,,,,,,,,,,,,,8,True
+Fwd IAT Total,queda,,,,,,,,,,,,,,,,,,,,,,9,True
+Fwd IAT Mean,sale,R2,Fwd IAT Total / (n_f - 1) si n_f >= 2; 0 si no,n_f < 2: 0 (y Fwd IAT Total = 0),(3(n_f-1)+4)u,1.0,7.450580596923828e-09,2.6024620858451886e-14,Fwd IAT Total; Total Fwd Packet,\text{Fwd IAT Total} / (n_f - 1)\ \text{si } n_f \ge 2;\ 0 \text{ si no},continua,BasicFlow.java:1294 (forwardIAT.getMean),1159924.0,0.0,234.4089456011647,0.2860929232043059,1.0,,,,,,17,False
+Fwd IAT Std,queda,,,,,,,,,,,,,,,,,,,,,,17,False
+Fwd IAT Max,queda,,,,,,,,,,,,,,,,,,,,,,9,True
+Fwd IAT Min,queda,,,,,,,,,,,,,,,,,,,,,,9,True
+Bwd IAT Total,queda,,,,,,,,,,,,,,,,,,,,,,9,True
+Bwd IAT Mean,sale,R2,Bwd IAT Total / (n_b - 1) si n_b >= 2; 0 si no,n_b < 2: 0 (y Bwd IAT Total = 0),(3(n_b-1)+4)u,1.0,7.450580596923828e-09,5.5748811483966956e-14,Bwd IAT Total; Total Bwd packets,\text{Bwd IAT Total} / (n_b - 1)\ \text{si } n_b \ge 2;\ 0 \text{ si no},continua,BasicFlow.java:1308 (backwardIAT.getMean),1159924.0,0.0,502.1406532510832,0.2952988659305451,1.0,,,,,,17,False
+Bwd IAT Std,queda,,,,,,,,,,,,,,,,,,,,,,17,False
+Bwd IAT Max,queda,,,,,,,,,,,,,,,,,,,,,,9,True
+Bwd IAT Min,queda,,,,,,,,,,,,,,,,,,,,,,9,True
+Fwd PSH Flags,queda,,,,,,,,,,,,,,,,,,,,,,4,True
+Bwd PSH Flags,queda,,,,,,,,,,,,,,,,,,,,,,4,True
+Fwd URG Flags,queda,,,,,,,,,,,,,,,,,,,,,,0,True
+Bwd URG Flags,queda,,,,,,,,,,,,,,,,,,,,,,0,True
+Fwd Header Length,queda,,,,,,,,,,,,,,,,,,,,,,7,True
+Bwd Header Length,queda,,,,,,,,,,,,,,,,,,,,,,7,True
+Fwd Packets/s,queda,,,,,0.9662331325155786,,8.192764060915847e-15,,,,,,,,,,n_f / (D·1e-6),4u,39167.0,,,17,False
+Bwd Packets/s,queda,,,,,0.9638415965183926,,1.1148338190103411e-14,,,,,,,,,,n_b / (D·1e-6),4u,41941.0,,,17,False
+Packet Length Min,sale,R2,"Bwd PL Min si n_f = 0; Fwd PL Min si n_b = 0; min(Fwd PL Min, Bwd PL Min) si no",dirección sin paquetes: su mínimo vale 0 en el CSV y no participa (regla corregida de la V3),round(f) == X,1.0,0.0,0.0,Fwd Packet Length Min; Bwd Packet Length Min; Total Fwd Packet; Total Bwd packets,"\text{Bwd PL Min si } n_f = 0;\ \text{Fwd PL Min si } n_b = 0;\ \min(\cdot,\cdot) \text{ si no}",entera,BasicFlow.java:1334 (flowLengthStats.getMin),1159924.0,0.0,0.0,0.0,1.0,,,,,,5,True
+Packet Length Max,sale,R2,"max(Fwd PL Max, Bwd PL Max)",ninguno (el máximo de una dirección vacía es 0),round(f) == X,1.0,0.0,0.0,Fwd Packet Length Max; Bwd Packet Length Max,"\max(\text{Fwd PL Max}, \text{Bwd PL Max})",entera,BasicFlow.java:1335 (flowLengthStats.getMax),1159924.0,0.0,0.0,0.0,1.0,,,,,,6,True
+Packet Length Mean,sale,R2,(B_f + B_b) / (n_f + n_b),n > 0 siempre,(3n+4)u,1.0,6.912159733474255e-11,5.675169803180988e-14,Total Length of Fwd Packet; Total Length of Bwd Packet; Total Fwd Packet; Total Bwd packets,(B_f + B_b) / (n_f + n_b),continua,BasicFlow.java:1336 (flowLengthStats.getMean),1159924.0,0.0,511.17385221740375,0.16203293961990972,1.0,,,,,,17,False
+Packet Length Std,queda,,,,,,,,,,,,,,,,,,,,,,17,False
+Packet Length Variance,queda,,,,,0.9956729923684655,,9.074685003663784e-16,,,,,,,,,,Packet Length Std^2,4u (raíz y cuadrado),5019.0,,,17,False
+FIN Flag Count,queda,,,,,,,,,,,,,,,,,,,,,,2,True
+SYN Flag Count,queda,,,,,,,,,,,,,,,,,,,,,,2,True
+RST Flag Count,queda,,,,,,,,,,,,,,,,,,,,,,3,True
+PSH Flag Count,queda,,,,,,,,,,,,,,,,,,,,,,4,True
+ACK Flag Count,queda,,,,,,,,,,,,,,,,,,,,,,6,True
+URG Flag Count,queda,,,,,,,,,,,,,,,,,,,,,,0,True
+CWR Flag Count,queda,,,,,,,,,,,,,,,,,,,,,,1,True
+ECE Flag Count,queda,,,,,,,,,,,,,,,,,,,,,,1,True
+Down/Up Ratio,queda,,,,,0.9999413754694273,,9.992007221626409e-16,,,,,,,,,,n_b / n_f si n_f > 0; 0 si no,2u (una división),68.0,,,17,False
+Average Packet Size,sale,R0,= Packet Length Mean,,(3n+4)u,1.0,6.912159733474255e-11,5.675169803180988e-14,Packet Length Mean,,,BasicFlow.java:384-389 (getAvgPacketSize) frente a :1336,,,511.17385221740375,,1.0,,,,0.8170664629751604,(B_f + B_b) / (n_f + n_b),17,False
+Fwd Segment Size Avg,sale,R0,= Fwd Packet Length Mean,,(3n_f+4)u: getSum()/n frente a la media incremental,1.0,3.410605131648481e-12,2.91341414475573e-14,Fwd Packet Length Mean,,,BasicFlow.java:391-395 (fAvgSegmentSize) frente a :1258,,,262.41701713395673,,1.0,,,,0.8775876695369697,B_f / n_f si n_f > 0; 0 si no,17,False
+Bwd Segment Size Avg,sale,R0,= Bwd Packet Length Mean,,(3n_b+4)u,1.0,9.777068044058979e-11,4.413634773740186e-14,Bwd Packet Length Mean,,,BasicFlow.java:397-401 (bAvgSegmentSize) frente a :1270,,,397.5448784473153,,1.0,,,,0.8735934423289802,B_b / n_b si n_b > 0; 0 si no,17,False
+Fwd Bytes/Bulk Avg,queda,,,,,,,,,,,,,,,,,,,,,,6,True
+Fwd Packet/Bulk Avg,queda,,,,,,,,,,,,,,,,,,,,,,3,True
+Fwd Bulk Rate Avg,queda,,,,,,,,,,,,,,,,,,,,,,9,True
+Bwd Bytes/Bulk Avg,queda,,,,,,,,,,,,,,,,,,,,,,9,True
+Bwd Packet/Bulk Avg,queda,,,,,,,,,,,,,,,,,,,,,,5,True
+Bwd Bulk Rate Avg,queda,,,,,,,,,,,,,,,,,,,,,,10,True
+Subflow Fwd Packets,queda,,,,,,,,,,,,,,,,,,,,,,1,True
+Subflow Fwd Bytes,queda,,,,,,,,,,,,,,,,,,,,,,4,True
+Subflow Bwd Packets,queda,,,,,,,,,,,,,,,,,,,,,,1,True
+Subflow Bwd Bytes,queda,,,,,,,,,,,,,,,,,,,,,,4,True
+FWD Init Win Bytes,queda,,,,,,,,,,,,,,,,,,,,,,5,True
+Bwd Init Win Bytes,queda,,,,,,,,,,,,,,,,,,,,,,5,True
+Fwd Act Data Pkts,queda,,,,,,,,,,,,,,,,,,,,,,4,True
+Fwd Seg Size Min,queda,,,,,,,,,,,,,,,,,,,,,,2,True
+Active Mean,queda,,,,,,,,,,,,,,,,,,,,,,17,False
+Active Std,queda,,,,,,,,,,,,,,,,,,,,,,17,False
+Active Max,queda,,,,,,,,,,,,,,,,,,,,,,9,True
+Active Min,queda,,,,,,,,,,,,,,,,,,,,,,9,True
+Idle Mean,queda,,,,,,,,,,,,,,,,,,,,,,17,False
+Idle Std,queda,,,,,,,,,,,,,,,,,,,,,,17,False
+Idle Max,queda,,,,,,,,,,,,,,,,,,,,,,9,True
+Idle Min,queda,,,,,,,,,,,,,,,,,,,,,,9,True

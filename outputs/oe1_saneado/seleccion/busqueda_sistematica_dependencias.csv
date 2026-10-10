@@ -1,0 +1,13 @@
+X,Y,soporte_Y,valores_distintos_Y,valores_distintos_X
+Subflow Bwd Packets,Total Fwd Packet,0.9995223825009225,1195,2
+Subflow Fwd Packets,Total Bwd packets,0.9994275487014667,1471,2
+Fwd Segment Size Avg,Fwd Packet Length Mean,0.9455602263596581,93582,67780
+Bwd Segment Size Avg,Bwd Packet Length Mean,0.9209586145299175,122469,103498
+CWR Flag Count,Flow IAT Std,0.5003017439073595,611277,7
+ECE Flag Count,Flow IAT Std,0.5003017439073595,611277,5
+Active Std,Flow IAT Std,0.5003017439073595,611277,143829
+Idle Std,Flow IAT Std,0.5003017439073595,611277,146528
+Idle Max,Flow IAT Max,0.7279614871319156,414156,198649
+Subflow Bwd Packets,Fwd Packets/s,0.5585029708842993,570473,2
+Subflow Fwd Packets,Bwd Packets/s,0.5696890485928389,556003,2
+Average Packet Size,Packet Length Mean,0.876045327107638,179700,145887

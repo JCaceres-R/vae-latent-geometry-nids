@@ -1,0 +1,754 @@
+descripcion: Conjunto de entrada del OE1 saneado por información nula (R0/R1/R2), derivado solo de train_benign tras el filtro
+  D4.
+fecha: '2026-10-08'
+n_universo: 77
+n_quedan: 66
+sha256: 49435ba7a10312a12aef49ee6c0f75b7916cf92813ba8cf3cf12291739405d97
+columnas_que_quedan:
+- Protocol
+- Flow Duration
+- Total Fwd Packet
+- Total Bwd packets
+- Total Length of Fwd Packet
+- Total Length of Bwd Packet
+- Fwd Packet Length Max
+- Fwd Packet Length Min
+- Fwd Packet Length Std
+- Bwd Packet Length Max
+- Bwd Packet Length Min
+- Bwd Packet Length Std
+- Flow Bytes/s
+- Flow Packets/s
+- Flow IAT Std
+- Flow IAT Max
+- Flow IAT Min
+- Fwd IAT Total
+- Fwd IAT Std
+- Fwd IAT Max
+- Fwd IAT Min
+- Bwd IAT Total
+- Bwd IAT Std
+- Bwd IAT Max
+- Bwd IAT Min
+- Fwd PSH Flags
+- Bwd PSH Flags
+- Fwd URG Flags
+- Bwd URG Flags
+- Fwd Header Length
+- Bwd Header Length
+- Fwd Packets/s
+- Bwd Packets/s
+- Packet Length Std
+- Packet Length Variance
+- FIN Flag Count
+- SYN Flag Count
+- RST Flag Count
+- PSH Flag Count
+- ACK Flag Count
+- URG Flag Count
+- CWR Flag Count
+- ECE Flag Count
+- Down/Up Ratio
+- Fwd Bytes/Bulk Avg
+- Fwd Packet/Bulk Avg
+- Fwd Bulk Rate Avg
+- Bwd Bytes/Bulk Avg
+- Bwd Packet/Bulk Avg
+- Bwd Bulk Rate Avg
+- Subflow Fwd Packets
+- Subflow Fwd Bytes
+- Subflow Bwd Packets
+- Subflow Bwd Bytes
+- FWD Init Win Bytes
+- Bwd Init Win Bytes
+- Fwd Act Data Pkts
+- Fwd Seg Size Min
+- Active Mean
+- Active Std
+- Active Max
+- Active Min
+- Idle Mean
+- Idle Std
+- Idle Max
+- Idle Min
+columnas:
+  Protocol:
+    estado: queda
+    precision_csv:
+      max_cifras_significativas: 2
+      usa_notacion_E: false
+      entera: true
+  Flow Duration:
+    estado: queda
+    precision_csv:
+      max_cifras_significativas: 9
+      usa_notacion_E: false
+      entera: true
+  Total Fwd Packet:
+    estado: queda
+    precision_csv:
+      max_cifras_significativas: 6
+      usa_notacion_E: false
+      entera: true
+  Total Bwd packets:
+    estado: queda
+    precision_csv:
+      max_cifras_significativas: 6
+      usa_notacion_E: false
+      entera: true
+  Total Length of Fwd Packet:
+    estado: queda
+    precision_csv:
+      max_cifras_significativas: 7
+      usa_notacion_E: false
+      entera: true
+  Total Length of Bwd Packet:
+    estado: queda
+    precision_csv:
+      max_cifras_significativas: 9
+      usa_notacion_E: true
+      entera: true
+  Fwd Packet Length Max:
+    estado: queda
+    precision_csv:
+      max_cifras_significativas: 6
+      usa_notacion_E: false
+      entera: true
+  Fwd Packet Length Min:
+    estado: queda
+    precision_csv:
+      max_cifras_significativas: 5
+      usa_notacion_E: false
+      entera: true
+  Fwd Packet Length Mean:
+    estado: sale
+    regla: R2
+    formula: B_f / n_f si n_f > 0; 0 si no
+    tramos: 'n_f = 0: 0'
+    entradas:
+    - Total Length of Fwd Packet
+    - Total Fwd Packet
+    eps: (3n_f+4)u
+    frac_verificada: 1.0
+    error_abs_max: 3.637978807091713e-12
+    error_rel_max: 3.1757551330794136e-14
+    formula_tex: B_f / n_f\ \text{si } n_f > 0;\ 0 \text{ si no}
+    tipo: continua
+    fuente: BasicFlow.java:1258 (fwdPktStats.getMean)
+    filas: 1159924
+    fallos: 0
+    error_rel_max_ulp: 286.04659267912774
+    error_sobre_eps_max: 0.2884501632918415
+    reconstruccion_frac: 1.0
+    precision_csv:
+      max_cifras_significativas: 17
+      usa_notacion_E: false
+      entera: false
+  Fwd Packet Length Std:
+    estado: queda
+    precision_csv:
+      max_cifras_significativas: 17
+      usa_notacion_E: false
+      entera: false
+  Bwd Packet Length Max:
+    estado: queda
+    precision_csv:
+      max_cifras_significativas: 6
+      usa_notacion_E: false
+      entera: true
+  Bwd Packet Length Min:
+    estado: queda
+    precision_csv:
+      max_cifras_significativas: 5
+      usa_notacion_E: false
+      entera: true
+  Bwd Packet Length Mean:
+    estado: sale
+    regla: R2
+    formula: B_b / n_b si n_b > 0; 0 si no
+    tramos: 'n_b = 0 (flujos sin paquetes de vuelta): 0'
+    entradas:
+    - Total Length of Bwd Packet
+    - Total Bwd packets
+    eps: (3n_b+4)u
+    frac_verificada: 1.0
+    error_abs_max: 9.777068044058979e-11
+    error_rel_max: 4.413634773740186e-14
+    formula_tex: B_b / n_b\ \text{si } n_b > 0;\ 0 \text{ si no}
+    tipo: continua
+    fuente: BasicFlow.java:1270 (bwdPktStats.getMean)
+    filas: 1159924
+    fallos: 0
+    error_rel_max_ulp: 397.5448784473153
+    error_sobre_eps_max: 0.2249251566255851
+    reconstruccion_frac: 1.0
+    precision_csv:
+      max_cifras_significativas: 17
+      usa_notacion_E: false
+      entera: false
+  Bwd Packet Length Std:
+    estado: queda
+    precision_csv:
+      max_cifras_significativas: 17
+      usa_notacion_E: false
+      entera: false
+  Flow Bytes/s:
+    estado: queda
+    frac_verificada: 0.998782678865167
+    error_rel_max: 4.211212246973961e-15
+    casi_funcion: (B_f + B_b) / (D·1e-6)
+    eps_casi: 4u
+    fallos_casi: 1412
+    precision_csv:
+      max_cifras_significativas: 17
+      usa_notacion_E: true
+      entera: false
+  Flow Packets/s:
+    estado: queda
+    frac_verificada: 0.9835066780237326
+    error_rel_max: 3.745462721221892e-15
+    casi_funcion: (n_f + n_b) / (D·1e-6)
+    eps_casi: 4u (una conversión y dos divisiones)
+    fallos_casi: 19131
+    precision_csv:
+      max_cifras_significativas: 17
+      usa_notacion_E: false
+      entera: false
+  Flow IAT Mean:
+    estado: sale
+    regla: R2
+    formula: D / (n - 1) si n >= 2; 0 si no
+    tramos: 'n < 2: 0 (convención; con un solo paquete no hay intervalos)'
+    entradas:
+    - Flow Duration
+    - Total Fwd Packet
+    - Total Bwd packets
+    eps: '(3(n-1)+4)u: media incremental de n-1 IAT'
+    frac_verificada: 1.0
+    error_abs_max: 7.450580596923828e-09
+    error_rel_max: 3.6258202559476294e-14
+    formula_tex: D / (n_f + n_b - 1)\ \text{si } n \ge 2;\ 0 \text{ si no}
+    tipo: continua
+    fuente: BasicFlow.java:1287 (flowIAT.getMean)
+    filas: 1159924
+    fallos: 0
+    error_rel_max_ulp: 326.5848550719628
+    error_sobre_eps_max: 0.2961314939772184
+    reconstruccion_frac: 1.0
+    precision_csv:
+      max_cifras_significativas: 17
+      usa_notacion_E: true
+      entera: false
+  Flow IAT Std:
+    estado: queda
+    precision_csv:
+      max_cifras_significativas: 17
+      usa_notacion_E: true
+      entera: false
+  Flow IAT Max:
+    estado: queda
+    precision_csv:
+      max_cifras_significativas: 9
+      usa_notacion_E: true
+      entera: true
+  Flow IAT Min:
+    estado: queda
+    precision_csv:
+      max_cifras_significativas: 8
+      usa_notacion_E: true
+      entera: true
+  Fwd IAT Total:
+    estado: queda
+    precision_csv:
+      max_cifras_significativas: 9
+      usa_notacion_E: true
+      entera: true
+  Fwd IAT Mean:
+    estado: sale
+    regla: R2
+    formula: Fwd IAT Total / (n_f - 1) si n_f >= 2; 0 si no
+    tramos: 'n_f < 2: 0 (y Fwd IAT Total = 0)'
+    entradas:
+    - Fwd IAT Total
+    - Total Fwd Packet
+    eps: (3(n_f-1)+4)u
+    frac_verificada: 1.0
+    error_abs_max: 7.450580596923828e-09
+    error_rel_max: 2.6024620858451886e-14
+    formula_tex: \text{Fwd IAT Total} / (n_f - 1)\ \text{si } n_f \ge 2;\ 0 \text{ si no}
+    tipo: continua
+    fuente: BasicFlow.java:1294 (forwardIAT.getMean)
+    filas: 1159924
+    fallos: 0
+    error_rel_max_ulp: 234.4089456011647
+    error_sobre_eps_max: 0.2860929232043059
+    reconstruccion_frac: 1.0
+    precision_csv:
+      max_cifras_significativas: 17
+      usa_notacion_E: true
+      entera: false
+  Fwd IAT Std:
+    estado: queda
+    precision_csv:
+      max_cifras_significativas: 17
+      usa_notacion_E: true
+      entera: false
+  Fwd IAT Max:
+    estado: queda
+    precision_csv:
+      max_cifras_significativas: 9
+      usa_notacion_E: true
+      entera: true
+  Fwd IAT Min:
+    estado: queda
+    precision_csv:
+      max_cifras_significativas: 9
+      usa_notacion_E: true
+      entera: true
+  Bwd IAT Total:
+    estado: queda
+    precision_csv:
+      max_cifras_significativas: 9
+      usa_notacion_E: true
+      entera: true
+  Bwd IAT Mean:
+    estado: sale
+    regla: R2
+    formula: Bwd IAT Total / (n_b - 1) si n_b >= 2; 0 si no
+    tramos: 'n_b < 2: 0 (y Bwd IAT Total = 0)'
+    entradas:
+    - Bwd IAT Total
+    - Total Bwd packets
+    eps: (3(n_b-1)+4)u
+    frac_verificada: 1.0
+    error_abs_max: 7.450580596923828e-09
+    error_rel_max: 5.5748811483966956e-14
+    formula_tex: \text{Bwd IAT Total} / (n_b - 1)\ \text{si } n_b \ge 2;\ 0 \text{ si no}
+    tipo: continua
+    fuente: BasicFlow.java:1308 (backwardIAT.getMean)
+    filas: 1159924
+    fallos: 0
+    error_rel_max_ulp: 502.1406532510832
+    error_sobre_eps_max: 0.2952988659305451
+    reconstruccion_frac: 1.0
+    precision_csv:
+      max_cifras_significativas: 17
+      usa_notacion_E: true
+      entera: false
+  Bwd IAT Std:
+    estado: queda
+    precision_csv:
+      max_cifras_significativas: 17
+      usa_notacion_E: true
+      entera: false
+  Bwd IAT Max:
+    estado: queda
+    precision_csv:
+      max_cifras_significativas: 9
+      usa_notacion_E: true
+      entera: true
+  Bwd IAT Min:
+    estado: queda
+    precision_csv:
+      max_cifras_significativas: 9
+      usa_notacion_E: true
+      entera: true
+  Fwd PSH Flags:
+    estado: queda
+    precision_csv:
+      max_cifras_significativas: 4
+      usa_notacion_E: false
+      entera: true
+  Bwd PSH Flags:
+    estado: queda
+    precision_csv:
+      max_cifras_significativas: 4
+      usa_notacion_E: false
+      entera: true
+  Fwd URG Flags:
+    estado: queda
+    precision_csv:
+      max_cifras_significativas: 0
+      usa_notacion_E: false
+      entera: true
+  Bwd URG Flags:
+    estado: queda
+    precision_csv:
+      max_cifras_significativas: 0
+      usa_notacion_E: false
+      entera: true
+  Fwd Header Length:
+    estado: queda
+    precision_csv:
+      max_cifras_significativas: 7
+      usa_notacion_E: false
+      entera: true
+  Bwd Header Length:
+    estado: queda
+    precision_csv:
+      max_cifras_significativas: 7
+      usa_notacion_E: false
+      entera: true
+  Fwd Packets/s:
+    estado: queda
+    frac_verificada: 0.9662331325155786
+    error_rel_max: 8.192764060915847e-15
+    casi_funcion: n_f / (D·1e-6)
+    eps_casi: 4u
+    fallos_casi: 39167
+    precision_csv:
+      max_cifras_significativas: 17
+      usa_notacion_E: false
+      entera: false
+  Bwd Packets/s:
+    estado: queda
+    frac_verificada: 0.9638415965183926
+    error_rel_max: 1.1148338190103411e-14
+    casi_funcion: n_b / (D·1e-6)
+    eps_casi: 4u
+    fallos_casi: 41941
+    precision_csv:
+      max_cifras_significativas: 17
+      usa_notacion_E: false
+      entera: false
+  Packet Length Min:
+    estado: sale
+    regla: R2
+    formula: Bwd PL Min si n_f = 0; Fwd PL Min si n_b = 0; min(Fwd PL Min, Bwd PL Min) si no
+    tramos: 'dirección sin paquetes: su mínimo vale 0 en el CSV y no participa (regla corregida de la V3)'
+    entradas:
+    - Fwd Packet Length Min
+    - Bwd Packet Length Min
+    - Total Fwd Packet
+    - Total Bwd packets
+    eps: round(f) == X
+    frac_verificada: 1.0
+    error_abs_max: 0.0
+    error_rel_max: 0.0
+    formula_tex: \text{Bwd PL Min si } n_f = 0;\ \text{Fwd PL Min si } n_b = 0;\ \min(\cdot,\cdot) \text{ si no}
+    tipo: entera
+    fuente: BasicFlow.java:1334 (flowLengthStats.getMin)
+    filas: 1159924
+    fallos: 0
+    error_rel_max_ulp: 0.0
+    error_sobre_eps_max: 0.0
+    reconstruccion_frac: 1.0
+    precision_csv:
+      max_cifras_significativas: 5
+      usa_notacion_E: false
+      entera: true
+  Packet Length Max:
+    estado: sale
+    regla: R2
+    formula: max(Fwd PL Max, Bwd PL Max)
+    tramos: ninguno (el máximo de una dirección vacía es 0)
+    entradas:
+    - Fwd Packet Length Max
+    - Bwd Packet Length Max
+    eps: round(f) == X
+    frac_verificada: 1.0
+    error_abs_max: 0.0
+    error_rel_max: 0.0
+    formula_tex: \max(\text{Fwd PL Max}, \text{Bwd PL Max})
+    tipo: entera
+    fuente: BasicFlow.java:1335 (flowLengthStats.getMax)
+    filas: 1159924
+    fallos: 0
+    error_rel_max_ulp: 0.0
+    error_sobre_eps_max: 0.0
+    reconstruccion_frac: 1.0
+    precision_csv:
+      max_cifras_significativas: 6
+      usa_notacion_E: false
+      entera: true
+  Packet Length Mean:
+    estado: sale
+    regla: R2
+    formula: (B_f + B_b) / (n_f + n_b)
+    tramos: n > 0 siempre
+    entradas:
+    - Total Length of Fwd Packet
+    - Total Length of Bwd Packet
+    - Total Fwd Packet
+    - Total Bwd packets
+    eps: (3n+4)u
+    frac_verificada: 1.0
+    error_abs_max: 6.912159733474255e-11
+    error_rel_max: 5.675169803180988e-14
+    formula_tex: (B_f + B_b) / (n_f + n_b)
+    tipo: continua
+    fuente: BasicFlow.java:1336 (flowLengthStats.getMean)
+    filas: 1159924
+    fallos: 0
+    error_rel_max_ulp: 511.17385221740375
+    error_sobre_eps_max: 0.16203293961990972
+    reconstruccion_frac: 1.0
+    precision_csv:
+      max_cifras_significativas: 17
+      usa_notacion_E: false
+      entera: false
+  Packet Length Std:
+    estado: queda
+    precision_csv:
+      max_cifras_significativas: 17
+      usa_notacion_E: false
+      entera: false
+  Packet Length Variance:
+    estado: queda
+    frac_verificada: 0.9956729923684655
+    error_rel_max: 9.074685003663784e-16
+    casi_funcion: Packet Length Std^2
+    eps_casi: 4u (raíz y cuadrado)
+    fallos_casi: 5019
+    precision_csv:
+      max_cifras_significativas: 17
+      usa_notacion_E: true
+      entera: false
+  FIN Flag Count:
+    estado: queda
+    precision_csv:
+      max_cifras_significativas: 2
+      usa_notacion_E: false
+      entera: true
+  SYN Flag Count:
+    estado: queda
+    precision_csv:
+      max_cifras_significativas: 2
+      usa_notacion_E: false
+      entera: true
+  RST Flag Count:
+    estado: queda
+    precision_csv:
+      max_cifras_significativas: 3
+      usa_notacion_E: false
+      entera: true
+  PSH Flag Count:
+    estado: queda
+    precision_csv:
+      max_cifras_significativas: 4
+      usa_notacion_E: false
+      entera: true
+  ACK Flag Count:
+    estado: queda
+    precision_csv:
+      max_cifras_significativas: 6
+      usa_notacion_E: false
+      entera: true
+  URG Flag Count:
+    estado: queda
+    precision_csv:
+      max_cifras_significativas: 0
+      usa_notacion_E: false
+      entera: true
+  CWR Flag Count:
+    estado: queda
+    precision_csv:
+      max_cifras_significativas: 1
+      usa_notacion_E: false
+      entera: true
+  ECE Flag Count:
+    estado: queda
+    precision_csv:
+      max_cifras_significativas: 1
+      usa_notacion_E: false
+      entera: true
+  Down/Up Ratio:
+    estado: queda
+    frac_verificada: 0.9999413754694273
+    error_rel_max: 9.992007221626409e-16
+    casi_funcion: n_b / n_f si n_f > 0; 0 si no
+    eps_casi: 2u (una división)
+    fallos_casi: 68
+    precision_csv:
+      max_cifras_significativas: 17
+      usa_notacion_E: false
+      entera: false
+  Average Packet Size:
+    estado: sale
+    regla: R0
+    formula: = Packet Length Mean
+    entradas:
+    - Packet Length Mean
+    eps: (3n+4)u
+    frac_verificada: 1.0
+    error_abs_max: 6.912159733474255e-11
+    error_rel_max: 5.675169803180988e-14
+    error_rel_max_ulp: 511.17385221740375
+    frac_bit_a_bit: 0.8170664629751604
+    fuente: BasicFlow.java:384-389 (getAvgPacketSize) frente a :1336
+    reconstruccion_desde_final: (B_f + B_b) / (n_f + n_b)
+    reconstruccion_frac: 1.0
+    precision_csv:
+      max_cifras_significativas: 17
+      usa_notacion_E: false
+      entera: false
+  Fwd Segment Size Avg:
+    estado: sale
+    regla: R0
+    formula: = Fwd Packet Length Mean
+    entradas:
+    - Fwd Packet Length Mean
+    eps: '(3n_f+4)u: getSum()/n frente a la media incremental'
+    frac_verificada: 1.0
+    error_abs_max: 3.410605131648481e-12
+    error_rel_max: 2.91341414475573e-14
+    error_rel_max_ulp: 262.41701713395673
+    frac_bit_a_bit: 0.8775876695369697
+    fuente: BasicFlow.java:391-395 (fAvgSegmentSize) frente a :1258
+    reconstruccion_desde_final: B_f / n_f si n_f > 0; 0 si no
+    reconstruccion_frac: 1.0
+    precision_csv:
+      max_cifras_significativas: 17
+      usa_notacion_E: false
+      entera: false
+  Bwd Segment Size Avg:
+    estado: sale
+    regla: R0
+    formula: = Bwd Packet Length Mean
+    entradas:
+    - Bwd Packet Length Mean
+    eps: (3n_b+4)u
+    frac_verificada: 1.0
+    error_abs_max: 9.777068044058979e-11
+    error_rel_max: 4.413634773740186e-14
+    error_rel_max_ulp: 397.5448784473153
+    frac_bit_a_bit: 0.8735934423289802
+    fuente: BasicFlow.java:397-401 (bAvgSegmentSize) frente a :1270
+    reconstruccion_desde_final: B_b / n_b si n_b > 0; 0 si no
+    reconstruccion_frac: 1.0
+    precision_csv:
+      max_cifras_significativas: 17
+      usa_notacion_E: false
+      entera: false
+  Fwd Bytes/Bulk Avg:
+    estado: queda
+    precision_csv:
+      max_cifras_significativas: 6
+      usa_notacion_E: false
+      entera: true
+  Fwd Packet/Bulk Avg:
+    estado: queda
+    precision_csv:
+      max_cifras_significativas: 3
+      usa_notacion_E: false
+      entera: true
+  Fwd Bulk Rate Avg:
+    estado: queda
+    precision_csv:
+      max_cifras_significativas: 9
+      usa_notacion_E: false
+      entera: true
+  Bwd Bytes/Bulk Avg:
+    estado: queda
+    precision_csv:
+      max_cifras_significativas: 9
+      usa_notacion_E: false
+      entera: true
+  Bwd Packet/Bulk Avg:
+    estado: queda
+    precision_csv:
+      max_cifras_significativas: 5
+      usa_notacion_E: false
+      entera: true
+  Bwd Bulk Rate Avg:
+    estado: queda
+    precision_csv:
+      max_cifras_significativas: 10
+      usa_notacion_E: false
+      entera: true
+  Subflow Fwd Packets:
+    estado: queda
+    precision_csv:
+      max_cifras_significativas: 1
+      usa_notacion_E: false
+      entera: true
+  Subflow Fwd Bytes:
+    estado: queda
+    precision_csv:
+      max_cifras_significativas: 4
+      usa_notacion_E: false
+      entera: true
+  Subflow Bwd Packets:
+    estado: queda
+    precision_csv:
+      max_cifras_significativas: 1
+      usa_notacion_E: false
+      entera: true
+  Subflow Bwd Bytes:
+    estado: queda
+    precision_csv:
+      max_cifras_significativas: 4
+      usa_notacion_E: false
+      entera: true
+  FWD Init Win Bytes:
+    estado: queda
+    precision_csv:
+      max_cifras_significativas: 5
+      usa_notacion_E: false
+      entera: true
+  Bwd Init Win Bytes:
+    estado: queda
+    precision_csv:
+      max_cifras_significativas: 5
+      usa_notacion_E: false
+      entera: true
+  Fwd Act Data Pkts:
+    estado: queda
+    precision_csv:
+      max_cifras_significativas: 4
+      usa_notacion_E: false
+      entera: true
+  Fwd Seg Size Min:
+    estado: queda
+    precision_csv:
+      max_cifras_significativas: 2
+      usa_notacion_E: false
+      entera: true
+  Active Mean:
+    estado: queda
+    precision_csv:
+      max_cifras_significativas: 17
+      usa_notacion_E: true
+      entera: false
+  Active Std:
+    estado: queda
+    precision_csv:
+      max_cifras_significativas: 17
+      usa_notacion_E: true
+      entera: false
+  Active Max:
+    estado: queda
+    precision_csv:
+      max_cifras_significativas: 9
+      usa_notacion_E: true
+      entera: true
+  Active Min:
+    estado: queda
+    precision_csv:
+      max_cifras_significativas: 9
+      usa_notacion_E: true
+      entera: true
+  Idle Mean:
+    estado: queda
+    precision_csv:
+      max_cifras_significativas: 17
+      usa_notacion_E: true
+      entera: false
+  Idle Std:
+    estado: queda
+    precision_csv:
+      max_cifras_significativas: 17
+      usa_notacion_E: true
+      entera: false
+  Idle Max:
+    estado: queda
+    precision_csv:
+      max_cifras_significativas: 9
+      usa_notacion_E: true
+      entera: true
+  Idle Min:
+    estado: queda
+    precision_csv:
+      max_cifras_significativas: 9
+      usa_notacion_E: true
+      entera: true

@@ -34,6 +34,19 @@ outputs/oe2_robust/latent_vectors/
 outputs/oe2_robust/tables/*.npz
 outputs/oe2_robust/tables/_cache/
 
+# OE2 sobre los modelos del OE1 saneado (perfil saneado, scripts/run_pendientes_vm.sh)
+# y descriptores: mismos criterios que oe2_robust (se versionan tablas, métricas y figuras).
+outputs/oe2_robust_saneado/latent_vectors/
+outputs/oe2_robust_saneado/tables/*.npz
+outputs/oe2_robust_saneado/tables/_cache/
+outputs/oe2_descriptores/_cache/
+outputs/oe2_descriptores_saneado/_cache/
+
+# OE1 saneado: prueba de humo y corridas de control de Windows (los checkpoints que se
+# versionan son los de la VM, en outputs/oe1_saneado/checkpoints/).
+outputs/oe1_saneado/humo/
+outputs/oe1_saneado_control_windows/
+
 # VM Linux dedicada para OE2 robusto (scripts/run_oe2_robust_vm.sh) -- no
 # se versiona, es local a cada máquina donde se corre el pipeline.
 .venv-linux/
