@@ -13,6 +13,10 @@ Perfiles (variable de entorno VAE_NIDS_OE2_PERFIL, se lee al importar):
             outputs/oe1_saneado/checkpoints/; resultados en
             outputs/oe2_robust_saneado/. No entrena nada (Fases 0 y 1 no aplican:
             los modelos son los del OE1).
+
+Con el perfil saneado, VAE_NIDS_OE2_CONFIG puede apuntar a otra configuración con el mismo formato
+(por ejemplo configs/oe4_beta2.yaml, OE4). Entonces semillas, arquitectura, beta y checkpoints salen de
+esa configuración y los resultados van a <salidas.dir>/oe2_robust/ (y <salidas.dir>/oe2_descriptores/).
 """
 import os
 from pathlib import Path
@@ -31,6 +35,10 @@ if PERFIL not in ("original", "saneado"):
     raise ValueError(f"VAE_NIDS_OE2_PERFIL debe ser 'original' o 'saneado', no '{PERFIL}'")
 
 OE1_SANEADO_CONFIG_PATH = base_cfg.PROJECT_ROOT / "configs" / "oe1_saneado.yaml"
+_CONFIG_ENV = os.environ.get("VAE_NIDS_OE2_CONFIG", "").strip()
+CONFIG_PERSONALIZADA = PERFIL == "saneado" and bool(_CONFIG_ENV)
+if CONFIG_PERSONALIZADA:
+    OE1_SANEADO_CONFIG_PATH = base_cfg.PROJECT_ROOT / _CONFIG_ENV
 
 if PERFIL == "saneado":
     with open(OE1_SANEADO_CONFIG_PATH, encoding="utf-8") as _f:
@@ -39,14 +47,16 @@ if PERFIL == "saneado":
     ALL_SEEDS = list(OE1_SANEADO_CFG["semillas"]["principal"])
     OFFICIAL_SEED = ALL_SEEDS[0]
     NEW_SEEDS = []
-    ROOT = base_cfg.PROJECT_ROOT / "outputs" / "oe2_robust_saneado"
+    SALIDAS_CONFIG = base_cfg.PROJECT_ROOT / OE1_SANEADO_CFG["salidas"]["dir"]
+    ROOT = SALIDAS_CONFIG / "oe2_robust" if CONFIG_PERSONALIZADA else base_cfg.PROJECT_ROOT / "outputs" / "oe2_robust_saneado"
     DATA_DIR = base_cfg.PROJECT_ROOT / OE1_SANEADO_CFG["datos"]["processed_dir"]
     DATA_SUFFIX = "_escalado"
-    OE1_CHECKPOINTS_DIR = base_cfg.PROJECT_ROOT / OE1_SANEADO_CFG["salidas"]["dir"] / "checkpoints"
+    OE1_CHECKPOINTS_DIR = SALIDAS_CONFIG / "checkpoints"
     OE1_RUN_NAME = OE1_SANEADO_CFG["entrenamiento"]["nombre_corrida"]
     OFFICIAL_CHECKPOINT_PATH = OE1_CHECKPOINTS_DIR / f"{OE1_RUN_NAME}_seed{OFFICIAL_SEED}.pt"
 else:
     OE1_SANEADO_CFG = None
+    SALIDAS_CONFIG = None
     # --- Semillas ---
     # 42 = checkpoint oficial de OE1/OE2 (outputs/checkpoints/vae_k8_beta1_input51_best.pt),
     # NO se reentrena -- se usa tal cual para el análisis. Las otras 9 son nuevas,

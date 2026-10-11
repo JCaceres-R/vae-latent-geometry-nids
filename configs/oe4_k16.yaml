@@ -1,0 +1,63 @@
+# OE4 -- reproducibilidad del ranking frente a beta y k. Idéntica a configs/oe1_saneado.yaml salvo:
+# latent_dim (k) = 16; nombre de corrida, semillas (5: 42-46) y carpeta de salida. Se entrena con
+# python -m vae_nids.oe1.run --config configs/oe4_k16.yaml (lo lanza scripts/run_oe3_oe4_vm.sh).
+
+datos:
+  raw_dir: data/raw
+  processed_dir: data/processed/oe1_saneado
+  csv:
+    - Monday-WorkingHours.csv
+    - Tuesday-WorkingHours.csv
+    - Wednesday-WorkingHours.csv
+    - Thursday-WorkingHours.csv
+    - Friday-WorkingHours.csv
+  # Columnas que no son de flujo (fuga o identificadores) y la etiqueta.
+  columnas_no_flujo: [Flow ID, Src IP, Src Port, Dst IP, Dst Port, Timestamp]
+  etiqueta: Label
+  # Split idéntico al pipeline original (vae_nids.data.pipeline): 70/15/15 del benigno,
+  # estratificado por día, random_state 42.
+  semilla_split: 42
+  fraccion_train: 0.70
+  fraccion_val: 0.15
+  fraccion_test: 0.15
+  estratificar_por_dia: true
+  # D4: se filtran los flujos con Flow Duration < 0 dentro de cada partición, después de dividir.
+  filtrar_duracion_negativa: true
+
+columnas:
+  conjunto: configs/features/oe1_info_nula.yaml
+  # Hash SHA-256 de la lista ordenada de columnas que quedan; se verifica al cargar.
+  sha256: 49435ba7a10312a12aef49ee6c0f75b7916cf92813ba8cf3cf12291739405d97
+
+modelo:
+  latent_dim: 16          # J (OE4)
+  hidden_dim: 32
+  beta: 1.0            # (OE4)
+  logvar_min: -10.0      # D3: clamp de log sigma^2 (codificador y decodificador)
+  logvar_max: 10.0
+
+entrenamiento:
+  optimizador: adam
+  lr: 0.001
+  batch_size: 1024
+  patience: 10
+  min_delta: 0.10        # nats de la pérdida de validación (-ELBO medio por flujo)
+  max_epochs: 250
+  fraccion_muestra: 1.0  # 1.0 = todo train/val; la prueba de humo usa 0.01
+  nombre_corrida: oe4_k16
+
+semillas:
+  principal: [42, 43, 44, 45, 46]
+  referencia_74: [42]
+  general: 42            # todo lo aleatorio fuera del barrido
+
+cpu:
+  hilos: 8
+  deterministico: true
+
+evaluacion:
+  tau_percentil: 95      # tau = p95 del score sobre val_benign
+  umbral_unidades_activas: 0.01
+
+salidas:
+  dir: outputs/oe4/k16

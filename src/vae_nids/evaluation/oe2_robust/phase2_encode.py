@@ -158,7 +158,7 @@ def encode_seed(seed: int) -> dict:
     # --- Unidades activas (Burda et al. 2016) sobre benigno de esta semilla ---
     au = active_units(torch.from_numpy(mu_b), threshold=ACTIVE_THRESHOLD)
     active_dims = [i for i, a in enumerate(au["active_per_dim"]) if a]
-    print(f"[fase2 seed={seed}] dims activas ({len(active_dims)}/8): {active_dims} "
+    print(f"[fase2 seed={seed}] dims activas ({len(active_dims)}/{len(au['active_per_dim'])}): {active_dims} "
           f"varianza={[round(v, 5) for v in au['variance_per_dim']]}")
 
     return {

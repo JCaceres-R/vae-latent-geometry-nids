@@ -1,16 +1,20 @@
 #!/usr/bin/env bash
-# Deja en el área de preparación (git add) solo lo que se versiona de la corrida de
-# scripts/run_pendientes_vm.sh. No hace commit ni push: eso lo haces tú después de revisar.
+# Deja en el área de preparación (git add) solo lo que se versiona de una corrida en la VM. El argumento
+# es la carpeta de documentación de la corrida (por defecto outputs/vm_pendientes, la de
+# scripts/run_pendientes_vm.sh; outputs/vm_oe3_oe4 para scripts/run_oe3_oe4_vm.sh).
+# No hace commit ni push: eso lo haces tú después de revisar.
 #
-#   bash scripts/vm_preparar_commit.sh
-#   git commit -F outputs/vm_pendientes/MENSAJE_COMMIT.txt && git push
+#   bash scripts/vm_preparar_commit.sh outputs/vm_oe3_oe4
+#   git commit -F outputs/vm_oe3_oe4/MENSAJE_COMMIT.txt && git push
 set -uo pipefail
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$REPO_ROOT"
 
-LIST="outputs/vm_pendientes/ARCHIVOS_PARA_COMMIT.txt"
+DIR="${1:-outputs/vm_pendientes}"
+DIR="${DIR%/}"
+LIST="$DIR/ARCHIVOS_PARA_COMMIT.txt"
 if [ ! -f "$LIST" ]; then
-  echo "No existe $LIST: corre primero scripts/run_pendientes_vm.sh (o python scripts/vm_resumen_corrida.py)." >&2
+  echo "No existe $LIST: la corrida no llegó a escribir su resumen (regenéralo con el script vm_resumen_* que le corresponde)." >&2
   exit 1
 fi
 
@@ -32,4 +36,4 @@ echo "Preparados: $(git diff --cached --name-only | wc -l) archivos, $(git diff 
 git diff --cached --stat | tail -n 25
 echo ""
 echo "Si todo se ve bien:"
-echo "  git commit -F outputs/vm_pendientes/MENSAJE_COMMIT.txt && git push"
+echo "  git commit -F $DIR/MENSAJE_COMMIT.txt && git push"

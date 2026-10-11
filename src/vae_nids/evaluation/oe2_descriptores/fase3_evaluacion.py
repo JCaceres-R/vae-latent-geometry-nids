@@ -124,11 +124,16 @@ def load_tables():
     for col in [c for c in des.columns if c.endswith("__auc")]:
         des[col.replace("__auc", "__sep")] = 2 * (des[col] - 0.5).abs()
     # descriptores ya calculados por el pipeline robusto (phase3), para compararlos con la misma vara
+    # (el OE4 no corre la fase 3 robusta: si sus tablas no están, se valoran solo los descriptores propios)
     rep = []
     for tab, metrics in REPO_METRICS.items():
+        if not (rcfg.TABLES_DIR / f"{tab}.csv").exists():
+            continue
         t = pd.read_csv(rcfg.TABLES_DIR / f"{tab}.csv")
         t = t[t.metric.isin(metrics)][["seed", "group", "metric", "value"]]
         rep.append(t)
+    if not rep:
+        return det, des
     rep = pd.concat(rep).pivot_table(index=["seed", "group"], columns="metric", values="value").reset_index()
     rep.columns = ["seed", "group"] + [f"repo:{c}" for c in rep.columns[2:]]
     des = des.merge(rep, on=["seed", "group"], how="left")

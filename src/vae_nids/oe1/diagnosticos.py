@@ -106,12 +106,12 @@ def fig_latent(row, path, k=8):
     fig.tight_layout(); fig.savefig(path, dpi=300, bbox_inches="tight"); plt.close(fig)
 
 
-def fig_active(tab, path):
+def fig_active(tab, path, k=8):
     fig, ax = plt.subplots(figsize=(6.5, 3))
     ax.bar(tab.seed.astype(str), tab.activas_burda, color=COLOR_BAR, width=0.6, zorder=3)
     for i, (s, v) in enumerate(zip(tab.seed, tab.activas_burda)):
         ax.text(i, v + 0.1, str(v), ha="center", fontsize=8, color=COLOR_INK)
-    ax.set_ylim(0, 8.8); ax.set_xlabel("semilla", color=COLOR_MUTED); ax.set_ylabel("unidades activas (de 8)", color=COLOR_MUTED)
+    ax.set_ylim(0, k + 0.8); ax.set_xlabel("semilla", color=COLOR_MUTED); ax.set_ylabel(f"unidades activas (de {k})", color=COLOR_MUTED)
     ax.set_title(f"Unidades activas por semilla: media {tab.activas_burda.mean():.1f} ± {tab.activas_burda.std():.1f}".replace(".", ","),
                  fontsize=9, loc="left", color=COLOR_INK)
     _style(ax); fig.tight_layout(); fig.savefig(path, dpi=300, bbox_inches="tight"); plt.close(fig)
@@ -140,7 +140,8 @@ def main(config=None, extra_configs=()):
         from vae_nids.oe1.config import load_feature_set
         cols = load_feature_set(c)
         val = load_parts(c, names=("val_benign",), columns=cols)["val_benign"]
-        seeds = c["semillas"]["principal"] if c["entrenamiento"]["nombre_corrida"] == "oe1_info_nula" else c["semillas"]["referencia_74"]
+        # la referencia de 74 usa sus propias semillas; cualquier otra corrida (OE1, OE4) usa las principales
+        seeds = c["semillas"]["referencia_74"] if c["entrenamiento"]["nombre_corrida"] == "referencia_74" else c["semillas"]["principal"]
         for s in seeds:
             run = f"{c['entrenamiento']['nombre_corrida']}_seed{s}"
             p = resolve(c, "salidas") / "checkpoints" / f"{run}.pt"
@@ -154,13 +155,13 @@ def main(config=None, extra_configs=()):
             if s == 42:
                 fig_curves(log, f"Curvas de entrenamiento — {c['entrenamiento']['nombre_corrida']} ({len(cols)} columnas), semilla 42",
                            fig_dir / f"curvas_{run}.png")
-                fig_latent(row, fig_dir / f"diagnostico_latente_{run}.png")
+                fig_latent(row, fig_dir / f"diagnostico_latente_{run}.png", k=c["modelo"]["latent_dim"])
                 fig_logvar(ctab, c["modelo"]["logvar_min"], fig_dir / f"logvar_decodificador_{run}.png")
     tab = pd.DataFrame(rows)
     tab.to_csv(tab_dir / "diagnosticos_por_semilla.csv", index=False)
-    main_tab = tab[tab.corrida == "oe1_info_nula"]
+    main_tab = tab[tab.corrida == cfg["entrenamiento"]["nombre_corrida"]]
     if len(main_tab):
-        fig_active(main_tab, fig_dir / "unidades_activas_por_semilla.png")
+        fig_active(main_tab, fig_dir / "unidades_activas_por_semilla.png", k=cfg["modelo"]["latent_dim"])
     return tab
 
 

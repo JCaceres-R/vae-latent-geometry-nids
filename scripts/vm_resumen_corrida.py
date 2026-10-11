@@ -244,9 +244,8 @@ def archivos():
         size[p] = sum(x.stat().st_size for x in q.rglob("*") if x.is_file()) if q.is_dir() else q.stat().st_size
     return ["Rutas a versionar (`ARCHIVOS_PARA_COMMIT.txt`, las usa `scripts/vm_preparar_commit.sh`):", "",
             md_table(pd.DataFrame({"ruta": list(size), "MB": [s / 2 ** 20 for s in size.values()]}), 2), "",
-            "No se versionan (pesados y regenerables): `outputs/oe2_robust_saneado/latent_vectors/`, "
-            "`outputs/oe2_robust_saneado/tables/*.npz` y `_cache/`, `outputs/oe2_descriptores_saneado/_cache/`, "
-            "`data/`."]
+            "No se versionan (pesados y regenerables, ver `.gitignore`): vectores latentes, scores por conexión, "
+            "curvas ROC en `.npz`, cachés `_cache/` y `data/`."]
 
 
 def main():

@@ -42,6 +42,12 @@ outputs/oe2_robust_saneado/tables/_cache/
 outputs/oe2_descriptores/_cache/
 outputs/oe2_descriptores_saneado/_cache/
 
+# OE4 (configs/oe4_*.yaml, scripts/run_oe3_oe4_vm.sh): mismos criterios en cada configuración.
+outputs/oe4/*/oe2_robust/latent_vectors/
+outputs/oe4/*/oe2_robust/tables/*.npz
+outputs/oe4/*/oe2_robust/tables/_cache/
+outputs/oe4/*/oe2_descriptores/_cache/
+
 # OE1 saneado: prueba de humo y corridas de control de Windows (los checkpoints que se
 # versionan son los de la VM, en outputs/oe1_saneado/checkpoints/).
 outputs/oe1_saneado/humo/

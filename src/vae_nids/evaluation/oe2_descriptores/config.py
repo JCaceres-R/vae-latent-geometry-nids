@@ -27,7 +27,12 @@ LATENT_DIR = rcfg.LATENT_DIR
 # saneado = modelos del OE1 saneado (66 variables), resultados aparte.
 PERFIL = rcfg.PERFIL
 ROOT_ORIGINAL = base_cfg.PROJECT_ROOT / "outputs" / "oe2_descriptores"
-ROOT = ROOT_ORIGINAL if PERFIL == "original" else base_cfg.PROJECT_ROOT / "outputs" / "oe2_descriptores_saneado"
+if PERFIL == "original":
+    ROOT = ROOT_ORIGINAL
+elif rcfg.CONFIG_PERSONALIZADA:
+    ROOT = rcfg.SALIDAS_CONFIG / "oe2_descriptores"
+else:
+    ROOT = base_cfg.PROJECT_ROOT / "outputs" / "oe2_descriptores_saneado"
 CACHE_DIR = ROOT / "_cache"
 TABLES_DIR = ROOT / "tables"
 FIGURES_DIR = ROOT / "figures"

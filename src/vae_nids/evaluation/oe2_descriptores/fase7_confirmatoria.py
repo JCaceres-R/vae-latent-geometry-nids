@@ -219,7 +219,9 @@ def main():
                 hipotesis=[dict(id=h[0], columna=h[1], rol=h[3], signo=h[4], rho_51=h[5]) for h in HIPOTESIS])
     json.dump(meta, open(C.TABLES_DIR / "confirmatoria.json", "w", encoding="utf-8"), indent=2, ensure_ascii=False)
 
-    lines = [f"# OE2 — prueba confirmatoria (perfil {C.PERFIL})", "",
+    from vae_nids.evaluation.oe2_robust import config as rcfg
+    cfg_name = rcfg.OE1_SANEADO_CONFIG_PATH.name if C.PERFIL == "saneado" else "51 variables"
+    lines = [f"# OE2 — prueba confirmatoria (perfil {C.PERFIL}, `{cfg_name}`)", "",
              f"Hipótesis registradas el {FECHA_REGISTRO}, antes de ver los resultados de este perfil "
              f"(`fase7_confirmatoria.py`). {len(C.SEEDS)} semillas ({', '.join(map(str, C.SEEDS))}), "
              f"{len(C.MAIN_FAMILIES)} familias, {C.N_PERM:,} permutaciones, {C.N_BOOT:,} remuestreos jerárquicos.", "",
