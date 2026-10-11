@@ -55,6 +55,16 @@ independiente, no sobre datos nuevos. Así hay que declararlo en la monografía.
 
 ## En la VM
 
+> **Nota del 10-10-2026:** el commit `d5d1449` ("update") subió las semillas 42 a 48 entrenadas en
+> Windows (`outputs/oe1_saneado/checkpoints/`, `logs/` y `registro_run.log`). Para que la VM reentrene
+> las 8 en Linux, apártalas en la VM después del `git pull` y antes de lanzar la corrida. Siguen en el
+> historial de git como control.
+>
+> ```bash
+> mkdir -p ~/control_windows
+> mv outputs/oe1_saneado/checkpoints outputs/oe1_saneado/logs outputs/oe1_saneado/registro_run.log ~/control_windows/
+> ```
+
 ```bash
 cd ~/vae-latent-geometry-nids          # o donde esté el repo
 git pull

@@ -46,8 +46,18 @@ mkdir -p "$LOG_DIR"
 export MKL_ENABLE_INSTRUCTIONS=SSE4_2
 export DNNL_MAX_CPU_ISA=SSE41
 export MKL_DEBUG_CPU_TYPE=5
+# Corrida del 10-10-2026: SIGILL (exit 132) intermitente, a veces a los 4 s de arrancar (al leer los
+# parquets o al importar). Se limitan también los demás despachadores de SIMD que deciden en tiempo de
+# ejecución: Arrow (lectura de parquet), los kernels propios de torch (ATen) y numba (UMAP, pynndescent).
+# No cambian los resultados, solo el código máquina. PYTHONFAULTHANDLER deja en el log la pila de Python
+# del proceso que muere, para saber qué biblioteca fue.
+export ARROW_USER_SIMD_LEVEL=SSE4_2
+export ATEN_CPU_CAPABILITY=default
+export NUMBA_CPU_NAME=generic
+export PYTHONFAULTHANDLER=1
 export PYTHONUNBUFFERED=1
 export PYTHONIOENCODING=utf-8
+MAX_INTENTOS=3   # una etapa que muere por SIGILL (132) se reintenta hasta este número de veces
 
 declare -A STATUS
 
@@ -79,9 +89,20 @@ etapa() {
   md "" "## ${id} — ${label}" "" "- Inicio: ${start_ts}" "- Comando: \`$*\`"
   echo "===== [$start_ts] ${id}: ${label} ====="
   start_s=$(date +%s)
-  echo "===== [$start_ts] ${id}: ${label} =====" >> "$raw"
-  "$@" >> "$raw" 2>&1
-  rc=$?
+  local intento=1 stdin_copy=""
+  if [ ! -t 0 ]; then              # etapas con heredoc: se guarda la entrada para poder reintentar
+    stdin_copy="$(mktemp)"; cat > "$stdin_copy"
+  fi
+  while :; do
+    echo "===== [$(ts)] ${id}: ${label} (intento ${intento}) =====" >> "$raw"
+    if [ -n "$stdin_copy" ]; then "$@" < "$stdin_copy" >> "$raw" 2>&1; else "$@" >> "$raw" 2>&1; fi
+    rc=$?
+    [ $rc -eq 132 ] && [ $intento -lt $MAX_INTENTOS ] || break
+    md "- Intento ${intento} murió por SIGILL (exit 132); se reintenta."
+    echo "      SIGILL en ${id}, intento ${intento}; reintentando"
+    intento=$((intento + 1))
+  done
+  [ -n "$stdin_copy" ] && rm -f "$stdin_copy"
   dur=$(( $(date +%s) - start_s ))
   if [ $rc -eq 0 ]; then STATUS[$id]="OK"; else STATUS[$id]="FALLO"; fi
   md "- Fin: $(ts) (${dur} s = $((dur / 60)) min)" "- Estado: **${STATUS[$id]}** (exit ${rc})" "" \
@@ -226,8 +247,10 @@ etapa E23 "OE2 robusto: correlación geometría-detectabilidad" "E21 E22" \
 etapa E24 "OE2 robusto: figuras" "E23" \
   "$PY" -c "from vae_nids.evaluation.oe2_robust import phase6_figures as p6; p6.main(include_umap=False)"
 
+# Proyecta todos los flujos de ataque (≈ 440 000 puntos por semilla): tardó 4,4 h la primera vez. Si la
+# figura de una semilla ya existe, no se recalcula.
 etapa E25 "OE2 robusto: UMAP (apoyo visual)" "E20" \
-  "$PY" -c "from vae_nids.evaluation.oe2_robust import config as rcfg, phase6_figures as p6; [p6.fig_umap(s) for s in rcfg.UMAP_SEEDS]"
+  "$PY" -c "from vae_nids.evaluation.oe2_robust import config as rcfg, phase6_figures as p6; [p6.fig_umap(s) for s in rcfg.UMAP_SEEDS if not (rcfg.FIGURES_DIR / f'fig_umap_seed{s}.png').exists()]"
 
 # ----------------------------------------------------------------------------
 # 5. OE2 descriptores sobre los modelos del OE1 saneado
