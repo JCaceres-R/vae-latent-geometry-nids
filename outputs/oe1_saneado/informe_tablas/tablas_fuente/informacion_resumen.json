@@ -1,0 +1,267 @@
+{
+  "n_columnas": 66,
+  "casi_constantes": [
+    "Fwd URG Flags",
+    "Bwd URG Flags",
+    "URG Flag Count",
+    "CWR Flag Count",
+    "ECE Flag Count",
+    "Subflow Bwd Packets"
+  ],
+  "total_length_bwd_vuelve": true,
+  "comparaciones": {
+    "nuevo__vs__actual_51": {
+      "en_comun": 45,
+      "solo_en_primero": [
+        "ACK Flag Count",
+        "Bwd Header Length",
+        "Bwd IAT Min",
+        "Bwd IAT Total",
+        "Bwd PSH Flags",
+        "Bwd Packet Length Max",
+        "Bwd Packet Length Std",
+        "Bwd Packet/Bulk Avg",
+        "Fwd Header Length",
+        "Fwd IAT Max",
+        "Fwd IAT Min",
+        "Fwd IAT Total",
+        "Fwd Packets/s",
+        "Fwd URG Flags",
+        "Idle Max",
+        "Idle Mean",
+        "Packet Length Variance",
+        "Subflow Bwd Bytes",
+        "Subflow Fwd Bytes",
+        "Total Bwd packets",
+        "Total Length of Bwd Packet"
+      ],
+      "solo_en_segundo": [
+        "Bwd IAT Mean",
+        "Flow IAT Mean",
+        "Fwd IAT Mean",
+        "Fwd Packet Length Mean",
+        "Packet Length Mean",
+        "Packet Length Min"
+      ]
+    },
+    "nuevo__vs__B_prima_51": {
+      "en_comun": 46,
+      "solo_en_primero": [
+        "ACK Flag Count",
+        "Bwd Header Length",
+        "Bwd IAT Std",
+        "Bwd IAT Total",
+        "Bwd PSH Flags",
+        "Bwd Packet/Bulk Avg",
+        "Bwd Packets/s",
+        "Bwd URG Flags",
+        "Flow Packets/s",
+        "Fwd Header Length",
+        "Fwd IAT Max",
+        "Fwd IAT Total",
+        "Fwd Packets/s",
+        "Fwd URG Flags",
+        "Idle Max",
+        "Idle Mean",
+        "Packet Length Variance",
+        "Subflow Bwd Bytes",
+        "Subflow Fwd Bytes",
+        "Total Bwd packets"
+      ],
+      "solo_en_segundo": [
+        "Bwd IAT Mean",
+        "Flow IAT Mean",
+        "Fwd IAT Mean",
+        "Fwd Packet Length Mean",
+        "Packet Length Mean"
+      ]
+    },
+    "nuevo__vs__info_nula_eps_ampliado_60": {
+      "en_comun": 60,
+      "solo_en_primero": [
+        "Bwd Packets/s",
+        "Down/Up Ratio",
+        "Flow Bytes/s",
+        "Flow Packets/s",
+        "Fwd Packets/s",
+        "Packet Length Variance"
+      ],
+      "solo_en_segundo": []
+    },
+    "nuevo__vs__Robusto_TB_56": {
+      "en_comun": 53,
+      "solo_en_primero": [
+        "Bwd IAT Total",
+        "Bwd Packet Length Max",
+        "Bwd Packets/s",
+        "Flow IAT Max",
+        "Fwd Header Length",
+        "Fwd IAT Max",
+        "Fwd IAT Total",
+        "Fwd Packet Length Min",
+        "Fwd Packets/s",
+        "Packet Length Variance",
+        "Subflow Bwd Bytes",
+        "Subflow Fwd Bytes",
+        "Total Bwd packets"
+      ],
+      "solo_en_segundo": [
+        "Fwd IAT Mean",
+        "Fwd Packet Length Mean",
+        "Packet Length Mean"
+      ]
+    },
+    "actual_51__vs__B_prima_51": {
+      "en_comun": 46,
+      "solo_en_primero": [
+        "Bwd IAT Std",
+        "Bwd Packets/s",
+        "Bwd URG Flags",
+        "Flow Packets/s",
+        "Packet Length Min"
+      ],
+      "solo_en_segundo": [
+        "Bwd IAT Min",
+        "Bwd Packet Length Max",
+        "Bwd Packet Length Std",
+        "Fwd IAT Min",
+        "Total Length of Bwd Packet"
+      ]
+    },
+    "actual_51__vs__info_nula_eps_ampliado_60": {
+      "en_comun": 41,
+      "solo_en_primero": [
+        "Bwd IAT Mean",
+        "Bwd Packets/s",
+        "Down/Up Ratio",
+        "Flow Bytes/s",
+        "Flow IAT Mean",
+        "Flow Packets/s",
+        "Fwd IAT Mean",
+        "Fwd Packet Length Mean",
+        "Packet Length Mean",
+        "Packet Length Min"
+      ],
+      "solo_en_segundo": [
+        "ACK Flag Count",
+        "Bwd Header Length",
+        "Bwd IAT Min",
+        "Bwd IAT Total",
+        "Bwd PSH Flags",
+        "Bwd Packet Length Max",
+        "Bwd Packet Length Std",
+        "Bwd Packet/Bulk Avg",
+        "Fwd Header Length",
+        "Fwd IAT Max",
+        "Fwd IAT Min",
+        "Fwd IAT Total",
+        "Fwd URG Flags",
+        "Idle Max",
+        "Idle Mean",
+        "Subflow Bwd Bytes",
+        "Subflow Fwd Bytes",
+        "Total Bwd packets",
+        "Total Length of Bwd Packet"
+      ]
+    },
+    "actual_51__vs__Robusto_TB_56": {
+      "en_comun": 45,
+      "solo_en_primero": [
+        "Bwd IAT Mean",
+        "Bwd Packets/s",
+        "Flow IAT Max",
+        "Flow IAT Mean",
+        "Fwd Packet Length Min",
+        "Packet Length Min"
+      ],
+      "solo_en_segundo": [
+        "ACK Flag Count",
+        "Bwd Header Length",
+        "Bwd IAT Min",
+        "Bwd PSH Flags",
+        "Bwd Packet Length Std",
+        "Bwd Packet/Bulk Avg",
+        "Fwd IAT Min",
+        "Fwd URG Flags",
+        "Idle Max",
+        "Idle Mean",
+        "Total Length of Bwd Packet"
+      ]
+    },
+    "B_prima_51__vs__info_nula_eps_ampliado_60": {
+      "en_comun": 44,
+      "solo_en_primero": [
+        "Bwd IAT Mean",
+        "Down/Up Ratio",
+        "Flow Bytes/s",
+        "Flow IAT Mean",
+        "Fwd IAT Mean",
+        "Fwd Packet Length Mean",
+        "Packet Length Mean"
+      ],
+      "solo_en_segundo": [
+        "ACK Flag Count",
+        "Bwd Header Length",
+        "Bwd IAT Std",
+        "Bwd IAT Total",
+        "Bwd PSH Flags",
+        "Bwd Packet/Bulk Avg",
+        "Bwd URG Flags",
+        "Fwd Header Length",
+        "Fwd IAT Max",
+        "Fwd IAT Total",
+        "Fwd URG Flags",
+        "Idle Max",
+        "Idle Mean",
+        "Subflow Bwd Bytes",
+        "Subflow Fwd Bytes",
+        "Total Bwd packets"
+      ]
+    },
+    "B_prima_51__vs__Robusto_TB_56": {
+      "en_comun": 46,
+      "solo_en_primero": [
+        "Bwd IAT Mean",
+        "Bwd Packet Length Max",
+        "Flow IAT Max",
+        "Flow IAT Mean",
+        "Fwd Packet Length Min"
+      ],
+      "solo_en_segundo": [
+        "ACK Flag Count",
+        "Bwd Header Length",
+        "Bwd IAT Std",
+        "Bwd PSH Flags",
+        "Bwd Packet/Bulk Avg",
+        "Bwd URG Flags",
+        "Flow Packets/s",
+        "Fwd URG Flags",
+        "Idle Max",
+        "Idle Mean"
+      ]
+    },
+    "info_nula_eps_ampliado_60__vs__Robusto_TB_56": {
+      "en_comun": 50,
+      "solo_en_primero": [
+        "Bwd IAT Total",
+        "Bwd Packet Length Max",
+        "Flow IAT Max",
+        "Fwd Header Length",
+        "Fwd IAT Max",
+        "Fwd IAT Total",
+        "Fwd Packet Length Min",
+        "Subflow Bwd Bytes",
+        "Subflow Fwd Bytes",
+        "Total Bwd packets"
+      ],
+      "solo_en_segundo": [
+        "Down/Up Ratio",
+        "Flow Bytes/s",
+        "Flow Packets/s",
+        "Fwd IAT Mean",
+        "Fwd Packet Length Mean",
+        "Packet Length Mean"
+      ]
+    }
+  }
+}

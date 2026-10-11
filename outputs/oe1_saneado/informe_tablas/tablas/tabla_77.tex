@@ -1,0 +1,89 @@
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{3.6cm}>{\raggedright\arraybackslash}p{2.3cm}c>{\raggedright\arraybackslash}p{3.6cm}rrc@{}}
+\caption{Las 77 columnas de flujo: estado, regla, tolerancia y precisión en el CSV (muestra de 300\,000 filas del lunes).}\label{tab:77}\\
+\toprule
+Columna & Estado & Regla & $\varepsilon$ (por fila) & \% verif. & Cifras CSV & Entera \\
+\midrule
+\endfirsthead
+\toprule
+Columna & Estado & Regla & $\varepsilon$ (por fila) & \% verif. & Cifras CSV & Entera \\
+\midrule
+\endhead
+Protocol & queda & -- & -- & -- & 2 & sí \\
+Flow Duration & queda & -- & -- & -- & 9 & sí \\
+Total Fwd Packet & queda & -- & -- & -- & 6 & sí \\
+Total Bwd packets & queda & -- & -- & -- & 6 & sí \\
+Total Length of Fwd Packet & queda & -- & -- & -- & 7 & sí \\
+Total Length of Bwd Packet & queda & -- & -- & -- & 9 & sí \\
+Fwd Packet Length Max & queda & -- & -- & -- & 6 & sí \\
+Fwd Packet Length Min & queda & -- & -- & -- & 5 & sí \\
+Fwd Packet Length Mean & sale & R2 & (3n\_f+4)u & 100{,}00 & 17 & no \\
+Fwd Packet Length Std & queda & -- & -- & -- & 17 & no \\
+Bwd Packet Length Max & queda & -- & -- & -- & 6 & sí \\
+Bwd Packet Length Min & queda & -- & -- & -- & 5 & sí \\
+Bwd Packet Length Mean & sale & R2 & (3n\_b+4)u & 100{,}00 & 17 & no \\
+Bwd Packet Length Std & queda & -- & -- & -- & 17 & no \\
+Flow Bytes/s & queda (casi función) & -- & 4u & 99{,}88 & 17 & no \\
+Flow Packets/s & queda (casi función) & -- & 4u (una conversión y dos divisiones) & 98{,}35 & 17 & no \\
+Flow IAT Mean & sale & R2 & (3(n-1)+4)u: media incremental de n-1 IAT & 100{,}00 & 17 & no \\
+Flow IAT Std & queda & -- & -- & -- & 17 & no \\
+Flow IAT Max & queda & -- & -- & -- & 9 & sí \\
+Flow IAT Min & queda & -- & -- & -- & 8 & sí \\
+Fwd IAT Total & queda & -- & -- & -- & 9 & sí \\
+Fwd IAT Mean & sale & R2 & (3(n\_f-1)+4)u & 100{,}00 & 17 & no \\
+Fwd IAT Std & queda & -- & -- & -- & 17 & no \\
+Fwd IAT Max & queda & -- & -- & -- & 9 & sí \\
+Fwd IAT Min & queda & -- & -- & -- & 9 & sí \\
+Bwd IAT Total & queda & -- & -- & -- & 9 & sí \\
+Bwd IAT Mean & sale & R2 & (3(n\_b-1)+4)u & 100{,}00 & 17 & no \\
+Bwd IAT Std & queda & -- & -- & -- & 17 & no \\
+Bwd IAT Max & queda & -- & -- & -- & 9 & sí \\
+Bwd IAT Min & queda & -- & -- & -- & 9 & sí \\
+Fwd PSH Flags & queda & -- & -- & -- & 4 & sí \\
+Bwd PSH Flags & queda & -- & -- & -- & 4 & sí \\
+Fwd URG Flags & queda & -- & -- & -- & 0 & sí \\
+Bwd URG Flags & queda & -- & -- & -- & 0 & sí \\
+Fwd Header Length & queda & -- & -- & -- & 7 & sí \\
+Bwd Header Length & queda & -- & -- & -- & 7 & sí \\
+Fwd Packets/s & queda (casi función) & -- & 4u & 96{,}62 & 17 & no \\
+Bwd Packets/s & queda (casi función) & -- & 4u & 96{,}38 & 17 & no \\
+Packet Length Min & sale & R2 & round(f) == X & 100{,}00 & 5 & sí \\
+Packet Length Max & sale & R2 & round(f) == X & 100{,}00 & 6 & sí \\
+Packet Length Mean & sale & R2 & (3n+4)u & 100{,}00 & 17 & no \\
+Packet Length Std & queda & -- & -- & -- & 17 & no \\
+Packet Length Variance & queda (casi función) & -- & 4u (raíz y cuadrado) & 99{,}57 & 17 & no \\
+FIN Flag Count & queda & -- & -- & -- & 2 & sí \\
+SYN Flag Count & queda & -- & -- & -- & 2 & sí \\
+RST Flag Count & queda & -- & -- & -- & 3 & sí \\
+PSH Flag Count & queda & -- & -- & -- & 4 & sí \\
+ACK Flag Count & queda & -- & -- & -- & 6 & sí \\
+URG Flag Count & queda & -- & -- & -- & 0 & sí \\
+CWR Flag Count & queda & -- & -- & -- & 1 & sí \\
+ECE Flag Count & queda & -- & -- & -- & 1 & sí \\
+Down/Up Ratio & queda (casi función) & -- & 2u (una división) & 99{,}99 & 17 & no \\
+Average Packet Size & sale & R0 & (3n+4)u & 100{,}00 & 17 & no \\
+Fwd Segment Size Avg & sale & R0 & (3n\_f+4)u: getSum()/n frente a la media incremental & 100{,}00 & 17 & no \\
+Bwd Segment Size Avg & sale & R0 & (3n\_b+4)u & 100{,}00 & 17 & no \\
+Fwd Bytes/Bulk Avg & queda & -- & -- & -- & 6 & sí \\
+Fwd Packet/Bulk Avg & queda & -- & -- & -- & 3 & sí \\
+Fwd Bulk Rate Avg & queda & -- & -- & -- & 9 & sí \\
+Bwd Bytes/Bulk Avg & queda & -- & -- & -- & 9 & sí \\
+Bwd Packet/Bulk Avg & queda & -- & -- & -- & 5 & sí \\
+Bwd Bulk Rate Avg & queda & -- & -- & -- & 10 & sí \\
+Subflow Fwd Packets & queda & -- & -- & -- & 1 & sí \\
+Subflow Fwd Bytes & queda & -- & -- & -- & 4 & sí \\
+Subflow Bwd Packets & queda & -- & -- & -- & 1 & sí \\
+Subflow Bwd Bytes & queda & -- & -- & -- & 4 & sí \\
+FWD Init Win Bytes & queda & -- & -- & -- & 5 & sí \\
+Bwd Init Win Bytes & queda & -- & -- & -- & 5 & sí \\
+Fwd Act Data Pkts & queda & -- & -- & -- & 4 & sí \\
+Fwd Seg Size Min & queda & -- & -- & -- & 2 & sí \\
+Active Mean & queda & -- & -- & -- & 17 & no \\
+Active Std & queda & -- & -- & -- & 17 & no \\
+Active Max & queda & -- & -- & -- & 9 & sí \\
+Active Min & queda & -- & -- & -- & 9 & sí \\
+Idle Mean & queda & -- & -- & -- & 17 & no \\
+Idle Std & queda & -- & -- & -- & 17 & no \\
+Idle Max & queda & -- & -- & -- & 9 & sí \\
+Idle Min & queda & -- & -- & -- & 9 & sí \\
+\bottomrule
+\end{longtable}

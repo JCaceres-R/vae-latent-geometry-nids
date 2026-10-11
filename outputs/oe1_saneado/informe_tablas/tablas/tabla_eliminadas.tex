@@ -1,0 +1,17 @@
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{3.1cm}c>{\raggedright\arraybackslash}p{5.4cm}rrr@{}}
+\toprule
+Columna & Regla & Fórmula (solo con columnas que quedan) & \% verif. & Error máx. (ulp) & máx. error/$\varepsilon$ \\
+\midrule
+Average Packet Size & R0 & copia de Packet Length Mean & 100{,}0 & 511 & 0{,}20 \\
+Bwd Segment Size Avg & R0 & copia de Bwd Packet Length Mean & 100{,}0 & 398 & 0{,}24 \\
+Fwd Segment Size Avg & R0 & copia de Fwd Packet Length Mean & 100{,}0 & 262 & 0{,}28 \\
+Bwd IAT Mean & R2 & Bwd IAT Total / (n\_b - 1) si n\_b >= 2; 0 si no & 100{,}0 & 502 & 0{,}30 \\
+Bwd Packet Length Mean & R2 & B\_b / n\_b si n\_b > 0; 0 si no & 100{,}0 & 398 & 0{,}22 \\
+Flow IAT Mean & R2 & D / (n - 1) si n >= 2; 0 si no & 100{,}0 & 327 & 0{,}30 \\
+Fwd IAT Mean & R2 & Fwd IAT Total / (n\_f - 1) si n\_f >= 2; 0 si no & 100{,}0 & 234 & 0{,}29 \\
+Fwd Packet Length Mean & R2 & B\_f / n\_f si n\_f > 0; 0 si no & 100{,}0 & 286 & 0{,}29 \\
+Packet Length Max & R2 & max(Fwd PL Max, Bwd PL Max) & 100{,}0 & 0 & 0 \\
+Packet Length Mean & R2 & (B\_f + B\_b) / (n\_f + n\_b) & 100{,}0 & 511 & 0{,}16 \\
+Packet Length Min & R2 & Bwd PL Min si n\_f = 0; Fwd PL Min si n\_b = 0; min(Fwd PL Min, Bwd PL Min) si no & 100{,}0 & 0 & 0 \\
+\bottomrule
+\end{tabular}

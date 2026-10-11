@@ -1,0 +1,4 @@
+caso,distintos,crudo,frac
+"Flow Packets/s, pipeline original (float32, con duraciones negativas)",10084,577678,0.017456091455793712
+"Flow Packets/s, saneado (filtro D4)",573049,577678,0.9919868854275219
+"Flow Duration, saneado (filtro D4)",517280,524335,0.9865448615865811

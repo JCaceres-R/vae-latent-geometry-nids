@@ -1,0 +1,73 @@
+,nuevo,actual_51,B_prima_51,info_nula_eps_ampliado_60,Robusto_TB_56
+ACK Flag Count,True,False,False,True,True
+Active Max,True,True,True,True,True
+Active Mean,True,True,True,True,True
+Active Min,True,True,True,True,True
+Active Std,True,True,True,True,True
+Bwd Bulk Rate Avg,True,True,True,True,True
+Bwd Bytes/Bulk Avg,True,True,True,True,True
+Bwd Header Length,True,False,False,True,True
+Bwd IAT Max,True,True,True,True,True
+Bwd IAT Mean,False,True,True,False,False
+Bwd IAT Min,True,False,True,True,True
+Bwd IAT Std,True,True,False,True,True
+Bwd IAT Total,True,False,False,True,False
+Bwd Init Win Bytes,True,True,True,True,True
+Bwd PSH Flags,True,False,False,True,True
+Bwd Packet Length Max,True,False,True,True,False
+Bwd Packet Length Min,True,True,True,True,True
+Bwd Packet Length Std,True,False,True,True,True
+Bwd Packet/Bulk Avg,True,False,False,True,True
+Bwd Packets/s,True,True,False,False,False
+Bwd URG Flags,True,True,False,True,True
+CWR Flag Count,True,True,True,True,True
+Down/Up Ratio,True,True,True,False,True
+ECE Flag Count,True,True,True,True,True
+FIN Flag Count,True,True,True,True,True
+FWD Init Win Bytes,True,True,True,True,True
+Flow Bytes/s,True,True,True,False,True
+Flow Duration,True,True,True,True,True
+Flow IAT Max,True,True,True,True,False
+Flow IAT Mean,False,True,True,False,False
+Flow IAT Min,True,True,True,True,True
+Flow IAT Std,True,True,True,True,True
+Flow Packets/s,True,True,False,False,True
+Fwd Act Data Pkts,True,True,True,True,True
+Fwd Bulk Rate Avg,True,True,True,True,True
+Fwd Bytes/Bulk Avg,True,True,True,True,True
+Fwd Header Length,True,False,False,True,False
+Fwd IAT Max,True,False,False,True,False
+Fwd IAT Mean,False,True,True,False,True
+Fwd IAT Min,True,False,True,True,True
+Fwd IAT Std,True,True,True,True,True
+Fwd IAT Total,True,False,False,True,False
+Fwd PSH Flags,True,True,True,True,True
+Fwd Packet Length Max,True,True,True,True,True
+Fwd Packet Length Mean,False,True,True,False,True
+Fwd Packet Length Min,True,True,True,True,False
+Fwd Packet Length Std,True,True,True,True,True
+Fwd Packet/Bulk Avg,True,True,True,True,True
+Fwd Packets/s,True,False,False,False,False
+Fwd Seg Size Min,True,True,True,True,True
+Fwd URG Flags,True,False,False,True,True
+Idle Max,True,False,False,True,True
+Idle Mean,True,False,False,True,True
+Idle Min,True,True,True,True,True
+Idle Std,True,True,True,True,True
+PSH Flag Count,True,True,True,True,True
+Packet Length Mean,False,True,True,False,True
+Packet Length Min,False,True,False,False,False
+Packet Length Std,True,True,True,True,True
+Packet Length Variance,True,False,False,False,False
+Protocol,True,True,True,True,True
+RST Flag Count,True,True,True,True,True
+SYN Flag Count,True,True,True,True,True
+Subflow Bwd Bytes,True,False,False,True,False
+Subflow Bwd Packets,True,True,True,True,True
+Subflow Fwd Bytes,True,False,False,True,False
+Subflow Fwd Packets,True,True,True,True,True
+Total Bwd packets,True,False,False,True,False
+Total Fwd Packet,True,True,True,True,True
+Total Length of Bwd Packet,True,False,True,True,True
+Total Length of Fwd Packet,True,True,True,True,True
+URG Flag Count,True,True,True,True,True

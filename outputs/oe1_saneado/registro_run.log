@@ -1,16 +1,22 @@
-[2026-10-08T13:37:33] preproceso
-[2026-10-08T13:37:54] oe1_info_nula_seed42: entrenando
-[2026-10-08T14:03:31] oe1_info_nula_seed42: parada en época 118 (paciencia (10 épocas sin mejorar más de min_delta=0.1)), mejor época 108, val -242.8933, 1532 s
-[2026-10-08T14:03:31] oe1_info_nula_seed43: entrenando
-[2026-10-08T14:13:51] oe1_info_nula_seed43: parada en época 59 (paciencia (10 épocas sin mejorar más de min_delta=0.1)), mejor época 49, val -243.6476, 616 s
-[2026-10-08T14:13:51] oe1_info_nula_seed44: entrenando
-[2026-10-08T14:30:46] oe1_info_nula_seed44: parada en época 106 (paciencia (10 épocas sin mejorar más de min_delta=0.1)), mejor época 96, val -247.4662, 1011 s
-[2026-10-08T14:30:46] oe1_info_nula_seed45: entrenando
-[2026-10-08T14:45:25] oe1_info_nula_seed45: parada en época 83 (paciencia (10 épocas sin mejorar más de min_delta=0.1)), mejor época 73, val -244.9959, 875 s
-[2026-10-08T14:45:25] oe1_info_nula_seed46: entrenando
-[2026-10-08T15:09:18] oe1_info_nula_seed46: parada en época 136 (paciencia (10 épocas sin mejorar más de min_delta=0.1)), mejor época 126, val -245.7420, 1429 s
-[2026-10-08T15:09:18] oe1_info_nula_seed47: entrenando
-[2026-10-08T15:25:23] oe1_info_nula_seed47: parada en época 92 (paciencia (10 épocas sin mejorar más de min_delta=0.1)), mejor época 82, val -247.5449, 961 s
-[2026-10-08T15:25:23] oe1_info_nula_seed48: entrenando
-[2026-10-08T15:43:53] oe1_info_nula_seed48: parada en época 107 (paciencia (10 épocas sin mejorar más de min_delta=0.1)), mejor época 97, val -242.3127, 1106 s
-[2026-10-08T15:43:53] oe1_info_nula_seed49: entrenando
+[2026-10-10T19:54:40] datos: construyendo particiones crudas
+[2026-10-10T19:59:09] preproceso
+[2026-10-10T19:59:40] oe1_info_nula_seed42: entrenando
+[2026-10-10T20:12:19] oe1_info_nula_seed42: parada en época 87 (paciencia (10 épocas sin mejorar más de min_delta=0.1)), mejor época 77, val -242.7477, 740 s
+[2026-10-10T20:12:19] oe1_info_nula_seed43: entrenando
+[2026-10-10T20:20:25] oe1_info_nula_seed43: parada en época 57 (paciencia (10 épocas sin mejorar más de min_delta=0.1)), mejor época 47, val -241.9347, 481 s
+[2026-10-10T20:20:25] oe1_info_nula_seed44: entrenando
+[2026-10-10T20:30:56] oe1_info_nula_seed44: parada en época 74 (paciencia (10 épocas sin mejorar más de min_delta=0.1)), mejor época 64, val -245.0449, 627 s
+[2026-10-10T20:30:56] oe1_info_nula_seed45: entrenando
+[2026-10-10T20:43:31] oe1_info_nula_seed45: parada en época 85 (paciencia (10 épocas sin mejorar más de min_delta=0.1)), mejor época 75, val -245.1515, 751 s
+[2026-10-10T20:43:31] oe1_info_nula_seed46: entrenando
+[2026-10-10T20:50:22] oe1_info_nula_seed46: parada en época 48 (paciencia (10 épocas sin mejorar más de min_delta=0.1)), mejor época 38, val -236.9820, 406 s
+[2026-10-10T20:50:22] oe1_info_nula_seed47: entrenando
+[2026-10-10T21:06:04] oe1_info_nula_seed47: parada en época 109 (paciencia (10 épocas sin mejorar más de min_delta=0.1)), mejor época 99, val -246.3414, 938 s
+[2026-10-10T21:06:04] oe1_info_nula_seed48: entrenando
+[2026-10-10T21:23:15] oe1_info_nula_seed48: parada en época 122 (paciencia (10 épocas sin mejorar más de min_delta=0.1)), mejor época 112, val -243.5257, 1027 s
+[2026-10-10T21:23:15] oe1_info_nula_seed49: entrenando
+[2026-10-10T21:36:45] oe1_info_nula_seed49: parada en época 95 (paciencia (10 épocas sin mejorar más de min_delta=0.1)), mejor época 85, val -244.2359, 805 s
+[2026-10-10T21:36:45] referencia_74_seed42: entrenando
+[2026-10-10T21:50:01] referencia_74_seed42: parada en época 91 (paciencia (10 épocas sin mejorar más de min_delta=0.1)), mejor época 81, val -270.4709, 791 s
+[2026-10-10T21:50:01] diagnósticos
+[2026-10-10T21:50:17] listo: {"corridas": 9}

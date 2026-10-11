@@ -1,0 +1,27 @@
+{"id": "E01", "etapa": "Tests (OE1 saneado y estadística del OE2)", "estado": "OK", "inicio": "2026-10-10T19:53:58Z", "segundos": 37, "rc": 0, "log": "outputs/vm_pendientes/logs/E01.log"}
+{"id": "E10", "etapa": "OE1: datos, preproceso, 8 semillas + referencia 74, diagnósticos", "estado": "OK", "inicio": "2026-10-10T19:54:35Z", "segundos": 6943, "rc": 0, "log": "outputs/vm_pendientes/logs/E10.log"}
+{"id": "E11", "etapa": "OE1: verificación de checkpoints y diagnósticos", "estado": "OK", "inicio": "2026-10-10T21:50:18Z", "segundos": 1, "rc": 0, "log": "outputs/vm_pendientes/logs/E11.log"}
+{"id": "E12", "etapa": "OE1: figuras del informe (selección y preproceso)", "estado": "OK", "inicio": "2026-10-10T21:50:19Z", "segundos": 9, "rc": 0, "log": "outputs/vm_pendientes/logs/E12.log"}
+{"id": "E13", "etapa": "OE1: tablas LaTeX y cifras del informe", "estado": "OK", "inicio": "2026-10-10T21:50:28Z", "segundos": 0, "rc": 0, "log": "outputs/vm_pendientes/logs/E13.log"}
+{"id": "E20", "etapa": "OE2 robusto: codificación (mu, log sigma^2) por semilla", "estado": "OK", "inicio": "2026-10-10T21:50:28Z", "segundos": 10, "rc": 0, "log": "outputs/vm_pendientes/logs/E20.log"}
+{"id": "E21", "etapa": "OE2 robusto: geometría distribucional", "estado": "OK", "inicio": "2026-10-10T21:50:38Z", "segundos": 1705, "rc": 0, "log": "outputs/vm_pendientes/logs/E21.log"}
+{"id": "E22_s42", "etapa": "OE2 robusto: detectabilidad, semilla 42", "estado": "OK", "inicio": "2026-10-10T22:19:05Z", "segundos": 682, "rc": 0, "log": "outputs/vm_pendientes/logs/E22_s42.log"}
+{"id": "E22_s43", "etapa": "OE2 robusto: detectabilidad, semilla 43", "estado": "FALLO", "inicio": "2026-10-10T22:30:27Z", "segundos": 54, "rc": 132, "log": "outputs/vm_pendientes/logs/E22_s43.log"}
+{"id": "E22_s44", "etapa": "OE2 robusto: detectabilidad, semilla 44", "estado": "OK", "inicio": "2026-10-10T22:31:21Z", "segundos": 663, "rc": 0, "log": "outputs/vm_pendientes/logs/E22_s44.log"}
+{"id": "E22_s45", "etapa": "OE2 robusto: detectabilidad, semilla 45", "estado": "OK", "inicio": "2026-10-10T22:42:24Z", "segundos": 641, "rc": 0, "log": "outputs/vm_pendientes/logs/E22_s45.log"}
+{"id": "E22_s46", "etapa": "OE2 robusto: detectabilidad, semilla 46", "estado": "OK", "inicio": "2026-10-10T22:53:05Z", "segundos": 653, "rc": 0, "log": "outputs/vm_pendientes/logs/E22_s46.log"}
+{"id": "E22_s47", "etapa": "OE2 robusto: detectabilidad, semilla 47", "estado": "FALLO", "inicio": "2026-10-10T23:03:58Z", "segundos": 4, "rc": 132, "log": "outputs/vm_pendientes/logs/E22_s47.log"}
+{"id": "E22_s48", "etapa": "OE2 robusto: detectabilidad, semilla 48", "estado": "FALLO", "inicio": "2026-10-10T23:04:02Z", "segundos": 5, "rc": 132, "log": "outputs/vm_pendientes/logs/E22_s48.log"}
+{"id": "E22_s49", "etapa": "OE2 robusto: detectabilidad, semilla 49", "estado": "OK", "inicio": "2026-10-10T23:04:07Z", "segundos": 645, "rc": 0, "log": "outputs/vm_pendientes/logs/E22_s49.log"}
+{"id": "E22", "etapa": "OE2 robusto: detectabilidad, tablas de todas las semillas", "estado": "FALLO", "inicio": "2026-10-10T23:14:52Z", "segundos": 4, "rc": 132, "log": "outputs/vm_pendientes/logs/E22.log"}
+{"id": "E23", "etapa": "OE2 robusto: correlación geometría-detectabilidad", "estado": "SALTADA", "inicio": "2026-10-10T23:14:56Z", "segundos": 0, "rc": -1, "log": "outputs/vm_pendientes/logs/E23.log"}
+{"id": "E24", "etapa": "OE2 robusto: figuras", "estado": "SALTADA", "inicio": "2026-10-10T23:14:56Z", "segundos": 0, "rc": -1, "log": "outputs/vm_pendientes/logs/E24.log"}
+{"id": "E25", "etapa": "OE2 robusto: UMAP (apoyo visual)", "estado": "OK", "inicio": "2026-10-10T23:14:56Z", "segundos": 15764, "rc": 0, "log": "outputs/vm_pendientes/logs/E25.log"}
+{"id": "E30", "etapa": "Descriptores: detectabilidad y referencia benigna", "estado": "FALLO", "inicio": "2026-10-11T03:37:40Z", "segundos": 5, "rc": 132, "log": "outputs/vm_pendientes/logs/E30.log"}
+{"id": "E31", "etapa": "Descriptores: 17 descriptores por familia y semilla", "estado": "SALTADA", "inicio": "2026-10-11T03:37:45Z", "segundos": 0, "rc": -1, "log": "outputs/vm_pendientes/logs/E31.log"}
+{"id": "E32", "etapa": "Descriptores: cribado y validación (attempted)", "estado": "SALTADA", "inicio": "2026-10-11T03:37:45Z", "segundos": 0, "rc": -1, "log": "outputs/vm_pendientes/logs/E32.log"}
+{"id": "E33", "etapa": "Descriptores: duplicados, métrica del decodificador, UMAP sin duplicados", "estado": "SALTADA", "inicio": "2026-10-11T03:37:45Z", "segundos": 0, "rc": -1, "log": "outputs/vm_pendientes/logs/E33.log"}
+{"id": "E34", "etapa": "Descriptores: figuras", "estado": "SALTADA", "inicio": "2026-10-11T03:37:45Z", "segundos": 0, "rc": -1, "log": "outputs/vm_pendientes/logs/E34.log"}
+{"id": "E35", "etapa": "Descriptores: tablas LaTeX y cifras", "estado": "SALTADA", "inicio": "2026-10-11T03:37:45Z", "segundos": 0, "rc": -1, "log": "outputs/vm_pendientes/logs/E35.log"}
+{"id": "E36", "etapa": "Prueba confirmatoria (primario + 6 secundarios, Holm)", "estado": "SALTADA", "inicio": "2026-10-11T03:37:45Z", "segundos": 0, "rc": -1, "log": "outputs/vm_pendientes/logs/E36.log"}
+{"id": "E99", "etapa": "Resumen de la corrida", "estado": "OK", "inicio": "2026-10-11T03:37:45Z", "segundos": 1, "rc": 0, "log": "outputs/vm_pendientes/logs/E99.log"}

@@ -1,0 +1,7 @@
+===== [2026-10-10T21:50:19Z] E12: OE1: figuras del informe (selección y preproceso) =====
+                                                                    caso  distintos   crudo      frac
+0  Flow Packets/s, pipeline original (float32, con duraciones negativas)      10084  577678  0.017456
+1                                    Flow Packets/s, saneado (filtro D4)     573049  577678  0.991987
+2                                     Flow Duration, saneado (filtro D4)     517280  524335  0.986545
+/home/estudiante/vae-latent-geometry-nids/src/vae_nids/oe1/figuras_informe.py:65: RuntimeWarning: invalid value encountered in divide
+  ratio = np.where(tol > 0, np.abs(a - b) / tol, 0.0)

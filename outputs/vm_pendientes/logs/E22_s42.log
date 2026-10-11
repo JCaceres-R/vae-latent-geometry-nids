@@ -1,0 +1,7 @@
+===== [2026-10-10T22:19:05Z] E22_s42: OE2 robusto: detectabilidad, semilla 42 =====
+[fase4 seed=42] tau_p95=-216.6112 fpr_test_benign=0.0504 AUC(nll_mc) principales: {'PortScan': 0.6727937868783134, 'DoS_Hulk': 0.9364883046767849, 'DDoS': 0.9880926504933847, 'DoS_GoldenEye': 0.970326622265858, 'DoS_slowloris': 0.9354712161592529, 'FTP_Patator': 0.8834263278935187, 'SSH_Patator': 0.9403647239146108, 'DoS_Slowhttptest': 0.9661804240732041, 'Bot': 0.5992895540334501, 'Web_Attack': 0.9424951070996233, 'Infiltration': 0.9851551782057524}
+[fase4] /home/estudiante/vae-latent-geometry-nids/outputs/oe2_robust_saneado/tables/phase4_detectability_metrics.csv (90 filas)
+[fase4] /home/estudiante/vae-latent-geometry-nids/outputs/oe2_robust_saneado/tables/phase4_delong_between_families.csv (275 filas)
+[fase4] /home/estudiante/vae-latent-geometry-nids/outputs/oe2_robust_saneado/tables/phase4_delong_between_scores.csv (54 filas)
+[fase4] /home/estudiante/vae-latent-geometry-nids/outputs/oe2_robust_saneado/tables/phase4_sample_size_control.csv (11 filas)
+[fase4] /home/estudiante/vae-latent-geometry-nids/outputs/oe2_robust_saneado/tables/phase4_tau_per_seed.csv (1 filas)

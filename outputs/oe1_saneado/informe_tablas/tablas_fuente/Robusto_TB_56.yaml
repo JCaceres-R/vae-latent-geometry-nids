@@ -1,0 +1,63 @@
+nombre: Robusto_TB_56
+n: 56
+sha256: 22e1cbd184f2144fc13d9c929be19ecca6b7c8027f6c9764120d5debe1610d05
+procedencia: C:\Users\user\Desktop\Monografia\02_Objetivos_Especificos\OE1_Seleccion_de_variables\3_informe_IM_v2\informe_oe1_im_v2\tablas_fuente\v8_conjuntos.csv
+  -> Robusto_TB == 'sí' (informe OE1-IM v2, V8)
+nota: Registrado para comparación; no se entrena en el saneamiento del OE1.
+columnas:
+- Protocol
+- Flow Duration
+- Total Fwd Packet
+- Total Length of Fwd Packet
+- Total Length of Bwd Packet
+- Fwd Packet Length Max
+- Fwd Packet Length Mean
+- Fwd Packet Length Std
+- Bwd Packet Length Min
+- Bwd Packet Length Std
+- Flow Bytes/s
+- Flow Packets/s
+- Flow IAT Std
+- Flow IAT Min
+- Fwd IAT Mean
+- Fwd IAT Std
+- Fwd IAT Min
+- Bwd IAT Std
+- Bwd IAT Max
+- Bwd IAT Min
+- Fwd PSH Flags
+- Bwd PSH Flags
+- Fwd URG Flags
+- Bwd URG Flags
+- Bwd Header Length
+- Packet Length Mean
+- Packet Length Std
+- FIN Flag Count
+- SYN Flag Count
+- RST Flag Count
+- PSH Flag Count
+- ACK Flag Count
+- URG Flag Count
+- CWR Flag Count
+- ECE Flag Count
+- Down/Up Ratio
+- Fwd Bytes/Bulk Avg
+- Fwd Packet/Bulk Avg
+- Fwd Bulk Rate Avg
+- Bwd Bytes/Bulk Avg
+- Bwd Packet/Bulk Avg
+- Bwd Bulk Rate Avg
+- Subflow Fwd Packets
+- Subflow Bwd Packets
+- FWD Init Win Bytes
+- Bwd Init Win Bytes
+- Fwd Act Data Pkts
+- Fwd Seg Size Min
+- Active Mean
+- Active Std
+- Active Max
+- Active Min
+- Idle Mean
+- Idle Std
+- Idle Max
+- Idle Min

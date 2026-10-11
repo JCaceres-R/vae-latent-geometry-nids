@@ -1,0 +1,12 @@
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{3cm}>{\raggedright\arraybackslash}p{4.6cm}rrr@{}}
+\toprule
+Columna & Fórmula & Filas que fallan & Error máx. (ulp) & máx. error/$\varepsilon$ \\
+\midrule
+Flow Packets/s & (n\_f + n\_b) / (D·1e-6) & 19\,131 (1{,}65\,\%) & 34 & 7{,}9 \\
+Fwd Packets/s & n\_f / (D·1e-6) & 39\,167 (3{,}38\,\%) & 74 & 16{,}9 \\
+Bwd Packets/s & n\_b / (D·1e-6) & 41\,941 (3{,}62\,\%) & 100 & 22{,}1 \\
+Flow Bytes/s & (B\_f + B\_b) / (D·1e-6) & 1\,412 (0{,}12\,\%) & 38 & 8{,}9 \\
+Packet Length Variance & Packet Length Std\^{}2 & 5\,019 (0{,}43\,\%) & 8 & 1{,}8 \\
+Down/Up Ratio & n\_b / n\_f si n\_f > 0; 0 si no & 68 (0{,}01\,\%) & 9 & 3{,}2 \\
+\bottomrule
+\end{tabular}

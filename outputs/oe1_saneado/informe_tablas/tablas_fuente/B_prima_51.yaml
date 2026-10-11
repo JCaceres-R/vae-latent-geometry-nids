@@ -1,0 +1,58 @@
+nombre: B_prima_51
+n: 51
+sha256: df8083b62f9dfcf6e4021bf09c4d4d8fba04f97b4a7f9014471a708c097192ed
+procedencia: C:\Users\user\Desktop\Monografia\02_Objetivos_Especificos\OE1_Seleccion_de_variables\3_informe_IM_v2\informe_oe1_im_v2\tablas_fuente\v6_opciones_listas.json
+  -> listas["B'"] (informe OE1-IM v2, V6)
+nota: Registrado para comparación; no se entrena en el saneamiento del OE1.
+columnas:
+- Protocol
+- Flow Duration
+- Total Fwd Packet
+- Total Length of Fwd Packet
+- Total Length of Bwd Packet
+- Fwd Packet Length Max
+- Fwd Packet Length Min
+- Fwd Packet Length Mean
+- Fwd Packet Length Std
+- Bwd Packet Length Max
+- Bwd Packet Length Min
+- Bwd Packet Length Std
+- Flow Bytes/s
+- Flow IAT Mean
+- Flow IAT Std
+- Flow IAT Max
+- Flow IAT Min
+- Fwd IAT Mean
+- Fwd IAT Std
+- Fwd IAT Min
+- Bwd IAT Mean
+- Bwd IAT Max
+- Bwd IAT Min
+- Fwd PSH Flags
+- Packet Length Mean
+- Packet Length Std
+- FIN Flag Count
+- SYN Flag Count
+- RST Flag Count
+- PSH Flag Count
+- URG Flag Count
+- CWR Flag Count
+- ECE Flag Count
+- Down/Up Ratio
+- Fwd Bytes/Bulk Avg
+- Fwd Packet/Bulk Avg
+- Fwd Bulk Rate Avg
+- Bwd Bytes/Bulk Avg
+- Bwd Bulk Rate Avg
+- Subflow Fwd Packets
+- Subflow Bwd Packets
+- FWD Init Win Bytes
+- Bwd Init Win Bytes
+- Fwd Act Data Pkts
+- Fwd Seg Size Min
+- Active Mean
+- Active Std
+- Active Max
+- Active Min
+- Idle Std
+- Idle Min

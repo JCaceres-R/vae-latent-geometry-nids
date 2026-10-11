@@ -1,0 +1,287 @@
+particion,grupo,columna,regla,filas,frac_verificada,fallos,error_abs_max,error_rel_max,error_rel_max_ulp,error_sobre_eps_max
+val_benign,todas,Fwd Packet Length Mean,R2,248553,1.0,0,9.094947017729282e-13,1.706371775570311e-14,153.6963058522797,0.17675977270603224
+val_benign,todas,Bwd Packet Length Mean,R2,248553,1.0,0,7.594280759803951e-11,3.480670177675601e-14,313.5108983035887,0.2163211491961211
+val_benign,todas,Flow IAT Mean,R2,248553,1.0,0,7.450580596923828e-09,2.722719408108524e-14,245.24076223583933,0.28149216576396635
+val_benign,todas,Fwd IAT Mean,R2,248553,1.0,0,7.450580596923828e-09,2.464656244751323e-14,221.99649890916848,0.17026128627488632
+val_benign,todas,Bwd IAT Mean,R2,248553,1.0,0,7.450580596923828e-09,1.1264740315189555e-14,101.46376057182617,0.2950223627569851
+val_benign,todas,Packet Length Min,R2,248553,1.0,0,0.0,0.0,0.0,0.0
+val_benign,todas,Packet Length Max,R2,248553,1.0,0,0.0,0.0,0.0,0.0
+val_benign,todas,Packet Length Mean,R2,248553,1.0,0,4.0472514228895307e-11,3.2131886491092974e-14,289.4183040559948,0.16203293961990972
+val_benign,todas,Average Packet Size,R0,248553,1.0,0,,3.2131886491092974e-14,,
+val_benign,todas,Fwd Segment Size Avg,R0,248553,1.0,0,,1.7466797702688223e-14,,
+val_benign,todas,Bwd Segment Size Avg,R0,248553,1.0,0,,3.480670177675601e-14,,
+test_benign,todas,Fwd Packet Length Mean,R2,248561,1.0,0,1.3642420526593924e-12,3.0300624192915236e-14,272.923759648613,0.16440020585548423
+test_benign,todas,Bwd Packet Length Mean,R2,248561,1.0,0,5.411493475548923e-11,1.998466475201397e-14,180.0058574605888,0.2163211491961211
+test_benign,todas,Flow IAT Mean,R2,248561,1.0,0,7.450580596923828e-09,3.380211829261562e-14,304.46241469391424,0.2964100810577203
+test_benign,todas,Fwd IAT Mean,R2,248561,1.0,0,7.450580596923828e-09,3.2038856742847664e-14,288.5803665769309,0.16984523823939307
+test_benign,todas,Bwd IAT Mean,R2,248561,1.0,0,7.450580596923828e-09,1.3022600550755397e-14,117.29715797555365,0.2897766030011921
+test_benign,todas,Packet Length Min,R2,248561,1.0,0,0.0,0.0,0.0,0.0
+test_benign,todas,Packet Length Max,R2,248561,1.0,0,0.0,0.0,0.0,0.0
+test_benign,todas,Packet Length Mean,R2,248561,1.0,0,4.092726157978177e-11,3.2555597513053385e-14,293.23475365722214,0.1468992778016026
+test_benign,todas,Average Packet Size,R0,248561,1.0,0,,3.2555597513053385e-14,,
+test_benign,todas,Fwd Segment Size Avg,R0,248561,1.0,0,,3.0416275430292776e-14,,
+test_benign,todas,Bwd Segment Size Avg,R0,248561,1.0,0,,1.998466475201397e-14,,
+test_attacks,Bot,Fwd Packet Length Mean,R2,738,1.0,0,9.094947017729282e-13,3.33932775643357e-16,3.007799047908436,0.08461474770962799
+test_attacks,Bot,Bwd Packet Length Mean,R2,738,1.0,0,7.105427357601002e-15,3.0531133177191795e-16,2.749999999999999,0.07393762247263715
+test_attacks,Bot,Flow IAT Mean,R2,738,1.0,0,9.313225746154785e-10,3.572249417804116e-16,3.2175962293794176,0.09402372060974817
+test_attacks,Bot,Fwd IAT Mean,R2,738,1.0,0,9.313225746154785e-10,2.8453856816711343e-16,2.562895579139893,0.0817802376500404
+test_attacks,Bot,Bwd IAT Mean,R2,738,1.0,0,2.9103830456733704e-11,3.0418281956887975e-16,2.7398352657258274,0.1328225131650449
+test_attacks,Bot,Packet Length Min,R2,738,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,Bot,Packet Length Max,R2,738,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,Bot,Packet Length Mean,R2,738,1.0,0,1.1368683772161603e-12,7.355615053840166e-16,6.625349043111076,0.06287467609195373
+test_attacks,Bot,Average Packet Size,R0,738,1.0,0,,7.355615053840166e-16,,
+test_attacks,Bot,Fwd Segment Size Avg,R0,738,1.0,0,,2.729426998281827e-16,,
+test_attacks,Bot,Bwd Segment Size Avg,R0,738,1.0,0,,3.330669073875469e-16,,
+test_attacks,Bot - Attempted,Fwd Packet Length Mean,R2,1470,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,Bot - Attempted,Bwd Packet Length Mean,R2,1470,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,Bot - Attempted,Flow IAT Mean,R2,1470,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,Bot - Attempted,Fwd IAT Mean,R2,1470,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,Bot - Attempted,Bwd IAT Mean,R2,1470,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,Bot - Attempted,Packet Length Min,R2,1470,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,Bot - Attempted,Packet Length Max,R2,1470,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,Bot - Attempted,Packet Length Mean,R2,1470,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,Bot - Attempted,Average Packet Size,R0,1470,1.0,0,,0.0,,
+test_attacks,Bot - Attempted,Fwd Segment Size Avg,R0,1470,1.0,0,,0.0,,
+test_attacks,Bot - Attempted,Bwd Segment Size Avg,R0,1470,1.0,0,,0.0,,
+test_attacks,DDoS,Fwd Packet Length Mean,R2,95123,1.0,0,8.881784197001252e-16,1.554312234475219e-16,1.4,0.08774790647423202
+test_attacks,DDoS,Bwd Packet Length Mean,R2,95123,1.0,0,4.547473508864641e-13,2.2059816051318425e-16,1.986971586971587,0.08477050434501537
+test_attacks,DDoS,Flow IAT Mean,R2,95123,1.0,0,9.313225746154785e-10,5.8904567395272805e-16,5.3056517554354174,0.13164136360617062
+test_attacks,DDoS,Fwd IAT Mean,R2,95123,1.0,0,1.862645149230957e-09,4.4287571155593894e-16,3.9890697790695397,0.14422461226187142
+test_attacks,DDoS,Bwd IAT Mean,R2,95123,1.0,0,1.1641532182693481e-10,3.9820491894681315e-16,3.5867110491719325,0.2507955744222017
+test_attacks,DDoS,Packet Length Min,R2,95123,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,DDoS,Packet Length Max,R2,95123,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,DDoS,Packet Length Mean,R2,95123,1.0,0,2.2737367544323206e-13,2.360280367922824e-16,2.1259515570934253,0.05421252069816128
+test_attacks,DDoS,Average Packet Size,R0,95123,1.0,0,,3.529951097319768e-16,,
+test_attacks,DDoS,Fwd Segment Size Avg,R0,95123,1.0,0,,1.554312234475219e-16,,
+test_attacks,DDoS,Bwd Segment Size Avg,R0,95123,1.0,0,,4.411963210263684e-16,,
+test_attacks,DoS GoldenEye,Fwd Packet Length Mean,R2,7567,1.0,0,1.1368683772161603e-13,4.642001540229311e-16,4.1811432813659986,0.1254067556577723
+test_attacks,DoS GoldenEye,Bwd Packet Length Mean,R2,7567,1.0,0,4.547473508864641e-13,2.3456706545037693e-16,2.1127922971114166,0.09503253913691442
+test_attacks,DoS GoldenEye,Flow IAT Mean,R2,7567,1.0,0,3.725290298461914e-09,4.871986663839237e-16,4.388295464764083,0.1117015596930197
+test_attacks,DoS GoldenEye,Fwd IAT Mean,R2,7567,1.0,0,3.725290298461914e-09,5.368335683695935e-16,4.83536691693855,0.15425722614140996
+test_attacks,DoS GoldenEye,Bwd IAT Mean,R2,7567,1.0,0,3.725290298461914e-09,3.664641363411383e-16,3.3008154957412024,0.17054580258059301
+test_attacks,DoS GoldenEye,Packet Length Min,R2,7567,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,DoS GoldenEye,Packet Length Max,R2,7567,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,DoS GoldenEye,Packet Length Mean,R2,7567,1.0,0,6.821210263296962e-13,6.268970916222452e-16,5.646587016459183,0.1509221742821099
+test_attacks,DoS GoldenEye,Average Packet Size,R0,7567,1.0,0,,6.268970916222452e-16,,
+test_attacks,DoS GoldenEye,Fwd Segment Size Avg,R0,7567,1.0,0,,5.614921044081251e-16,,
+test_attacks,DoS GoldenEye,Bwd Segment Size Avg,R0,7567,1.0,0,,2.3456706545037693e-16,,
+test_attacks,DoS GoldenEye - Attempted,Fwd Packet Length Mean,R2,80,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,DoS GoldenEye - Attempted,Bwd Packet Length Mean,R2,80,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,DoS GoldenEye - Attempted,Flow IAT Mean,R2,80,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,DoS GoldenEye - Attempted,Fwd IAT Mean,R2,80,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,DoS GoldenEye - Attempted,Bwd IAT Mean,R2,80,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,DoS GoldenEye - Attempted,Packet Length Min,R2,80,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,DoS GoldenEye - Attempted,Packet Length Max,R2,80,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,DoS GoldenEye - Attempted,Packet Length Mean,R2,80,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,DoS GoldenEye - Attempted,Average Packet Size,R0,80,1.0,0,,0.0,,
+test_attacks,DoS GoldenEye - Attempted,Fwd Segment Size Avg,R0,80,1.0,0,,0.0,,
+test_attacks,DoS GoldenEye - Attempted,Bwd Segment Size Avg,R0,80,1.0,0,,0.0,,
+test_attacks,DoS Hulk,Fwd Packet Length Mean,R2,158469,1.0,0,8.526512829121202e-14,4.780409843034311e-16,4.305810397553515,0.1390782302433748
+test_attacks,DoS Hulk,Bwd Packet Length Mean,R2,158469,1.0,0,2.2737367544323206e-13,1.764866821034143e-16,1.5896507115135836,0.04986443112324733
+test_attacks,DoS Hulk,Flow IAT Mean,R2,158469,1.0,0,1.3969838619232178e-09,7.315634171277053e-16,6.58933746554844,0.1472966251339356
+test_attacks,DoS Hulk,Fwd IAT Mean,R2,158469,1.0,0,1.862645149230957e-09,6.244098634014493e-16,5.624184056282458,0.17754639237301426
+test_attacks,DoS Hulk,Bwd IAT Mean,R2,158469,1.0,0,9.313225746154785e-10,4.4366657998587914e-16,3.9961932886022953,0.29174426489405164
+test_attacks,DoS Hulk,Packet Length Min,R2,158469,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,DoS Hulk,Packet Length Max,R2,158469,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,DoS Hulk,Packet Length Mean,R2,158469,1.0,0,6.821210263296962e-13,6.304790597115081e-16,5.678850516763297,0.15177492051985828
+test_attacks,DoS Hulk,Average Packet Size,R0,158469,1.0,0,,6.304790597115081e-16,,
+test_attacks,DoS Hulk,Fwd Segment Size Avg,R0,158469,1.0,0,,5.614921044081251e-16,,
+test_attacks,DoS Hulk,Bwd Segment Size Avg,R0,158469,1.0,0,,2.745348388275333e-16,,
+test_attacks,DoS Hulk - Attempted,Fwd Packet Length Mean,R2,579,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,DoS Hulk - Attempted,Bwd Packet Length Mean,R2,579,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,DoS Hulk - Attempted,Flow IAT Mean,R2,579,1.0,0,1.862645149230957e-09,3.835390128607765e-16,3.454612310803682,0.06608737954672182
+test_attacks,DoS Hulk - Attempted,Fwd IAT Mean,R2,579,1.0,0,1.862645149230957e-09,1.771127563828007e-16,1.5952898872962853,0.09455816276316571
+test_attacks,DoS Hulk - Attempted,Bwd IAT Mean,R2,579,1.0,0,1.862645149230957e-09,2.0659437868164596e-16,1.8608367336949998,0.07297537878708969
+test_attacks,DoS Hulk - Attempted,Packet Length Min,R2,579,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,DoS Hulk - Attempted,Packet Length Max,R2,579,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,DoS Hulk - Attempted,Packet Length Mean,R2,579,1.0,0,2.842170943040401e-14,2.9442378553595305e-16,2.651933701657458,0.053610664319848705
+test_attacks,DoS Hulk - Attempted,Average Packet Size,R0,579,1.0,0,,4.4163567830392953e-16,,
+test_attacks,DoS Hulk - Attempted,Fwd Segment Size Avg,R0,579,1.0,0,,0.0,,
+test_attacks,DoS Hulk - Attempted,Bwd Segment Size Avg,R0,579,1.0,0,,0.0,,
+test_attacks,DoS Slowhttptest,Fwd Packet Length Mean,R2,1742,1.0,0,5.684341886080802e-14,3.3306690738754686e-16,2.999999999999999,0.2249251566255851
+test_attacks,DoS Slowhttptest,Bwd Packet Length Mean,R2,1742,1.0,0,2.2737367544323206e-13,2.313420819254924e-16,2.083744227909525,0.11427262102312699
+test_attacks,DoS Slowhttptest,Flow IAT Mean,R2,1742,1.0,0,5.587935447692871e-09,4.532023068854683e-16,4.0820834808256885,0.13191895614342805
+test_attacks,DoS Slowhttptest,Fwd IAT Mean,R2,1742,1.0,0,7.450580596923828e-09,3.541075212596988e-16,3.189517001588539,0.14129091442534006
+test_attacks,DoS Slowhttptest,Bwd IAT Mean,R2,1742,1.0,0,7.450580596923828e-09,2.177932876055507e-16,1.9617075378083069,0.14790498141263067
+test_attacks,DoS Slowhttptest,Packet Length Min,R2,1742,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,DoS Slowhttptest,Packet Length Max,R2,1742,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,DoS Slowhttptest,Packet Length Mean,R2,1742,1.0,0,1.1368683772161603e-13,3.43547140083548e-16,3.094397544128933,0.07165814143791847
+test_attacks,DoS Slowhttptest,Average Packet Size,R0,1742,1.0,0,,3.987013346950461e-16,,
+test_attacks,DoS Slowhttptest,Fwd Segment Size Avg,R0,1742,1.0,0,,3.4262680714034677e-16,,
+test_attacks,DoS Slowhttptest,Bwd Segment Size Avg,R0,1742,1.0,0,,2.313420819254924e-16,,
+test_attacks,DoS Slowhttptest - Attempted,Fwd Packet Length Mean,R2,3367,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,DoS Slowhttptest - Attempted,Bwd Packet Length Mean,R2,3367,1.0,0,1.1368683772161603e-13,1.736560657662159e-16,1.5641547861507126,0.11782560235533975
+test_attacks,DoS Slowhttptest - Attempted,Flow IAT Mean,R2,3367,1.0,0,3.725290298461914e-09,2.197554852866289e-16,1.979381443298969,0.1502478504266612
+test_attacks,DoS Slowhttptest - Attempted,Fwd IAT Mean,R2,3367,1.0,0,1.862645149230957e-09,1.7717043335294355e-16,1.5958093952587717,0.09475954599856265
+test_attacks,DoS Slowhttptest - Attempted,Bwd IAT Mean,R2,3367,1.0,0,3.725290298461914e-09,3.273133523654971e-16,2.9481765834932814,0.22126555007636647
+test_attacks,DoS Slowhttptest - Attempted,Packet Length Min,R2,3367,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,DoS Slowhttptest - Attempted,Packet Length Max,R2,3367,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,DoS Slowhttptest - Attempted,Packet Length Mean,R2,3367,1.0,0,1.1368683772161603e-13,1.736560657662159e-16,1.5641547861507126,0.11427262102312699
+test_attacks,DoS Slowhttptest - Attempted,Average Packet Size,R0,3367,1.0,0,,1.736560657662159e-16,,
+test_attacks,DoS Slowhttptest - Attempted,Fwd Segment Size Avg,R0,3367,1.0,0,,0.0,,
+test_attacks,DoS Slowhttptest - Attempted,Bwd Segment Size Avg,R0,3367,1.0,0,,1.736560657662159e-16,,
+test_attacks,DoS slowloris,Fwd Packet Length Mean,R2,4001,1.0,0,5.684341886080802e-14,4.1545061076256917e-16,3.742046431642303,0.10211827435569193
+test_attacks,DoS slowloris,Bwd Packet Length Mean,R2,4001,1.0,0,5.684341886080802e-14,2.1583624696889472e-16,1.9440800828443212,0.05230098520628538
+test_attacks,DoS slowloris,Flow IAT Mean,R2,4001,1.0,0,7.450580596923828e-09,3.978457719380409e-16,3.5834761405021767,0.1390308492204581
+test_attacks,DoS slowloris,Fwd IAT Mean,R2,4001,1.0,0,7.450580596923828e-09,3.4117444820047576e-16,3.0730262355679945,0.141882882242145
+test_attacks,DoS slowloris,Bwd IAT Mean,R2,4001,1.0,0,7.450580596923828e-09,2.2130127813926207e-16,1.9933047075291903,0.14797957974161832
+test_attacks,DoS slowloris,Packet Length Min,R2,4001,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,DoS slowloris,Packet Length Max,R2,4001,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,DoS slowloris,Packet Length Mean,R2,4001,1.0,0,1.1368683772161603e-13,4.100322545008929e-16,3.6932422171602113,0.0693628088135923
+test_attacks,DoS slowloris,Average Packet Size,R0,4001,1.0,0,,4.100322545008929e-16,,
+test_attacks,DoS slowloris,Fwd Segment Size Avg,R0,4001,1.0,0,,4.1545061076256917e-16,,
+test_attacks,DoS slowloris,Bwd Segment Size Avg,R0,4001,1.0,0,,2.1583624696889472e-16,,
+test_attacks,DoS slowloris - Attempted,Fwd Packet Length Mean,R2,1706,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,DoS slowloris - Attempted,Bwd Packet Length Mean,R2,1706,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,DoS slowloris - Attempted,Flow IAT Mean,R2,1706,1.0,0,4.547473508864641e-13,3.253618060241813e-16,2.930598616742189,0.2199782031209248
+test_attacks,DoS slowloris - Attempted,Fwd IAT Mean,R2,1706,1.0,0,9.313225746154785e-10,2.1119247584885467e-16,1.9022527110727088,0.09477056837122264
+test_attacks,DoS slowloris - Attempted,Bwd IAT Mean,R2,1706,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,DoS slowloris - Attempted,Packet Length Min,R2,1706,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,DoS slowloris - Attempted,Packet Length Max,R2,1706,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,DoS slowloris - Attempted,Packet Length Mean,R2,1706,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,DoS slowloris - Attempted,Average Packet Size,R0,1706,1.0,0,,0.0,,
+test_attacks,DoS slowloris - Attempted,Fwd Segment Size Avg,R0,1706,1.0,0,,0.0,,
+test_attacks,DoS slowloris - Attempted,Bwd Segment Size Avg,R0,1706,1.0,0,,0.0,,
+test_attacks,FTP-Patator,Fwd Packet Length Mean,R2,3973,1.0,0,3.552713678800501e-15,3.3689526264487497e-16,3.0344827586206886,0.08107722899321922
+test_attacks,FTP-Patator,Bwd Packet Length Mean,R2,3973,1.0,0,1.7763568394002505e-15,1.4023869784738819e-16,1.263157894736842,0.05650310750983292
+test_attacks,FTP-Patator,Flow IAT Mean,R2,3973,1.0,0,1.7462298274040222e-10,5.5546365945269135e-16,5.003171859457986,0.058110931593642265
+test_attacks,FTP-Patator,Fwd IAT Mean,R2,3973,1.0,0,3.4924596548080444e-10,3.6731777985920965e-16,3.308504433000989,0.09597194073471628
+test_attacks,FTP-Patator,Bwd IAT Mean,R2,3973,1.0,0,2.3283064365386963e-10,4.4038422373013283e-16,3.9666284517817427,0.075051870084811
+test_attacks,FTP-Patator,Packet Length Min,R2,3973,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,FTP-Patator,Packet Length Max,R2,3973,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,FTP-Patator,Packet Length Mean,R2,3973,1.0,0,7.105427357601002e-15,5.90361916952012e-16,5.317507418397626,0.06017036919799141
+test_attacks,FTP-Patator,Average Packet Size,R0,3973,1.0,0,,5.90361916952012e-16,,
+test_attacks,FTP-Patator,Fwd Segment Size Avg,R0,3973,1.0,0,,5.053428939673125e-16,,
+test_attacks,FTP-Patator,Bwd Segment Size Avg,R0,3973,1.0,0,,1.4023869784738819e-16,,
+test_attacks,FTP-Patator - Attempted,Fwd Packet Length Mean,R2,11,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,FTP-Patator - Attempted,Bwd Packet Length Mean,R2,11,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,FTP-Patator - Attempted,Flow IAT Mean,R2,11,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,FTP-Patator - Attempted,Fwd IAT Mean,R2,11,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,FTP-Patator - Attempted,Bwd IAT Mean,R2,11,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,FTP-Patator - Attempted,Packet Length Min,R2,11,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,FTP-Patator - Attempted,Packet Length Max,R2,11,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,FTP-Patator - Attempted,Packet Length Mean,R2,11,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,FTP-Patator - Attempted,Average Packet Size,R0,11,1.0,0,,0.0,,
+test_attacks,FTP-Patator - Attempted,Fwd Segment Size Avg,R0,11,1.0,0,,0.0,,
+test_attacks,FTP-Patator - Attempted,Bwd Segment Size Avg,R0,11,1.0,0,,0.0,,
+test_attacks,Heartbleed,Fwd Packet Length Mean,R2,11,1.0,0,9.769962616701378e-15,2.8300594191353913e-15,25.49090909090902,0.0030282890466453395
+test_attacks,Heartbleed,Bwd Packet Length Mean,R2,11,1.0,0,6.821210263296962e-12,1.810018908306217e-15,16.30320096196286,0.0025960017086120654
+test_attacks,Heartbleed,Flow IAT Mean,R2,11,1.0,0,9.822542779147625e-11,3.978430636325419e-15,35.834517462549044,0.0024713149428300524
+test_attacks,Heartbleed,Fwd IAT Mean,R2,11,1.0,0,9.458744898438454e-11,2.2199778340138286e-15,19.99578269207088,0.0023798675363160488
+test_attacks,Heartbleed,Bwd IAT Mean,R2,11,1.0,0,1.0186340659856796e-10,1.7315980289819653e-15,15.596848476157328,0.0026079339387207134
+test_attacks,Heartbleed,Packet Length Min,R2,11,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,Heartbleed,Packet Length Max,R2,11,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,Heartbleed,Packet Length Mean,R2,11,1.0,0,3.183231456205249e-12,1.9861415254257132e-15,17.88957246762462,0.004521248891038426
+test_attacks,Heartbleed,Average Packet Size,R0,11,1.0,0,,1.9861415254257132e-15,,
+test_attacks,Heartbleed,Fwd Segment Size Avg,R0,11,1.0,0,,2.8300594191353913e-15,,
+test_attacks,Heartbleed,Bwd Segment Size Avg,R0,11,1.0,0,,1.810018908306217e-15,,
+test_attacks,Infiltration,Fwd Packet Length Mean,R2,32,1.0,0,1.2505552149377763e-12,2.616257316455668e-15,23.565150950990162,0.03090325134285217
+test_attacks,Infiltration,Bwd Packet Length Mean,R2,32,1.0,0,7.105427357601002e-15,6.946147103109919e-15,62.565331010452965,0.06161532292487635
+test_attacks,Infiltration,Flow IAT Mean,R2,32,1.0,0,6.984919309616089e-10,3.181826047249592e-15,28.659341201502002,0.028586365019505382
+test_attacks,Infiltration,Fwd IAT Mean,R2,32,1.0,0,1.862645149230957e-09,3.6832191214006116e-15,33.17548852532736,0.04809797697906079
+test_attacks,Infiltration,Bwd IAT Mean,R2,32,1.0,0,9.313225746154785e-10,1.648118795285839e-15,14.844934384623231,0.03015739751682979
+test_attacks,Infiltration,Packet Length Min,R2,32,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,Infiltration,Packet Length Max,R2,32,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,Infiltration,Packet Length Mean,R2,32,1.0,0,9.094947017729282e-13,3.5055203962885772e-15,31.57492070092982,0.021423268217746393
+test_attacks,Infiltration,Average Packet Size,R0,32,1.0,0,,3.5055203962885772e-15,,
+test_attacks,Infiltration,Fwd Segment Size Avg,R0,32,1.0,0,,2.4785595629580015e-15,,
+test_attacks,Infiltration,Bwd Segment Size Avg,R0,32,1.0,0,,5.7439293352639785e-15,,
+test_attacks,Infiltration - Attempted,Fwd Packet Length Mean,R2,16,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,Infiltration - Attempted,Bwd Packet Length Mean,R2,16,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,Infiltration - Attempted,Flow IAT Mean,R2,16,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,Infiltration - Attempted,Fwd IAT Mean,R2,16,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,Infiltration - Attempted,Bwd IAT Mean,R2,16,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,Infiltration - Attempted,Packet Length Min,R2,16,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,Infiltration - Attempted,Packet Length Max,R2,16,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,Infiltration - Attempted,Packet Length Mean,R2,16,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,Infiltration - Attempted,Average Packet Size,R0,16,1.0,0,,0.0,,
+test_attacks,Infiltration - Attempted,Fwd Segment Size Avg,R0,16,1.0,0,,0.0,,
+test_attacks,Infiltration - Attempted,Bwd Segment Size Avg,R0,16,1.0,0,,0.0,,
+test_attacks,PortScan,Fwd Packet Length Mean,R2,159023,1.0,0,1.4210854715202004e-14,1.41502109539707e-16,1.2745376955903271,0.0500831403216887
+test_attacks,PortScan,Bwd Packet Length Mean,R2,159023,1.0,0,2.2737367544323206e-13,2.6568552867870063e-16,2.393082495910259,0.0980397914596603
+test_attacks,PortScan,Flow IAT Mean,R2,159023,1.0,0,9.313225746154785e-10,3.8497104986087194e-16,3.467510953403703,0.21455348726231627
+test_attacks,PortScan,Fwd IAT Mean,R2,159023,1.0,0,2.3283064365386963e-10,3.204507621746923e-16,2.8863638662410716,0.14227756175022874
+test_attacks,PortScan,Bwd IAT Mean,R2,159023,1.0,0,9.313225746154785e-10,2.50641563762406e-16,2.25757850632786,0.12812959849615915
+test_attacks,PortScan,Packet Length Min,R2,159023,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,PortScan,Packet Length Max,R2,159023,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,PortScan,Packet Length Mean,R2,159023,1.0,0,1.1368683772161603e-13,2.380045451255046e-16,2.143754361479414,0.03816003592437748
+test_attacks,PortScan,Average Packet Size,R0,159023,1.0,0,,2.380045451255046e-16,,
+test_attacks,PortScan,Fwd Segment Size Avg,R0,159023,1.0,0,,2.8300421907941396e-16,,
+test_attacks,PortScan,Bwd Segment Size Avg,R0,159023,1.0,0,,2.6568552867870063e-16,,
+test_attacks,SSH-Patator,Fwd Packet Length Mean,R2,2980,1.0,0,4.263256414560601e-14,4.2127039669571156e-16,3.794466403162055,0.05887912548236432
+test_attacks,SSH-Patator,Bwd Packet Length Mean,R2,2980,1.0,0,1.1368683772161603e-13,8.168084389149945e-16,7.357156362261292,0.07812783573009657
+test_attacks,SSH-Patator,Flow IAT Mean,R2,2980,1.0,0,1.1641532182693481e-10,5.475384691491081e-16,4.93178809126187,0.07522243022062941
+test_attacks,SSH-Patator,Fwd IAT Mean,R2,2980,1.0,0,2.3283064365386963e-10,4.052371480432866e-16,3.650051737848856,0.14580542475854597
+test_attacks,SSH-Patator,Bwd IAT Mean,R2,2980,1.0,0,9.313225746154785e-10,6.517066786967694e-16,5.870051910667269,0.0873987979027351
+test_attacks,SSH-Patator,Packet Length Min,R2,2980,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,SSH-Patator,Packet Length Max,R2,2980,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,SSH-Patator,Packet Length Mean,R2,2980,1.0,0,9.947598300641403e-14,8.958131912161713e-16,8.068767908309448,0.0656615346889949
+test_attacks,SSH-Patator,Average Packet Size,R0,2980,1.0,0,,7.678398781852897e-16,,
+test_attacks,SSH-Patator,Fwd Segment Size Avg,R0,2980,1.0,0,,4.70841571889223e-16,,
+test_attacks,SSH-Patator,Bwd Segment Size Avg,R0,2980,1.0,0,,8.168084389149945e-16,,
+test_attacks,SSH-Patator - Attempted,Fwd Packet Length Mean,R2,8,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,SSH-Patator - Attempted,Bwd Packet Length Mean,R2,8,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,SSH-Patator - Attempted,Flow IAT Mean,R2,8,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,SSH-Patator - Attempted,Fwd IAT Mean,R2,8,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,SSH-Patator - Attempted,Bwd IAT Mean,R2,8,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,SSH-Patator - Attempted,Packet Length Min,R2,8,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,SSH-Patator - Attempted,Packet Length Max,R2,8,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,SSH-Patator - Attempted,Packet Length Mean,R2,8,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,SSH-Patator - Attempted,Average Packet Size,R0,8,1.0,0,,0.0,,
+test_attacks,SSH-Patator - Attempted,Fwd Segment Size Avg,R0,8,1.0,0,,0.0,,
+test_attacks,SSH-Patator - Attempted,Bwd Segment Size Avg,R0,8,1.0,0,,0.0,,
+test_attacks,Web Attack - Brute Force,Fwd Packet Length Mean,R2,151,1.0,0,5.684341886080802e-14,2.8095599789984536e-16,2.530626654898499,0.03585416097812437
+test_attacks,Web Attack - Brute Force,Bwd Packet Length Mean,R2,151,1.0,0,5.684341886080801e-13,8.268420004689113e-16,7.447530650412129,0.05525904097016538
+test_attacks,Web Attack - Brute Force,Flow IAT Mean,R2,151,1.0,0,3.4924596548080444e-10,1.0773661296158235e-15,9.704051399758832,0.10200771684522167
+test_attacks,Web Attack - Brute Force,Fwd IAT Mean,R2,151,1.0,0,1.7462298274040222e-10,1.0067835295098787e-15,9.068299856686885,0.046734070751517205
+test_attacks,Web Attack - Brute Force,Bwd IAT Mean,R2,151,1.0,0,2.3283064365386963e-10,6.839404082591374e-16,6.160387535558952,0.05664104492220484
+test_attacks,Web Attack - Brute Force,Packet Length Min,R2,151,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,Web Attack - Brute Force,Packet Length Max,R2,151,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,Web Attack - Brute Force,Packet Length Mean,R2,151,1.0,0,3.979039320256561e-13,1.0585831438847654e-15,9.534869304680235,0.04913182536364447
+test_attacks,Web Attack - Brute Force,Average Packet Size,R0,151,1.0,0,,1.2098093072968746e-15,,
+test_attacks,Web Attack - Brute Force,Fwd Segment Size Avg,R0,151,1.0,0,,4.2143399684976803e-16,,
+test_attacks,Web Attack - Brute Force,Bwd Segment Size Avg,R0,151,1.0,0,,8.268420004689113e-16,,
+test_attacks,Web Attack - Brute Force - Attempted,Fwd Packet Length Mean,R2,1214,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,Web Attack - Brute Force - Attempted,Bwd Packet Length Mean,R2,1214,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,Web Attack - Brute Force - Attempted,Flow IAT Mean,R2,1214,1.0,0,1.1641532182693481e-10,1.395475910654165e-16,1.2569329582453201,0.05576492463796414
+test_attacks,Web Attack - Brute Force - Attempted,Fwd IAT Mean,R2,1214,1.0,0,2.3283064365386963e-10,2.187330095447009e-16,1.9701718005582842,0.14228989272678025
+test_attacks,Web Attack - Brute Force - Attempted,Bwd IAT Mean,R2,1214,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,Web Attack - Brute Force - Attempted,Packet Length Min,R2,1214,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,Web Attack - Brute Force - Attempted,Packet Length Max,R2,1214,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,Web Attack - Brute Force - Attempted,Packet Length Mean,R2,1214,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,Web Attack - Brute Force - Attempted,Average Packet Size,R0,1214,1.0,0,,0.0,,
+test_attacks,Web Attack - Brute Force - Attempted,Fwd Segment Size Avg,R0,1214,1.0,0,,0.0,,
+test_attacks,Web Attack - Brute Force - Attempted,Bwd Segment Size Avg,R0,1214,1.0,0,,0.0,,
+test_attacks,Web Attack - Sql Injection,Fwd Packet Length Mean,R2,12,1.0,0,1.4210854715202004e-14,1.4234579013557933e-16,1.2821368948247078,0.057107946606212046
+test_attacks,Web Attack - Sql Injection,Bwd Packet Length Mean,R2,12,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,Web Attack - Sql Injection,Flow IAT Mean,R2,12,1.0,0,1.1641532182693481e-10,2.288395446907363e-16,2.061203376393668,0.06046618896930275
+test_attacks,Web Attack - Sql Injection,Fwd IAT Mean,R2,12,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,Web Attack - Sql Injection,Bwd IAT Mean,R2,12,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,Web Attack - Sql Injection,Packet Length Min,R2,12,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,Web Attack - Sql Injection,Packet Length Max,R2,12,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,Web Attack - Sql Injection,Packet Length Mean,R2,12,1.0,0,1.1368683772161603e-13,3.199987755726141e-16,2.8822927328556798,0.07684667535930696
+test_attacks,Web Attack - Sql Injection,Average Packet Size,R0,12,1.0,0,,3.199987755726141e-16,,
+test_attacks,Web Attack - Sql Injection,Fwd Segment Size Avg,R0,12,1.0,0,,0.0,,
+test_attacks,Web Attack - Sql Injection,Bwd Segment Size Avg,R0,12,1.0,0,,0.0,,
+test_attacks,Web Attack - XSS,Fwd Packet Length Mean,R2,27,1.0,0,1.4210854715202004e-13,6.170506608692598e-16,5.557898252719033,0.05504150047539965
+test_attacks,Web Attack - XSS,Bwd Packet Length Mean,R2,27,1.0,0,6.821210263296962e-13,3.9384718219770455e-16,3.547460045973004,0.062165539619348814
+test_attacks,Web Attack - XSS,Flow IAT Mean,R2,27,1.0,0,2.6193447411060333e-10,1.188504933951974e-15,10.705100755348212,0.04738516240367233
+test_attacks,Web Attack - XSS,Fwd IAT Mean,R2,27,1.0,0,2.3283064365386963e-10,7.231476142697724e-16,6.5135346523184205,0.0571204627554366
+test_attacks,Web Attack - XSS,Bwd IAT Mean,R2,27,1.0,0,4.656612873077393e-10,7.311309935777997e-16,6.585442540471998,0.11069153410588478
+test_attacks,Web Attack - XSS,Packet Length Min,R2,27,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,Web Attack - XSS,Packet Length Max,R2,27,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,Web Attack - XSS,Packet Length Mean,R2,27,1.0,0,1.0231815394945443e-12,1.3737822068737937e-15,12.37393006993007,0.04673755211277538
+test_attacks,Web Attack - XSS,Average Packet Size,R0,27,1.0,0,,1.3737822068737937e-15,,
+test_attacks,Web Attack - XSS,Fwd Segment Size Avg,R0,27,1.0,0,,6.170506608692598e-16,,
+test_attacks,Web Attack - XSS,Bwd Segment Size Avg,R0,27,1.0,0,,3.9754972884045865e-16,,
+test_attacks,Web Attack - XSS - Attempted,Fwd Packet Length Mean,R2,652,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,Web Attack - XSS - Attempted,Bwd Packet Length Mean,R2,652,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,Web Attack - XSS - Attempted,Flow IAT Mean,R2,652,1.0,0,1.1641532182693481e-10,1.3632829617944736e-16,1.2279361277476275,0.054508572882954194
+test_attacks,Web Attack - XSS - Attempted,Fwd IAT Mean,R2,652,1.0,0,2.3283064365386963e-10,1.9357541975634125e-16,1.7435723765654916,0.13036611396781045
+test_attacks,Web Attack - XSS - Attempted,Bwd IAT Mean,R2,652,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,Web Attack - XSS - Attempted,Packet Length Min,R2,652,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,Web Attack - XSS - Attempted,Packet Length Max,R2,652,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,Web Attack - XSS - Attempted,Packet Length Mean,R2,652,1.0,0,0.0,0.0,0.0,0.0
+test_attacks,Web Attack - XSS - Attempted,Average Packet Size,R0,652,1.0,0,,0.0,,
+test_attacks,Web Attack - XSS - Attempted,Fwd Segment Size Avg,R0,652,1.0,0,,0.0,,
+test_attacks,Web Attack - XSS - Attempted,Bwd Segment Size Avg,R0,652,1.0,0,,0.0,,

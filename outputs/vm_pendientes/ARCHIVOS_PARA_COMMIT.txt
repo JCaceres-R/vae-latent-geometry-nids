@@ -1,0 +1,16 @@
+outputs/vm_pendientes
+outputs/oe1_saneado/checkpoints
+outputs/oe1_saneado/logs
+outputs/oe1_saneado/tables
+outputs/oe1_saneado/figures
+outputs/oe1_saneado/figures_informe
+outputs/oe1_saneado/preproceso
+outputs/oe1_saneado/informe_tablas
+outputs/oe1_saneado/registro_run.log
+outputs/oe1_saneado/datos_info.json
+outputs/oe2_robust_saneado/tables
+outputs/oe2_robust_saneado/metrics
+outputs/oe2_robust_saneado/figures
+outputs/oe2_robust_saneado/verificacion_conteos.json
+outputs/oe2_descriptores_saneado/tables
+outputs/oe2_descriptores_saneado/figures

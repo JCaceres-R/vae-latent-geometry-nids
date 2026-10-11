@@ -1,0 +1,9 @@
+VM: OE1 saneado (8 semillas + referencia 74) y OE2 recalculado sobre 66 variables
+
+Corrida de scripts/run_pendientes_vm.sh. Resumen en outputs/vm_pendientes/RESUMEN_CORRIDA.md,
+log en outputs/vm_pendientes/RUN_LOG.md.
+
+- OE1: reentrenamiento, diagnósticos, figuras y tablas del informe
+- OE2 robusto (perfil saneado): fases 2-6 en outputs/oe2_robust_saneado/
+- OE2 descriptores (perfil saneado): fases 1-7 en outputs/oe2_descriptores_saneado/
+- Fase 7: prueba confirmatoria (primario + 6 secundarios con Holm)
