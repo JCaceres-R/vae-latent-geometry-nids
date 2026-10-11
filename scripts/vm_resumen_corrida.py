@@ -164,11 +164,14 @@ def oe2_robusto():
     old = ROB51 / "tables" / "phase4_detectability_metrics.csv"
     if old.exists():
         o = pd.read_csv(old)
-        o = o[o.score == "nll_mc"].groupby("group").auc_roc.mean()
+        o = o[o.score == "nll_mc"]
+        n_old = o.seed.nunique()
+        o = o.groupby("group").auc_roc.mean()
         n = d.groupby("group").auc_roc.mean()
         c = pd.DataFrame({"auc_51": o, "auc_66": n}).dropna()
         c["dif"] = c.auc_66 - c.auc_51
-        lines += ["**Frente al modelo de 51 variables** (OE2 robusto, 10 semillas):", "",
+        lines += [f"**Frente al modelo de 51 variables** (tabla de la fase 4 del OE2 robusto: {n_old} semilla(s); "
+                  "la comparación con 10 semillas está en la sección 6):", "",
                   md_table(c.reset_index().rename(columns={"index": "group"}), 4), ""]
     tau = ROB / "tables" / "phase4_tau_per_seed.csv"
     if tau.exists():

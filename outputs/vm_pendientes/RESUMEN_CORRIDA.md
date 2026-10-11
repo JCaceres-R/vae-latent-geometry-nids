@@ -113,7 +113,7 @@ Semillas: 42, 43, 44, 45, 46, 47, 48, 49. Dimensiones activas por semilla (benig
 | DDoS | 0.9838 | 0.0141 | 0.9517 | 0.9957 |
 | Infiltration | 0.9874 | 0.0033 | 0.9835 | 0.9929 |
 
-**Frente al modelo de 51 variables** (OE2 robusto, 10 semillas):
+**Frente al modelo de 51 variables** (tabla de la fase 4 del OE2 robusto: 1 semilla(s); la comparación con 10 semillas está en la sección 6):
 
 | group | auc_51 | auc_66 | dif |
 |---|---|---|---|
