@@ -1,0 +1,9 @@
+===== [2026-10-11T15:20:28Z] E24: OE2 robusto: figuras (intento 1) =====
+[fase6] fig1_mahalanobis_distributions.png / .pdf
+[fase6] fig2_forest_auc.png / .pdf
+[fase6] fig3_scatter_geometry_detectability.png / .pdf
+[fase6] fig4_rho_distribution.png / .pdf
+[fase6] fig5_ranking_heatmap.png / .pdf
+[fase6] fig6_mixed_model_coefficients.png / .pdf
+[fase6] fig7_score_comparison.png / .pdf
+[fase6] UMAP omitido en esta corrida (include_umap=False) -- pendiente, ver informe sección 4.7 / 10.

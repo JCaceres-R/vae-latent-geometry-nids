@@ -1,0 +1,45 @@
+===== [2026-10-11T16:21:35Z] E32: Descriptores: cribado y validación (attempted) (intento 1) =====
+/home/estudiante/vae-latent-geometry-nids/src/vae_nids/evaluation/oe2_descriptores/fase3_evaluacion.py:77: RuntimeWarning: Mean of empty slice
+  return float(np.tanh(np.nanmean(np.arctanh(r))))
+1.1      Mahalanobis (mediana)                            rho=+0.77 [+0.44,+0.97] p=0.000 W=0.81 rhoM=+1.00 val=+0.86
+5.1      kNN al benigno (z blanqueado)                    rho=+0.74 [+0.33,+0.93] p=0.001 W=0.77 rhoM=+0.73 val=+0.67
+2.4      Fisher-Rao al k-ésimo posterior benigno          rho=+0.78 [+0.43,+0.91] p=0.000 W=0.79 rhoM=+0.78 val=+0.66
+7.1      Tasa KL(q||p) por flujo                          rho=+0.83 [+0.52,+0.97] p=0.000 W=0.90 rhoM=+0.89 val=+0.95
+3.2      MMD² analítico entre posteriores agregados       rho=+0.44 [-0.27,+0.89] p=0.115 W=0.77 rhoM=+0.62 val=+0.85
+6.2      kNN en el espacio decodificado                   rho=+0.68 [+0.25,+0.88] p=0.003 W=0.68 rhoM=+0.66 val=+0.64
+6.1      Log-magnificación del decodificador              rho=+0.59 [+0.11,+0.89] p=0.013 W=0.68 rhoM=+0.48 val=+0.94
+4.2      Distancia afín-invariante entre covarianzas      rho=-0.14 [-0.67,+0.40] p=0.634 W=0.89 rhoM=-0.31 val=-0.46
+8.1      LID relativa al benigno                          rho=+0.44 [-0.05,+0.82] p=0.059 W=0.56 rhoM=+0.46 val=+0.37
+10.1a    Silhouette del grupo (z blanqueado)              rho=-0.41 [-0.83,+0.10] p=0.177 W=0.93 rhoM=-0.46 val=-0.75
+10.3     Sonda lineal sobre (μ, log σ²)                   rho=+0.04 [-0.61,+0.64] p=0.909 W=0.92 rhoM=+0.08 val=-0.16
+1.1b     Mahalanobis (AUC frente al control)              rho=+0.81 [+0.56,+0.98] p=0.000 W=0.81 rhoM=+0.88 val=+0.91
+10.1b    Silhouette del grupo (Fisher-Rao)                rho=-0.63 [-0.92,-0.22] p=0.026 W=0.96 rhoM=-0.69 val=-0.69
+1.2      Log-densidad de mezcla benigna (K=8)             rho=+0.74 [+0.39,+0.97] p=0.002 W=0.82 rhoM=+0.85 val=+0.86
+1.3      Mahalanobis relativa al prior                    rho=+0.71 [+0.39,+0.94] p=0.000 W=0.62 rhoM=+0.74 val=+0.86
+1.4      Tipicidad radial bilateral                       rho=+0.76 [+0.50,+0.94] p=0.000 W=0.72 rhoM=+0.82 val=+0.94
+4.1      Rango efectivo de la familia                     rho=+0.14 [-0.47,+0.81] p=0.618 W=0.73 rhoM=+0.27 val=+0.13
+7.2      Log-volumen del posterior                        rho=+0.56 [+0.05,+0.87] p=0.019 W=0.63 rhoM=+0.45 val=+0.89
+11.1     Inconsistencia Kumar-Poole                       rho=+0.38 [+0.02,+0.69] p=0.069 W=0.44 rhoM=+0.41 val=+0.01
+5.1m     kNN: fracción > p95 del control                  rho=+0.63 [+0.07,+0.90] p=0.010 W=0.73 rhoM=+0.47 val=+0.75
+2.4m     Fisher-Rao (mediana)                             rho=+0.72 [+0.32,+0.93] p=0.002 W=0.77 rhoM=+0.83 val=+0.57
+7.1m     Tasa (mediana, nats)                             rho=+0.79 [+0.45,+0.97] p=0.001 W=0.87 rhoM=+0.97 val=+0.88
+6.1m     Log-magnificación (mediana)                      rho=+0.63 [+0.25,+0.87] p=0.007 W=0.69 rhoM=+0.53 val=+0.85
+R        bhattacharyya cov term                           rho=-0.56 [-0.83,-0.16] p=0.048 W=0.92 rhoM=-0.71 val=-0.81
+R        bhattacharyya mean term                          rho=+0.32 [-0.23,+0.81] p=0.252 W=0.74 rhoM=+0.36 val=+0.42
+R        bhattacharyya total                              rho=-0.28 [-0.65,+0.22] p=0.346 W=0.92 rhoM=-0.40 val=-0.79
+R        cliffs delta                                     rho=+0.80 [+0.51,+0.98] p=0.000 W=0.82 rhoM=+0.86 val=+0.91
+R        cov logdet                                       rho=+0.66 [+0.24,+0.93] p=0.022 W=0.98 rhoM=+0.70 val=+0.79
+R        energy distance                                  rho=+0.67 [+0.24,+0.93] p=0.009 W=0.81 rhoM=+0.66 val=+0.71
+R        log density benign median                        rho=-0.74 [-0.94,-0.37] p=0.002 W=0.79 rhoM=-0.89 val=-0.45
+R        mahalanobis median robust mcd                    rho=+0.65 [+0.35,+0.86] p=0.002 W=0.55 rhoM=+0.62 val=+0.28
+R        mahalanobis p95                                  rho=+0.61 [+0.06,+0.90] p=0.025 W=0.89 rhoM=+0.70 val=+0.77
+R        mean posterior variance sum                      rho=-0.14 [-0.81,+0.46] p=0.626 W=0.73 rhoM=-0.28 val=-0.89
+R        mmd2 rbf                                         rho=+0.36 [-0.20,+0.84] p=0.212 W=0.85 rhoM=+0.41 val=+0.25
+/home/estudiante/vae-latent-geometry-nids/src/vae_nids/evaluation/oe2_descriptores/fase3_evaluacion.py:77: RuntimeWarning: Mean of empty slice
+  return float(np.tanh(np.nanmean(np.arctanh(r))))
+/home/estudiante/vae-latent-geometry-nids/src/vae_nids/evaluation/oe2_descriptores/fase3_evaluacion.py:77: RuntimeWarning: Mean of empty slice
+  return float(np.tanh(np.nanmean(np.arctanh(r))))
+R        neighborhood purity median                       rho=+0.41 [+nan,+nan] p=0.279 W=0.25 rhoM=+0.18 val=+nan
+R        posterior mahalanobis median                     rho=+0.76 [+0.46,+0.97] p=0.000 W=0.80 rhoM=+0.99 val=+0.77
+R        silhouette mean                                  rho=+0.46 [-0.03,+0.86] p=0.102 W=0.84 rhoM=+0.31 val=+0.37
+R        sliced wasserstein                               rho=+0.76 [+0.35,+0.95] p=0.002 W=0.86 rhoM=+0.76 val=+0.81

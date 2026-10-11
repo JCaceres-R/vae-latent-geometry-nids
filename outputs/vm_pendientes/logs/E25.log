@@ -8,3 +8,4 @@
 /home/estudiante/vae-latent-geometry-nids/.venv-linux/lib/python3.10/site-packages/umap/umap_.py:1952: UserWarning: n_jobs value 1 overridden to 1 by setting random_state. Use no seed for parallelism.
   warn(
 [fase6] fig_umap_seed44.png / .pdf
+===== [2026-10-11T15:20:38Z] E25: OE2 robusto: UMAP (apoyo visual) (intento 1) =====

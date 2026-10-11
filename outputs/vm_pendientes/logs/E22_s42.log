@@ -5,3 +5,10 @@
 [fase4] /home/estudiante/vae-latent-geometry-nids/outputs/oe2_robust_saneado/tables/phase4_delong_between_scores.csv (54 filas)
 [fase4] /home/estudiante/vae-latent-geometry-nids/outputs/oe2_robust_saneado/tables/phase4_sample_size_control.csv (11 filas)
 [fase4] /home/estudiante/vae-latent-geometry-nids/outputs/oe2_robust_saneado/tables/phase4_tau_per_seed.csv (1 filas)
+===== [2026-10-11T14:39:46Z] E22_s42: OE2 robusto: detectabilidad, semilla 42 (intento 1) =====
+[fase4 seed=42] ya cacheado en phase4_seed42.json, se salta el cómputo
+[fase4] /home/estudiante/vae-latent-geometry-nids/outputs/oe2_robust_saneado/tables/phase4_detectability_metrics.csv (90 filas)
+[fase4] /home/estudiante/vae-latent-geometry-nids/outputs/oe2_robust_saneado/tables/phase4_delong_between_families.csv (275 filas)
+[fase4] /home/estudiante/vae-latent-geometry-nids/outputs/oe2_robust_saneado/tables/phase4_delong_between_scores.csv (54 filas)
+[fase4] /home/estudiante/vae-latent-geometry-nids/outputs/oe2_robust_saneado/tables/phase4_sample_size_control.csv (11 filas)
+[fase4] /home/estudiante/vae-latent-geometry-nids/outputs/oe2_robust_saneado/tables/phase4_tau_per_seed.csv (1 filas)

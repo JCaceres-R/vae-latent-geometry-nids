@@ -1,0 +1,9 @@
+===== [2026-10-11T16:24:23Z] E36: Prueba confirmatoria (primario + 6 secundarios, Holm) (intento 1) =====
+[fase7] 1.1    Mahalanobis (mediana)                      rho=+0.772 [+0.394,+0.976] p=0.0007 (51 variables: +0.604)
+[fase7] 2.4    Fisher-Rao al 10.º posterior benigno       rho=+0.775 [+0.392,+0.918] p=0.0004 (51 variables: +0.724)
+[fase7] 6.2    kNN en el espacio decodificado             rho=+0.680 [+0.133,+0.900] p=0.0021 (51 variables: +0.691)
+[fase7] 7.1    Tasa KL(q||p) por flujo                    rho=+0.830 [+0.482,+0.981] p=0.0004 (51 variables: +0.681)
+[fase7] 5.1    kNN al benigno (z blanqueado)              rho=+0.741 [+0.290,+0.943] p=0.0011 (51 variables: +0.694)
+[fase7] 6.1    Log-magnificación del decodificador        rho=+0.592 [+0.050,+0.908] p=0.0154 (51 variables: +0.523)
+[fase7] 10.1b  Silhouette del grupo (Fisher-Rao)          rho=-0.627 [-0.897,-0.178] p=0.0259 (51 variables: -0.629)
+[fase7] resumen en /home/estudiante/vae-latent-geometry-nids/outputs/oe2_descriptores_saneado/RESULTADOS_CONFIRMATORIA.md

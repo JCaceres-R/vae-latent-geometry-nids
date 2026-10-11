@@ -1,0 +1,81 @@
+{
+  "pair": "mahalanobis_median vs. auc_roc(nll_mc)",
+  "per_seed": [
+    {
+      "seed": 42,
+      "rho": 0.790909090909091,
+      "p_asymptotic": 0.003746082953397406,
+      "p_permutation": 0.0047995200479952005,
+      "n_families": 11
+    },
+    {
+      "seed": 43,
+      "rho": 0.6181818181818182,
+      "p_asymptotic": 0.042645569805326695,
+      "p_permutation": 0.048095190480951906,
+      "n_families": 11
+    },
+    {
+      "seed": 44,
+      "rho": 0.7454545454545456,
+      "p_asymptotic": 0.00845472888506156,
+      "p_permutation": 0.009999000099990002,
+      "n_families": 11
+    },
+    {
+      "seed": 45,
+      "rho": 0.9,
+      "p_asymptotic": 0.00015997142806871369,
+      "p_permutation": 0.00019998000199980003,
+      "n_families": 11
+    },
+    {
+      "seed": 46,
+      "rho": 0.3545454545454546,
+      "p_asymptotic": 0.2846927409558867,
+      "p_permutation": 0.28777122287771223,
+      "n_families": 11
+    },
+    {
+      "seed": 47,
+      "rho": 0.7454545454545456,
+      "p_asymptotic": 0.00845472888506156,
+      "p_permutation": 0.012598740125987402,
+      "n_families": 11
+    },
+    {
+      "seed": 48,
+      "rho": 0.6727272727272727,
+      "p_asymptotic": 0.023313039833185972,
+      "p_permutation": 0.027097290270972903,
+      "n_families": 11
+    },
+    {
+      "seed": 49,
+      "rho": 0.9181818181818183,
+      "p_asymptotic": 6.661451941355563e-05,
+      "p_permutation": 9.999000099990002e-05,
+      "n_families": 11
+    }
+  ],
+  "combined": {
+    "rho_combined": 0.7593317965129173,
+    "ci_low": 0.6190769785907116,
+    "ci_high": 0.8526451452754229,
+    "n_seeds": 8,
+    "rho_per_seed_mean": 0.7181818181818183,
+    "rho_per_seed_sd": 0.17893823012623208
+  },
+  "power": {
+    "n_families": 11,
+    "min_detectable_rho_alpha05": 0.599875013591584,
+    "power_rho_0.3": 0.14135758313271743,
+    "power_rho_0.5": 0.3424851921443486,
+    "power_rho_0.7": 0.689045560019352
+  },
+  "previous_oe2_single_seed": {
+    "rho": 0.3818,
+    "p_value": 0.2466,
+    "n": 11
+  }
+}

@@ -95,6 +95,6 @@ triton==3.8.0
 typing_extensions==4.16.0
 tzdata==2026.4
 umap-learn==0.5.12
--e git+https://github.com/JCaceres-R/vae-latent-geometry-nids.git@d5d14493617551cf625ab39ed0bf742aa527b1f1#egg=vae_latent_geometry_nids
+-e git+https://github.com/JCaceres-R/vae-latent-geometry-nids.git@c818eead44d7b628d603588314db7fde60af0f80#egg=vae_latent_geometry_nids
 wcwidth==0.8.4
 wrapt==2.4.1

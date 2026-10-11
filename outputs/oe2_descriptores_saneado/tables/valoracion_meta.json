@@ -1,0 +1,14 @@
+{
+  "n_familias": 11,
+  "n_semillas": 8,
+  "n_boot": 2000,
+  "n_perm": 10000,
+  "grupos_validacion": [
+    "DoS_Hulk_attempted",
+    "DoS_GoldenEye_attempted",
+    "DoS_slowloris_attempted",
+    "DoS_Slowhttptest_attempted",
+    "Bot_attempted",
+    "WebAttack_BruteForce_attempted"
+  ]
+}

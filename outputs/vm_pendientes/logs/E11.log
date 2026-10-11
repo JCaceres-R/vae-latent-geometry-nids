@@ -10,3 +10,15 @@
 7  oe1_info_nula    49          66           85              6  8.482490                 0.901580
 8  referencia_74    42          74           81              7  9.651970                 0.887711
 OK: 9 checkpoints y diagnósticos completos
+===== [2026-10-11T14:39:29Z] E11: OE1: verificación de checkpoints y diagnósticos (intento 1) =====
+         corrida  seed  n_columnas  mejor_epoca  activas_burda  kl_total  frac_logvar_dec_en_piso
+0  oe1_info_nula    42          66           77              7  9.784456                 0.910270
+1  oe1_info_nula    43          66           47              7  7.883008                 0.887778
+2  oe1_info_nula    44          66           64              7  8.531523                 0.915067
+3  oe1_info_nula    45          66           75              7  9.008251                 0.921152
+4  oe1_info_nula    46          66           38              7  8.288469                 0.875387
+5  oe1_info_nula    47          66           99              7  7.467426                 0.915344
+6  oe1_info_nula    48          66          112              7  8.792538                 0.909653
+7  oe1_info_nula    49          66           85              6  8.482490                 0.901580
+8  referencia_74    42          74           81              7  9.651970                 0.887711
+OK: 9 checkpoints y diagnósticos completos

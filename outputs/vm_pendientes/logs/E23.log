@@ -1,0 +1,25 @@
+===== [2026-10-11T15:12:15Z] E23: OE2 robusto: correlación geometría-detectabilidad (intento 1) =====
+[fase5 7.1] rho combinado=0.7593 IC95=[0.6191,0.8526] (media por semilla=0.7182, sd=0.1789)
+/home/estudiante/vae-latent-geometry-nids/src/vae_nids/evaluation/oe2_robust/phase5_correlation.py:163: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  lambda idx: sp_stats.spearmanr(x_avg[idx], y_avg[idx])[0],
+/home/estudiante/vae-latent-geometry-nids/src/vae_nids/evaluation/oe2_robust/phase5_correlation.py:163: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  lambda idx: sp_stats.spearmanr(x_avg[idx], y_avg[idx])[0],
+/home/estudiante/vae-latent-geometry-nids/src/vae_nids/evaluation/oe2_robust/phase5_correlation.py:163: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  lambda idx: sp_stats.spearmanr(x_avg[idx], y_avg[idx])[0],
+[fase5 7.2] 81 pares geometría x detectabilidad evaluados; 47 con p crudo <0.05, 6 tras corrección de Holm
+[fase5] /home/estudiante/vae-latent-geometry-nids/outputs/oe2_robust_saneado/tables/phase5_secondary_per_seed.csv (648 filas)
+[fase5] /home/estudiante/vae-latent-geometry-nids/outputs/oe2_robust_saneado/tables/phase5_secondary_summary.csv (81 filas)
+[fase5] /home/estudiante/vae-latent-geometry-nids/outputs/oe2_robust_saneado/tables/phase5_ranking_correlation.csv (8 filas)
+[fase5 7.3] datos a nivel de conexión: 309,248 filas, 12 grupos, 8 semillas
+/home/estudiante/vae-latent-geometry-nids/src/vae_nids/evaluation/oe2_robust/phase5_correlation.py:249: ConvergenceWarning: The Hessian matrix at the estimated parameter values is not positive definite.
+  result = model.fit(reml=True, method="lbfgs", maxiter=200)
+[fase5 7.3] modelo mixto: convergió=True efecto_fijo(maha_std)=0.103590690890833
+[fase5] /home/estudiante/vae-latent-geometry-nids/outputs/oe2_robust_saneado/tables/phase5_connection_level_spearman.csv (88 filas)
+[fase5 7.4] W de Kendall (auc_roc_nll_mc): 0.8866
+[fase5 7.4] W de Kendall (mahalanobis_median): 0.7983
+[fase5 7.4] W de Kendall (mmd2_rbf): 0.8537
+[fase5 7.4] W de Kendall (sliced_wasserstein): 0.8608
+[fase5 7.4] W de Kendall (energy_distance): 0.8051
+[fase5 7.4] W de Kendall (bhattacharyya_total): 0.9173
+[fase5] /home/estudiante/vae-latent-geometry-nids/outputs/oe2_robust_saneado/tables/phase5_seed_stability_kendalls_w.csv (6 filas)
+[fase5] /home/estudiante/vae-latent-geometry-nids/outputs/oe2_robust_saneado/tables/phase5_attempted_comparison.csv (48 filas)

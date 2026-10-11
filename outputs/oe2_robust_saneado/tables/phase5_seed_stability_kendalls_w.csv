@@ -1,0 +1,7 @@
+kendalls_w,metric,n_families,n_seeds
+0.8866477272727272,auc_roc_nll_mc,11,8
+0.7982954545454546,mahalanobis_median,11,8
+0.8536931818181818,mmd2_rbf,11,8
+0.8607954545454546,sliced_wasserstein,11,8
+0.8051136363636363,energy_distance,11,8
+0.9173295454545455,bhattacharyya_total,11,8

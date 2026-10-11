@@ -21,3 +21,16 @@
 [2026-10-10T21:50:01] referencia_74_seed42: parada en época 91 (paciencia (10 épocas sin mejorar más de min_delta=0.1)), mejor época 81, val -270.4709, 791 s
 [2026-10-10T21:50:01] diagnósticos
 [2026-10-10T21:50:17] listo: {"corridas": 9}
+===== [2026-10-11T14:38:35Z] E10: OE1: datos, preproceso, 8 semillas + referencia 74, diagnósticos (intento 1) =====
+[2026-10-11T14:38:38] preproceso
+[2026-10-11T14:39:11] oe1_info_nula_seed42: ya existe, se salta
+[2026-10-11T14:39:11] oe1_info_nula_seed43: ya existe, se salta
+[2026-10-11T14:39:11] oe1_info_nula_seed44: ya existe, se salta
+[2026-10-11T14:39:11] oe1_info_nula_seed45: ya existe, se salta
+[2026-10-11T14:39:11] oe1_info_nula_seed46: ya existe, se salta
+[2026-10-11T14:39:11] oe1_info_nula_seed47: ya existe, se salta
+[2026-10-11T14:39:11] oe1_info_nula_seed48: ya existe, se salta
+[2026-10-11T14:39:11] oe1_info_nula_seed49: ya existe, se salta
+[2026-10-11T14:39:11] referencia_74_seed42: ya existe, se salta
+[2026-10-11T14:39:11] diagnósticos
+[2026-10-11T14:39:28] listo: {"corridas": 9}

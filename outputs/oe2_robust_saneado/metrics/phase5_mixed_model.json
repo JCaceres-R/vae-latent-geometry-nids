@@ -1,0 +1,21 @@
+{
+  "attempts": [
+    {
+      "description": "intercepto+pendiente aleatoria por familia + componente de varianza por semilla",
+      "converged": true,
+      "error": null
+    }
+  ],
+  "converged": true,
+  "n_obs": 309248,
+  "fixed_effect_maha_std": 0.103590690890833,
+  "fixed_effect_ci_low": -0.09867933102603124,
+  "fixed_effect_ci_high": 0.3058607128076972,
+  "fixed_effect_p_value": 0.31548604736763375,
+  "random_slope_variance_by_family": 0.12641693181768685,
+  "var_fixed": 0.010730996538833837,
+  "var_random": 6.561235087621492,
+  "var_residual": 0.5379039346142126,
+  "r2_marginal": 0.0015093098060157556,
+  "r2_conditional": 0.9243440550679819
+}

@@ -1,0 +1,79 @@
+{
+  "fecha_registro": "2026-10-10",
+  "perfil": "saneado",
+  "semillas": [
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49
+  ],
+  "n_familias": 11,
+  "n_perm": 10000,
+  "n_boot": 2000,
+  "alfa": 0.05,
+  "primario_confirmado": true,
+  "secundarios_confirmados": [
+    "2.4",
+    "6.2",
+    "7.1",
+    "5.1",
+    "6.1",
+    "10.1b"
+  ],
+  "rho_ranking_auc_51_vs_66": 0.9636363636363637,
+  "hipotesis": [
+    {
+      "id": "1.1",
+      "columna": "maha__median",
+      "rol": "P",
+      "signo": 1,
+      "rho_51": 0.604
+    },
+    {
+      "id": "2.4",
+      "columna": "fr__auc",
+      "rol": "S",
+      "signo": 1,
+      "rho_51": 0.724
+    },
+    {
+      "id": "6.2",
+      "columna": "dec_knn__auc",
+      "rol": "S",
+      "signo": 1,
+      "rho_51": 0.691
+    },
+    {
+      "id": "7.1",
+      "columna": "rate__sep",
+      "rol": "S",
+      "signo": 1,
+      "rho_51": 0.681
+    },
+    {
+      "id": "5.1",
+      "columna": "knn__auc",
+      "rol": "S",
+      "signo": 1,
+      "rho_51": 0.694
+    },
+    {
+      "id": "6.1",
+      "columna": "logmag__sep",
+      "rol": "S",
+      "signo": 1,
+      "rho_51": 0.523
+    },
+    {
+      "id": "10.1b",
+      "columna": "sil_fr__value",
+      "rol": "S",
+      "signo": -1,
+      "rho_51": -0.629
+    }
+  ]
+}

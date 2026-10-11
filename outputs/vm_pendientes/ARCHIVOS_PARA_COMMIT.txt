@@ -14,3 +14,5 @@ outputs/oe2_robust_saneado/figures
 outputs/oe2_robust_saneado/verificacion_conteos.json
 outputs/oe2_descriptores_saneado/tables
 outputs/oe2_descriptores_saneado/figures
+outputs/oe2_descriptores_saneado/tablas_tex
+outputs/oe2_descriptores_saneado/RESULTADOS_CONFIRMATORIA.md

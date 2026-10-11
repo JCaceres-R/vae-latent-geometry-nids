@@ -24,3 +24,13 @@
 [fase2 seed=49] conteos frente al manifest del OE2 original: idénticos
 [fase2 seed=49] dims activas (6/8): [0, 1, 3, 4, 5, 7] varianza=[0.54036, 0.45019, 1e-05, 0.60727, 0.946, 0.31784, 4e-05, 0.9782]
 [fase2] tabla semilla x dimensión guardada en /home/estudiante/vae-latent-geometry-nids/outputs/oe2_robust_saneado/tables/phase2_active_dims_per_seed.csv
+===== [2026-10-11T14:39:37Z] E20: OE2 robusto: codificación (mu, log sigma^2) por semilla (intento 1) =====
+[fase2 seed=42] ya codificado (/home/estudiante/vae-latent-geometry-nids/outputs/oe2_robust_saneado/latent_vectors/seed42/manifest.json), se reutiliza
+[fase2 seed=43] ya codificado (/home/estudiante/vae-latent-geometry-nids/outputs/oe2_robust_saneado/latent_vectors/seed43/manifest.json), se reutiliza
+[fase2 seed=44] ya codificado (/home/estudiante/vae-latent-geometry-nids/outputs/oe2_robust_saneado/latent_vectors/seed44/manifest.json), se reutiliza
+[fase2 seed=45] ya codificado (/home/estudiante/vae-latent-geometry-nids/outputs/oe2_robust_saneado/latent_vectors/seed45/manifest.json), se reutiliza
+[fase2 seed=46] ya codificado (/home/estudiante/vae-latent-geometry-nids/outputs/oe2_robust_saneado/latent_vectors/seed46/manifest.json), se reutiliza
+[fase2 seed=47] ya codificado (/home/estudiante/vae-latent-geometry-nids/outputs/oe2_robust_saneado/latent_vectors/seed47/manifest.json), se reutiliza
+[fase2 seed=48] ya codificado (/home/estudiante/vae-latent-geometry-nids/outputs/oe2_robust_saneado/latent_vectors/seed48/manifest.json), se reutiliza
+[fase2 seed=49] ya codificado (/home/estudiante/vae-latent-geometry-nids/outputs/oe2_robust_saneado/latent_vectors/seed49/manifest.json), se reutiliza
+[fase2] tabla semilla x dimensión guardada en /home/estudiante/vae-latent-geometry-nids/outputs/oe2_robust_saneado/tables/phase2_active_dims_per_seed.csv

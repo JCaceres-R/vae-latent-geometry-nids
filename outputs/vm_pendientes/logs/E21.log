@@ -169,3 +169,22 @@
 [fase3] /home/estudiante/vae-latent-geometry-nids/outputs/oe2_robust_saneado/tables/phase3_posterior_uncertainty.csv (152 filas)
 [fase3] /home/estudiante/vae-latent-geometry-nids/outputs/oe2_robust_saneado/tables/phase3_neighborhood.csv (576 filas)
 [fase3] /home/estudiante/vae-latent-geometry-nids/outputs/oe2_robust_saneado/tables/phase3_dispersion.csv (432 filas)
+===== [2026-10-11T14:39:40Z] E21: OE2 robusto: geometría distribucional (intento 1) =====
+[fase3 seed=42] ya cacheado en phase3_seed42.json, se salta el cómputo
+[fase3 seed=43] ya cacheado en phase3_seed43.json, se salta el cómputo
+[fase3 seed=44] ya cacheado en phase3_seed44.json, se salta el cómputo
+[fase3 seed=45] ya cacheado en phase3_seed45.json, se salta el cómputo
+[fase3 seed=46] ya cacheado en phase3_seed46.json, se salta el cómputo
+[fase3 seed=47] ya cacheado en phase3_seed47.json, se salta el cómputo
+[fase3 seed=48] ya cacheado en phase3_seed48.json, se salta el cómputo
+[fase3 seed=49] ya cacheado en phase3_seed49.json, se salta el cómputo
+[fase3] /home/estudiante/vae-latent-geometry-nids/outputs/oe2_robust_saneado/tables/phase3_mahalanobis_summary.csv (1296 filas)
+[fase3] /home/estudiante/vae-latent-geometry-nids/outputs/oe2_robust_saneado/tables/phase3_mahalanobis_tests.csv (288 filas)
+[fase3] /home/estudiante/vae-latent-geometry-nids/outputs/oe2_robust_saneado/tables/phase3_cliffs_delta.csv (144 filas)
+[fase3] /home/estudiante/vae-latent-geometry-nids/outputs/oe2_robust_saneado/tables/phase3_robust_ranking.csv (8 filas)
+[fase3] /home/estudiante/vae-latent-geometry-nids/outputs/oe2_robust_saneado/tables/phase3_divergences.csv (432 filas)
+[fase3] /home/estudiante/vae-latent-geometry-nids/outputs/oe2_robust_saneado/tables/phase3_bhattacharyya.csv (432 filas)
+[fase3] /home/estudiante/vae-latent-geometry-nids/outputs/oe2_robust_saneado/tables/phase3_posterior_mahalanobis.csv (576 filas)
+[fase3] /home/estudiante/vae-latent-geometry-nids/outputs/oe2_robust_saneado/tables/phase3_posterior_uncertainty.csv (152 filas)
+[fase3] /home/estudiante/vae-latent-geometry-nids/outputs/oe2_robust_saneado/tables/phase3_neighborhood.csv (576 filas)
+[fase3] /home/estudiante/vae-latent-geometry-nids/outputs/oe2_robust_saneado/tables/phase3_dispersion.csv (432 filas)

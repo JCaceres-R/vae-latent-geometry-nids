@@ -1,0 +1,4 @@
+===== [2026-10-11T16:22:24Z] E33: Descriptores: duplicados, métrica del decodificador, UMAP sin duplicados (intento 1) =====
+/home/estudiante/vae-latent-geometry-nids/.venv-linux/lib/python3.10/site-packages/umap/umap_.py:1952: UserWarning: n_jobs value 1 overridden to 1 by setting random_state. Use no seed for parallelism.
+  warn(
+[fase4] listo

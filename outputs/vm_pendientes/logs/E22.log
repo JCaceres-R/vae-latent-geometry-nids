@@ -1,2 +1,16 @@
 ===== [2026-10-10T23:14:52Z] E22: OE2 robusto: detectabilidad, tablas de todas las semillas =====
 [fase4 seed=42] ya cacheado en phase4_seed42.json, se salta el cómputo
+===== [2026-10-11T15:12:11Z] E22: OE2 robusto: detectabilidad, tablas de todas las semillas (intento 1) =====
+[fase4 seed=42] ya cacheado en phase4_seed42.json, se salta el cómputo
+[fase4 seed=43] ya cacheado en phase4_seed43.json, se salta el cómputo
+[fase4 seed=44] ya cacheado en phase4_seed44.json, se salta el cómputo
+[fase4 seed=45] ya cacheado en phase4_seed45.json, se salta el cómputo
+[fase4 seed=46] ya cacheado en phase4_seed46.json, se salta el cómputo
+[fase4 seed=47] ya cacheado en phase4_seed47.json, se salta el cómputo
+[fase4 seed=48] ya cacheado en phase4_seed48.json, se salta el cómputo
+[fase4 seed=49] ya cacheado en phase4_seed49.json, se salta el cómputo
+[fase4] /home/estudiante/vae-latent-geometry-nids/outputs/oe2_robust_saneado/tables/phase4_detectability_metrics.csv (720 filas)
+[fase4] /home/estudiante/vae-latent-geometry-nids/outputs/oe2_robust_saneado/tables/phase4_delong_between_families.csv (2200 filas)
+[fase4] /home/estudiante/vae-latent-geometry-nids/outputs/oe2_robust_saneado/tables/phase4_delong_between_scores.csv (432 filas)
+[fase4] /home/estudiante/vae-latent-geometry-nids/outputs/oe2_robust_saneado/tables/phase4_sample_size_control.csv (88 filas)
+[fase4] /home/estudiante/vae-latent-geometry-nids/outputs/oe2_robust_saneado/tables/phase4_tau_per_seed.csv (8 filas)
