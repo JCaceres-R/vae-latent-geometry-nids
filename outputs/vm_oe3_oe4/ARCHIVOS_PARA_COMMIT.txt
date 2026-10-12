@@ -1,0 +1,5 @@
+outputs/vm_oe3_oe4
+outputs/oe2_descriptores_saneado/tables
+outputs/oe2_descriptores_saneado/RESULTADOS_RECONCILIACION.md
+outputs/oe3
+outputs/oe4

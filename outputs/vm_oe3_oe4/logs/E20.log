@@ -1,0 +1,34 @@
+===== [2026-10-11T17:52:36Z] E20: OE3: calidad generativa del decodificador (intento 1) =====
+[oe3 seed=42] real_val             KS med=0.004 C2ST=0.501 SW2=0.0053
+[oe3 seed=42] prior_media          KS med=0.553 C2ST=1.000 SW2=0.0568
+[oe3 seed=42] prior_muestra        KS med=0.459 C2ST=1.000 SW2=0.7183
+[oe3 seed=42] posterior_agregado   KS med=0.440 C2ST=1.000 SW2=0.0510
+[oe3 seed=43] real_val             KS med=0.004 C2ST=0.497 SW2=0.0096
+[oe3 seed=43] prior_media          KS med=0.501 C2ST=1.000 SW2=0.0624
+[oe3 seed=43] prior_muestra        KS med=0.455 C2ST=1.000 SW2=2.0429
+[oe3 seed=43] posterior_agregado   KS med=0.456 C2ST=1.000 SW2=0.0699
+[oe3 seed=44] real_val             KS med=0.004 C2ST=0.497 SW2=0.0061
+[oe3 seed=44] prior_media          KS med=0.527 C2ST=1.000 SW2=0.0537
+[oe3 seed=44] prior_muestra        KS med=0.454 C2ST=1.000 SW2=0.2250
+[oe3 seed=44] posterior_agregado   KS med=0.448 C2ST=1.000 SW2=0.0684
+[oe3 seed=45] real_val             KS med=0.004 C2ST=0.497 SW2=0.0053
+[oe3 seed=45] prior_media          KS med=0.480 C2ST=1.000 SW2=0.0567
+[oe3 seed=45] prior_muestra        KS med=0.450 C2ST=1.000 SW2=0.0664
+[oe3 seed=45] posterior_agregado   KS med=0.445 C2ST=1.000 SW2=0.0716
+[oe3 seed=46] real_val             KS med=0.003 C2ST=0.497 SW2=0.0108
+[oe3 seed=46] prior_media          KS med=0.490 C2ST=1.000 SW2=0.0797
+[oe3 seed=46] prior_muestra        KS med=0.469 C2ST=1.000 SW2=0.7885
+[oe3 seed=46] posterior_agregado   KS med=0.463 C2ST=1.000 SW2=0.0686
+[oe3 seed=47] real_val             KS med=0.003 C2ST=0.498 SW2=0.0067
+[oe3 seed=47] prior_media          KS med=0.568 C2ST=1.000 SW2=0.0504
+[oe3 seed=47] prior_muestra        KS med=0.457 C2ST=1.000 SW2=0.8418
+[oe3 seed=47] posterior_agregado   KS med=0.457 C2ST=1.000 SW2=0.0448
+[oe3 seed=48] real_val             KS med=0.003 C2ST=0.503 SW2=0.0082
+[oe3 seed=48] prior_media          KS med=0.500 C2ST=1.000 SW2=0.0690
+[oe3 seed=48] prior_muestra        KS med=0.449 C2ST=1.000 SW2=0.9219
+[oe3 seed=48] posterior_agregado   KS med=0.439 C2ST=1.000 SW2=0.0622
+[oe3 seed=49] real_val             KS med=0.003 C2ST=0.500 SW2=0.0051
+[oe3 seed=49] prior_media          KS med=0.505 C2ST=1.000 SW2=0.0530
+[oe3 seed=49] prior_muestra        KS med=0.451 C2ST=1.000 SW2=0.1266
+[oe3 seed=49] posterior_agregado   KS med=0.447 C2ST=1.000 SW2=0.0610
+[oe3] resumen en /home/estudiante/vae-latent-geometry-nids/outputs/oe3/RESULTADOS_OE3.md

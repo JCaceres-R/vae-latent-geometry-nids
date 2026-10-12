@@ -1,0 +1,18 @@
+{
+  "fecha_utc": "2026-10-12T00:52:44+00:00",
+  "host": "tesis-juan",
+  "sistema": "Linux-5.15.0-194-generic-x86_64-with-glibc2.35",
+  "python": "3.10.12",
+  "cpus": 8,
+  "git_commit": "75a5abd97ce744da02f703ea8a376f1c3d6693ea",
+  "git_rama": "main",
+  "git_arbol_limpio_al_resumir": false,
+  "ram_gb": 23.5,
+  "torch": "2.13.0+cpu",
+  "numpy": "2.2.6",
+  "pandas": "2.3.3",
+  "scikit-learn": "1.7.2",
+  "scipy": "1.15.3",
+  "umap-learn": "0.5.12",
+  "statsmodels": "0.15.0"
+}

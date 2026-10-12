@@ -1,0 +1,106 @@
+Requirement already satisfied: pip in ./.venv-linux/lib/python3.10/site-packages (26.2.1)
+Looking in indexes: https://download.pytorch.org/whl/cpu
+Requirement already satisfied: torch==2.13.0 in ./.venv-linux/lib/python3.10/site-packages (2.13.0+cpu)
+Requirement already satisfied: filelock in ./.venv-linux/lib/python3.10/site-packages (from torch==2.13.0) (4.0.1)
+Requirement already satisfied: typing-extensions>=4.10.0 in ./.venv-linux/lib/python3.10/site-packages (from torch==2.13.0) (4.16.0)
+Requirement already satisfied: setuptools>=77.0.3 in ./.venv-linux/lib/python3.10/site-packages (from torch==2.13.0) (84.0.0)
+Requirement already satisfied: sympy>=1.13.3 in ./.venv-linux/lib/python3.10/site-packages (from torch==2.13.0) (1.14.0)
+Requirement already satisfied: networkx>=2.5.1 in ./.venv-linux/lib/python3.10/site-packages (from torch==2.13.0) (3.4.2)
+Requirement already satisfied: jinja2 in ./.venv-linux/lib/python3.10/site-packages (from torch==2.13.0) (3.1.6)
+Requirement already satisfied: fsspec>=0.8.5 in ./.venv-linux/lib/python3.10/site-packages (from torch==2.13.0) (2026.9.0)
+Requirement already satisfied: mpmath<1.4,>=1.1.0 in ./.venv-linux/lib/python3.10/site-packages (from sympy>=1.13.3->torch==2.13.0) (1.3.0)
+Requirement already satisfied: MarkupSafe>=2.0 in ./.venv-linux/lib/python3.10/site-packages (from jinja2->torch==2.13.0) (3.0.3)
+Requirement already satisfied: pandas==2.3.3 in ./.venv-linux/lib/python3.10/site-packages (from -r requirements-vm.txt (line 5)) (2.3.3)
+Requirement already satisfied: numpy==2.2.6 in ./.venv-linux/lib/python3.10/site-packages (from -r requirements-vm.txt (line 6)) (2.2.6)
+Requirement already satisfied: scikit-learn==1.7.2 in ./.venv-linux/lib/python3.10/site-packages (from -r requirements-vm.txt (line 7)) (1.7.2)
+Requirement already satisfied: scipy==1.15.3 in ./.venv-linux/lib/python3.10/site-packages (from -r requirements-vm.txt (line 8)) (1.15.3)
+Requirement already satisfied: pyarrow==25.0.1 in ./.venv-linux/lib/python3.10/site-packages (from -r requirements-vm.txt (line 9)) (25.0.1)
+Requirement already satisfied: joblib==1.6.0 in ./.venv-linux/lib/python3.10/site-packages (from -r requirements-vm.txt (line 10)) (1.6.0)
+Requirement already satisfied: matplotlib==3.10.9 in ./.venv-linux/lib/python3.10/site-packages (from -r requirements-vm.txt (line 11)) (3.10.9)
+Requirement already satisfied: seaborn==0.13.2 in ./.venv-linux/lib/python3.10/site-packages (from -r requirements-vm.txt (line 12)) (0.13.2)
+Requirement already satisfied: umap-learn==0.5.12 in ./.venv-linux/lib/python3.10/site-packages (from -r requirements-vm.txt (line 13)) (0.5.12)
+Requirement already satisfied: pynndescent==0.6.0 in ./.venv-linux/lib/python3.10/site-packages (from -r requirements-vm.txt (line 14)) (0.6.0)
+Requirement already satisfied: numba==0.67.0 in ./.venv-linux/lib/python3.10/site-packages (from -r requirements-vm.txt (line 15)) (0.67.0)
+Requirement already satisfied: llvmlite==0.49.0 in ./.venv-linux/lib/python3.10/site-packages (from -r requirements-vm.txt (line 16)) (0.49.0)
+Requirement already satisfied: PyYAML==6.0.3 in ./.venv-linux/lib/python3.10/site-packages (from -r requirements-vm.txt (line 17)) (6.0.3)
+Requirement already satisfied: statsmodels==0.15.0 in ./.venv-linux/lib/python3.10/site-packages (from -r requirements-vm.txt (line 18)) (0.15.0)
+Requirement already satisfied: patsy==1.0.3 in ./.venv-linux/lib/python3.10/site-packages (from -r requirements-vm.txt (line 19)) (1.0.3)
+Requirement already satisfied: psutil==7.2.2 in ./.venv-linux/lib/python3.10/site-packages (from -r requirements-vm.txt (line 20)) (7.2.2)
+Requirement already satisfied: pytest==9.1.1 in ./.venv-linux/lib/python3.10/site-packages (from -r requirements-vm.txt (line 21)) (9.1.1)
+Requirement already satisfied: ipykernel==7.3.0 in ./.venv-linux/lib/python3.10/site-packages (from -r requirements-vm.txt (line 22)) (7.3.0)
+Requirement already satisfied: nbformat==5.11.1 in ./.venv-linux/lib/python3.10/site-packages (from -r requirements-vm.txt (line 23)) (5.11.1)
+Requirement already satisfied: nbclient==0.11.0 in ./.venv-linux/lib/python3.10/site-packages (from -r requirements-vm.txt (line 24)) (0.11.0)
+Requirement already satisfied: python-dateutil>=2.8.2 in ./.venv-linux/lib/python3.10/site-packages (from pandas==2.3.3->-r requirements-vm.txt (line 5)) (2.9.0.post0)
+Requirement already satisfied: pytz>=2020.1 in ./.venv-linux/lib/python3.10/site-packages (from pandas==2.3.3->-r requirements-vm.txt (line 5)) (2026.3.post1)
+Requirement already satisfied: tzdata>=2022.7 in ./.venv-linux/lib/python3.10/site-packages (from pandas==2.3.3->-r requirements-vm.txt (line 5)) (2026.4)
+Requirement already satisfied: threadpoolctl>=3.1.0 in ./.venv-linux/lib/python3.10/site-packages (from scikit-learn==1.7.2->-r requirements-vm.txt (line 7)) (3.7.0)
+Requirement already satisfied: cloudpickle>=3.0 in ./.venv-linux/lib/python3.10/site-packages (from joblib==1.6.0->-r requirements-vm.txt (line 10)) (3.1.2)
+Requirement already satisfied: contourpy>=1.0.1 in ./.venv-linux/lib/python3.10/site-packages (from matplotlib==3.10.9->-r requirements-vm.txt (line 11)) (1.3.2)
+Requirement already satisfied: cycler>=0.10 in ./.venv-linux/lib/python3.10/site-packages (from matplotlib==3.10.9->-r requirements-vm.txt (line 11)) (0.12.1)
+Requirement already satisfied: fonttools>=4.22.0 in ./.venv-linux/lib/python3.10/site-packages (from matplotlib==3.10.9->-r requirements-vm.txt (line 11)) (4.65.0)
+Requirement already satisfied: kiwisolver>=1.3.1 in ./.venv-linux/lib/python3.10/site-packages (from matplotlib==3.10.9->-r requirements-vm.txt (line 11)) (1.5.1)
+Requirement already satisfied: packaging>=20.0 in ./.venv-linux/lib/python3.10/site-packages (from matplotlib==3.10.9->-r requirements-vm.txt (line 11)) (26.3)
+Requirement already satisfied: pillow>=8 in ./.venv-linux/lib/python3.10/site-packages (from matplotlib==3.10.9->-r requirements-vm.txt (line 11)) (12.3.0)
+Requirement already satisfied: pyparsing>=3 in ./.venv-linux/lib/python3.10/site-packages (from matplotlib==3.10.9->-r requirements-vm.txt (line 11)) (3.3.3)
+Requirement already satisfied: tqdm in ./.venv-linux/lib/python3.10/site-packages (from umap-learn==0.5.12->-r requirements-vm.txt (line 13)) (4.70.1)
+Requirement already satisfied: formulaic>=1.1.0 in ./.venv-linux/lib/python3.10/site-packages (from statsmodels==0.15.0->-r requirements-vm.txt (line 18)) (1.2.2)
+Requirement already satisfied: exceptiongroup>=1 in ./.venv-linux/lib/python3.10/site-packages (from pytest==9.1.1->-r requirements-vm.txt (line 21)) (1.3.1)
+Requirement already satisfied: iniconfig>=1.0.1 in ./.venv-linux/lib/python3.10/site-packages (from pytest==9.1.1->-r requirements-vm.txt (line 21)) (2.3.0)
+Requirement already satisfied: pluggy<2,>=1.5 in ./.venv-linux/lib/python3.10/site-packages (from pytest==9.1.1->-r requirements-vm.txt (line 21)) (1.6.0)
+Requirement already satisfied: pygments>=2.7.2 in ./.venv-linux/lib/python3.10/site-packages (from pytest==9.1.1->-r requirements-vm.txt (line 21)) (2.21.0)
+Requirement already satisfied: tomli>=1 in ./.venv-linux/lib/python3.10/site-packages (from pytest==9.1.1->-r requirements-vm.txt (line 21)) (2.4.1)
+Requirement already satisfied: comm>=0.1.1 in ./.venv-linux/lib/python3.10/site-packages (from ipykernel==7.3.0->-r requirements-vm.txt (line 22)) (0.2.3)
+Requirement already satisfied: debugpy>=1.6.5 in ./.venv-linux/lib/python3.10/site-packages (from ipykernel==7.3.0->-r requirements-vm.txt (line 22)) (1.8.22)
+Requirement already satisfied: ipython>=7.23.1 in ./.venv-linux/lib/python3.10/site-packages (from ipykernel==7.3.0->-r requirements-vm.txt (line 22)) (8.39.0)
+Requirement already satisfied: jupyter-client>=8.9.0 in ./.venv-linux/lib/python3.10/site-packages (from ipykernel==7.3.0->-r requirements-vm.txt (line 22)) (8.10.0)
+Requirement already satisfied: jupyter-core!=6.0.*,>=5.1 in ./.venv-linux/lib/python3.10/site-packages (from ipykernel==7.3.0->-r requirements-vm.txt (line 22)) (5.9.1)
+Requirement already satisfied: matplotlib-inline>=0.1 in ./.venv-linux/lib/python3.10/site-packages (from ipykernel==7.3.0->-r requirements-vm.txt (line 22)) (0.2.2)
+Requirement already satisfied: nest-asyncio2>=1.7.0 in ./.venv-linux/lib/python3.10/site-packages (from ipykernel==7.3.0->-r requirements-vm.txt (line 22)) (1.7.2)
+Requirement already satisfied: pyzmq>=25 in ./.venv-linux/lib/python3.10/site-packages (from ipykernel==7.3.0->-r requirements-vm.txt (line 22)) (27.2.0)
+Requirement already satisfied: tornado>=6.4.1 in ./.venv-linux/lib/python3.10/site-packages (from ipykernel==7.3.0->-r requirements-vm.txt (line 22)) (6.5.10)
+Requirement already satisfied: traitlets>=5.4.0 in ./.venv-linux/lib/python3.10/site-packages (from ipykernel==7.3.0->-r requirements-vm.txt (line 22)) (5.16.1)
+Requirement already satisfied: fastjsonschema>=2.15 in ./.venv-linux/lib/python3.10/site-packages (from nbformat==5.11.1->-r requirements-vm.txt (line 23)) (2.22.2)
+Requirement already satisfied: jsonschema>=2.6 in ./.venv-linux/lib/python3.10/site-packages (from nbformat==5.11.1->-r requirements-vm.txt (line 23)) (4.26.0)
+Requirement already satisfied: typing-extensions>=4.6.0 in ./.venv-linux/lib/python3.10/site-packages (from exceptiongroup>=1->pytest==9.1.1->-r requirements-vm.txt (line 21)) (4.16.0)
+Requirement already satisfied: interface-meta>=1.2.0 in ./.venv-linux/lib/python3.10/site-packages (from formulaic>=1.1.0->statsmodels==0.15.0->-r requirements-vm.txt (line 18)) (2.0.1)
+Requirement already satisfied: narwhals>=1.17 in ./.venv-linux/lib/python3.10/site-packages (from formulaic>=1.1.0->statsmodels==0.15.0->-r requirements-vm.txt (line 18)) (2.26.0)
+Requirement already satisfied: wrapt>=1.0 in ./.venv-linux/lib/python3.10/site-packages (from formulaic>=1.1.0->statsmodels==0.15.0->-r requirements-vm.txt (line 18)) (2.4.1)
+Requirement already satisfied: decorator in ./.venv-linux/lib/python3.10/site-packages (from ipython>=7.23.1->ipykernel==7.3.0->-r requirements-vm.txt (line 22)) (5.3.1)
+Requirement already satisfied: jedi>=0.16 in ./.venv-linux/lib/python3.10/site-packages (from ipython>=7.23.1->ipykernel==7.3.0->-r requirements-vm.txt (line 22)) (0.20.0)
+Requirement already satisfied: pexpect>4.3 in ./.venv-linux/lib/python3.10/site-packages (from ipython>=7.23.1->ipykernel==7.3.0->-r requirements-vm.txt (line 22)) (4.9.0)
+Requirement already satisfied: prompt_toolkit<3.1.0,>=3.0.41 in ./.venv-linux/lib/python3.10/site-packages (from ipython>=7.23.1->ipykernel==7.3.0->-r requirements-vm.txt (line 22)) (3.0.53)
+Requirement already satisfied: stack_data in ./.venv-linux/lib/python3.10/site-packages (from ipython>=7.23.1->ipykernel==7.3.0->-r requirements-vm.txt (line 22)) (0.6.3)
+Requirement already satisfied: wcwidth>=0.1.4 in ./.venv-linux/lib/python3.10/site-packages (from prompt_toolkit<3.1.0,>=3.0.41->ipython>=7.23.1->ipykernel==7.3.0->-r requirements-vm.txt (line 22)) (0.8.4)
+Requirement already satisfied: parso<0.9.0,>=0.8.6 in ./.venv-linux/lib/python3.10/site-packages (from jedi>=0.16->ipython>=7.23.1->ipykernel==7.3.0->-r requirements-vm.txt (line 22)) (0.8.7)
+Requirement already satisfied: attrs>=22.2.0 in ./.venv-linux/lib/python3.10/site-packages (from jsonschema>=2.6->nbformat==5.11.1->-r requirements-vm.txt (line 23)) (26.1.0)
+Requirement already satisfied: jsonschema-specifications>=2023.03.6 in ./.venv-linux/lib/python3.10/site-packages (from jsonschema>=2.6->nbformat==5.11.1->-r requirements-vm.txt (line 23)) (2025.9.1)
+Requirement already satisfied: referencing>=0.28.4 in ./.venv-linux/lib/python3.10/site-packages (from jsonschema>=2.6->nbformat==5.11.1->-r requirements-vm.txt (line 23)) (0.37.0)
+Requirement already satisfied: rpds-py>=0.25.0 in ./.venv-linux/lib/python3.10/site-packages (from jsonschema>=2.6->nbformat==5.11.1->-r requirements-vm.txt (line 23)) (0.30.0)
+Requirement already satisfied: platformdirs>=2.5 in ./.venv-linux/lib/python3.10/site-packages (from jupyter-core!=6.0.*,>=5.1->ipykernel==7.3.0->-r requirements-vm.txt (line 22)) (4.11.12)
+Requirement already satisfied: ptyprocess>=0.5 in ./.venv-linux/lib/python3.10/site-packages (from pexpect>4.3->ipython>=7.23.1->ipykernel==7.3.0->-r requirements-vm.txt (line 22)) (0.7.0)
+Requirement already satisfied: six>=1.5 in ./.venv-linux/lib/python3.10/site-packages (from python-dateutil>=2.8.2->pandas==2.3.3->-r requirements-vm.txt (line 5)) (1.17.0)
+Requirement already satisfied: executing>=1.2.0 in ./.venv-linux/lib/python3.10/site-packages (from stack_data->ipython>=7.23.1->ipykernel==7.3.0->-r requirements-vm.txt (line 22)) (2.2.1)
+Requirement already satisfied: asttokens>=2.1.0 in ./.venv-linux/lib/python3.10/site-packages (from stack_data->ipython>=7.23.1->ipykernel==7.3.0->-r requirements-vm.txt (line 22)) (3.0.2)
+Requirement already satisfied: pure-eval in ./.venv-linux/lib/python3.10/site-packages (from stack_data->ipython>=7.23.1->ipykernel==7.3.0->-r requirements-vm.txt (line 22)) (0.2.4)
+Obtaining file:///home/estudiante/vae-latent-geometry-nids
+  Installing build dependencies: started
+  Installing build dependencies: still running...
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: vae-latent-geometry-nids
+  Building editable for vae-latent-geometry-nids (pyproject.toml): started
+  Building editable for vae-latent-geometry-nids (pyproject.toml): finished with status 'done'
+  Created wheel for vae-latent-geometry-nids: filename=vae_latent_geometry_nids-0.1.0-0.editable-py3-none-any.whl size=1388 sha256=319bd110d07e13fcaa875f79c9bd06231ecdae3705c68c6bcb4e5e95c2573992
+  Stored in directory: /tmp/pip-ephem-wheel-cache-c3gbk9qu/wheels/fe/76/13/920ed0ee2ee6bcaf85b946b17a19c0a13dd7697558b4fbf841
+Successfully built vae-latent-geometry-nids
+Installing collected packages: vae-latent-geometry-nids
+  Attempting uninstall: vae-latent-geometry-nids
+    Found existing installation: vae-latent-geometry-nids 0.1.0
+    Uninstalling vae-latent-geometry-nids-0.1.0:
+      Successfully uninstalled vae-latent-geometry-nids-0.1.0
+Successfully installed vae-latent-geometry-nids-0.1.0

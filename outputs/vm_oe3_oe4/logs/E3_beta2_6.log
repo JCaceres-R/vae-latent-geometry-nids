@@ -1,0 +1,9 @@
+===== [2026-10-11T21:45:47Z] E3_beta2_6: OE4 beta2: prueba confirmatoria (intento 1) =====
+[fase7] 1.1    Mahalanobis (mediana)                      rho=+0.603 [-0.037,+0.956] p=0.0313 (51 variables: +0.604)
+[fase7] 2.4    Fisher-Rao al 10.º posterior benigno       rho=+0.716 [+0.275,+0.902] p=0.0077 (51 variables: +0.724)
+[fase7] 6.2    kNN en el espacio decodificado             rho=+0.639 [+0.096,+0.948] p=0.0213 (51 variables: +0.691)
+[fase7] 7.1    Tasa KL(q||p) por flujo                    rho=+0.658 [+0.074,+0.935] p=0.0276 (51 variables: +0.681)
+[fase7] 5.1    kNN al benigno (z blanqueado)              rho=+0.707 [+0.065,+0.944] p=0.0073 (51 variables: +0.694)
+[fase7] 6.1    Log-magnificación del decodificador        rho=+0.551 [-0.176,+0.936] p=0.0632 (51 variables: +0.523)
+[fase7] 10.1b  Silhouette del grupo (Fisher-Rao)          rho=-0.624 [-0.913,-0.106] p=0.0385 (51 variables: -0.629)
+[fase7] resumen en /home/estudiante/vae-latent-geometry-nids/outputs/oe4/beta2/oe2_descriptores/RESULTADOS_CONFIRMATORIA.md

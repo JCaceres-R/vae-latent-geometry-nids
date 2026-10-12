@@ -1,0 +1,7 @@
+===== [2026-10-11T17:52:20Z] E10: Reconciliación: modelo mixto (fase 5) frente a nivel de flujo (fase 7) (intento 1) =====
+[fase8] 309,248 conexiones, 12 grupos, 8 semillas
+/home/estudiante/vae-latent-geometry-nids/src/vae_nids/evaluation/oe2_robust/phase5_correlation.py:249: ConvergenceWarning: The Hessian matrix at the estimated parameter values is not positive definite.
+  result = model.fit(reml=True, method="lbfgs", maxiter=200)
+[fase8] M2: mixto, valores estandarizados, sin benigno: efecto=0.10592863446845337 p=0.29228387310562576
+[fase8] M3: mixto, puntuaciones normales de rango, sin benigno: efecto=0.71762201766437 p=7.972253044286313e-25
+[fase8] resumen en /home/estudiante/vae-latent-geometry-nids/outputs/oe2_descriptores_saneado/RESULTADOS_RECONCILIACION.md

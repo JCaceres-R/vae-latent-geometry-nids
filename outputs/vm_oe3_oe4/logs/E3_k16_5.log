@@ -1,0 +1,26 @@
+===== [2026-10-12T00:51:58Z] E3_k16_5: OE4 k16: cribado de descriptores (intento 1) =====
+/home/estudiante/vae-latent-geometry-nids/src/vae_nids/evaluation/oe2_descriptores/fase3_evaluacion.py:77: RuntimeWarning: Mean of empty slice
+  return float(np.tanh(np.nanmean(np.arctanh(r))))
+1.1      Mahalanobis (mediana)                            rho=+0.65 [+0.18,+0.95] p=0.003 W=0.69 rhoM=+1.00 val=+0.73
+5.1      kNN al benigno (z blanqueado)                    rho=+0.54 [+0.05,+0.94] p=0.015 W=0.64 rhoM=+0.78 val=+0.56
+2.4      Fisher-Rao al k-ésimo posterior benigno          rho=+0.71 [+0.36,+0.89] p=0.001 W=0.74 rhoM=+0.60 val=+0.60
+7.1      Tasa KL(q||p) por flujo                          rho=+0.81 [+0.47,+0.97] p=0.000 W=0.88 rhoM=+0.85 val=+0.86
+3.2      MMD² analítico entre posteriores agregados       rho=+0.36 [-0.43,+0.87] p=0.193 W=0.81 rhoM=+0.58 val=+0.56
+6.2      kNN en el espacio decodificado                   rho=+0.65 [+0.29,+0.87] p=0.004 W=0.66 rhoM=+0.55 val=+0.71
+6.1      Log-magnificación del decodificador              rho=+0.54 [-0.00,+0.85] p=0.020 W=0.67 rhoM=+0.45 val=+0.69
+4.2      Distancia afín-invariante entre covarianzas      rho=+0.07 [-0.44,+0.55] p=0.800 W=0.87 rhoM=-0.14 val=-0.48
+8.1      LID relativa al benigno                          rho=+0.43 [-0.06,+0.81] p=0.036 W=0.46 rhoM=+0.01 val=+0.18
+10.1a    Silhouette del grupo (z blanqueado)              rho=-0.42 [-0.81,+0.13] p=0.148 W=0.92 rhoM=-0.56 val=-0.78
+10.3     Sonda lineal sobre (μ, log σ²)                   rho=-0.00 [-0.58,+0.60] p=0.996 W=0.92 rhoM=-0.08 val=+0.12
+1.1b     Mahalanobis (AUC frente al control)              rho=+0.72 [+0.32,+0.97] p=0.001 W=0.77 rhoM=+0.92 val=+0.74
+10.1b    Silhouette del grupo (Fisher-Rao)                rho=-0.64 [-0.95,-0.25] p=0.015 W=0.96 rhoM=-0.73 val=-0.61
+1.2      Log-densidad de mezcla benigna (K=8)             rho=+0.73 [+0.34,+0.96] p=0.001 W=0.81 rhoM=+0.81 val=+0.95
+1.3      Mahalanobis relativa al prior                    rho=+0.59 [+0.01,+0.95] p=0.005 W=0.59 rhoM=+0.92 val=+0.72
+1.4      Tipicidad radial bilateral                       rho=+0.72 [+0.31,+0.98] p=0.001 W=0.77 rhoM=+0.92 val=+0.74
+4.1      Rango efectivo de la familia                     rho=+0.17 [-0.48,+0.79] p=0.551 W=0.82 rhoM=+0.02 val=+0.33
+7.2      Log-volumen del posterior                        rho=+0.56 [-0.05,+0.88] p=0.021 W=0.74 rhoM=+0.60 val=+0.75
+11.1     Inconsistencia Kumar-Poole                       rho=+0.12 [-0.36,+0.56] p=0.632 W=0.57 rhoM=-0.06 val=+0.24
+5.1m     kNN: fracción > p95 del control                  rho=+0.42 [-0.11,+0.89] p=0.057 W=0.53 rhoM=+0.63 val=+0.78
+2.4m     Fisher-Rao (mediana)                             rho=+0.68 [+0.29,+0.86] p=0.003 W=0.69 rhoM=+0.60 val=+0.53
+7.1m     Tasa (mediana, nats)                             rho=+0.75 [+0.41,+0.96] p=0.001 W=0.92 rhoM=+0.87 val=+0.85
+6.1m     Log-magnificación (mediana)                      rho=+0.49 [-0.09,+0.83] p=0.045 W=0.71 rhoM=+0.43 val=+0.72

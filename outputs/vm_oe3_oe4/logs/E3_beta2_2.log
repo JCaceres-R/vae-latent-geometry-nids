@@ -1,0 +1,17 @@
+===== [2026-10-11T21:08:12Z] E3_beta2_2: OE4 beta2: codificación (mu, log sigma^2) (intento 1) =====
+[fase2 seed=42] BENIGN test: n=248,561
+[fase2 seed=42] conteos frente al manifest del OE2 original: idénticos
+[fase2 seed=42] dims activas (5/8): [0, 1, 2, 5, 6] varianza=[0.66916, 0.18312, 0.42444, 1e-05, 3e-05, 1.01327, 0.4504, 3e-05]
+[fase2 seed=43] BENIGN test: n=248,561
+[fase2 seed=43] conteos frente al manifest del OE2 original: idénticos
+[fase2 seed=43] dims activas (5/8): [0, 2, 3, 5, 7] varianza=[1.05661, 0.0, 0.32174, 0.31566, 1e-05, 0.75915, 0.0, 0.39142]
+[fase2 seed=44] BENIGN test: n=248,561
+[fase2 seed=44] conteos frente al manifest del OE2 original: idénticos
+[fase2 seed=44] dims activas (6/8): [0, 2, 3, 4, 5, 7] varianza=[0.19046, 1e-05, 0.62817, 0.98937, 0.64448, 0.1533, 1e-05, 0.3563]
+[fase2 seed=45] BENIGN test: n=248,561
+[fase2 seed=45] conteos frente al manifest del OE2 original: idénticos
+[fase2 seed=45] dims activas (4/8): [2, 3, 5, 6] varianza=[1e-05, 2e-05, 0.33422, 0.9835, 1e-05, 0.63425, 0.735, 3e-05]
+[fase2 seed=46] BENIGN test: n=248,561
+[fase2 seed=46] conteos frente al manifest del OE2 original: idénticos
+[fase2 seed=46] dims activas (6/8): [0, 2, 3, 4, 5, 6] varianza=[0.18185, 2e-05, 0.30572, 1.04326, 0.11161, 0.49481, 0.71933, 2e-05]
+[fase2] tabla semilla x dimensión guardada en /home/estudiante/vae-latent-geometry-nids/outputs/oe4/beta2/oe2_robust/tables/phase2_active_dims_per_seed.csv

@@ -1,0 +1,61 @@
+{
+  "columnas": 66,
+  "marcadas": [
+    "Flow Duration",
+    "Total Length of Fwd Packet",
+    "Total Length of Bwd Packet",
+    "Flow IAT Max",
+    "Flow IAT Min",
+    "Fwd IAT Total",
+    "Fwd IAT Max",
+    "Fwd IAT Min",
+    "Bwd IAT Total",
+    "Bwd IAT Max",
+    "Bwd IAT Min",
+    "Fwd Bulk Rate Avg",
+    "Bwd Bytes/Bulk Avg",
+    "Bwd Bulk Rate Avg",
+    "Active Max",
+    "Active Min",
+    "Idle Max",
+    "Idle Min"
+  ],
+  "flow_iat_min_negativos": {
+    "train_benign": 1873,
+    "val_benign": 375,
+    "test_benign": 414,
+    "test_attacks": 229
+  },
+  "filtro_d4": {
+    "train_benign": 24,
+    "val_benign": 7,
+    "test_benign": 0,
+    "test_attacks": 0
+  },
+  "resolucion_tras_filtro": {
+    "Flow Packets/s": {
+      "min": 0.0250007516892674,
+      "max": 3000000.0,
+      "distintos_crudo": 577678,
+      "distintos_escalado_float32": 573049
+    },
+    "Flow Duration": {
+      "min": 1.0,
+      "max": 119999998.0,
+      "distintos_crudo": 524335,
+      "distintos_escalado_float32": 517280
+    }
+  },
+  "regla_inf_nan": {
+    "filas_eliminadas": 793,
+    "columnas_con_no_finitos": {
+      "Flow Bytes/s": 793,
+      "Flow Packets/s": 793,
+      "Flow IAT Mean": 252,
+      "Flow IAT Std": 252,
+      "Flow IAT Max": 252,
+      "Flow IAT Min": 252
+    },
+    "nota": "todas las filas eliminadas tienen inf/NaN en Flow Bytes/s y Flow Packets/s, que siguen en el conjunto; ninguna volvería al quitar la regla"
+  }
+}

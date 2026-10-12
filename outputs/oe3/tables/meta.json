@@ -1,0 +1,19 @@
+{
+  "semillas": [
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49
+  ],
+  "n_gen": 50000,
+  "n_c2st": 20000,
+  "variantes": [
+    "prior_muestra",
+    "prior_media",
+    "posterior_agregado"
+  ]
+}

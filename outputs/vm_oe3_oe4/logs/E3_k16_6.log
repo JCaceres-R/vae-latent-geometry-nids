@@ -1,0 +1,9 @@
+===== [2026-10-12T00:52:28Z] E3_k16_6: OE4 k16: prueba confirmatoria (intento 1) =====
+[fase7] 1.1    Mahalanobis (mediana)                      rho=+0.647 [+0.087,+0.967] p=0.0035 (51 variables: +0.604)
+[fase7] 2.4    Fisher-Rao al 10.º posterior benigno       rho=+0.711 [+0.295,+0.913] p=0.0020 (51 variables: +0.724)
+[fase7] 6.2    kNN en el espacio decodificado             rho=+0.651 [+0.201,+0.897] p=0.0037 (51 variables: +0.691)
+[fase7] 7.1    Tasa KL(q||p) por flujo                    rho=+0.807 [+0.327,+0.987] p=0.0003 (51 variables: +0.681)
+[fase7] 5.1    kNN al benigno (z blanqueado)              rho=+0.537 [-0.062,+0.954] p=0.0165 (51 variables: +0.694)
+[fase7] 6.1    Log-magnificación del decodificador        rho=+0.542 [-0.164,+0.875] p=0.0205 (51 variables: +0.523)
+[fase7] 10.1b  Silhouette del grupo (Fisher-Rao)          rho=-0.642 [-0.929,-0.143] p=0.0165 (51 variables: -0.629)
+[fase7] resumen en /home/estudiante/vae-latent-geometry-nids/outputs/oe4/k16/oe2_descriptores/RESULTADOS_CONFIRMATORIA.md

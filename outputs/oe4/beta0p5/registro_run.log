@@ -1,0 +1,13 @@
+[2026-10-11T17:56:51] preproceso
+[2026-10-11T17:57:25] oe4_beta0p5_seed42: entrenando
+[2026-10-11T18:18:21] oe4_beta0p5_seed42: parada en época 150 (paciencia (10 épocas sin mejorar más de min_delta=0.1)), mejor época 140, val -249.6861, 1250 s
+[2026-10-11T18:18:21] oe4_beta0p5_seed43: entrenando
+[2026-10-11T18:29:12] oe4_beta0p5_seed43: parada en época 78 (paciencia (10 épocas sin mejorar más de min_delta=0.1)), mejor época 68, val -247.8179, 645 s
+[2026-10-11T18:29:12] oe4_beta0p5_seed44: entrenando
+[2026-10-11T18:42:42] oe4_beta0p5_seed44: parada en época 96 (paciencia (10 épocas sin mejorar más de min_delta=0.1)), mejor época 86, val -248.4324, 804 s
+[2026-10-11T18:42:42] oe4_beta0p5_seed45: entrenando
+[2026-10-11T18:59:22] oe4_beta0p5_seed45: parada en época 118 (paciencia (10 épocas sin mejorar más de min_delta=0.1)), mejor época 108, val -252.0603, 995 s
+[2026-10-11T18:59:22] oe4_beta0p5_seed46: entrenando
+[2026-10-11T19:10:54] oe4_beta0p5_seed46: parada en época 82 (paciencia (10 épocas sin mejorar más de min_delta=0.1)), mejor época 72, val -247.6524, 687 s
+[2026-10-11T19:10:54] diagnósticos
+[2026-10-11T19:11:03] listo: {"corridas": 5}

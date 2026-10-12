@@ -1,0 +1,8 @@
+VM: reconciliación del nivel de conexión, OE3 (calidad generativa) y OE4 (β=0,5, β=2, k=16)
+
+Corrida de scripts/run_oe3_oe4_vm.sh. Resumen en outputs/vm_oe3_oe4/RESUMEN_CORRIDA.md,
+log en outputs/vm_oe3_oe4/RUN_LOG.md.
+
+- OE2: fase 8 (modelo mixto frente a nivel de flujo)
+- OE3: KS, Wasserstein, clasificador real/sintético y memorización en outputs/oe3/
+- OE4: 15 modelos, descriptores, confirmatoria y concordancia de rankings en outputs/oe4/
